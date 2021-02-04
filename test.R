@@ -4,3 +4,4 @@
 ##looking into why Gus and Jade could not join this project
 ##haven't figured out the issue
 ##Gus testing
+##Seems like its working for Gus
