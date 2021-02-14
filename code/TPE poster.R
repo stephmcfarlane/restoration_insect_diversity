@@ -32,7 +32,12 @@ Grass <- read_csv("grassland1.5km.csv")
 Summary <- full_join(TPE.Sites, Grass, by = "EasementID")
 
 
-
+######################################################################################
+#                    other anova code                                    #
+######################################################################################
+richness_anova <- aov(richness ~ RestorationCategory, data = spprichness)
+summary(richness_anova)
+TukeyHSD(richness_anova)
 
 ######################################################################################
 #                     Insect Abundance & Graphs                                      #
