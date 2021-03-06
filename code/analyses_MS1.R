@@ -20,7 +20,7 @@ treatment <- read_csv("raw/3.6.21_insect_data.csv") %>%
   mutate(RestorationCategory = factor(RestorationCategory, levels = c("Not Seeded", "Seeded Only", "Seeded + Fire", "Remnant")))  #####this code reorders the treatments --the default is alphabetical
 
 ##Color Palettes####
-palette1<-  c("tomato3", "palegreen4", "skyblue4", "slategray4")
+palette1<-  c("#767171", "#A9D18E", "#548235", "#A49988")
 
 
 insects_rel_rich <- read_csv("raw/3.6.21_insect_data.csv") %>% 
