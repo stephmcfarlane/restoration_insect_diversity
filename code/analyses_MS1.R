@@ -1,10 +1,9 @@
 library(tidyverse)
 
 #upload data
-TPE.AllData <- read_csv("raw/3.6.21_insect_data.csv") %>% 
+all_data <- read_csv("raw/3.6.21_insect_data.csv") %>% 
   left_join(treatment) %>% 
-  relocate(., RestorationCategory, .before = "Date" ) %>% 
-  filter(RestorationCategory == "Seeded + Fire")
+  relocate(., RestorationCategory, .before = "Date" ) 
 
 ###Reading in treatment code & cleaning########
 treatment <- read_csv("raw/3.6.21_insect_data.csv") %>% 
@@ -24,7 +23,7 @@ palette1<-  c("#767171", "#A9D18E", "#548235", "#A49988")
 palette2 <-  c("tomato3", "#A49988","#5F9EA0", "#006887")
 
 
-insects_rel_rich <- read_csv("raw/3.6.21_insect_data.csv") %>% 
+insects_ave_rich <- read_csv("raw/3.6.21_insect_data.csv") %>% 
   select(EasementID, Date, Sample, Total, Order, Family) %>% 
   filter(!is.na(EasementID)) %>% 
   group_by(EasementID, Date, Sample) %>% 
@@ -78,6 +77,93 @@ orthoptera_rel_rich <- read_csv("raw/3.6.21_insect_data.csv") %>%
   summarise(ave_rich = mean(fam_rich)) %>% 
   left_join(treatment)
 
+diptera_rel_rich <- read_csv("raw/3.6.21_insect_data.csv") %>% 
+  select(EasementID, Date, Sample, Total, Order, Family) %>% 
+  filter(Order == "Diptera") %>% 
+  filter(!is.na(EasementID)) %>% 
+  group_by(EasementID, Date, Sample) %>% 
+  filter(!duplicated(Family))%>% 
+  summarise(fam_rich = n()) %>% 
+  group_by(EasementID) %>% 
+  summarise(ave_rich = mean(fam_rich)) %>% 
+  left_join(treatment)
+
+thysanoptera_ave_rich <- read_csv("raw/3.6.21_insect_data.csv") %>% 
+  select(EasementID, Date, Sample, Total, Order, Family) %>% 
+  filter(Order == "Thysanoptera") %>% 
+  filter(!is.na(EasementID)) %>% 
+  group_by(EasementID, Date, Sample) %>% 
+  filter(!duplicated(Family))%>% 
+  summarise(fam_rich = n()) %>% 
+  group_by(EasementID) %>% 
+  summarise(ave_rich = mean(fam_rich)) %>% 
+  left_join(treatment)
+
+odonata_ave_rich <- read_csv("raw/3.6.21_insect_data.csv") %>% 
+  select(EasementID, Date, Sample, Total, Order, Family) %>% 
+  filter(Order == "Odonata") %>% 
+  filter(!is.na(EasementID)) %>% 
+  group_by(EasementID, Date, Sample) %>% 
+  filter(!duplicated(Family))%>% 
+  summarise(fam_rich = n()) %>% 
+  group_by(EasementID) %>% 
+  summarise(ave_rich = mean(fam_rich)) %>% 
+  left_join(treatment)
+
+neuroptera_ave_rich <- read_csv("raw/3.6.21_insect_data.csv") %>% 
+  select(EasementID, Date, Sample, Total, Order, Family) %>% 
+  filter(Order == "Neuroptera") %>% 
+  filter(!is.na(EasementID)) %>% 
+  group_by(EasementID, Date, Sample) %>% 
+  filter(!duplicated(Family))%>% 
+  summarise(fam_rich = n()) %>% 
+  group_by(EasementID) %>% 
+  summarise(ave_rich = mean(fam_rich)) %>% 
+  left_join(treatment)
+
+ephemeroptera_ave_rich <- read_csv("raw/3.6.21_insect_data.csv") %>% 
+  select(EasementID, Date, Sample, Total, Order, Family) %>% 
+  filter(Order == "Ephemeroptera") %>% 
+  filter(!is.na(EasementID)) %>% 
+  group_by(EasementID, Date, Sample) %>% 
+  filter(!duplicated(Family))%>% 
+  summarise(fam_rich = n()) %>% 
+  group_by(EasementID) %>% 
+  summarise(ave_rich = mean(fam_rich)) %>% 
+  left_join(treatment)
+
+lepidoptera_ave_rich <- read_csv("raw/3.6.21_insect_data.csv") %>% 
+  select(EasementID, Date, Sample, Total, Order, Family) %>% 
+  filter(Order == "Lepidoptera") %>% 
+  filter(!is.na(EasementID)) %>% 
+  group_by(EasementID, Date, Sample) %>% 
+  filter(!duplicated(Family))%>% 
+  summarise(fam_rich = n()) %>% 
+  group_by(EasementID) %>% 
+  summarise(ave_rich = mean(fam_rich)) %>% 
+  left_join(treatment)
+
+strepsiptera_ave_rich <- read_csv("raw/3.6.21_insect_data.csv") %>% 
+  select(EasementID, Date, Sample, Total, Order, Family) %>% 
+  filter(Order == "Strepsiptera") %>% 
+  filter(!is.na(EasementID)) %>% 
+  group_by(EasementID, Date, Sample) %>% 
+  filter(!duplicated(Family))%>% 
+  summarise(fam_rich = n()) %>% 
+  group_by(EasementID) %>% 
+  summarise(ave_rich = mean(fam_rich)) %>% 
+  left_join(treatment)
+
+psocodea_ave_rich <- read_csv("raw/3.6.21_insect_data.csv") %>% 
+  select(EasementID, Date, Sample, Total, Order, Family) %>% 
+  filter(Order == "Psocodea") %>% 
+  filter(!is.na(EasementID)) %>% 
+  group_by(EasementID, Date, Sample) %>% 
+  filter(!duplicated(Family))%>% 
+  summarise(fam_rich = n()) %>% 
+  group_by(EasementID) %>% 
+  summarise(ave_rich = mean(fam_rich)) %>% 
+  left_join(treatment)
 
 
 fam_rich <- read_csv("raw/3.6.21_insect_data.csv") %>% 
@@ -88,7 +174,7 @@ fam_rich <- read_csv("raw/3.6.21_insect_data.csv") %>%
   summarise(fam_rich = n()) %>% 
   left_join(treatment)
 
-coleoptera_rel_rich %>% 
+insects_ave_rich %>% 
   ggplot(aes(RestorationCategory, ave_rich, fill=RestorationCategory)) +
   geom_boxplot(outlier.alpha = 0) +
   theme_classic()+
