@@ -21,6 +21,7 @@ treatment <- read_csv("raw/3.6.21_insect_data.csv") %>%
 
 ##Color Palettes####
 palette1<-  c("#767171", "#A9D18E", "#548235", "#A49988")
+palette2 <-  c("tomato3", "#A49988","#5F9EA0", "#006887")
 
 
 insects_rel_rich <- read_csv("raw/3.6.21_insect_data.csv") %>% 
@@ -87,11 +88,11 @@ fam_rich <- read_csv("raw/3.6.21_insect_data.csv") %>%
   summarise(fam_rich = n()) %>% 
   left_join(treatment)
 
-orthoptera_rel_rich %>% 
+coleoptera_rel_rich %>% 
   ggplot(aes(RestorationCategory, ave_rich, fill=RestorationCategory)) +
   geom_boxplot(outlier.alpha = 0) +
   theme_classic()+
-  scale_fill_manual(values = c(palette1),
+  scale_fill_manual(values = c(palette2),
                     name = "Site Categories")+
   labs(title = "Insect Family Richness \n per Restoration Category")+
   xlab("\n Restoration Category") +
