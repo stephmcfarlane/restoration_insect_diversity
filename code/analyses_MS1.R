@@ -3,7 +3,9 @@ library(tidyverse)
 #upload data
 TPE.AllData <- read_csv("raw/3.6.21_insect_data.csv") %>% 
   left_join(treatment) %>% 
-  relocate(.data, treatment,.before = "Date" )
+  relocate(., RestorationCategory, .before = "Date" ) %>% 
+  filter(RestorationCategory == "Seeded + Fire")
+
 
 ###########Reading in Treatment data and cleaning#############
 treatment <- read_csv("raw/TreatmentNov20.csv") %>% 
