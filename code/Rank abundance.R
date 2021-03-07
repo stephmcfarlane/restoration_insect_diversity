@@ -95,11 +95,11 @@ AbundProp <- read_csv("FamilyMatrix.csv")
 
 #get site alone with a new df and then slicing out the other sites
 
-#Site.007R5 <- AbundProp[-(1:7),]
-#Site.007R5 <- Site.007R5[-(2:18),]
+Site.007R5 <- AbundProp[-(1:7),]
+Site.007R5 <- Site.007R5[-(2:18),]
 
 #change the df from horizontal to verticle
-#Site.007R5 <- t(Site.007R5)
+site.007R5 <- t(Site.007R5)
 
 #export to excel to sort them into descending order
 #write.csv(Site.007R5,"D:/OneDrive/Documents/r.Studio/TPE/Site.007R5.csv")
@@ -114,12 +114,12 @@ Site.Sort.007R5 <- Site.Sort.007R5[-c(75:165),]
 
 
 ##############################################################00MDP
-#site.00mdp <- AbundProp[-c(1:10),]
-#site.00mdp <- site.00mdp[-c(2:15),]
+site.00mdp <- AbundProp[-c(1:10),]
+site.00mdp <- site.00mdp[-c(2:15),]
 
-#site.00mdp <- t(site.00mdp)
+site.00mdp <- t(site.00mdp)
 
-#write.csv(site.00mdp,"D:/OneDrive/Documents/r.Studio/TPE/site.00mdp.csv")
+write.csv(site.00mdp,"D:/OneDrive/Documents/r.Studio/TPE/site.00mdp.csv")
 
 
 #only run this
@@ -129,12 +129,12 @@ Site.Sort.00MDP <- Site.Sort.00MDP[-c(78:165),]
 
 
 ##############################################################0078Z
-#site.007CQ <- AbundProp[-c(1:5),]
-#site.007CQ <- site.007CQ[-c(2:20),]
+site.007CQ <- AbundProp[-c(1:5),]
+site.007CQ <- site.007CQ[-c(2:20),]
 
-#site.007CQ <- t(site.007CQ)
+site.007CQ <- t(site.007CQ)
 
-#write.csv(site.007CQ,"D:/OneDrive/Documents/r.Studio/TPE/site.007CQ.csv")
+write.csv(site.007CQ,"D:/OneDrive/Documents/r.Studio/TPE/site.007CQ.csv")
 
 Site.Sort.007CQ <- read.csv("site.007CQ.csv")
 
@@ -142,12 +142,12 @@ Site.Sort.007CQ <- Site.Sort.007CQ[-c(75:165),]
 
 
 ##############################################################00NCQ
-#site.00NCQ <- AbundProp[-c(1:14),]
-#site.00NCQ <- site.00NCQ[-c(2:11),]
+site.00NCQ <- AbundProp[-c(1:14),]
+site.00NCQ <- site.00NCQ[-c(2:11),]
 
-#site.00NCQ <- t(site.00NCQ)
+site.00NCQ <- t(site.00NCQ)
 
-#write.csv(site.00NCQ,"D:/OneDrive/Documents/r.Studio/TPE/site.00NCQ.csv")
+write.csv(site.00NCQ,"D:/OneDrive/Documents/r.Studio/TPE/site.00NCQ.csv")
 
 Site.Sort.00NCQ <- read.csv("site.00NCQ.csv")
 
@@ -155,12 +155,12 @@ Site.Sort.00NCQ <- Site.Sort.00NCQ[-c(92:165),]
 
 
 ##############################################################007XH
-#site.007XH <- AbundProp[-c(1:9),]
-#site.007XH <- site.007XH[-c(2:16),]
+site.007XH <- AbundProp[-c(1:9),]
+site.007XH <- site.007XH[-c(2:16),]
 
-#site.007XH <- t(site.007XH)
+site.007XH <- t(site.007XH)
 
-#write.csv(site.007XH,"D:/OneDrive/Documents/r.Studio/TPE/site.007XH.csv")
+write.csv(site.007XH,"D:/OneDrive/Documents/r.Studio/TPE/site.007XH.csv")
 
 Site.Sort.007XH <- read.csv("site.007XH.csv")
 
