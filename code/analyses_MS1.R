@@ -67,7 +67,23 @@ num_trans <- num_trans19 %>%
   mutate(total_trans = Trans2019 + Trans2020) %>% 
   select(EasementID, total_trans)
   
-  
+ ###Site by family matrix 
+##example code:
+ShannonDiv <- 
+  read_csv("datasets/CVSPlantCommunityData_.csv") %>% 
+  select(-Notes, -DataProofed, -EntryOrder, -UnkFamily, -UnkGenus, -Photo, -Sample) %>% 
+  na.omit(PctCover1x1) %>% 
+  group_by(EasementID, SppCode) %>% 
+  summarise(avecover=sum(PctCover1x1)/8) %>% 
+  pivot_wider(names_from=SppCode, values_from=avecover) %>% #mke one column variable into multiple
+  replace(is.na(.), 0) %>% 
+  right_join(NumberSiteID) %>% 
+  relocate(., id, .before = ANDGER)  %>% #### :) Moves column to location you want!
+  ungroup() %>% 
+  select(-EasementID) %>% 
+  diversity()
+##end example code
+
 sitebyfam <- read_csv("raw/3.6.21_insect_data.csv") %>% 
   select(EasementID, Date, Sample, Total, Family) %>% 
   filter(!is.na(EasementID)) %>% 
