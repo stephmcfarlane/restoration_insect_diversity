@@ -23,16 +23,74 @@ palette1<-  c("#767171", "#A9D18E", "#548235", "#A49988")
 palette2 <-  c("tomato3", "#A49988","#5F9EA0", "#006887")
 
 
-insects_ave_rich <- read_csv("raw/3.6.21_insect_data.csv") %>% 
+monarch_site_visits <- read_csv("../PrairieRestoration/datasets/AdultCounts.csv") %>% 
+  group_by(EasementID) %>%
+  filter(!duplicated(Date))%>%
+  summarise(SiteVisits = n())
+
+num_trans <- read_csv("raw/3.6.21_insect_data.csv") %>% 
+  select(EasementID,  Date) %>%
+  group_by(EasementID) %>% 
+  filter(!duplicated(Date)) %>% 
+  left_join(read_csv("raw/3.6.21_insect_data.csv")) %>% 
+  select(EasementID, Date, Sample)
+  
+  summarise(site_visit = n())
+
+  ##List of all families observed on NRCS easements##
+insect_fam <- read_csv("raw/3.6.21_insect_data.csv") %>% 
+    select(EasementID, Date, Sample, Family) %>% 
+    filter(!is.na(EasementID)) %>% 
+    filter(!duplicated(Family)) %>% 
+    select(Family)
+
+## Calculating number of transect ID'd per year, per easement in order to get total # of bags id'd.  We needed this number to get the average abundance of Family per site##
+num_trans19 <- read_csv("raw/3.6.21_insect_data.csv") %>% 
+  select(EasementID, Date, Sample) %>%
+  group_by(EasementID) %>% 
+  separate(., Date, c('Month', 'Day', 'Year'), sep="/") %>% 
+  filter(Year == '2019') %>% 
+  filter(!duplicated(Sample)) %>% 
+  summarise(Trans2019 = n())
+
+num_trans20 <- read_csv("raw/3.6.21_insect_data.csv") %>% 
+  select(EasementID, Date, Sample) %>%
+  group_by(EasementID) %>% 
+  separate(., Date, c('Month', 'Day', 'Year'), sep="/") %>% 
+  filter(Year == '2020') %>% 
+  filter(!duplicated(Sample)) %>% 
+  summarise(Trans2020 = n())
+ 
+num_trans <- num_trans19 %>% 
+  full_join(num_trans20) %>% 
+  replace(is.na(.), 0) %>% 
+  mutate(total_trans = Trans2019 + Trans2020) %>% 
+  select(EasementID, total_trans)
+  
+  
+sitebyfam <- read_csv("raw/3.6.21_insect_data.csv") %>% 
+  select(EasementID, Date, Sample, Total, Family) %>% 
+  filter(!is.na(EasementID)) %>% 
+  group_by(EasementID, Family) %>% 
+  summarise(abundance= sum(Total)) %>% 
+  full_join(num_trans) %>% 
+  mutate(AveAbund = abundance/total_trans) %>% 
+  left_join(treatment)
+
+  summarise(aveabund=sum(PctCover1x1)/8) %>% 
+  
+  
+  insects_ave_rich <- read_csv("raw/3.6.21_insect_data.csv") %>% 
   select(EasementID, Date, Sample, Total, Order, Family) %>% 
   filter(!is.na(EasementID)) %>% 
   group_by(EasementID, Date, Sample) %>% 
-  filter(!duplicated(Family))%>% 
+  filter(!duplicated(Family)) %>% 
   summarise(fam_rich = n()) %>% 
   group_by(EasementID) %>% 
   summarise(ave_rich = mean(fam_rich)) %>% 
   left_join(treatment)
   
+
 coleoptera_rel_rich <- read_csv("raw/3.6.21_insect_data.csv") %>% 
   select(EasementID, Date, Sample, Total, Order, Family) %>% 
   filter(Order == "Coleoptera") %>% 
