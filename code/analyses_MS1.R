@@ -33,9 +33,11 @@ palette2 <-  c("tomato3", "#A49988","#5F9EA0", "#006887")
 
 # Raw data visualizations -------------------------------------------------
 
-# Calculate average observed number of Families per easement
+
+
+# Calculate average Family richness per easement
 insects_ave_rich <- all_data %>% 
-  select(EasementID, RestorationCategory, Date, Sample, Total, Order, Family) %>% 
+  select(EasementID, RestorationCategory, Date, Sample, Family) %>% 
   filter(!is.na(EasementID)) %>% 
   group_by(EasementID, RestorationCategory, Date, Sample) %>% 
   filter(!duplicated(Family)) %>% #remove duplicates of Family/easement
@@ -215,8 +217,11 @@ insect_fam <- read_csv("raw/3.6.21_insect_data.csv") %>%
     filter(!duplicated(Family)) %>% 
     select(Family)
 
+
+  
 ## Calculate number of transects ID'd per year, per easement in order to get total # of bags id'd.  We needed this number to get the average abundance of Family per site##
 # Find number of bags id'd for 2019
+
 num_trans19 <- read_csv("raw/3.6.21_insect_data.csv") %>% 
   select(EasementID, Date, Sample) %>%
   group_by(EasementID) %>% 
@@ -241,14 +246,23 @@ num_trans <- num_trans19 %>%
   replace(is.na(.), 0) %>% 
   mutate(total_trans = Trans2019 + Trans2020) %>% #calculate total samples by adding 2019 and 2020
   select(EasementID, total_trans) #simply df
-  
+
+# Calculate average abundance per Family per easement
+insect_ave_abundance <- all_data %>% 
+  select(EasementID, RestorationCategory, Date, Sample, Total, Family) %>% 
+  filter(!is.na(EasementID)) %>% 
+  group_by(EasementID, RestorationCategory, Family) %>% 
+  summarise(abundance= sum(Total)) %>% 
+  full_join(num_trans) %>% 
+  mutate(AveAbund = abundance/total_trans) %>%
+  select(EasementID, RestorationCategory, Family, AveAbund)
+
 ### Site x Family Matrix ####
 # Make a new dataframe where each row is a site (easement) and each column is an insect Family. 
 # The number in each cell will be the average abundance for that Family
 
 # I need to combine insect_fam + num_trans dataframes
 # I need EasementID + RestorationCategory + transpose insect_fam into column. 
-
 sitebyfam <- all_data %>% 
   select(EasementID, RestorationCategory, Date, Sample, Total, Family) %>% 
   filter(!is.na(EasementID)) %>% 
@@ -368,8 +382,8 @@ color.hull <- factor(hull.data$RestorationCategory, levels = c("Not Seeded", "Se
 p <- ggplot() + 
   geom_polygon(data=hull.data,aes(x=NMDS1,y=NMDS2, group=color.hull),alpha=0.2) + 
   geom_point(data = nmds.scores, aes(x=NMDS1,y=NMDS2, colour=color.nmds, shape = color.nmds), size = 2) + # add the point markers
-  scale_fill_manual(values = palette1) +
-  scale_color_manual(values = palette1) +
+  scale_fill_manual(values = palette2) +
+  scale_color_manual(values = palette2) +
   scale_shape_manual(values = c(19,19,19,19)) +
   theme_bw() + 
   theme(axis.text.x = element_blank(),  # remove x-axis text
