@@ -1,11 +1,11 @@
+# Run this section every time! --------------------------------------------
+
 library(tidyverse)
+library(vegan)
+# NOTE: adding four # after a note makes it into a section heading!
 
-#upload data
-all_data <- read_csv("raw/3.6.21_insect_data.csv") %>% 
-  left_join(treatment) %>% 
-  relocate(., RestorationCategory, .before = "Date" ) 
-
-###Reading in treatment code & cleaning########
+## Load data #####
+# Upload easement treatment (aka restoration category) data & clean ##
 treatment <- read_csv("raw/3.6.21_insect_data.csv") %>% 
   left_join(read_csv("raw/TreatmentNov20.csv")) %>% 
   select(EasementID, RestorationCategory) %>% 
@@ -18,105 +18,41 @@ treatment <- read_csv("raw/3.6.21_insect_data.csv") %>%
   
   mutate(RestorationCategory = factor(RestorationCategory, levels = c("Not Seeded", "Seeded Only", "Seeded + Fire", "Remnant")))  #####this code reorders the treatments --the default is alphabetical
 
-##Color Palettes####
+# Upload raw insect sweep identification data
+# This csv was downloaded from the Google Doc data entry spreadsheet on 6 March 2021
+all_data <- read_csv("raw/3.6.21_insect_data.csv") %>% 
+  select(-X1) %>% #remove random column with nothing in it
+  left_join(treatment) %>% #join with treatment df
+  relocate(., RestorationCategory, .before = "Date" ) 
+
+
+# Color Palettes #
 palette1<-  c("#767171", "#A9D18E", "#548235", "#A49988")
 palette2 <-  c("tomato3", "#A49988","#5F9EA0", "#006887")
 
 
-monarch_site_visits <- read_csv("../PrairieRestoration/datasets/AdultCounts.csv") %>% 
-  group_by(EasementID) %>%
-  filter(!duplicated(Date))%>%
-  summarise(SiteVisits = n())
+# Raw data visualizations -------------------------------------------------
 
-num_trans <- read_csv("raw/3.6.21_insect_data.csv") %>% 
-  select(EasementID,  Date) %>%
-  group_by(EasementID) %>% 
-  filter(!duplicated(Date)) %>% 
-  left_join(read_csv("raw/3.6.21_insect_data.csv")) %>% 
-  select(EasementID, Date, Sample)
-  
-  summarise(site_visit = n())
-
-  ##List of all families observed on NRCS easements##
-insect_fam <- read_csv("raw/3.6.21_insect_data.csv") %>% 
-    select(EasementID, Date, Sample, Family) %>% 
-    filter(!is.na(EasementID)) %>% 
-    filter(!duplicated(Family)) %>% 
-    select(Family)
-
-## Calculating number of transect ID'd per year, per easement in order to get total # of bags id'd.  We needed this number to get the average abundance of Family per site##
-num_trans19 <- read_csv("raw/3.6.21_insect_data.csv") %>% 
-  select(EasementID, Date, Sample) %>%
-  group_by(EasementID) %>% 
-  separate(., Date, c('Month', 'Day', 'Year'), sep="/") %>% 
-  filter(Year == '2019') %>% 
-  filter(!duplicated(Sample)) %>% 
-  summarise(Trans2019 = n())
-
-num_trans20 <- read_csv("raw/3.6.21_insect_data.csv") %>% 
-  select(EasementID, Date, Sample) %>%
-  group_by(EasementID) %>% 
-  separate(., Date, c('Month', 'Day', 'Year'), sep="/") %>% 
-  filter(Year == '2020') %>% 
-  filter(!duplicated(Sample)) %>% 
-  summarise(Trans2020 = n())
- 
-num_trans <- num_trans19 %>% 
-  full_join(num_trans20) %>% 
-  replace(is.na(.), 0) %>% 
-  mutate(total_trans = Trans2019 + Trans2020) %>% 
-  select(EasementID, total_trans)
-  
- ###Site by family matrix 
-##example code:
-ShannonDiv <- 
-  read_csv("datasets/CVSPlantCommunityData_.csv") %>% 
-  select(-Notes, -DataProofed, -EntryOrder, -UnkFamily, -UnkGenus, -Photo, -Sample) %>% 
-  na.omit(PctCover1x1) %>% 
-  group_by(EasementID, SppCode) %>% 
-  summarise(avecover=sum(PctCover1x1)/8) %>% 
-  pivot_wider(names_from=SppCode, values_from=avecover) %>% #mke one column variable into multiple
-  replace(is.na(.), 0) %>% 
-  right_join(NumberSiteID) %>% 
-  relocate(., id, .before = ANDGER)  %>% #### :) Moves column to location you want!
-  ungroup() %>% 
-  select(-EasementID) %>% 
-  diversity()
-##end example code
-
-sitebyfam <- read_csv("raw/3.6.21_insect_data.csv") %>% 
-  select(EasementID, Date, Sample, Total, Family) %>% 
+# Calculate average observed number of Families per easement
+insects_ave_rich <- all_data %>% 
+  select(EasementID, RestorationCategory, Date, Sample, Total, Order, Family) %>% 
   filter(!is.na(EasementID)) %>% 
-  group_by(EasementID, Family) %>% 
-  summarise(abundance= sum(Total)) %>% 
-  full_join(num_trans) %>% 
-  mutate(AveAbund = abundance/total_trans) %>% 
-  left_join(treatment)
+  group_by(EasementID, RestorationCategory, Date, Sample) %>% 
+  filter(!duplicated(Family)) %>% #remove duplicates of Family/easement
+  summarise(fam_rich = n()) %>% #count the number of families/easement
+  group_by(EasementID, RestorationCategory) %>% 
+  summarise(ave_rich = mean(fam_rich)) #calculate average families
 
-  summarise(aveabund=sum(PctCover1x1)/8) %>% 
-  
-  
-  insects_ave_rich <- read_csv("raw/3.6.21_insect_data.csv") %>% 
-  select(EasementID, Date, Sample, Total, Order, Family) %>% 
-  filter(!is.na(EasementID)) %>% 
-  group_by(EasementID, Date, Sample) %>% 
-  filter(!duplicated(Family)) %>% 
-  summarise(fam_rich = n()) %>% 
-  group_by(EasementID) %>% 
-  summarise(ave_rich = mean(fam_rich)) %>% 
-  left_join(treatment)
-  
-
-coleoptera_rel_rich <- read_csv("raw/3.6.21_insect_data.csv") %>% 
-  select(EasementID, Date, Sample, Total, Order, Family) %>% 
+# Calculate the family richness for each Order
+coleoptera_rel_rich <- all_data %>% 
+  select(EasementID, RestorationCategory, Date, Sample, Total, Order, Family) %>% 
   filter(Order == "Coleoptera") %>% 
   filter(!is.na(EasementID)) %>% 
-  group_by(EasementID, Date, Sample) %>% 
+  group_by(EasementID, RestorationCategory, Date, Sample) %>% 
   filter(!duplicated(Family))%>% 
   summarise(fam_rich = n()) %>% 
-  group_by(EasementID) %>% 
-  summarise(ave_rich = mean(fam_rich)) %>% 
-  left_join(treatment)
+  group_by(EasementID, RestorationCategory) %>% 
+  summarise(ave_rich = mean(fam_rich)) 
 
 hymenoptera_rel_rich <- read_csv("raw/3.6.21_insect_data.csv") %>% 
   select(EasementID, Date, Sample, Total, Order, Family) %>% 
@@ -239,7 +175,7 @@ psocodea_ave_rich <- read_csv("raw/3.6.21_insect_data.csv") %>%
   summarise(ave_rich = mean(fam_rich)) %>% 
   left_join(treatment)
 
-
+# Total family richness per easement
 fam_rich <- read_csv("raw/3.6.21_insect_data.csv") %>% 
   select(EasementID, Date, Sample, Total, Order, Family) %>% 
   filter(!is.na(EasementID)) %>% 
@@ -248,6 +184,7 @@ fam_rich <- read_csv("raw/3.6.21_insect_data.csv") %>%
   summarise(fam_rich = n()) %>% 
   left_join(treatment)
 
+## Boxplot of insect family richness by restoration category ####
 insects_ave_rich %>% 
   ggplot(aes(RestorationCategory, ave_rich, fill=RestorationCategory)) +
   geom_boxplot(outlier.alpha = 0) +
@@ -266,124 +203,173 @@ insects_ave_rich %>%
         legend.position = "none",
         plot.margin = unit(c(1,1,2,1), "lines")) +
   geom_jitter(alpha=.2, width = .1, size = 3)
+
+# Community composition analyses ------------------------------------------
+## Data Wrangling ####
+# This section is where we are wrangling and cleaning the raw data in order to reformat the structure of the dataframe
+
+##List of ALL families observed on NRCS easements##
+insect_fam <- read_csv("raw/3.6.21_insect_data.csv") %>% 
+    select(EasementID, Date, Sample, Family) %>% 
+    filter(!is.na(EasementID)) %>% 
+    filter(!duplicated(Family)) %>% 
+    select(Family)
+
+## Calculate number of transects ID'd per year, per easement in order to get total # of bags id'd.  We needed this number to get the average abundance of Family per site##
+# Find number of bags id'd for 2019
+num_trans19 <- read_csv("raw/3.6.21_insect_data.csv") %>% 
+  select(EasementID, Date, Sample) %>%
+  group_by(EasementID) %>% 
+  separate(., Date, c('Month', 'Day', 'Year'), sep="/") %>% 
+  filter(Year == '2019') %>% 
+  filter(!duplicated(Sample)) %>% 
+  summarise(Trans2019 = n())
+
+# Find number of bags id'd for 2020
+num_trans20 <- read_csv("raw/3.6.21_insect_data.csv") %>% 
+  select(EasementID, Date, Sample) %>%
+  group_by(EasementID) %>% 
+  separate(., Date, c('Month', 'Day', 'Year'), sep="/") %>% 
+  filter(Year == '2020') %>% 
+  filter(!duplicated(Sample)) %>% 
+  summarise(Trans2020 = n())
+
+# combine dataframes into one
+# this gives us the total number of samples (bags or transects) that we currently have for each easement
+num_trans <- num_trans19 %>% 
+  full_join(num_trans20) %>% 
+  replace(is.na(.), 0) %>% 
+  mutate(total_trans = Trans2019 + Trans2020) %>% #calculate total samples by adding 2019 and 2020
+  select(EasementID, total_trans) #simply df
   
+### Site x Family Matrix ####
+# Make a new dataframe where each row is a site (easement) and each column is an insect Family. 
+# The number in each cell will be the average abundance for that Family
 
-################################################################################
-# community composition analyses from Bombus stuff. NOT cleaned or annotated so beware :)
+# I need to combine insect_fam + num_trans dataframes
+# I need EasementID + RestorationCategory + transpose insect_fam into column. 
 
-# remove extraneous information. 
-community.matrix <- sitexspp  %>%
-  dplyr::select(BOMAFF, BOMAUR, BOMBIM, BOMBOR, BOMCIT, BOMFER, BOMGRI, BOMIMP, BOMRUF, VAGSAN)
+sitebyfam <- all_data %>% 
+  select(EasementID, RestorationCategory, Date, Sample, Total, Family) %>% 
+  filter(!is.na(EasementID)) %>% 
+  group_by(EasementID, RestorationCategory, Family) %>% 
+  summarise(abundance= sum(Total)) %>% 
+  full_join(num_trans) %>% 
+  mutate(AveAbund = abundance/total_trans) %>%
+  select(EasementID, RestorationCategory, Family, AveAbund) %>%
+  pivot_wider(names_from = Family, values_from = AveAbund) %>%
+  replace(is.na(.), 0) %>%
+  ungroup()
+
+ShannonDiv <- sitebyfam %>%
+  select(-EasementID, -RestorationCategory) %>%
+  diversity()
+
+### Vegan Code ####
 
 #take the square root to give less to abundant spp
-community.matrix <- sqrt(community.matrix)
+# NEED TO DISCUSS W/GROUP
+#community.matrix <- sqrt(community.matrix)
 
-#round up to whole numbers
-community.matrix <- community.matrix %>%
-  mutate(BOMAFF = ceiling(BOMAFF),
-         BOMAUR = ceiling(BOMAUR),
-         BOMBIM = ceiling(BOMBIM),
-         BOMBOR = ceiling(BOMBOR),
-         BOMCIT = ceiling(BOMCIT),
-         BOMFER = ceiling(BOMFER),
-         BOMGRI = ceiling(BOMGRI),
-         BOMIMP = ceiling(BOMIMP),
-         BOMRUF = ceiling(BOMRUF),
-         VAGSAN = ceiling(VAGSAN))
+# create a matrix with only the family and average abundance
+# these need to be whole numbers for PERMANOVA to work
+fam_matrix <- sitebyfam %>%
+  select(-EasementID, -RestorationCategory) %>%
+  mutate_all(round, 0) #round up to nearest whole number
 
-# env variables in separate df
-community.env <- sitexspp %>%
+# site (aka environmental) variables in separate df
+env_matrix <- sitebyfam %>%
   dplyr::select(EasementID, RestorationCategory)
 
-community.env <- inner_join(community.env, bombus)
-community.env <- community.env %>%
-  select(c(EasementID, RestorationCategory, percent.natural, Year))
+# STUFF FROM JADE'S
+# NOT SURE IF RELEVANT YET
+#community.env <- inner_join(community.env, bombus)
+#community.env <- community.env %>%
+ # select(c(EasementID, RestorationCategory, percent.natural, Year))
 
-spp.sum <- rbind(community.matrix, colSums(community.matrix))
-spp.sum$N <- rowSums(spp.sum)
+#spp.sum <- rbind(community.matrix, colSums(community.matrix))
+#spp.sum$N <- rowSums(spp.sum)
 
 # remove species that made up less than 5% of total 
-community.matrix <- community.matrix %>%
-  dplyr::select(-c(BOMAFF, BOMBOR, BOMFER, BOMCIT))
+#community.matrix <- community.matrix %>%
+#  dplyr::select(-c(BOMAFF, BOMBOR, BOMFER, BOMCIT))
 
-## PERMANOVA
-perm <- adonis2(community.matrix ~ RestorationCategory + percent.natural + Year, data = community.env, method="bray", by="margin", permutations=9999, model = "reduced")
+### PERMANOVA ####
+perm <- adonis2(fam_matrix ~ RestorationCategory, data = community.env, method="bray", by="margin", permutations=9999, model = "reduced")
 #model = "reduced" determines the method of permuations. 
 #This permutes the residuals under a reduced model
 
 # view results
 perm
 
-### Pairwise
 
+### Pairwise: package doesn't exist????
 # pairwise permanova comparisons between restoration categories
-library(pairwiseAdonis)
-pairwise.adonis(community.matrix, community.env$RestorationCategory,sim.function = "vegdist", sim.method = "bray")
+#library(pairwiseAdonis)
+#pairwise.adonis(community.matrix, community.env$RestorationCategory,sim.function = "vegdist", sim.method = "bray")
 
-### Dispersion
-bray2 <- vegdist(community.matrix, method = "bray")
+### Calculate Dispersion 
+# Dispersion is basically the community composition variance
+bray2 <- vegdist(fam_matrix, method = "bray")
 
-dispersion<-betadisper(bray2, group=community.env$RestorationCategory)
+dispersion<-betadisper(bray2, group=env_matrix$RestorationCategory)
 dispersion
-permutest(dispersion, pairwise = T) #p=0.003 so groups have different dispersions
+permutest(dispersion, pairwise = T) #p=0.554 so groups do not have different dispersions. this model assumption is met!
 
-# Figures: NMDS
-## create the nmds with transformed data
-nmds <- metaMDS(community.matrix, distance = "bray")
-plot(nmds)
+## Ordination Figures: NMDS ####
+## create the basic nmds ordination
+nmds <- metaMDS(fam_matrix, distance = "bray")
+plot(nmds) #basic plot
 
-community.envfit <- community.env[-c(1)]
-
+# fit the site data (environmental info) onto the ordination
+community.envfit <- env_matrix[-c(1)]
 (fit <- envfit(nmds, community.envfit, perm = 999))
 head(fit)
 scores(fit, "vectors")
 
+# extract site data to plot it
 env.scores <- as.data.frame(scores(fit, display = "vectors"))
 env.scores <- cbind(env.scores, Species = rownames(env.scores))
 
-plot(nmds)
-plot(fit, col="black")
+plot(nmds) #basic plot again
+plot(fit, col="black") #annotate the plot with restoration categories
 
 ## Extract Scores
-#extract NMDS scores (x and y coordinates)
-#ggplot needs these in a df
+# extract NMDS scores (x and y coordinates)
+# need scores in a dateframe in order to make a nmds plot using ggplot
 nmds.scores <- as.data.frame(scores(nmds))
 
 #add identifying columns to dataframe
-nmds.scores$EasementID <- community.env$EasementID
-nmds.scores <- inner_join(nmds.scores, community.env)
+nmds.scores$EasementID <- env_matrix$EasementID
+nmds.scores <- inner_join(nmds.scores, env_matrix)
 
 #### Basic Plot
 # create hulls
-grp.control <- nmds.scores[nmds.scores$RestorationCategory == "Control", ][chull(nmds.scores[nmds.scores$RestorationCategory == 
-                                                                                               "Control", c("NMDS1", "NMDS2")]), ]  # hull values for grp A
+grp.control <- nmds.scores[nmds.scores$RestorationCategory == "Not Seeded", ][chull(nmds.scores[nmds.scores$RestorationCategory == 
+                                                                                               "Not Seeded", c("NMDS1", "NMDS2")]), ]  # hull values for grp A
 
-grp.seeded <- nmds.scores[nmds.scores$RestorationCategory == "Seeded", ][chull(nmds.scores[nmds.scores$RestorationCategory == 
-                                                                                             "Seeded", c("NMDS1", "NMDS2")]), ]  # hull values for grp B
+grp.seeded <- nmds.scores[nmds.scores$RestorationCategory == "Seeded Only", ][chull(nmds.scores[nmds.scores$RestorationCategory == 
+                                                                                             "Seeded Only", c("NMDS1", "NMDS2")]), ]  # hull values for grp B
 
-grp.burned <- nmds.scores[nmds.scores$RestorationCategory == "Burned", ][chull(nmds.scores[nmds.scores$RestorationCategory == 
-                                                                                             "Burned", c("NMDS1", "NMDS2")]), ]  # hull values for grp C
+grp.burned <- nmds.scores[nmds.scores$RestorationCategory == "Seeded + Fire", ][chull(nmds.scores[nmds.scores$RestorationCategory == 
+                                                                                             "Seeded + Fire", c("NMDS1", "NMDS2")]), ]  # hull values for grp C
 
-hull.data <- rbind(grp.control, grp.seeded, grp.burned)  #combine groups
+grp.remnant <- nmds.scores[nmds.scores$RestorationCategory == "Remnant", ][chull(nmds.scores[nmds.scores$RestorationCategory == 
+                                                                                                    "Remnant", c("NMDS1", "NMDS2")]), ]  # hull values for grp D
+
+hull.data <- rbind(grp.control, grp.seeded, grp.burned, grp.remnant)  #combine groups
 hull.data
 
 #specify order of categories 
-color.nmds <- factor(nmds.scores$RestorationCategory, levels = c("Control", "Seeded", "Burned"))
-color.hull <- factor(hull.data$RestorationCategory, levels = c("Control", "Seeded", "Burned"))
+color.nmds <- factor(nmds.scores$RestorationCategory, levels = c("Not Seeded", "Seeded Only", "Seeded + Fire", "Remnant"))
+color.hull <- factor(hull.data$RestorationCategory, levels = c("Not Seeded", "Seeded Only", "Seeded + Fire", "Remnant"))
 
-# grey scale 
-## scale_color_manual(values = c("#252525", "#969696", "#636363", "#252525"))
-## scale_shape_manual(values = c(1,19,19,15))
-
-# grey and green
-## scale_color_manual(values = c("#767171", "#A9D18E", "#548235"))
-## scale_shape_manual(values = c(19,19,19,15))
-
+# Make NMDS PLot in ggplot
 p <- ggplot() + 
   geom_polygon(data=hull.data,aes(x=NMDS1,y=NMDS2, group=color.hull),alpha=0.2) + 
   geom_point(data = nmds.scores, aes(x=NMDS1,y=NMDS2, colour=color.nmds, shape = color.nmds), size = 2) + # add the point markers
-  scale_fill_manual(values = c("#767171", "#A9D18E", "#548235")) +
-  scale_color_manual(values = c("#767171", "#A9D18E", "#548235")) +
+  scale_fill_manual(values = palette1) +
+  scale_color_manual(values = palette1) +
   scale_shape_manual(values = c(19,19,19,19)) +
   theme_bw() + 
   theme(axis.text.x = element_blank(),  # remove x-axis text
@@ -399,29 +385,30 @@ p <- ggplot() +
         legend.background = element_rect(color = "black",linetype = "solid"),
         legend.position = "right")
 
-p
+p #view the plot
 
-legend.restore <- get_legend(p)
 
-# relative abundance
-# filter out nest searching
-relative <- timed %>% 
-  filter(SppCode != "n/a") %>%
-  filter(!is.na(SppCode)) 
+## Barchart for Relative Abundance ####
+# This provides a closer look at the community composition
+# TOO MANY FAMILIES TO PROPERLY SEE BARS! 
+# NEED TO DISCUSS HOW TO VISUALIZE
 
-#order the categories so they show up specifically on the x-axis.                                 
-order2 <- factor(relative$RestorationCategory, levels = c("Control", "Seeded", "Burned"))
+# this example is using Order so there are fewer bars
+relative_abund <- all_data %>% 
+  select(EasementID, RestorationCategory, Date, Sample, Total, Order) %>% 
+  filter(!is.na(EasementID)) %>% 
+  group_by(EasementID, RestorationCategory, Order) %>% 
+  summarise(abundance= sum(Total)) %>% 
+  full_join(num_trans) %>% 
+  mutate(AveAbund = abundance/total_trans) %>%
+  select(EasementID, RestorationCategory, Order, AveAbund) %>%
+  mutate(RestorationCategory = factor(RestorationCategory, levels = c("Not Seeded", "Seeded Only", "Seeded + Fire", "Remnant")))  #####this code reorders the treatments --the default is alphabetical
 
-relative.abund <- ggplot(relative, aes(x = order2, fill = SppCode)) + 
-  geom_bar(position = "fill", width = 0.75) + 
+relative_abund %>% ggplot(aes(x = RestorationCategory, fill = Order)) + 
+  geom_bar(position = "fill", width = 0.75, colour = "black") + 
   theme_bw() + 
   ylab("Relative Abundance") +
-  theme(legend.position = "none",
+  theme(legend.position = "right",
         axis.text.x = element_text(size = 12),
         axis.title.x = element_blank(),
-        axis.text.y = element_text(size = 12)) +
-  scale_fill_brewer(palette = "BrBG")
-
-relative.abund
-
-#ggsave("./Figures/relative_abundance_ESA.jpeg",plot = relative.abund, width = 7, height = 5)
+        axis.text.y = element_text(size = 12)) 
