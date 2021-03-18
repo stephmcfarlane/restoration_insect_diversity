@@ -291,9 +291,9 @@ fam_matrix <- sitebyfam %>%
   select(-EasementID, -RestorationCategory) %>%
   mutate_all(round, 0) #round up to nearest whole number
 
-# site (aka environmental) variables in separate df
+# site (aka environmental-this is any independent variable) variables in separate df
 env_matrix <- sitebyfam %>%
-  dplyr::select(EasementID, RestorationCategory)
+  dplyr::select(EasementID, RestorationCategory) ##because vegan is also loading, must indicate that we are using select from the dplyr package
 
 # STUFF FROM JADE'S
 # NOT SURE IF RELEVANT YET
@@ -309,11 +309,11 @@ env_matrix <- sitebyfam %>%
 #  dplyr::select(-c(BOMAFF, BOMBOR, BOMFER, BOMCIT))
 
 ### PERMANOVA ####
-perm <- adonis2(fam_matrix ~ RestorationCategory, data = community.env, method="bray", by="margin", permutations=9999, model = "reduced")
+perm <- adonis2(fam_matrix ~ RestorationCategory, data = env_matrix, method="bray", by="margin", permutations=9999, model = "reduced")
 #model = "reduced" determines the method of permuations. 
 #This permutes the residuals under a reduced model
 
-# view results
+# view results, comparing centroid of each category
 perm
 
 
@@ -328,7 +328,7 @@ bray2 <- vegdist(fam_matrix, method = "bray")
 
 dispersion<-betadisper(bray2, group=env_matrix$RestorationCategory)
 dispersion
-permutest(dispersion, pairwise = T) #p=0.554 so groups do not have different dispersions. this model assumption is met!
+permutest(dispersion, pairwise = T) #p=0.554 so groups do not have different variance (aka dispersions). this model assumption is met!
 
 ## Ordination Figures: NMDS ####
 ## create the basic nmds ordination
@@ -339,7 +339,7 @@ plot(nmds) #basic plot
 community.envfit <- env_matrix[-c(1)]
 (fit <- envfit(nmds, community.envfit, perm = 999))
 head(fit)
-scores(fit, "vectors")
+scores(fit, "vectors")  #extracting XYs
 
 # extract site data to plot it
 env.scores <- as.data.frame(scores(fit, display = "vectors"))
