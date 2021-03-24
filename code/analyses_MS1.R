@@ -426,3 +426,4 @@ relative_abund %>% ggplot(aes(x = RestorationCategory, fill = Order)) +
         axis.text.x = element_text(size = 12),
         axis.title.x = element_blank(),
         axis.text.y = element_text(size = 12)) 
+
