@@ -163,7 +163,7 @@ Plant.Data <- Plant.Data%>%
 
 
 ######################################################################################
-#                     Plant CC Scores                                                #
+#                    Getting Plant CC Scores                                                #
 ######################################################################################
 
 ### Load all plant CC values
@@ -183,7 +183,7 @@ Plant.Data <- Plant.Data %>%
 Plant.Easement.CC <- Plant.Data%>%
   select(EasementID, SppCode, WI_C,PctCover1x1)
 
-### Getting the average c value at each site.
+### Getting the average c value at each site. UNWEIGHTED
 Plant.Ave.CC <- Plant.Easement.CC %>%
   group_by(EasementID) %>% 
   dplyr::summarise(AveCC = mean(WI_C,na.rm=T)) 
@@ -193,7 +193,7 @@ Summarized.Plant.Insect <- left_join(Insect.Summarized, Plant.Ave.CC)
 
 
 ######################################################################################
-#                     Plant native % cover                                           #
+#                     Plant % native % cover                                           #
 ######################################################################################
 
 ### #Read in Native/NonNative data and select data needed
@@ -224,6 +224,11 @@ Plant.Percent.CC<- Plant.Easement.Native %>%
   group_by(EasementID, WI_C) %>% 
   summarise(avecover=mean(cover))
 
+#weighted <- Plant.Percent.CC%>%
+  #group_by(EasementID)%>%
+  #summarise_all(weighted.mean, "WI_C" = "avecover")
+
+
 ### get I/N own column, % by easement
 Plant.Percent.I <- Plant.Percent.Native %>% 
   group_by(EasementID) %>%
@@ -251,18 +256,7 @@ Summarized.Plant.Insect <- left_join(Summarized.Plant.Insect, Plant.Percent.NI)%
   replace(is.na(.), 0)
 
 
-Ctesting <- Summarized.Plant.Insect %>%
-  select(-EasementID,)%>%
-  replace(is.na(.), 0)
 
-
-### Create proportion of native plants at a site. 
-Summarized.Plant.Insect <- mutate(Summarized.Plant.Insect, PropN= ((N)/(N+I+NI)))
-testing <- mutate(testing, PropN= ((N)/(N+I+NI)))
-
-### Create proportion of invasive plants at a site. 
-Summarized.Plant.Insect <- mutate(Summarized.Plant.Insect, PropI= ((I)/(N+I+NI)))
-testing <- mutate(testing, PropI= ((I)/(N+I+NI)))
 
 ######################################################################################
 #                     Plant richness                                                 #
@@ -276,6 +270,21 @@ Plant.Richness <- Plant.Easement.CC%>%
 
 Summarized.Plant.Insect <- left_join(Summarized.Plant.Insect, Plant.Richness)
 
+
+testing <- Summarized.Plant.Insect %>%
+  select(-EasementID,)%>%
+  replace(is.na(.), 0)
+
+
+### Create proportion of native plants at a site. 
+Summarized.Plant.Insect <- mutate(Summarized.Plant.Insect, PropN= ((N)/(N+I+NI)))
+testing <- mutate(testing, PropN= ((N)/(N+I+NI)))
+
+### Create proportion of invasive plants at a site. 
+Summarized.Plant.Insect <- mutate(Summarized.Plant.Insect, PropI= ((I)/(N+I+NI)))
+testing <- mutate(testing, PropI= ((I)/(N+I+NI)))
+
+
 ######################################################################################
 #                    plant % gram or forb cover                                        #
 ######################################################################################
@@ -284,11 +293,13 @@ Summarized.Plant.Insect <- left_join(Summarized.Plant.Insect, Plant.Richness)
 Plant.Form <- Plant.All.CC %>% 
   select(WorZ_SppCode, USDAHabit) %>% 
   mutate(SppCode=substr(WorZ_SppCode, 2,7)) %>% 
-  filter(!is.na(USDAHabit))
-
+  filter(!is.na(USDAHabit))%>%
+  select(-WorZ_SppCode)%>%
+  filter(!duplicated(SppCode))
+  
 ### merge the form to the plant data
 Plant.Data <- Plant.Data%>% 
-  left_join(Plant.Form, "SppCode")
+  left_join(Plant.Form)
 
   ### Condensing df
   Plant.Form.Percent <- Plant.Data%>%
@@ -364,8 +375,8 @@ pv4 <- cor.test(testing$Ave.Abundance, testing$PropN, method = "pearson")
 pv4$p.value
 pv5<- cor.test(testing$Ave.Richness, testing$PropN, method = "pearson")
 pv5$p.value
-#pv6<- cor.test(testing$Abundance, testing$PropN, method = "pearson")
-#pv6$p.value
+pv6<- cor.test(testing$Abundance, testing$PropN, method = "pearson")
+pv6$p.value
 pv7<- cor.test(testing$Ave.Abundance, testing$SppCode, method = "pearson")
 pv7$p.value
 pv8<- cor.test(testing$Ave.Richness, testing$SppCode, method = "pearson")
