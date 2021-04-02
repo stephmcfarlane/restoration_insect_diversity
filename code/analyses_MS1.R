@@ -56,7 +56,7 @@ rich_year <-  rest_year %>%
   geom_point(outlier.alpha = 0) +
   geom_smooth(aes(color = RestorationCategory), method = "lm") +
   theme_classic()+
-   scale_x_continuous( breaks = c(1996, 2000, 2005, 2010, 2015)) + scale_color_manual(values = palette2,
+   scale_x_continuous( limits = c(1995, 2015)) + scale_color_manual(values = palette2,
                      name = "Site Categories")+
   labs(title = "Average Family Richness per Restoration Year")+
   xlab("\n Restoration year") +
