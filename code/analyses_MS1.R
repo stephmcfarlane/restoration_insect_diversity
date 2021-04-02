@@ -47,6 +47,13 @@ insects_ave_rich <- all_data %>%
   group_by(EasementID, RestorationCategory) %>% 
   summarise(ave_rich = mean(fam_rich)) #calculate average families
 
+insects_rich_trans <- all_data %>% 
+  select(EasementID, RestorationCategory, Date, Sample, Family) %>% 
+  filter(!is.na(EasementID)) %>% 
+  group_by(EasementID, RestorationCategory, Date, Sample) %>% 
+  filter(!duplicated(Family)) %>% #remove duplicates of Family/easement
+  summarise(fam_rich = n()) 
+
 # visualize family richment per restoration age
 rich_year <-  rest_year %>% 
   inner_join(insects_ave_rich) 
