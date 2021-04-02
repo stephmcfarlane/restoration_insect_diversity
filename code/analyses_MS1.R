@@ -25,6 +25,8 @@ all_data <- read_csv("raw/3.6.21_insect_data.csv") %>%
   left_join(treatment) %>% #join with treatment df
   relocate(., RestorationCategory, .before = "Date" ) 
 
+rest_year <- read_csv("clean/enroll_rest.csv")
+
 
 # Color Palettes #
 palette1<-  c("#767171", "#A9D18E", "#548235", "#A49988")
@@ -44,6 +46,30 @@ insects_ave_rich <- all_data %>%
   summarise(fam_rich = n()) %>% #count the number of families/easement
   group_by(EasementID, RestorationCategory) %>% 
   summarise(ave_rich = mean(fam_rich)) #calculate average families
+
+# visualize family richment per restoration age
+rich_year <-  rest_year %>% 
+  inner_join(insects_ave_rich) 
+
+ rich_year %>% 
+  ggplot(aes(rest_year, ave_rich, color = RestorationCategory)) +
+  geom_point(outlier.alpha = 0) +
+  geom_smooth(aes(color = RestorationCategory), method = "lm") +
+  theme_classic()+
+   scale_x_continuous( breaks = c(1996, 2000, 2005, 2010, 2015)) + scale_color_manual(values = palette2,
+                     name = "Site Categories")+
+  labs(title = "Average Family Richness per Restoration Year")+
+  xlab("\n Restoration year") +
+  ylab("Ave Family Richness")+
+  theme(plot.title = element_text(family = "Palatino", size = 18, hjust = 0.5, vjust = 2),
+        axis.title.x = element_text(family = "Palatino", size = 15, vjust = 4),
+        axis.title.y = element_text(family = "Palatino", size = 15, hjust = 0.5, vjust =4),
+        axis.text.x =  element_text(family = "Palatino", size = 12),
+        axis.text.y = element_text(family = "Palatino", size = 12),
+        legend.title = element_blank(),
+        legend.position = "none",
+        plot.margin = unit(c(1,1,2,1), "lines")) +
+  geom_jitter(alpha=.2, width = .1, size = 3)
 
 # Calculate the family richness for each Order
 coleoptera_rel_rich <- all_data %>% 
