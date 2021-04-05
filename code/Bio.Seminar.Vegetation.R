@@ -183,6 +183,22 @@ Plant.Data <- Plant.Data %>%
 Plant.Easement.CC <- Plant.Data%>%
   select(EasementID, SppCode, WI_C,PctCover1x1)
 
+###Weighted CC Score
+Plant.Weighted.CC <- Plant.Easement.CC%>%
+  group_by(EasementID, SppCode) %>%
+  summarise(avecover=sum(PctCover1x1)/8)
+
+Plant.Weighted.CC <- Plant.Weighted.CC%>%
+  group_by(EasemtentID)
+  mutate(relaCover = avecover/ sum(avecover)) %>%
+  left_join(Plant.Easement.CC, "WI_C") %>%
+  select(-WorZ_SppCode) %>%
+  summarise(WeightCC = WI_C * relaCover) %>%
+  group_by(EasementID) %>%
+  summarise(AveWeightCC = mean(WeightCC, na.rm = T)) %>%
+  left_join(treatment) %>%
+  filter(!is.na(RestorationCategory))
+
 ### Getting the average c value at each site. UNWEIGHTED
 Plant.Ave.CC <- Plant.Easement.CC %>%
   group_by(EasementID) %>% 
