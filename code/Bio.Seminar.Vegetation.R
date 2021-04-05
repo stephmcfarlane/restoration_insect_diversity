@@ -42,14 +42,27 @@ Insect.Data <- Insect.Data[ !grepl(paste(Remnants, collapse="|"), Insect.Data$Ea
 ######################################################################################
 
 ### Insect richness averaged for the number of transects completed. 
+#Insect.Ave.Richness <- Insect.Data %>% 
+ # select(EasementID, Date, Sample, Family) %>% 
+ # filter(!is.na(EasementID)) %>% 
+ # group_by(EasementID, Sample, Date) %>% 
+#  filter(!duplicated(Family)) %>% #remove duplicates of Family/easement
+ # summarise(fam_rich = n()) %>% #count the number of families/easement
+ # group_by(EasementID ) %>% 
+#  summarise(Ave.Richness = mean(fam_rich)) #calculate average families
+
+# This gives the average richenss at a site (total divided by # of transects), the above code gives richness of each transect and then averages those... need to decide which is better
 Insect.Ave.Richness <- Insect.Data %>% 
   select(EasementID, Date, Sample, Family) %>% 
   filter(!is.na(EasementID)) %>% 
-  group_by(EasementID, Sample, Date) %>% 
+  group_by(EasementID) %>% 
   filter(!duplicated(Family)) %>% #remove duplicates of Family/easement
   summarise(fam_rich = n()) %>% #count the number of families/easement
+  full_join(num_trans) %>% 
   group_by(EasementID ) %>% 
-  summarise(Ave.Richness = mean(fam_rich)) #calculate average families
+  #summarise(Ave.Richness = mean(fam_rich)) #calculate average families
+  mutate(Ave.Richness = fam_rich/total_trans)
+
 
 ### Total insect richness, not averaged for the number of transects completed. 
 Insect.Total.Richness <- Insect.Data%>%
@@ -185,24 +198,29 @@ Plant.Easement.CC <- Plant.Data%>%
 
 ###Weighted CC Score
 Plant.Weighted.CC <- Plant.Easement.CC%>%
+  filter(!is.na(PctCover1x1))%>%
   group_by(EasementID, SppCode) %>%
   summarise(avecover=sum(PctCover1x1)/8)
 
 Plant.Weighted.CC <- Plant.Weighted.CC%>%
-  group_by(EasemtentID)
-  mutate(relaCover = avecover/ sum(avecover)) %>%
-  left_join(Plant.Easement.CC, "WI_C") %>%
-  select(-WorZ_SppCode) %>%
-  summarise(WeightCC = WI_C * relaCover) %>%
   group_by(EasementID) %>%
-  summarise(AveWeightCC = mean(WeightCC, na.rm = T)) %>%
-  left_join(treatment) %>%
-  filter(!is.na(RestorationCategory))
+  mutate(relaCover = avecover/ sum(avecover)) %>%
+  left_join(Plant.WI.CC, "SppCode") %>%
+  filter(!is.na(WI_C))
+  #select(-WorZ_SppCode) %>%
+
+Plant.Weighted.CC <- Plant.Weighted.CC%>%
+  group_by(EasementID, SppCode)%>%
+  summarise(WeightCC = WI_C * relaCover) 
+
+Plant.Ave.CC <- Plant.Weighted.CC%>%
+  group_by(EasementID) %>%
+  summarise(AveWeightCC = mean(WeightCC, na.rm = T))
 
 ### Getting the average c value at each site. UNWEIGHTED
-Plant.Ave.CC <- Plant.Easement.CC %>%
-  group_by(EasementID) %>% 
-  dplyr::summarise(AveCC = mean(WI_C,na.rm=T)) 
+#Plant.Ave.CC <- Plant.Easement.CC %>%
+  #group_by(EasementID) %>% 
+  #dplyr::summarise(AveCC = mean(WI_C,na.rm=T)) 
 
 ### Merging for info at each site
 Summarized.Plant.Insect <- left_join(Insect.Summarized, Plant.Ave.CC)
@@ -232,17 +250,6 @@ Plant.Percent.Native<- Plant.Easement.Native %>%
   summarize(cover=sum(PctCover1x1)) %>% 
   group_by(EasementID, USDANativeStatus) %>% 
   summarise(avecover=mean(cover))
-
-### Summarize data to get mean c by cover
-Plant.Percent.CC<- Plant.Easement.Native %>% 
-  group_by(EasementID, Module, Corner, WI_C) %>% 
-  summarize(cover=sum(PctCover1x1)) %>% 
-  group_by(EasementID, WI_C) %>% 
-  summarise(avecover=mean(cover))
-
-#weighted <- Plant.Percent.CC%>%
-  #group_by(EasementID)%>%
-  #summarise_all(weighted.mean, "WI_C" = "avecover")
 
 
 ### get I/N own column, % by easement
@@ -329,7 +336,7 @@ Plant.Data <- Plant.Data%>%
     group_by(EasementID, USDAHabit) %>% 
     summarise(avecover=mean(cover))
   
-  ### get forb/gram own column, % by easement
+### get forb/gram own column, % by easement
   Plant.Form.Percent.Gram <- Plant.Form.Percent%>% 
     group_by(EasementID) %>%
     filter(USDAHabit == "Graminoid")
@@ -342,10 +349,42 @@ Plant.Data <- Plant.Data%>%
   Plant.Form.Percent.Forb <- rename(Plant.Form.Percent.Forb, Forb = avecover)%>%
     select(EasementID, Forb)
   
+  Plant.Form.Percent.Tree <- Plant.Form.Percent%>% 
+    group_by(EasementID) %>%
+    filter(USDAHabit == "Tree")
+  Plant.Form.Percent.Tree <- rename(Plant.Form.Percent.Tree, Tree = avecover)%>%
+    select(EasementID, Tree)
+  
+  Plant.Form.Percent.Vine <- Plant.Form.Percent%>% 
+    group_by(EasementID) %>%
+    filter(USDAHabit == "Vine")
+  Plant.Form.Percent.Vine <- rename(Plant.Form.Percent.Vine, Vine = avecover)%>%
+    select(EasementID, Vine)
 
+  Plant.Form.Percent.Shrub <- Plant.Form.Percent%>% 
+    group_by(EasementID) %>%
+    filter(USDAHabit == "Shrub")
+  Plant.Form.Percent.Shrub  <- rename(Plant.Form.Percent.Shrub , Shrub  = avecover)%>%
+    select(EasementID, Shrub )
+  
+  Plant.Form.Percent.Subshrub <- Plant.Form.Percent%>% 
+    group_by(EasementID) %>%
+    filter(USDAHabit == "Subshrub")
+  Plant.Form.Percent.Subshrub <- rename(Plant.Form.Percent.Subshrub, Subshrub = avecover)%>%
+    select(EasementID, Subshrub)
+  
   ### Merging to all summarized data by easement. 
-  Summarized.Plant.Form <- full_join(Plant.Form.Percent.Gram, Plant.Form.Percent.Forb)%>%
+  Summarized.Plant.Form <- full_join(Plant.Form.Percent.Gram, Plant.Form.Percent.Forb,)%>%
     replace(is.na(.), 0)
+  Summarized.Plant.Form <- left_join(Summarized.Plant.Form,Plant.Form.Percent.Tree)%>%
+    replace(is.na(.), 0)
+  Summarized.Plant.Form <- left_join(Summarized.Plant.Form,  Plant.Form.Percent.Vine)%>%
+    replace(is.na(.), 0)
+  Summarized.Plant.Form <- left_join(Summarized.Plant.Form,  Plant.Form.Percent.Shrub)%>%
+    replace(is.na(.), 0)
+  Summarized.Plant.Form <- left_join(Summarized.Plant.Form,  Plant.Form.Percent.Subshrub)%>%
+    replace(is.na(.), 0)
+  
   
   Summarized.Plant.Insect <- left_join(Summarized.Plant.Insect, Summarized.Plant.Form)
  
@@ -354,15 +393,25 @@ Plant.Data <- Plant.Data%>%
     select(-EasementID,)%>%
     replace(is.na(.), 0)
   
-  ### Create proportion of form plants at a site. 
-  Summarized.Plant.Insect <- mutate(Summarized.Plant.Insect, PropGram= ((Gram)/(Gram + Forb)))
-  testing <- mutate(testing, PropGram= ((N)/(Gram + Forb)))
+### Create proportion of form plants at a site. 
+  Summarized.Plant.Insect <- mutate(Summarized.Plant.Insect, PropGram= ((Gram)/(Gram + Forb + Tree + Shrub + Subshrub +Vine)))
+  testing <- mutate(testing, PropGram= ((Gram)/(Gram + Forb + Tree + Shrub + Subshrub +Vine)))
   
-  ### Create proportion of form plants at a site. 
-  Summarized.Plant.Insect <- mutate(Summarized.Plant.Insect, PropForb= ((Forb)/(Gram + Forb)))
-  testing <- mutate(testing, PropForb= ((Forb)/(Gram + Forb)))
+  Summarized.Plant.Insect <- mutate(Summarized.Plant.Insect, PropForb= ((Forb)/(Gram + Forb + Tree + Shrub + Subshrub +Vine)))
+  testing <- mutate(testing, PropForb= ((Forb)/(Gram + Forb + Tree + Shrub + Subshrub +Vine)))
   
+  Summarized.Plant.Insect <- mutate(Summarized.Plant.Insect, PropTree= ((Tree)/(Gram + Forb + Tree + Shrub + Subshrub +Vine)))
+  testing <- mutate(testing, PropTree= ((Tree)/(Gram + Forb + Tree + Shrub + Subshrub +Vine)))
   
+  Summarized.Plant.Insect <- mutate(Summarized.Plant.Insect, PropShrub= ((Shrub)/(Gram + Forb + Tree + Shrub + Subshrub +Vine)))
+  testing <- mutate(testing, PropShrub=  ((Shrub)/(Gram + Forb + Tree + Shrub + Subshrub +Vine)))
+  
+  Summarized.Plant.Insect <- mutate(Summarized.Plant.Insect, PropSubshrub= ((Subshrub)/(Gram + Forb + Tree + Shrub + Subshrub +Vine)))
+  testing <- mutate(testing, PropSubshrub= ((Subshrub)/(Gram + Forb + Tree + Shrub + Subshrub +Vine)))
+  
+  Summarized.Plant.Insect <- mutate(Summarized.Plant.Insect, PropVine= ((Vine)/(Gram + Forb + Tree + Shrub + Subshrub +Vine)))
+  testing <- mutate(testing, PropVine= ((Vine)/(Gram + Forb + Tree + Shrub + Subshrub +Vine)))
+
 ######################################################################################
 #                     ETC                                                            #
 ######################################################################################
@@ -381,9 +430,9 @@ Plant.Data <- Plant.Data%>%
 pearson <- cor(testing, method = c("pearson"))
 
 ### Gets the p value and condenses to one df
-pv1 <- cor.test(testing$Ave.Richness, testing$AveCC, method = "pearson")
+pv1 <- cor.test(testing$Ave.Richness, testing$AveWeightCC, method = "pearson")
 pv1$p.value
-pv2<- cor.test(testing$Ave.Abundance, testing$AveCC, method = "pearson")
+pv2<- cor.test(testing$Ave.Abundance, testing$AveWeightCC, method = "pearson")
 pv2$p.value
 #pv3<- cor.test(testing$Abundance, testing$AveCC, method = "pearson")
 #pv3$p.value
@@ -422,7 +471,7 @@ pv12$p.value
 #                     Graphing                                                       #
 ######################################################################################
 
-p1 <- ggplot(data = testing, aes(x = AveCC, y = Ave.Richness)) + 
+p1 <- ggplot(data = testing, aes(x = AveWeightCC, y = Ave.Richness)) + 
   geom_point(aes(size=0.7),show.legend = F,color='black') +
   geom_smooth(aes(colour="green"),show.legend = F,method= "lm", se=FALSE)+
   theme(axis.title.x=element_blank(), axis.text.x=element_blank(),
@@ -442,7 +491,7 @@ p2 <- ggplot(data = testing, aes(x = SppCode, y = Ave.Richness)) +
         axis.ticks.y=element_blank())+ 
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
 
-p3 <- ggplot(data = testing, aes(x = AveCC, y = Ave.Abundance)) + 
+p3 <- ggplot(data = testing, aes(x = AveWeightCC, y = Ave.Abundance)) + 
   geom_point(aes(size=0.7),show.legend = F,color='black') +
   geom_smooth(aes(colour="green"),show.legend = F,method= "lm", se=FALSE)+
   theme(text = element_text(size=22))+
@@ -526,5 +575,54 @@ graphs3 <- grid.arrange(p7, p8, p9,p10,nrow=2)
 
 
 ######################################################################################
-#                     Notes/Extras                                                   #
+#                     visualizing community composition                              #
 ######################################################################################
+#Jade's code from MS1 analyses
+
+
+## need to figure out how to weigh the bar chart levels by the abundance, right now just doing by presence or absense of order
+
+# relative abundance within each order at each site
+Insect.Relative.Abundance <- Insect.Data %>% 
+  group_by(EasementID, Order) %>% 
+  summarise(abundance= sum(Total)) %>% 
+  full_join(num_trans) %>% 
+  mutate(AveAbund = abundance/total_trans)
+
+Insect.Relative.Abundance <- Insect.Relative.Abundance%>%
+  select(-abundance)%>%
+  select(-total_trans)
+
+Insect.Relative.Abundance %>% ggplot(aes(x = EasementID, fill = Order)) + 
+  geom_bar(position = "fill", width = 0.75, colour = "black") + 
+  theme_bw() + 
+  ylab("Relative Abundance") +
+  theme(legend.position = "right",
+        axis.text.x = element_text(size = 12),
+        axis.title.x = element_blank(),
+        axis.text.y = element_text(size = 12)) 
+
+
+# Relative richness within each order at each site
+Insect.Relative.Richness <- Insect.Data %>% 
+  select(EasementID, Date, Sample, Order, Family) %>% 
+  group_by(EasementID, Order) %>% 
+  filter(!duplicated(Family)) %>% #remove duplicates of Family/easement
+  summarise(fam_rich = n()) %>% #count the number of families/easement
+  full_join(num_trans) %>% 
+  group_by(EasementID, Order ) %>% 
+  #summarise(Ave.Richness = mean(fam_rich)) #calculate average families
+  mutate(Ave.Rich = fam_rich/total_trans)
+
+Insect.Relative.Richness %>% ggplot(aes(x = EasementID, fill = Order)) + 
+  geom_bar(position = "fill", width = 0.75, colour = "black") + 
+  theme_bw() + 
+  ylab("Relative richness") +
+  theme(legend.position = "right",
+        axis.text.x = element_text(size = 12),
+        axis.title.x = element_blank(),
+        axis.text.y = element_text(size = 12)) 
+
+
+
+
