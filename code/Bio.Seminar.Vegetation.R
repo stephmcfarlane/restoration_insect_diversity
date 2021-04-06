@@ -41,43 +41,6 @@ Insect.Data <- Insect.Data[ !grepl(paste(Remnants, collapse="|"), Insect.Data$Ea
 #                     Insect Richness                                                #
 ######################################################################################
 
-### Insect richness averaged for the number of transects completed. 
-#Insect.Ave.Richness <- Insect.Data %>% 
- # select(EasementID, Date, Sample, Family) %>% 
- # filter(!is.na(EasementID)) %>% 
- # group_by(EasementID, Sample, Date) %>% 
-#  filter(!duplicated(Family)) %>% #remove duplicates of Family/easement
- # summarise(fam_rich = n()) %>% #count the number of families/easement
- # group_by(EasementID ) %>% 
-#  summarise(Ave.Richness = mean(fam_rich)) #calculate average families
-
-# This gives the average richenss at a site (total divided by # of transects), the above code gives richness of each transect and then averages those... need to decide which is better
-Insect.Ave.Richness <- Insect.Data %>% 
-  select(EasementID, Date, Sample, Family) %>% 
-  filter(!is.na(EasementID)) %>% 
-  group_by(EasementID) %>% 
-  filter(!duplicated(Family)) %>% #remove duplicates of Family/easement
-  summarise(fam_rich = n()) %>% #count the number of families/easement
-  full_join(num_trans) %>% 
-  group_by(EasementID ) %>% 
-  #summarise(Ave.Richness = mean(fam_rich)) #calculate average families
-  mutate(Ave.Richness = fam_rich/total_trans)
-
-
-### Total insect richness, not averaged for the number of transects completed. 
-Insect.Total.Richness <- Insect.Data%>%
-  group_by(EasementID) %>%
-  filter(!duplicated(Family))%>%
-  dplyr::summarise(FamRichness = n())
-
-### Compiling
-Insect.Richness <- full_join(Insect.Ave.Richness, Insect.Total.Richness)
-
-
-######################################################################################
-#                     Insect Abundance                                               #
-######################################################################################
-### Code used from MS1 analysis 
 
 ### Number of bags id'd for 2019
 num_trans19 <- Insect.Data%>% 
@@ -104,6 +67,49 @@ num_trans <- num_trans19 %>%
   mutate(total_trans = Trans2019 + Trans2020) %>% #calculate total samples by adding 2019 and 2020
   select(EasementID, total_trans) #simply df
 
+### Insect richness averaged for the number of transects completed. 
+## note that this code gives richness at a transect... meaning that a family could be at multiple transects at a site, and therefore driving up the richness number of multiple observations 
+
+#Insect.Ave.test.Richness <- Insect.Data %>% 
+ #select(EasementID, Date, Sample, Family) %>% 
+ #filter(!is.na(EasementID)) %>% 
+ #group_by(EasementID, Sample, Date) %>% 
+#  filter(!duplicated(Family)) %>% #remove duplicates of Family/easement
+# summarise(fam_rich = n()) %>% #count the number of families/easement
+# group_by(EasementID ) %>% 
+#  summarise(familyrichness = n())
+  #summarise(Ave.Richness = mean(fam_rich)) #calculate average families
+
+
+# This gives the average richenss at a site (total divided by # of transects), the above code gives richness of each transect and then averages those... need to decide which is better
+Insect.Ave.Richness <- Insect.Data %>% 
+  select(EasementID, Date, Sample, Family) %>% 
+  filter(!is.na(EasementID)) %>% 
+  group_by(EasementID) %>% 
+  filter(!duplicated(Family)) %>% #remove duplicates of Family/easement
+  summarise(fam_rich = n()) %>% #count the number of families/easement
+  full_join(num_trans) %>% 
+  group_by(EasementID ) %>% 
+  #summarise(Ave.Richness = mean(fam_rich)) #calculate average families
+  mutate(Ave.Richness = fam_rich/total_trans)
+
+
+### Total insect richness, not averaged for the number of transects completed. 
+#Insect.Total.Richness <- Insect.Data%>%
+ # group_by(EasementID) %>%
+#  filter(!duplicated(Family))%>%
+#  dplyr::summarise(FamRichness = n())
+
+### Compiling
+#Insect.Richness <- full_join(Insect.Ave.Richness, Insect.Total.Richness)
+
+
+######################################################################################
+#                     Insect Abundance                                               #
+######################################################################################
+### Code used from MS1 analysis (for the transects)
+
+
 ### Calculate average abundance per Family per easement
 Insect.Ave.Abundance <- Insect.Data %>% 
   select(EasementID, Date, Sample, Total, Family) %>% 
@@ -115,7 +121,7 @@ Insect.Ave.Abundance <- Insect.Data %>%
   select(EasementID, Ave.Abundance)
 
 ### Compiling
-Insect.Summarized <-  full_join(Insect.Ave.Abundance,Insect.Richness)
+Insect.Summarized <-  full_join(Insect.Ave.Abundance,Insect.Ave.Richness)
 
 ######################################################################################
 #                     Family abundance matrix/ rank abudnance                                       #
@@ -434,19 +440,18 @@ pv1 <- cor.test(testing$Ave.Richness, testing$AveWeightCC, method = "pearson")
 pv1$p.value
 pv2<- cor.test(testing$Ave.Abundance, testing$AveWeightCC, method = "pearson")
 pv2$p.value
-#pv3<- cor.test(testing$Abundance, testing$AveCC, method = "pearson")
-#pv3$p.value
+pv3<- cor.test(testing$Ave.Richness, testing$PropN, method = "pearson")
+pv3$p.value
 pv4 <- cor.test(testing$Ave.Abundance, testing$PropN, method = "pearson")
 pv4$p.value
-pv5<- cor.test(testing$Ave.Richness, testing$PropN, method = "pearson")
-pv5$p.value
-pv6<- cor.test(testing$Abundance, testing$PropN, method = "pearson")
-pv6$p.value
-pv7<- cor.test(testing$Ave.Abundance, testing$SppCode, method = "pearson")
+#pv5<- cor.test(testing$Ave.Richness, testing$PropN, method = "pearson")
+#pv5$p.value
+#pv6<- cor.test(testing$Ave.Abundance, testing$PropN, method = "pearson")
+#pv6$p.value
+pv7<- cor.test(testing$Ave.Richness, testing$SppCode, method = "pearson")
 pv7$p.value
-pv8<- cor.test(testing$Ave.Richness, testing$SppCode, method = "pearson")
+pv8<- cor.test(testing$Ave.Abundance, testing$SppCode, method = "pearson")
 pv8$p.value
-
 pv9<- cor.test(testing$Ave.Richness, testing$PropGram, method = "pearson")
 pv9$p.value
 pv10<- cor.test(testing$Ave.Abundance, testing$PropGram, method = "pearson")
@@ -613,6 +618,7 @@ Insect.Relative.Richness <- Insect.Data %>%
   group_by(EasementID, Order ) %>% 
   #summarise(Ave.Richness = mean(fam_rich)) #calculate average families
   mutate(Ave.Rich = fam_rich/total_trans)
+
 
 Insect.Relative.Richness %>% ggplot(aes(x = EasementID, fill = Order)) + 
   geom_bar(position = "fill", width = 0.75, colour = "black") + 
