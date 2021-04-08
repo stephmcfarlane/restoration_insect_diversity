@@ -56,17 +56,19 @@ insects_rich_trans <- all_data %>%
 
 # visualize family richment per restoration age
 rich_year <-  rest_year %>% 
-  inner_join(insects_ave_rich) 
+  inner_join(insects_ave_rich) %>% 
+  mutate(time_since = (2021- rest_year))
+
 
  rich_year %>% 
-  ggplot(aes(rest_year, ave_rich, color = RestorationCategory)) +
+  ggplot(aes(time_since, ave_rich, color = RestorationCategory)) +
   geom_point(outlier.alpha = 0) +
   geom_smooth(aes(color = RestorationCategory), method = "lm") +
   theme_classic()+
-   scale_x_continuous( limits = c(1995, 2015)) + scale_color_manual(values = palette2,
+  scale_color_manual(values = palette2,
                      name = "Site Categories")+
   labs(title = "Average Family Richness per Restoration Year")+
-  xlab("\n Restoration year") +
+  xlab("\n Years Since Restoration") +
   ylab("Ave Family Richness")+
   theme(plot.title = element_text(family = "Palatino", size = 18, hjust = 0.5, vjust = 2),
         axis.title.x = element_text(family = "Palatino", size = 15, vjust = 4),
