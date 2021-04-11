@@ -579,6 +579,38 @@ graphs3 <- grid.arrange(p7, p8, p9,p10,nrow=2)
 ###When exporting to clipboard, set height to 1500, preview, then copy. 
 
 
+#testing the relationships between the variables Im looking at 
+
+p20<- ggplot(data = testing, aes(x = PropN, y = PropGram)) + 
+  geom_point(aes(size=0.7),show.legend = F,color='black') +
+  geom_smooth(aes(colour="green"),show.legend = F,method= "lm", se=FALSE)+
+  theme(text = element_text(size=22))+
+  labs(x= "propN", y= "propgram") + 
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+
+p21 <- ggplot(data = testing, aes(x = PropN, y = PropForb)) + 
+  geom_point(aes(size=0.7),show.legend = F,color='black') +
+  geom_smooth(aes(colour="green"),show.legend = F,method= "lm", se=FALSE)+
+  theme(text = element_text(size=22))+
+  labs(x= "propN", y= "propforb") + 
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+
+p22<- ggplot(data = testing, aes(x = PropI, y = PropGram)) + 
+  geom_point(aes(size=0.7),show.legend = F,color='black') +
+  geom_smooth(aes(colour="green"),show.legend = F,method= "lm", se=FALSE)+
+  theme(text = element_text(size=22))+
+  labs(x= "PropI", y= "propgram") + 
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+
+p23 <- ggplot(data = testing, aes(x = PropI, y = PropForb)) + 
+  geom_point(aes(size=0.7),show.legend = F,color='black') +
+  geom_smooth(aes(colour="green"),show.legend = F,method= "lm", se=FALSE)+
+  theme(text = element_text(size=22))+
+  labs(x= "PropI", y= "propforb") + 
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+
+graphs4 <- grid.arrange(p20, p21, p22, p23, nrow=2)
+
 ######################################################################################
 #                     visualizing community composition                              #
 ######################################################################################
@@ -594,9 +626,16 @@ Insect.Relative.Abundance <- Insect.Data %>%
   full_join(num_trans) %>% 
   mutate(AveAbund = abundance/total_trans)
 
-Insect.Relative.Abundance <- Insect.Relative.Abundance%>%
-  select(-abundance)%>%
-  select(-total_trans)
+Insect.Total.Relative.Abundance <- Insect.Relative.Abundance%>%
+  group_by(EasementID)%>%
+  summarise(TotalAveAbund = sum(AveAbund))
+
+Insect.Total.Abundance <-left_join(Insect.Relative.Abundance, Insect.Total.Relative.Abundance)
+
+
+#Insect.Relative.Abundance <- Insect.Relative.Abundance%>%
+ # select(-abundance)%>%
+  #select(-total_trans)
 
 #Insect.Relative.Abundance %>% ggplot(aes(x = EasementID, fill = Order)) + 
 #  geom_bar(position = "fill", width = 0.75, colour = "black") + 
@@ -611,7 +650,7 @@ Insect.Relative.Abundance <- Insect.Relative.Abundance%>%
 
 # OPTION 1: what you were originally going for. 
 #I think the combination of adding y = AveAbund and stat = "identity" makes the colors within a bar scaled properly
-Insect.Relative.Abundance %>% ggplot(aes(x = EasementID, y = AveAbund)) + 
+Insect.Total.Abundance %>% ggplot(aes(x = EasementID, y = AveAbund)) + 
   geom_bar(position = "fill", stat = "identity", color = "black", aes(fill = Order)) + 
   theme_bw() + 
   ylab("Relative abundance") +
@@ -622,18 +661,18 @@ Insect.Relative.Abundance %>% ggplot(aes(x = EasementID, y = AveAbund)) +
 
 #this is the same graph as the one above, just using geom_col. I think the difference is this one is technically more direct or simple
 #it doesn't really matter if you use geom_bar or geom_col as far as I know
-Insect.Relative.Abundance %>% ggplot(aes(x = EasementID, y = AveAbund)) + 
-  geom_col(position = "fill", color = "black", aes(fill = Order)) + 
-  theme_bw() + 
-  ylab("Relative abundance") +
-  theme(legend.position = "right",
-        axis.text.x = element_text(size = 12),
-        axis.title.x = element_blank(),
-        axis.text.y = element_text(size = 12))
+#Insect.Total.Abundance %>% ggplot(aes(x = EasementID, y = AveAbund)) + 
+#  geom_col(position = "fill", color = "black", aes(fill = Order)) + 
+#  theme_bw() + 
+#  ylab("Relative abundance") +
+#  theme(legend.position = "right",
+#        axis.text.x = element_text(size = 12),
+#        axis.title.x = element_blank(),
+#        axis.text.y = element_text(size = 12))
 
 #OPTION 2: 
 # all of the bars are not the same height. but the size of each color within a bar seems to be proportionate to the amount
-Insect.Relative.Abundance %>% ggplot(aes(x = EasementID, y = AveAbund, fill = Order)) + 
+Insect.Total.Abundance %>% ggplot(aes(x = reorder(EasementID,-TotalAveAbund), y = AveAbund, fill = Order)) + 
   geom_bar(stat = "identity", color = "black") + 
   theme_bw() + 
   ylab("Relative abundance") +
@@ -653,9 +692,16 @@ Insect.Relative.Richness <- Insect.Data %>%
   #summarise(Ave.Richness = mean(fam_rich)) #calculate average families
   mutate(Ave.Rich = fam_rich/total_trans)
 
+Insect.Total.Relative.Richness <- Insect.Relative.Richness%>%
+  group_by(EasementID)%>%
+  summarise(TotalAveRich = sum(Ave.Rich))
 
-Insect.Relative.Richness %>% ggplot(aes(x = EasementID, fill = Order)) + 
-  geom_bar(position = "fill", width = 0.75, colour = "black") + 
+Insect.Total.Richness <-left_join(Insect.Relative.Richness, Insect.Total.Relative.Richness)
+
+
+
+Insect.Relative.Richness %>% ggplot(aes(x = EasementID, y= Ave.Rich)) + 
+  geom_bar(position = "fill", stat = "identity", colour = "black", aes(fill = Order)) + 
   theme_bw() + 
   ylab("Relative richness") +
   theme(legend.position = "right",
@@ -663,6 +709,65 @@ Insect.Relative.Richness %>% ggplot(aes(x = EasementID, fill = Order)) +
         axis.title.x = element_blank(),
         axis.text.y = element_text(size = 12)) 
 
+Insect.Total.Richness %>% ggplot(aes(x = reorder(EasementID,-TotalAveRich), y = Ave.Rich, fill = Order)) + 
+  geom_bar(stat = "identity", color = "black") + 
+  theme_bw() + 
+  ylab("Relative richness") +
+  theme(legend.position = "right",
+        axis.text.x = element_text(size = 12),
+        axis.title.x = element_blank(),
+        axis.text.y = element_text(size = 12))
+
+######################################################################################
+#                     grouping community composiiton                             #
+######################################################################################
+
+### scale the x axis byprop n 
+plant.propn <- Summarized.Plant.Insect%>%
+  select(EasementID, PropN)
+
+Insect.propn.abundance <-left_join(Insect.Relative.Abundance, plant.propn )
+
+Insect.propn.abundance %>% ggplot(aes(x = reorder(EasementID,-PropN), y = AveAbund)) + 
+  geom_bar(position = "fill", stat = "identity", color = "black", aes(fill = Order)) + 
+  theme_bw() + 
+  ylab("Relative abundance") +
+  theme(legend.position = "right",
+        axis.text.x = element_text(size = 12),
+        axis.title.x = element_blank(),
+        axis.text.y = element_text(size = 12))
+
+Insect.propn.abundance %>% ggplot(aes(x = reorder(EasementID,-PropN), y = AveAbund, fill = Order)) + 
+  geom_bar(stat = "identity", color = "black") + 
+  theme_bw() + 
+  ylab("Relative abundance") +
+  theme(legend.position = "right",
+        axis.text.x = element_text(size = 12),
+        axis.title.x = element_blank(),
+        axis.text.y = element_text(size = 12))
 
 
 
+### scale the x axis byprop gram 
+plant.propgram <- Summarized.Plant.Insect%>%
+  select(EasementID, PropGram)
+
+Insect.propgram.abundance <-left_join(Insect.Relative.Abundance, plant.propgram )
+
+Insect.propgram.abundance %>% ggplot(aes(x = reorder(EasementID,-PropGram), y = AveAbund)) + 
+  geom_bar(position = "fill", stat = "identity", color = "black", aes(fill = Order)) + 
+  theme_bw() + 
+  ylab("Relative abundance") +
+  theme(legend.position = "right",
+        axis.text.x = element_text(size = 12),
+        axis.title.x = element_blank(),
+        axis.text.y = element_text(size = 12))
+
+Insect.propgram.abundance %>% ggplot(aes(x = reorder(EasementID,-PropGram), y = AveAbund, fill = Order)) + 
+  geom_bar(stat = "identity", color = "black") + 
+  theme_bw() + 
+  ylab("Relative abundance") +
+  theme(legend.position = "right",
+        axis.text.x = element_text(size = 12),
+        axis.title.x = element_blank(),
+        axis.text.y = element_text(size = 12))
