@@ -124,7 +124,7 @@ Insect.Ave.Abundance <- Insect.Data %>%
 Insect.Summarized <-  full_join(Insect.Ave.Abundance,Insect.Ave.Richness)
 
 ######################################################################################
-#                     Family abundance matrix/ rank abudnance                                       #
+#                     Family abundance matrix/ rank abundance                                       #
 ######################################################################################
 
 ### Gets the total average abundance (total, and then divided for the number of transects)
@@ -198,7 +198,7 @@ Plant.WI.CC <- Plant.All.CC %>%
 Plant.Data <- Plant.Data %>% 
   left_join(Plant.WI.CC, "SppCode")
 
-### Condesing df
+### Condensing df
 Plant.Easement.CC <- Plant.Data%>%
   select(EasementID, SppCode, WI_C,PctCover1x1)
 
@@ -598,15 +598,49 @@ Insect.Relative.Abundance <- Insect.Relative.Abundance%>%
   select(-abundance)%>%
   select(-total_trans)
 
-Insect.Relative.Abundance %>% ggplot(aes(x = EasementID, fill = Order)) + 
-  geom_bar(position = "fill", width = 0.75, colour = "black") + 
+#Insect.Relative.Abundance %>% ggplot(aes(x = EasementID, fill = Order)) + 
+#  geom_bar(position = "fill", width = 0.75, colour = "black") + 
+#  theme_bw() + 
+#  ylab("Relative Abundance") +
+#  theme(legend.position = "right",
+#        axis.text.x = element_text(size = 12),
+#        axis.title.x = element_blank(),
+#        axis.text.y = element_text(size = 12)) 
+
+# New code from Jade 4/10/2021
+
+# OPTION 1: what you were originally going for. 
+#I think the combination of adding y = AveAbund and stat = "identity" makes the colors within a bar scaled properly
+Insect.Relative.Abundance %>% ggplot(aes(x = EasementID, y = AveAbund)) + 
+  geom_bar(position = "fill", stat = "identity", color = "black", aes(fill = Order)) + 
   theme_bw() + 
-  ylab("Relative Abundance") +
+  ylab("Relative abundance") +
   theme(legend.position = "right",
         axis.text.x = element_text(size = 12),
         axis.title.x = element_blank(),
-        axis.text.y = element_text(size = 12)) 
+        axis.text.y = element_text(size = 12))
 
+#this is the same graph as the one above, just using geom_col. I think the difference is this one is technically more direct or simple
+#it doesn't really matter if you use geom_bar or geom_col as far as I know
+Insect.Relative.Abundance %>% ggplot(aes(x = EasementID, y = AveAbund)) + 
+  geom_col(position = "fill", color = "black", aes(fill = Order)) + 
+  theme_bw() + 
+  ylab("Relative abundance") +
+  theme(legend.position = "right",
+        axis.text.x = element_text(size = 12),
+        axis.title.x = element_blank(),
+        axis.text.y = element_text(size = 12))
+
+#OPTION 2: 
+# all of the bars are not the same height. but the size of each color within a bar seems to be proportionate to the amount
+Insect.Relative.Abundance %>% ggplot(aes(x = EasementID, y = AveAbund, fill = Order)) + 
+  geom_bar(stat = "identity", color = "black") + 
+  theme_bw() + 
+  ylab("Relative abundance") +
+  theme(legend.position = "right",
+        axis.text.x = element_text(size = 12),
+        axis.title.x = element_blank(),
+        axis.text.y = element_text(size = 12))
 
 # Relative richness within each order at each site
 Insect.Relative.Richness <- Insect.Data %>% 
