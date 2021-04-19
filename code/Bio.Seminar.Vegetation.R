@@ -10,6 +10,7 @@ library(grid)
 library(gridExtra)
 library(janitor)
 
+
 ######################################################################################
 #                     Enter/orangize insects                                         #
 ######################################################################################
@@ -460,7 +461,10 @@ pv11<- cor.test(testing$Ave.Richness, testing$PropForb, method = "pearson")
 pv11$p.value
 pv12<- cor.test(testing$Ave.Abundance, testing$PropForb, method = "pearson")
 pv12$p.value
-
+pv13<- cor.test(testing$Ave.Abundance, testing$PropI, method = "pearson")
+pv13$p.value
+pv14<- cor.test(testing$Ave.Richness, testing$PropI, method = "pearson")
+pv14$p.value
 #working on creating a df that easily shows all the correlations and p values
 
 #Pearson <- rbind(pv1$p.value, pv2$p.value, pv4$p.value, pv5$p.value, pv7$p.value, pv8$p.value,pv9$p.value,pv10$p.value,pv11$p.value,pv12$p.value)
@@ -471,6 +475,24 @@ pv12$p.value
 #pearson <- pearson[c(3, 8, 12, 17, 21, 26, 30, 35, 39, 44, 48, 53, 57, 62, 66, 71)]
 #remove(pv1, pv2, pv3, pv4, pv5, pv6, pv7, pv8)
 
+### stats (r^2)
+
+fit1 <- lm(PropN ~ Ave.Abundance, data = testing)
+summary(fit1)
+fit2 <- lm(PropN ~ Ave.Richness, data = testing)
+summary(fit2)
+fit3 <- lm(PropGram ~ Ave.Abundance, data = testing)
+summary(fit3)
+fit4 <- lm(PropGram ~ Ave.Richness, data = testing)
+summary(fit4)
+fit5 <- lm(AveWeightCC ~ Ave.Abundance, data = testing)
+summary(fit5)
+fit6 <- lm(AveWeightCC ~ Ave.Richness, data = testing)
+summary(fit6)
+fit7 <- lm(SppCode ~ Ave.Abundance, data = testing)
+summary(fit7)
+fit8 <- lm(SppCode ~ Ave.Richness, data = testing)
+summary(fit8)
 
 ######################################################################################
 #                     Graphing                                                       #
@@ -482,8 +504,8 @@ p1 <- ggplot(data = testing, aes(x = AveWeightCC, y = Ave.Richness)) +
   theme(axis.title.x=element_blank(), axis.text.x=element_blank(),
         axis.ticks.x=element_blank()) +
   theme(text = element_text(size=22))+
-  labs(y = "
-       Insect Family Richness") +
+  labs(y = "    Average Insect 
+   Family Richness") +
   theme(axis.text.y = element_text(angle=90))+ 
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
 
@@ -500,9 +522,8 @@ p3 <- ggplot(data = testing, aes(x = AveWeightCC, y = Ave.Abundance)) +
   geom_point(aes(size=0.7),show.legend = F,color='black') +
   geom_smooth(aes(colour="green"),show.legend = F,method= "lm", se=FALSE)+
   theme(text = element_text(size=22))+
-  labs(x= "Average Plant C Score 
-  (Coefficient of Conservatism)", y = "
-       Insect Abundance") +
+  labs(x= "Average Plant CC Score", y = "   Average
+  Insect Abundance") +
   theme(axis.text.y = element_text(angle=90))+ 
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
 
@@ -518,9 +539,8 @@ p4 <- ggplot(data = testing, aes(x = SppCode, y = Ave.Abundance)) +
 
 
 graphs1 <- grid.arrange(p1, p2, p3, p4, nrow=2, 
-                       top = textGrob("Relationship between insect communities and prairie quality", gp=gpar(fontsize=25,font=1)), 
-                       bottom = textGrob("Prairie Quality
-                               ", gp=gpar(fontsize=20,font=1)))
+                       bottom = textGrob("Vegetation Quality", gp=gpar(fontsize=20,font=1)))
+
 
 ### more graphs to test
 
@@ -539,8 +559,23 @@ p6 <- ggplot(data = testing, aes(x = PropN, y = Ave.Richness)) +
   labs(x= "propN", y= "ave richness") + 
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
 
-graphs2 <- grid.arrange(p5, p6, nrow=1)
+p24  <- ggplot(data = testing, aes(x = PropI, y = Ave.Richness)) + 
+  geom_point(aes(size=0.7),show.legend = F,color='black') +
+  geom_smooth(aes(colour="green"),show.legend = F,method= "lm", se=FALSE)+
+  theme(text = element_text(size=22))+
+  labs(x= "propI", y= "ave richness") + 
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
 
+p25 <- ggplot(data = testing, aes(x = PropI, y = Ave.Abundance)) + 
+  geom_point(aes(size=0.7),show.legend = F,color='black') +
+  geom_smooth(aes(colour="green"),show.legend = F,method= "lm", se=FALSE)+
+  theme(text = element_text(size=22))+
+  labs(x= "propI", y= "ave abundance") + 
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+
+graphs2 <- grid.arrange(p5, p6, p24, p25, nrow=2)
+
+graphs2 <- grid.arrange(p5, p6, p24, p25, nrow=2)
 
 ### more graphs to test
 
@@ -574,7 +609,8 @@ p10 <- ggplot(data = testing, aes(x = PropForb, y = Ave.Richness)) +
 
 graphs3 <- grid.arrange(p7, p8, p9,p10,nrow=2)
 
-
+finalgraph <- grid.arrange(p5, p6, p7, p8, nrow=2, 
+                        bottom = textGrob("Vegetation Quality", gp=gpar(fontsize=20,font=1)))
 
 ###When exporting to clipboard, set height to 1500, preview, then copy. 
 
@@ -610,6 +646,7 @@ p23 <- ggplot(data = testing, aes(x = PropI, y = PropForb)) +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
 
 graphs4 <- grid.arrange(p20, p21, p22, p23, nrow=2)
+
 
 ######################################################################################
 #                     visualizing community composition                              #
@@ -655,7 +692,7 @@ Insect.Total.Abundance %>% ggplot(aes(x = EasementID, y = AveAbund)) +
   theme_bw() + 
   ylab("Relative abundance") +
   theme(legend.position = "right",
-        axis.text.x = element_text(size = 12),
+        axis.text.x = element_text(size = 10),
         axis.title.x = element_blank(),
         axis.text.y = element_text(size = 12))
 
@@ -677,9 +714,10 @@ Insect.Total.Abundance %>% ggplot(aes(x = reorder(EasementID,-TotalAveAbund), y 
   theme_bw() + 
   ylab("Relative abundance") +
   theme(legend.position = "right",
-        axis.text.x = element_text(size = 12),
+        axis.text.x = element_text(size = 10),
         axis.title.x = element_blank(),
-        axis.text.y = element_text(size = 12))
+        axis.text.y = element_text(size = 12),
+        axis.title.y = element_text(size = 14))
 
 # Relative richness within each order at each site
 Insect.Relative.Richness <- Insect.Data %>% 
@@ -709,59 +747,91 @@ Insect.Relative.Richness %>% ggplot(aes(x = EasementID, y= Ave.Rich)) +
         axis.title.x = element_blank(),
         axis.text.y = element_text(size = 12)) 
 
+Insect.Total.Abundance %>% ggplot(aes(x = EasementID, y= AveAbund)) + 
+  geom_bar(position = "fill", stat = "identity", colour = "black", aes(fill = Order)) + 
+  theme_bw() + 
+  ylab("Relative abundance") +
+  theme(legend.position = "right",
+        axis.text.x = element_text(size = 12),
+        axis.title.x = element_blank(),c
+        axis.text.y = element_text(size = 12))
+
+
+##using these two
+
 Insect.Total.Richness %>% ggplot(aes(x = reorder(EasementID,-TotalAveRich), y = Ave.Rich, fill = Order)) + 
   geom_bar(stat = "identity", color = "black") + 
   theme_bw() + 
-  ylab("Relative richness") +
-  theme(legend.position = "right",
-        axis.text.x = element_text(size = 12),
-        axis.title.x = element_blank(),
-        axis.text.y = element_text(size = 12))
+  ylab("Relative Richness of Insects") +
+  xlab("Highest                                                                                                                                                                                                                                  Lowest")
+theme(legend.position = "right",
+      axis.text.x = element_text(size = 12),
+      axis.title.x = element_text(size = 14),
+      axis.title.y = element_text(size = 14),
+      axis.text.y = element_text(size = 12))
+
+Insect.Total.Abundance %>% ggplot(aes(x = reorder(EasementID,-TotalAveAbund), y = AveAbund, fill = Order)) + 
+  geom_bar(stat = "identity", color = "black") + 
+  theme_bw() + 
+  ylab("Relative Abundance of Insects") +
+  xlab("Highest                                                                                                                                                                                                                                  Lowest")
+theme(legend.position = "right",
+      axis.text.x = element_text(size = 12),
+      axis.title.x = element_text(size = 14),
+      axis.title.y = element_text(size = 14),
+      axis.text.y = element_text(size = 12))
 
 ######################################################################################
 #                     grouping community composiiton                             #
 ######################################################################################
 
 ### scale the x axis byprop n 
+
+### keep this
 plant.propn <- Summarized.Plant.Insect%>%
   select(EasementID, PropN)
 
 Insect.propn.abundance <-left_join(Insect.Relative.Abundance, plant.propn )
 
-Insect.propn.abundance %>% ggplot(aes(x = reorder(EasementID,-PropN), y = AveAbund)) + 
-  geom_bar(position = "fill", stat = "identity", color = "black", aes(fill = Order)) + 
-  theme_bw() + 
-  ylab("Relative abundance") +
-  theme(legend.position = "right",
-        axis.text.x = element_text(size = 12),
-        axis.title.x = element_blank(),
-        axis.text.y = element_text(size = 12))
+#Insect.propn.abundance %>% ggplot(aes(x = reorder(EasementID,-PropN), y = AveAbund)) + 
+#  geom_bar(position = "fill", stat = "identity", color = "black", aes(fill = Order)) + 
+#  theme_bw() + 
+#  ylab("Relative abundance") +
+#  theme(legend.position = "right",
+#        axis.text.x = element_text(size = 12),
+#        axis.title.x = element_blank(),
+#        axis.text.y = element_text(size = 12))
 
+
+#using this
 Insect.propn.abundance %>% ggplot(aes(x = reorder(EasementID,-PropN), y = AveAbund, fill = Order)) + 
   geom_bar(stat = "identity", color = "black") + 
   theme_bw() + 
-  ylab("Relative abundance") +
-  theme(legend.position = "right",
-        axis.text.x = element_text(size = 12),
-        axis.title.x = element_blank(),
-        axis.text.y = element_text(size = 12))
+  ylab("Relative Abundance of Insects") +
+  xlab("Highest                                                                                                                                                                                                                                  Lowest
+       Average % Cover Native Plants")
+theme(legend.position = "right",
+      axis.text.x = element_text(size = 12),
+      axis.title.x = element_text(size = 14),
+      axis.title.y = element_text(size = 14),
+      axis.text.y = element_text(size = 12))
 
 
 
 ### scale the x axis byprop gram 
+##not using
 plant.propgram <- Summarized.Plant.Insect%>%
   select(EasementID, PropGram)
 
 Insect.propgram.abundance <-left_join(Insect.Relative.Abundance, plant.propgram )
 
-Insect.propgram.abundance %>% ggplot(aes(x = reorder(EasementID,-PropGram), y = AveAbund)) + 
-  geom_bar(position = "fill", stat = "identity", color = "black", aes(fill = Order)) + 
-  theme_bw() + 
-  ylab("Relative abundance") +
-  theme(legend.position = "right",
-        axis.text.x = element_text(size = 12),
-        axis.title.x = element_blank(),
-        axis.text.y = element_text(size = 12))
+#Insect.propgram.abundance %>% ggplot(aes(x = reorder(EasementID,-PropGram), y = AveAbund)) + 
+#  geom_bar(position = "fill", stat = "identity", color = "black", aes(fill = Order)) + 
+#  theme_bw() + 
+#  theme(legend.position = "right",
+#        axis.text.x = element_text(size = 12),
+#        axis.title.x = element_blank(),
+#        axis.text.y = element_text(size = 12))
 
 Insect.propgram.abundance %>% ggplot(aes(x = reorder(EasementID,-PropGram), y = AveAbund, fill = Order)) + 
   geom_bar(stat = "identity", color = "black") + 
@@ -771,3 +841,84 @@ Insect.propgram.abundance %>% ggplot(aes(x = reorder(EasementID,-PropGram), y = 
         axis.text.x = element_text(size = 12),
         axis.title.x = element_blank(),
         axis.text.y = element_text(size = 12))
+
+
+
+
+### scale the x axis by spp richness and insect rich
+plant.sppcode <- Summarized.Plant.Insect%>%
+  select(EasementID, SppCode)
+
+Insect.sppcode.richness <-left_join(Insect.Relative.Richness, plant.sppcode )
+
+
+
+
+#using this
+Insect.sppcode.richness %>% ggplot(aes(x = reorder(EasementID,-SppCode), y = Ave.Rich, fill = Order)) + 
+  geom_bar(stat = "identity", color = "black") + 
+  theme_bw() + 
+  ylab("Relative Richness of Insects") +
+  xlab("Highest                                                                                                                                                                                                                                  Lowest
+       Plant Species Richness")
+  theme(legend.position = "right",
+        axis.text.x = element_text(size = 12),
+        axis.title.x = element_text(size = 14),
+        axis.title.y = element_text(size = 14),
+        axis.text.y = element_text(size = 12))
+
+
+
+
+
+
+
+
+
+
+
+#### just remaking a graph
+
+
+f1 <- ggplot(data = testing, aes(x = PropN, y = Ave.Richness)) + 
+  geom_point(aes(size=0.7),show.legend = F,color='black') +
+  geom_smooth(aes(colour="green"),show.legend = F,method= "lm", se=FALSE)+
+  theme(axis.title.x=element_blank(), axis.text.x=element_blank(),
+        axis.ticks.x=element_blank()) +
+  theme(text = element_text(size=22))+
+  labs(y = "    Average Insect 
+   Family Richness") +
+  theme(axis.text.y = element_text(angle=90))+ 
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+
+f2 <- ggplot(data = testing, aes(x = PropGram, y = Ave.Richness)) + 
+  geom_point(aes(size=0.7),show.legend = F,color='black') +
+  geom_smooth(aes(colour="green"),show.legend = F,method= "lm", se=FALSE)+
+  theme(axis.title.x=element_blank(), axis.text.x=element_blank(),
+        axis.ticks.x=element_blank()) +
+  theme(axis.title.y=element_blank(), axis.text.y=element_blank(),
+        axis.ticks.y=element_blank())+ 
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+
+f3 <- ggplot(data = testing, aes(x = PropN, y = Ave.Abundance)) + 
+  geom_point(aes(size=0.7),show.legend = F,color='black') +
+  geom_smooth(aes(colour="green"),show.legend = F,method= "lm", se=FALSE)+
+  theme(text = element_text(size=22))+
+  labs(x= "Average % Cover Native Plants", y = "   Average
+  Insect Abundance") +
+  theme(axis.text.y = element_text(angle=90))+ 
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+
+
+f4 <- ggplot(data = testing, aes(x = PropGram, y = Ave.Abundance)) + 
+  geom_point(aes(size=0.7),show.legend = F,color='black') +
+  geom_smooth(aes(colour="green"),show.legend = F,method= "lm", se=FALSE)+
+  theme(axis.title.y=element_blank(), axis.text.y=element_blank(),
+        axis.ticks.y=element_blank())+
+  theme(text = element_text(size=22))+
+  labs(x= "Average % Cover Graminoid") + 
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+
+
+final <- grid.arrange(f1, f2, f3, f4, nrow=2, 
+                        bottom = textGrob("Vegetation Quality", gp=gpar(fontsize=20,font=1)))
