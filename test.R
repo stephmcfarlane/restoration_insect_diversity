@@ -96,7 +96,7 @@ FamilyMatrix = subset(FamilyMatrix, select = c(EasementID,Richness,Simpson))
 
 Summary <- full_join(FamilyMatrix, Summary, by = "EasementID")
 
-
+#this line is just Grant seeing if his Github works.
 
 ######################################################################################
 #                     Insect Richness/Diveristy Graphs                               #
