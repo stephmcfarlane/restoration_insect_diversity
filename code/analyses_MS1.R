@@ -462,3 +462,87 @@ relative_abund %>% ggplot(aes(x = RestorationCategory, fill = Order)) +
         axis.title.x = element_blank(),
         axis.text.y = element_text(size = 12)) 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#playing with NMDS - Lydia
+
+stressplot(nmds)
+
+#adding a 3rd dimension?
+
+nmds2 <- metaMDS(fam_matrix, distance = "bray", k=3)
+plot(nmds2)
+
+community.envfit <- env_matrix[-c(1)]
+(fit <- envfit(nmds2, community.envfit, perm = 999))
+head(fit)
+scores(fit, "vectors")  #extracting XYs
+
+# extract site data to plot it
+env.scores <- as.data.frame(scores(fit, display = "vectors"))
+env.scores <- cbind(env.scores, Species = rownames(env.scores))
+
+plot(nmds2) #basic plot again
+plot(fit, col="black") #annotate the plot with restoration categories
+
+nmds.scores2 <- as.data.frame(scores(nmds2))
+
+
+#add identifying columns to dataframe
+nmds.scores2$EasementID <- env_matrix$EasementID
+nmds.scores2 <- inner_join(nmds.scores2, env_matrix)
+
+grp.control <- nmds.scores2[nmds.scores2$RestorationCategory == "Not Seeded", ][chull(nmds.scores2[nmds.scores2$RestorationCategory == 
+                                                                                                  "Not Seeded", c("NMDS1", "NMDS2")]), ]  # hull values for grp A
+
+grp.seeded <- nmds.scores2[nmds.scores2$RestorationCategory == "Seeded Only", ][chull(nmds.scores2[nmds.scores2$RestorationCategory == 
+                                                                                                  "Seeded Only", c("NMDS1", "NMDS2")]), ]  # hull values for grp B
+
+grp.burned <- nmds.scores2[nmds.scores2$RestorationCategory == "Seeded + Fire", ][chull(nmds.scores2[nmds.scores2$RestorationCategory == 
+                                                                                                    "Seeded + Fire", c("NMDS1", "NMDS2")]), ]  # hull values for grp C
+
+grp.remnant <- nmds.scores2[nmds.scores2$RestorationCategory == "Remnant", ][chull(nmds.scores2[nmds.scores2$RestorationCategory == 
+                                                                                               "Remnant", c("NMDS1", "NMDS2")]), ]  # hull values for grp D
+
+hull.data <- rbind(grp.control, grp.seeded, grp.burned, grp.remnant)  #combine groups
+hull.data
+
+color.nmds <- factor(nmds.scores2$RestorationCategory, levels = c("Not Seeded", "Seeded Only", "Seeded + Fire", "Remnant"))
+color.hull <- factor(hull.data$RestorationCategory, levels = c("Not Seeded", "Seeded Only", "Seeded + Fire", "Remnant"))
+
+# Make NMDS PLot in ggplot
+p2 <- ggplot() + 
+  geom_polygon(data=hull.data,aes(x=NMDS1,y=NMDS2, group=color.hull),alpha=0.2) + 
+  geom_point(data = nmds.scores2, aes(x=NMDS1,y=NMDS2, colour=color.nmds, shape = color.nmds), size = 2) + # add the point markers
+  scale_fill_manual(values = palette2) +
+  scale_color_manual(values = palette2) +
+  scale_shape_manual(values = c(19,19,19,19)) +
+  theme_bw() + 
+  theme(axis.text.x = element_blank(),  # remove x-axis text
+        axis.text.y = element_blank(), # remove y-axis text
+        axis.ticks = element_blank(),  # remove axis ticks
+        axis.title.x = element_text(size=12), # remove x-axis labels
+        axis.title.y = element_text(size=12), # remove y-axis labels
+        panel.background = element_blank(), 
+        panel.grid.major = element_blank(),  #remove major-grid labels
+        panel.grid.minor = element_blank(),  #remove minor-grid labels
+        plot.background = element_blank(),
+        legend.title = element_blank(),
+        legend.background = element_rect(color = "black",linetype = "solid"),
+        legend.position = "right")
+
+p2 #view the plot
