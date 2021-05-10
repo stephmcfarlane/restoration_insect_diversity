@@ -481,6 +481,7 @@ relative_abund %>% ggplot(aes(x = RestorationCategory, fill = Order)) +
 #playing with NMDS - Lydia
 
 stressplot(nmds)
+stressplot(nmds2)
 
 #adding a 3rd dimension?
 
