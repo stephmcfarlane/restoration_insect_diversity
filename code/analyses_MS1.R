@@ -6,7 +6,7 @@ library(vegan)
 
 ## Load data #####
 # Upload easement treatment (aka restoration category) data & clean ##
-treatment <- read_csv("raw/3.6.21_insect_data.csv") %>% 
+treatment <- read_csv("raw/All_Insect_Data.csv") %>% 
   left_join(read_csv("raw/TreatmentNov20.csv")) %>% 
   select(EasementID, RestorationCategory) %>% 
   filter(!duplicated(EasementID)) %>% 
@@ -547,3 +547,4 @@ p2 <- ggplot() +
         legend.position = "right")
 
 p2 #view the plot
+
