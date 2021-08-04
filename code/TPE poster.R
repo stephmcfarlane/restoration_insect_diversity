@@ -1,6 +1,9 @@
 library(tidyverse)
 
 
+
+
+
 treatment <- read_csv("../PrairieRestoration/datasets/TreatmentNov20.csv") %>% 
   mutate(EasementID = replace(EasementID, EasementID == "792", "00792")) %>% 
   mutate(RestorationCategory = replace(RestorationCategory, RestorationCategory =="Seed+ Fire", "Seeded + Fire"),
