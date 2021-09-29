@@ -20,7 +20,7 @@ treatment <- read_csv("raw/All_Insect_Data.csv") %>%
 
 # Upload raw insect sweep identification data
 # This csv was downloaded from the Google Doc data entry spreadsheet on 6 March 2021
-all_data <- read_csv("raw/3.6.21_insect_data.csv") %>% 
+all_data <- read_csv("raw/All_Insect_Data.csv") %>% 
   select(-X1) %>% #remove random column with nothing in it
   left_join(treatment) %>% #join with treatment df
   relocate(., RestorationCategory, .before = "Date" ) 
@@ -246,7 +246,7 @@ insects_ave_rich %>%
 # This section is where we are wrangling and cleaning the raw data in order to reformat the structure of the dataframe
 
 ##List of ALL families observed on NRCS easements##
-insect_fam <- read_csv("raw/3.6.21_insect_data.csv") %>% 
+insect_fam <- read_csv("raw/All_Insect_Data.csv") %>% 
     select(EasementID, Date, Sample, Family) %>% 
     filter(!is.na(EasementID)) %>% 
     filter(!duplicated(Family)) %>% 
@@ -257,7 +257,7 @@ insect_fam <- read_csv("raw/3.6.21_insect_data.csv") %>%
 ## Calculate number of transects ID'd per year, per easement in order to get total # of bags id'd.  We needed this number to get the average abundance of Family per site##
 # Find number of bags id'd for 2019
 
-num_trans19 <- read_csv("raw/3.6.21_insect_data.csv") %>% 
+num_trans19 <- read_csv("raw/All_Insect_Data.csv") %>% 
   select(EasementID, Date, Sample) %>%
   group_by(EasementID) %>% 
   separate(., Date, c('Month', 'Day', 'Year'), sep="/") %>% 
@@ -266,7 +266,7 @@ num_trans19 <- read_csv("raw/3.6.21_insect_data.csv") %>%
   summarise(Trans2019 = n())
 
 # Find number of bags id'd for 2020
-num_trans20 <- read_csv("raw/3.6.21_insect_data.csv") %>% 
+num_trans20 <- read_csv("raw/All_Insect_Data.csv") %>% 
   select(EasementID, Date, Sample) %>%
   group_by(EasementID) %>% 
   separate(., Date, c('Month', 'Day', 'Year'), sep="/") %>% 
