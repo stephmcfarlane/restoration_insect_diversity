@@ -384,6 +384,30 @@ ShannonDiv <- sitebyfam %>%
   select(-EasementID, -RestorationCategory) %>%
   diversity()
 
+#### Lydia, 10/10/21 #####
+## getting shannon div per easement per year. 
+
+sitebyfam <- all_data %>% 
+  select(EasementID, RestorationCategory, Date, Sample, Total, Family) %>% 
+  filter(!is.na(EasementID)) %>% 
+  separate(., Date, c('Month', 'Day', 'Year'), sep="/") %>% 
+  group_by(EasementID, RestorationCategory, Year, Family) %>% 
+  summarise(abundance= sum(Total)) %>% 
+  select(EasementID, RestorationCategory, Family, Year, abundance) %>%
+  pivot_wider(names_from = Family, values_from = abundance) %>%
+  replace(is.na(.), 0) %>%
+  ungroup()
+
+##Shannon div per easement per year
+
+sitebyfam$Shannon <- diversity(sitebyfam[4:183], index = "shannon", MARGIN = 1, base = exp(1))
+
+insect_div <- sitebyfam%>%
+  select(EasementID, Year, Shannon)
+
+ggplot(insect_div, aes(x=Year, y=Shannon)) +
+  geom_boxplot()
+
 ### Vegan Code ####
 
 #take the square root to give less to abundant spp
