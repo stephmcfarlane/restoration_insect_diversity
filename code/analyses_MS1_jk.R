@@ -11,12 +11,10 @@ treatment <- read_csv("raw/All_Insect_Data.csv") %>%
   select(EasementID, RestorationCategory) %>% 
   filter(!duplicated(EasementID)) %>% 
   replace(is.na(.), "Remnant") %>%
-  mutate(Date = replace(Date, Date == "8/16/2021", "8/16/2019")) %>%
   mutate(EasementID = replace(EasementID, EasementID == "792", "00792")) %>% 
   mutate(RestorationCategory = replace(RestorationCategory, RestorationCategory =="Seed+ Fire", "Seeded + Fire"),
          RestorationCategory = replace(RestorationCategory, RestorationCategory == "Seed", "Seeded Only"),
          RestorationCategory = replace(RestorationCategory, RestorationCategory == "No Seed", "Not Seeded")) %>% 
-  
   mutate(RestorationCategory = factor(RestorationCategory, levels = c("Not Seeded", "Seeded Only", "Seeded + Fire", "Remnant")))  #####this code reorders the treatments --the default is alphabetical
 
 # Upload raw insect sweep identification data
@@ -24,7 +22,11 @@ treatment <- read_csv("raw/All_Insect_Data.csv") %>%
 all_data <- read_csv("raw/All_Insect_Data.csv") %>% 
   select(-X1) %>% #remove random column with nothing in it
   left_join(treatment) %>% #join with treatment df
-  relocate(., RestorationCategory, .before = "Date" ) 
+  relocate(., RestorationCategory, .before = "Date" ) %>%
+  filter(EasementID != "Borah Creek") %>% 
+  filter(EasementID != "Lulu lake") %>%
+  filter(EasementID != "Scuppernog") %>%
+  filter(EasementID != "00MDP")
 
 rest_year <- read_csv("clean/enroll_rest.csv")
 
@@ -287,7 +289,6 @@ num_trans <- num_trans19 %>%
 # Calculate abundance per Family per easement
 abundance_family <- all_data %>%
   separate(Date,c("month", "day", "Year")) %>%
-  mutate(Year = replace(Year, Year == "2021", "2019")) %>%
   select(EasementID, RestorationCategory, Year, Sample, Total, Family) %>% 
   filter(!is.na(EasementID)) %>% 
   group_by(EasementID, RestorationCategory, Year, Family) %>% 
@@ -296,7 +297,6 @@ abundance_family <- all_data %>%
 # Calculate abundance per easement
 abundance_total<- all_data %>% 
   separate(Date,c("month", "day", "Year")) %>%
-  mutate(Year = replace(Year, Year == "2021", "2019")) %>%
   select(EasementID, RestorationCategory, Year, Sample, Total) %>% 
   filter(!is.na(EasementID)) %>% 
   group_by(EasementID, RestorationCategory, Year) %>% 
