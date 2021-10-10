@@ -37,7 +37,7 @@ palette2 <-  c("tomato3", "#A49988","#5F9EA0", "#006887")
 
 
 
-# Calculate average Family richness per easement
+## Calculate average Family richness per easement
 insects_ave_rich <- all_data %>% 
   select(EasementID, RestorationCategory, Date, Sample, Family) %>% 
   filter(!is.na(EasementID)) %>% 
@@ -80,7 +80,43 @@ rich_year <-  rest_year %>%
         plot.margin = unit(c(1,1,2,1), "lines")) +
   geom_jitter(alpha=.2, width = .1, size = 3)
 
-# Calculate the family richness for each Order
+#Lydia ####
+# Calculate Family richness per easement, per year
+insects_rich_2019 <- all_data %>% 
+   select(EasementID, RestorationCategory, Date, Sample, Family) %>% 
+   filter(!is.na(EasementID)) %>% 
+   separate(., Date, c('Month', 'Day', 'Year'), sep="/") %>%
+   filter(Year == '2019') %>% 
+   group_by(EasementID, Year) %>% 
+   filter(!duplicated(Family)) %>% #remove duplicates of Family/easement
+   summarise(fam_rich = n()) #count the number of families/easement
+ 
+ 
+insects_rich_2020 <- all_data %>% 
+   select(EasementID, RestorationCategory, Date, Sample, Family) %>% 
+   filter(!is.na(EasementID)) %>% 
+   separate(., Date, c('Month', 'Day', 'Year'), sep="/") %>%
+   filter(Year == '2020') %>% 
+   group_by(EasementID, Year) %>% 
+   filter(!duplicated(Family)) %>% #remove duplicates of Family/easement
+   summarise(fam_rich = n())  #count the number of families/easement
+ ##combine the richness per year per easment
+ 
+insect_rich <- insects_rich_2019%>%
+   full_join(insects_rich_2020)
+ 
+## Boxplot of insect family richness by restoration category ###
+ ggplot(insect_rich, aes(x=Year, y=fam_rich)) +
+   geom_boxplot()
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+# Calculate the family richness for each Order ####
 coleoptera_rel_rich <- all_data %>% 
   select(EasementID, RestorationCategory, Date, Sample, Total, Order, Family) %>% 
   filter(Order == "Coleoptera") %>% 

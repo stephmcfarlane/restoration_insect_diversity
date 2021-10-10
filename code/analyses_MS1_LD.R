@@ -45,18 +45,31 @@ insects_rich_2019 <- all_data %>%
   filter(!is.na(EasementID)) %>% 
   separate(., Date, c('Month', 'Day', 'Year'), sep="/") %>%
   filter(Year == '2019') %>% 
-  group_by(EasementID, RestorationCategory) %>% 
+  group_by(EasementID, Year) %>% 
   filter(!duplicated(Family)) %>% #remove duplicates of Family/easement
-  summarise(fam_rich = n())  #count the number of families/easement
+  summarise(fam_rich = n()) #count the number of families/easement
 
+  
 insects_rich_2020 <- all_data %>% 
   select(EasementID, RestorationCategory, Date, Sample, Family) %>% 
   filter(!is.na(EasementID)) %>% 
   separate(., Date, c('Month', 'Day', 'Year'), sep="/") %>%
   filter(Year == '2020') %>% 
-  group_by(EasementID, RestorationCategory) %>% 
+  group_by(EasementID, Year) %>% 
   filter(!duplicated(Family)) %>% #remove duplicates of Family/easement
   summarise(fam_rich = n())  #count the number of families/easement
+##combine the richness per year per easment
+
+insect_rich <- insects_rich_2019%>%
+  full_join(insects_rich_2020)
+
+## Boxplot of insect family richness by restoration category ####
+ggplot(insect_rich, aes(x=Year, y=fam_rich)) +
+  geom_boxplot()
+
+
+
+
 
 
 
