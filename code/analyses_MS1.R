@@ -15,7 +15,6 @@ treatment <- read_csv("raw/All_Insect_Data.csv") %>%
   mutate(RestorationCategory = replace(RestorationCategory, RestorationCategory =="Seed+ Fire", "Seeded + Fire"),
          RestorationCategory = replace(RestorationCategory, RestorationCategory == "Seed", "Seeded Only"),
          RestorationCategory = replace(RestorationCategory, RestorationCategory == "No Seed", "Not Seeded")) %>% 
-  
   mutate(RestorationCategory = factor(RestorationCategory, levels = c("Not Seeded", "Seeded Only", "Seeded + Fire", "Remnant")))  #####this code reorders the treatments --the default is alphabetical
 
 # Upload raw insect sweep identification data
@@ -23,7 +22,11 @@ treatment <- read_csv("raw/All_Insect_Data.csv") %>%
 all_data <- read_csv("raw/All_Insect_Data.csv") %>% 
   select(-X1) %>% #remove random column with nothing in it
   left_join(treatment) %>% #join with treatment df
-  relocate(., RestorationCategory, .before = "Date" ) 
+  relocate(., RestorationCategory, .before = "Date" ) %>%
+  filter(EasementID != "Borah Creek") %>% #remove site w/missing data
+  filter(EasementID != "Lulu lake") %>%
+  filter(EasementID != "Scuppernog") %>%
+  filter(EasementID != "00MDP")
 
 rest_year <- read_csv("clean/enroll_rest.csv")
 
