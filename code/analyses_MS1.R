@@ -110,9 +110,40 @@ insect_rich <- insects_rich_2019%>%
    geom_boxplot()
  
  
+# Jade ####
+# 10 Oct 2021
+# Calculate abundance per Family per easement
+abundance_family <- all_data %>%
+   separate(Date,c("month", "day", "Year")) %>%
+   select(EasementID, RestorationCategory, Year, Sample, Total, Family) %>% 
+   filter(!is.na(EasementID)) %>% 
+   group_by(EasementID, RestorationCategory, Year, Family) %>% 
+   summarise(abundance= sum(Total))
  
+# Calculate abundance per easement
+abundance_total<- all_data %>% 
+   separate(Date,c("month", "day", "Year")) %>%
+   select(EasementID, RestorationCategory, Year, Sample, Total) %>% 
+   filter(!is.na(EasementID)) %>% 
+   group_by(EasementID, RestorationCategory, Year) %>% 
+   summarise(abundance= sum(Total))
  
+# plot abundance by year
+abundance_total %>% 
+   ggplot(aes(Year, abundance, fill = "EasementID")) +
+   geom_boxplot() +
+   theme_classic()+
+   scale_fill_manual(values = c(palette2),
+                     name = "EasementID")+
+   labs(title = "Insect Abundance \n per Year")+
+   xlab("\n Year") +
+   ylab("Total Abundance")+
+   geom_jitter(alpha=.7, width = .1, size = 3, aes(colour = EasementID))
  
+# see if 2020 is significantly lower abundance
+fit1 <- lm(abundance ~ Year + RestorationCategory, data = abundance_total)
+summary(fit1) # Year explains a significant amount of variation in the data
+# Need to include year as a variable in models, at least w/abundance
  
  
  
