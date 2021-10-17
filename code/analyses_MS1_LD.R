@@ -119,6 +119,14 @@ ggplot(data = insect_div) + geom_histogram(mapping = aes(x = residual), bins = 6
 
 
 
+attach(insect_div)
+sd(Shannon)
+detach(insect_div)
+
+power.t.test(n=41,delta=NULL,sd=0.27, sig.level = 0.05, power = 0.8, type = "one.sample")
+
+
+
 # Raw data visualizations -------------------------------------------------
 
 
