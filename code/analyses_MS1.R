@@ -15,10 +15,13 @@ rest_history <- read_csv("raw/Seeding and Fire checklist.csv") %>%
 all_data <- read_csv("raw/All_Insect_Data.csv") %>% 
   left_join(rest_history) %>% 
   mutate(EasementID = replace(EasementID, EasementID == "792", "00792")) %>% 
-  mutate(RestorationCategory = factor(RestorationCategory, levels = c("Not Seeded", "Seeded Only", "Seeded + Fire", "Remnant"))) %>% #####this code reorders the treatments --the default is alphabetical
+  mutate(RestorationCategory = factor(RestorationCategory, levels = c("No Seed", "Seed", "Seed + Fire", "Remnant"))) %>% #####this code reorders the treatments --the default is alphabetical
   select(-X1) %>% #remove random column with nothing in it
   relocate(., RestorationCategory, .before = "Date" ) %>% 
   separate(., Date, c('Month', 'Day', 'Year'), sep="/") %>% 
+  filter(EasementID != "Borah Creek") %>% 
+  filter(EasementID != "Lulu lake") %>%
+  filter(EasementID != "Scuppernog") %>% 
   filter(EasementID !="00MDP"|Year!="2020") ##Need to filter out 00MDP 2020, but not 00MDP 2019
 
 rest_year <- read_csv("clean/enroll_rest.csv")
@@ -79,9 +82,8 @@ rich_year <-  rest_year %>%
 #Lydia ####
 # Calculate Family richness per easement, per year
 insects_rich_2019 <- all_data %>% 
-   select(EasementID, RestorationCategory, Date, Sample, Family) %>% 
+   select(EasementID, RestorationCategory, Year, Sample, Family) %>% 
    filter(!is.na(EasementID)) %>% 
-   separate(., Date, c('Month', 'Day', 'Year'), sep="/") %>%
    filter(Year == '2019') %>% 
    group_by(EasementID, Year) %>% 
    filter(!duplicated(Family)) %>% #remove duplicates of Family/easement
@@ -89,9 +91,8 @@ insects_rich_2019 <- all_data %>%
  
  
 insects_rich_2020 <- all_data %>% 
-   select(EasementID, RestorationCategory, Date, Sample, Family) %>% 
+   select(EasementID, RestorationCategory, Year, Sample, Family) %>% 
    filter(!is.na(EasementID)) %>% 
-   separate(., Date, c('Month', 'Day', 'Year'), sep="/") %>%
    filter(Year == '2020') %>% 
    group_by(EasementID, Year) %>% 
    filter(!duplicated(Family)) %>% #remove duplicates of Family/easement
@@ -110,7 +111,6 @@ insect_rich <- insects_rich_2019%>%
 # 10 Oct 2021
 # Calculate abundance per Family per easement
 abundance_family <- all_data %>%
-   separate(Date,c("month", "day", "Year")) %>%
    select(EasementID, RestorationCategory, Year, Sample, Total, Family) %>% 
    filter(!is.na(EasementID)) %>% 
    group_by(EasementID, RestorationCategory, Year, Family) %>% 
@@ -118,7 +118,6 @@ abundance_family <- all_data %>%
  
 # Calculate abundance per easement
 abundance_total<- all_data %>% 
-   separate(Date,c("month", "day", "Year")) %>%
    select(EasementID, RestorationCategory, Year, Sample, Total) %>% 
    filter(!is.na(EasementID)) %>% 
    group_by(EasementID, RestorationCategory, Year) %>% 
