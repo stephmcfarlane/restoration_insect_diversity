@@ -34,7 +34,76 @@ palette2 <-  c("tomato3", "#A49988","#5F9EA0", "#006887")
 
 # Raw data visualizations -------------------------------------------------
 
+###### LD,GB,GW checking for normality
+######10/17/2021
 
+### ABUNDANCE
+# get total abundance per site, per year
+abundance_family <- all_data %>%
+  select(EasementID, RestorationCategory, Year, Sample, Total, Family) %>% 
+  filter(!is.na(EasementID)) %>% 
+  group_by(EasementID, Year) %>% 
+  summarise(abundance= sum(Total))%>%
+  select(EasementID, abundance)
+
+mean1<-mean(abundance_family$abundance)
+abundance_family$residual <- abundance_family$abundance-mean1
+shapiro.test(abundance_family$residual)
+ggplot(data = abundance_family) + geom_histogram(mapping = aes(x = residual), bins = 6)
+
+#abundance has normally distributed residuals
+
+### RICHNESS
+# Calculate Family richness per easement, per year
+insects_rich_2019 <- all_data %>% 
+  select(EasementID, RestorationCategory, Year, Sample, Family) %>% 
+  filter(!is.na(EasementID)) %>% 
+  filter(Year == '2019') %>% 
+  group_by(EasementID, Year) %>% 
+  filter(!duplicated(Family)) %>% #remove duplicates of Family/easement
+  summarise(fam_rich = n()) #count the number of families/easement
+insects_rich_2020 <- all_data %>% 
+  select(EasementID, RestorationCategory, Year, Sample, Family) %>% 
+  filter(!is.na(EasementID)) %>% 
+  filter(Year == '2020') %>% 
+  group_by(EasementID, Year) %>% 
+  filter(!duplicated(Family)) %>% #remove duplicates of Family/easement
+  summarise(fam_rich = n())  #count the number of families/easement
+##combine the richness per year per easment
+insect_rich <- insects_rich_2019%>%
+  full_join(insects_rich_2020)
+
+mean2<-mean(insect_rich$fam_rich)
+insect_rich$residual <- insect_rich$fam_rich-mean2
+shapiro.test(insect_rich$residual)
+ggplot(data = insect_rich) + geom_histogram(mapping = aes(x = residual))
+
+#richness just barely has normally distributed residuals
+
+### DIVERSITY
+sitebyfam <- all_data %>% 
+  select(EasementID, RestorationCategory, Year, Sample, Total, Family) %>% 
+  filter(!is.na(EasementID)) %>% 
+  group_by(EasementID, RestorationCategory, Year, Family) %>% 
+  summarise(abundance= sum(Total)) %>% 
+  select(EasementID, RestorationCategory, Family, Year, abundance) %>%
+  pivot_wider(names_from = Family, values_from = abundance) %>%
+  replace(is.na(.), 0) %>%
+  ungroup()
+##Shannon div per easement per year
+sitebyfam$Shannon <- diversity(sitebyfam[4:182], index = "shannon", MARGIN = 1, base = exp(1))
+insect_div <- sitebyfam%>%
+  select(EasementID, Year, Shannon)
+
+mean3<-mean(insect_div$Shannon)
+insect_div$residual <- insect_div$Shannon-mean3
+shapiro.test(insect_div$residual)
+ggplot(data = insect_div) + geom_histogram(mapping = aes(x = residual), bins = 6)
+
+#diversity does not have normally distributed residuals
+
+
+##########################################################################################################################
 
 ## Calculate average Family richness per easement
 insects_ave_rich <- all_data %>% 
