@@ -17,8 +17,9 @@ all_data <- read_csv("raw/All_Insect_Data.csv") %>%
   mutate(EasementID = replace(EasementID, EasementID == "792", "00792")) %>% 
   mutate(RestorationCategory = factor(RestorationCategory, levels = c("Not Seeded", "Seeded Only", "Seeded + Fire", "Remnant"))) %>% #####this code reorders the treatments --the default is alphabetical
   select(-X1) %>% #remove random column with nothing in it
-  relocate(., RestorationCategory, .before = "Date" )  #join with treatment df
-  ##filter(EasementID != "00MDP") Need to filter out 00MDP from 2020
+  relocate(., RestorationCategory, .before = "Date" ) %>% 
+  separate(., Date, c('Month', 'Day', 'Year'), sep="/") %>% 
+  filter(EasementID !="00MDP"|Year!="2020") ##Need to filter out 00MDP 2020, but not 00MDP 2019
 
 rest_year <- read_csv("clean/enroll_rest.csv")
 
