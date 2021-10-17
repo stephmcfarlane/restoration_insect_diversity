@@ -6,27 +6,19 @@ library(vegan)
 
 ## Load data #####
 # Upload easement treatment (aka restoration category) data & clean ##
-treatment <- read_csv("raw/All_Insect_Data.csv") %>% 
-  left_join(read_csv("raw/TreatmentNov20.csv")) %>% 
-  select(EasementID, RestorationCategory) %>% 
-  filter(!duplicated(EasementID)) %>% 
-  replace(is.na(.), "Remnant") %>% 
-  mutate(EasementID = replace(EasementID, EasementID == "792", "00792")) %>% 
-  mutate(RestorationCategory = replace(RestorationCategory, RestorationCategory =="Seed+ Fire", "Seeded + Fire"),
-         RestorationCategory = replace(RestorationCategory, RestorationCategory == "Seed", "Seeded Only"),
-         RestorationCategory = replace(RestorationCategory, RestorationCategory == "No Seed", "Not Seeded")) %>% 
-  mutate(RestorationCategory = factor(RestorationCategory, levels = c("Not Seeded", "Seeded Only", "Seeded + Fire", "Remnant")))  #####this code reorders the treatments --the default is alphabetical
+rest_history <- read_csv("raw/Seeding and Fire checklist.csv") %>% 
+  select(EasementID, RestorationCategory)
 
 # Upload raw insect sweep identification data
 # This csv was downloaded from the Google Doc data entry spreadsheet on 6 March 2021
+
 all_data <- read_csv("raw/All_Insect_Data.csv") %>% 
+  left_join(rest_history) %>% 
+  mutate(EasementID = replace(EasementID, EasementID == "792", "00792")) %>% 
+  mutate(RestorationCategory = factor(RestorationCategory, levels = c("Not Seeded", "Seeded Only", "Seeded + Fire", "Remnant"))) %>% #####this code reorders the treatments --the default is alphabetical
   select(-X1) %>% #remove random column with nothing in it
-  left_join(treatment) %>% #join with treatment df
-  relocate(., RestorationCategory, .before = "Date" ) %>%
-  filter(EasementID != "Borah Creek") %>% #remove site w/missing data
-  filter(EasementID != "Lulu lake") %>%
-  filter(EasementID != "Scuppernog") %>%
-  filter(EasementID != "00MDP")
+  relocate(., RestorationCategory, .before = "Date" )  #join with treatment df
+  ##filter(EasementID != "00MDP") Need to filter out 00MDP from 2020
 
 rest_year <- read_csv("clean/enroll_rest.csv")
 
