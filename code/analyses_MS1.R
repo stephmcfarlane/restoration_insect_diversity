@@ -32,8 +32,7 @@ palette1<-  c("#767171", "#A9D18E", "#548235", "#A49988")
 palette2 <-  c("tomato3", "#A49988","#5F9EA0", "#006887")
 
 
-# Raw data visualizations -------------------------------------------------
-
+# Normality ----
 ###### LD,GB,GW checking for normality
 ######10/17/2021
 
@@ -103,7 +102,7 @@ ggplot(data = insect_div) + geom_histogram(mapping = aes(x = residual), bins = 6
 #diversity does not have normally distributed residuals
 
 
-##########################################################################################################################
+# Raw data visualizations -------------------------------------------------
 
 ## Calculate average Family richness per easement
 insects_ave_rich <- all_data %>% 
@@ -148,7 +147,7 @@ rich_year <-  rest_year %>%
         plot.margin = unit(c(1,1,2,1), "lines")) +
   geom_jitter(alpha=.2, width = .1, size = 3)
 
-#Lydia ####
+
 # Calculate Family richness per easement, per year
 insects_rich_2019 <- all_data %>% 
    select(EasementID, RestorationCategory, Year, Sample, Family) %>% 
@@ -176,7 +175,7 @@ insect_rich <- insects_rich_2019%>%
    geom_boxplot()
  
  
-# Jade ####
+# Jade ###
 # 10 Oct 2021
 # Calculate abundance per Family per easement
 abundance_family <- all_data %>%
@@ -445,8 +444,9 @@ ShannonDiv <- sitebyfam %>%
   select(-EasementID, -RestorationCategory) %>%
   diversity()
 
-#### Lydia, 10/10/21 #####
-## getting shannon div per easement per year. 
+#### Lydia, 10/10/21 ###
+
+#shannon div per easement per year. ----
 
 sitebyfam <- all_data %>% 
   select(EasementID, RestorationCategory, Date, Sample, Total, Family) %>% 
