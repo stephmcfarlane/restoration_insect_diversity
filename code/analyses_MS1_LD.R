@@ -126,6 +126,19 @@ detach(insect_div)
 power.t.test(n=41,delta=NULL,sd=0.27, sig.level = 0.05, power = 0.8, type = "one.sample")
 
 
+# rarefied richness
+
+library(janitor)
+#ignoring yr to test (removing year row)
+fambysite <- data.frame(t(sitebyfam)) %>% 
+  row_to_names(row_number = 1)
+fambysite <-   fambysite[-c(1,2),]
+library(janitor)
+
+sample <- c(20)
+sample <- min(colSums(sitebyfam))
+rare_richness <- rarefy(fambysite, 20, MARGIN = 2)
+rare_richness <- rrarefy(sitebyfam, sample)
 
 # Raw data visualizations -------------------------------------------------
 
