@@ -184,8 +184,21 @@ rarerich19 <- data.frame(rare_richness19)
 
 #When comparing, must do within year, not across years, because they are standardized differently. 
 
+#checking the residuals for each year's rarefied richness
 
+#2019
+mean4<-mean(rarerich19$rare_richness19)
+rarerich19$residual <- rarerich19$rare_richness19-mean4
+shapiro.test(rarerich19$residual)
+ggplot(data = rarerich19) + geom_histogram(mapping = aes(x = residual))
+#not normally distributed p value 0.03392
 
+#2020
+mean5<-mean(rarerich20$rare_richness20)
+rarerich20$residual <- rarerich20$rare_richness20-mean5
+shapiro.test(rarerich20$residual)
+ggplot(data = rarerich20) + geom_histogram(mapping = aes(x = residual))
+#normally distributed p value 0.9187
 
 # Raw data visualizations -------------------------------------------------
 
