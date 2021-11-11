@@ -102,6 +102,71 @@ ggplot(data = insect_div) + geom_histogram(mapping = aes(x = residual), bins = 6
 #diversity does not have normally distributed residuals
 
 
+# Rarefied richness ---------------------------------
+# rarefaction standardizes the sample sizes for the richness based on the smallest sample size
+
+#2020
+sitebyfam20 <- all_data %>% 
+  select(EasementID, RestorationCategory, Year, Sample, Total, Family) %>% 
+  filter(!is.na(EasementID)) %>% 
+  group_by(EasementID, RestorationCategory, Year, Family) %>% 
+  summarise(abundance= sum(Total)) %>% 
+  filter(Year == '2020') %>% 
+  select(EasementID, RestorationCategory, Family, Year, abundance) %>%
+  pivot_wider(names_from = Family, values_from = abundance) %>%
+  replace(is.na(.), 0) %>%
+  ungroup()
+sitebyfam20$Shannon <- diversity(sitebyfam20[4:182], index = "shannon", MARGIN = 1, base = exp(1))
+
+library(janitor)
+fambysite20 <- data.frame(t(sitebyfam20)) %>% 
+  row_to_names(row_number = 1)
+fambysite20 <-   fambysite20[-c(1,2),]
+rowremove <- c("Shannon")
+fambysite20 <- fambysite20[!(row.names(fambysite20)%in%rowremove),]
+fambysite20 <- mutate_all(fambysite20,function(x)as.numeric(as.character(x)))
+
+# the lowest abundance for 2020 was 60
+rare_richness20 <- rarefy(fambysite20, 60, MARGIN = 2)
+rare_richness20
+rarerich20 <- data.frame(rare_richness20)
+
+#2019
+sitebyfam19 <- all_data %>% 
+  select(EasementID, RestorationCategory, Year, Sample, Total, Family) %>% 
+  filter(!is.na(EasementID)) %>% 
+  group_by(EasementID, RestorationCategory, Year, Family) %>% 
+  summarise(abundance= sum(Total)) %>% 
+  filter(Year == '2019') %>% 
+  select(EasementID, RestorationCategory, Family, Year, abundance) %>%
+  pivot_wider(names_from = Family, values_from = abundance) %>%
+  replace(is.na(.), 0) %>%
+  ungroup()
+sitebyfam19$Shannon <- diversity(sitebyfam19[4:182], index = "shannon", MARGIN = 1, base = exp(1))
+
+
+fambysite19 <- data.frame(t(sitebyfam19)) %>% 
+  row_to_names(row_number = 1)
+fambysite19 <-   fambysite19[-c(1,2),]
+rowremove <- c("Shannon")
+fambysite19 <- fambysite19[!(row.names(fambysite19)%in%rowremove),]
+fambysite19 <- mutate_all(fambysite19,function(x)as.numeric(as.character(x)))
+
+# the lowest abundance in 2019 was 366
+rare_richness19 <- rarefy(fambysite19, 366, MARGIN = 2)
+rare_richness19
+rarerich19 <- data.frame(rare_richness19)
+
+
+#When comparing, must do within year, not across years, because they are standardized differently. 
+
+
+
+
+
+
+
+
 # Raw data visualizations -------------------------------------------------
 
 ## Calculate average Family richness per easement
