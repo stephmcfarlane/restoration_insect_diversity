@@ -157,6 +157,17 @@ rare_richness19 <- rarefy(fambysite19, 366, MARGIN = 2)
 rare_richness19
 rarerich19 <- data.frame(rare_richness19)
 
+library(dplyr)
+rarerich19 <- tibble::rownames_to_column(rarerich19, "VALUE")
+colnames(rarerich19)[colnames(rarerich19) == 'VALUE'] <- 'EasementID'
+rarerich19 <-  rarerich19%>% 
+  left_join(insects_rich_2019)
+attach(rarerich19)
+plot(rare_richness19, fam_rich, xlab = "fam_rich", ylab = "rare_richness19")
+abline(0, 1)
+detach(rarerich19)
+
+rarecurve(rarerich19, step = 20, sample = 366, col = "blue", cex = 0.6)
 
 #When comparing, must do within year, not across years, because they are standardized differently. 
 
