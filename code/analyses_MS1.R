@@ -22,7 +22,10 @@ all_data <- read_csv("raw/All_Insect_Data.csv") %>%
   filter(EasementID != "Borah Creek") %>% 
   filter(EasementID != "Lulu lake") %>%
   filter(EasementID != "Scuppernog") %>% 
+  filter(EasementID != "Dewey Heights") %>% 
   filter(EasementID !="00MDP"|Year!="2020") ##Need to filter out 00MDP 2020, but not 00MDP 2019
+
+#site 00VTR may be an outlier in the data...
 
 rest_year <- read_csv("clean/enroll_rest.csv")
 
@@ -458,6 +461,64 @@ insects_ave_rich %>%
         legend.position = "none",
         plot.margin = unit(c(1,1,2,1), "lines")) +
   geom_jitter(alpha=.2, width = .1, size = 3)
+
+
+
+# Insect Diversity: ANOVA & Tukey----------------------------------------
+
+anova <- aov(Shannon ~ RestorationCategory + Year, data = sitebyfam)
+summary(anova)
+#there is no signifcant variation of insect diversity between restoration categories, nor collection year
+#Restoration category = 0.0572
+#year = 0.2471
+
+TukeyHSD(anova)
+#this gives intersting results for the differences in the means
+
+sitebyfam %>% #visualizing restoration category and insect diversity
+  ggplot(aes(RestorationCategory, Shannon, fill = "EasementID")) +
+  geom_boxplot() +
+  theme_classic()+
+  xlab("Restoration Category") +
+  ylab("Insect Diversity")
+
+
+# Ordination & PERMANOVA --------------------------------------------------
+
+sitebyfam2 <- all_data %>% #matrix with only numeric values
+  select(EasementID, RestorationCategory, Year, Sample, Total, Family) %>% #note that this is including year, so a site can have up to 2 entries
+  filter(!is.na(EasementID)) %>% 
+  group_by(EasementID, RestorationCategory, Year, Family) %>% 
+  summarise(abundance= sum(Total)) %>% 
+  select(EasementID, RestorationCategory, Family, Year, abundance) %>%
+  pivot_wider(names_from = Family, values_from = abundance) %>%
+  replace(is.na(.), 0) %>%
+  ungroup()%>% 
+  select(-Year, -RestorationCategory, -EasementID)
+
+
+#the model statement for the capscale
+  #model.cap <-capscale(dataonly ~ group, groupings, dist="bray")
+
+div_can <- capscale(sitebyfam2 ~ RestorationCategory, sitebyfam, dist="bray")
+div_can
+  #creating the ordination
+
+#plotting the ordination
+ordiplot(div_can,type="n", main = "Insect Community")
+orditorp(div_can, display="sites", priority, labels= sitebyfam$RestorationCategory,)
+ordihull(div_can, groups= sitebyfam$RestorationCategory, label= TRUE, draw= "polygon")
+
+
+div_permanova <- adonis(formula = sitebyfam2 ~ RestorationCategory, data = sitebyfam, permutations = 999, method ="bray")
+div_permanova
+  #permanova on the ordination: testing if there are differences in the dispersion/spread of groups
+    #does not assume normality (non-parametric)
+
+
+
+
+
 
 # Community composition analyses ------------------------------------------
 ## Data Wrangling ####
