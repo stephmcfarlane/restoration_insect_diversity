@@ -4,10 +4,48 @@ library(tidyverse)
 library(vegan)
 # NOTE: adding four # after a note makes it into a section heading!
 
-## Load data #####
+# Site History Data ####
 # Upload easement treatment (aka restoration category) data & clean ##
-rest_history <- read_csv("raw/Seeding and Fire checklist.csv") %>% 
-  select(EasementID, RestorationCategory)
+
+### Restoration History ####
+rest_history <- read_csv("raw/restoration_history.csv") %>% 
+  select(EasementID, RestorationCategory = RestorationCategory_NEW, Size = Contiguous_Seeding_Size) %>% 
+  mutate(EasementID = recode(EasementID, '792' = "00792")) %>%
+  mutate(RestorationCategory = factor(RestorationCategory, levels = c("No Seed", "Seed", "Seed + Fire", "Remnant")))
+
+## Restoration Age
+age <- read_csv("clean/rest_age.csv")
+
+##Fire History####
+fire_years  <- read_csv("raw/restoration_history.csv") %>% 
+  select(SiteID = EasementID, RestorationCategory = RestorationCategory_NEW, Fire_Years) %>%
+  mutate(SiteID = recode(SiteID, '792' = "00792")) %>%
+  filter(RestorationCategory != "Seed") %>% 
+  filter(RestorationCategory != "No Seed") %>% 
+  separate(Fire_Years, c("Fire1", "Fire2", "Fire3")) %>%
+  left_join(age) %>% 
+  mutate(sample_year = '2020') %>% 
+  select(-rest_year, -rest_age)  %>% 
+  mutate(Fire3 = ifelse(Fire3 > sample_year, NA, Fire3)) %>% 
+  mutate(Fire2 = ifelse(Fire2 > sample_year, NA, Fire2)) %>% 
+  mutate(Fire1 = ifelse(Fire1 > sample_year, NA, Fire1))
+
+
+fire_frequency <- fire_years %>% 
+  pivot_longer(cols = c("Fire1", "Fire2", "Fire3"), values_to = "Fires") %>% 
+  filter(!is.na(Fires)) %>% 
+  group_by(SiteID) %>% 
+  summarise(number_fires = n()) %>% 
+  left_join(age) %>% 
+  mutate(fire_frequency = (rest_age/number_fires)) 
+
+
+time_since_fire <- fire_years %>% 
+  mutate_at(vars(c(Fire1, Fire2, Fire3)), ~replace(., is.na(.), "")) %>% 
+  mutate(last_fire = ifelse(Fire3 > 0, Fire3, Fire2)) %>% 
+  mutate(last_fire = ifelse(last_fire > 0, last_fire, Fire1)) %>% 
+  convert(int(last_fire)) %>% 
+  mutate(years_since_fire = (sample_year - last_fire))
 
 # Upload raw insect sweep identification data
 # This csv was downloaded from the Google Doc data entry spreadsheet on 6 March 2021
@@ -22,7 +60,9 @@ all_data <- read_csv("raw/All_Insect_Data.csv") %>%
   filter(EasementID != "Borah Creek") %>% 
   filter(EasementID != "Lulu lake") %>%
   filter(EasementID != "Scuppernog") %>% 
-  filter(EasementID != "Dewey Heights") %>% 
+  filter(EasementID != "Hauser Road") %>% 
+  filter(EasementID != "UW-Arboretum") %>% 
+  filter(EasementID != "Snapper Prairie") %>% 
   filter(EasementID !="00MDP"|Year!="2020") ##Need to filter out 00MDP 2020, but not 00MDP 2019
 
 #site 00VTR may be an outlier in the data...
@@ -33,6 +73,7 @@ rest_year <- read_csv("clean/enroll_rest.csv")
 # Color Palettes #
 palette1<-  c("#767171", "#A9D18E", "#548235", "#A49988")
 palette2 <-  c("tomato3", "#A49988","#5F9EA0", "#006887")
+palette3<-  c("#767171", "#A9D18E", "#548235", "#2A4117") #3B5422
 
 
 # Normality ----
@@ -41,17 +82,16 @@ palette2 <-  c("tomato3", "#A49988","#5F9EA0", "#006887")
 
 ### ABUNDANCE
 # get total abundance per site, per year
-abundance_family <- all_data %>%
+abundance_by_year <- all_data %>%
   select(EasementID, RestorationCategory, Year, Sample, Total, Family) %>% 
   filter(!is.na(EasementID)) %>% 
   group_by(EasementID, Year) %>% 
-  summarise(abundance= sum(Total))%>%
-  select(EasementID, abundance)
+  summarise(abundance= sum(Total))
 
-mean1<-mean(abundance_family$abundance)
-abundance_family$residual <- abundance_family$abundance-mean1
-shapiro.test(abundance_family$residual)
-ggplot(data = abundance_family) + geom_histogram(mapping = aes(x = residual), bins = 6)
+mean1<-mean(abundance_by_year$abundance)
+abundance_by_year$residual <- abundance_by_year$abundance-mean1
+shapiro.test(abundance_by_year$residual)
+ggplot(data = abundance_by_year) + geom_histogram(mapping = aes(x = residual), bins = 6)
 
 #abundance has normally distributed residuals
 
@@ -64,28 +104,67 @@ insects_rich_2019 <- all_data %>%
   group_by(EasementID, Year) %>% 
   filter(!duplicated(Family)) %>% #remove duplicates of Family/easement
   summarise(fam_rich = n()) #count the number of families/easement
+
 insects_rich_2020 <- all_data %>% 
   select(EasementID, RestorationCategory, Year, Sample, Family) %>% 
-  filter(!is.na(EasementID)) %>% 
   filter(Year == '2020') %>% 
   group_by(EasementID, Year) %>% 
   filter(!duplicated(Family)) %>% #remove duplicates of Family/easement
   summarise(fam_rich = n())  #count the number of families/easement
 ##combine the richness per year per easment
-insect_rich <- insects_rich_2019%>%
-  full_join(insects_rich_2020)
+
+##This is not averaging family richness--it is just removing duplicates which
+##which will result in higher family richness at sites visited two years in a row
+insect_rich<- all_data %>% 
+ select(EasementID, RestorationCategory, Year, Sample, Family) %>% 
+ group_by(EasementID) %>% 
+ filter(!duplicated(Family)) %>% #remove duplicates of Family/easement
+ summarise(fam_rich = n()) %>% 
+  left_join(rest_history)
+
+insect_rich<- all_data %>% 
+  select(EasementID, RestorationCategory, Year, Sample, Family) %>% 
+  group_by(EasementID, Year) %>% 
+  filter(!duplicated(Family)) %>% #remove duplicates of Family/easement
+  summarise(fam_rich = n()) %>% 
+  ungroup() %>% 
+  group_by(EasementID) %>% 
+  sum(ave_rich = mean(fam_rich))
+
+insect_rich %>% 
+  ggplot(aes(RestorationCategory, fam_rich, fill=RestorationCategory)) +
+  geom_boxplot(outlier.alpha = 0) +
+  theme_classic()+
+  scale_fill_manual(values = palette3,
+                    name = "Site Categories")+
+  labs(title = "Insect Family Richness \n per Site Category")+
+  xlab("\n Site category") +
+  ylab("Average family richness")+
+  theme(plot.title = element_text(family = "Palatino", size = 18, hjust = 0.5, vjust = 2),
+        axis.title.x = element_text(family = "Palatino", size = 15, vjust = 4),
+        axis.title.y = element_text(family = "Palatino", size = 15, hjust = 0.5, vjust =4),
+        axis.text.x =  element_text(family = "Palatino", size = 12),
+        axis.text.y = element_text(family = "Palatino", size = 12),
+        legend.title = element_blank(),
+        legend.position = "none",
+        plot.margin = unit(c(1,1,2,1), "lines")) +
+  geom_jitter(alpha=.2, width = .1, size = 3)
+
+## 8 sites have species richness for two years...how should we deal with that?
+insect_rich_combined <- insects_rich_2019%>%
+  full_join(insects_rich_2020) %>% 
+  
 
 mean2<-mean(insect_rich$fam_rich)
 insect_rich$residual <- insect_rich$fam_rich-mean2
 shapiro.test(insect_rich$residual)
-ggplot(data = insect_rich) + geom_histogram(mapping = aes(x = residual))
+ggplot(data = insect_rich) + geom_histogram(mapping = aes(x = residual), bins = 6)
 
 #richness just barely has normally distributed residuals
 
 ### DIVERSITY
 sitebyfam <- all_data %>% 
   select(EasementID, RestorationCategory, Year, Sample, Total, Family) %>% 
-  filter(!is.na(EasementID)) %>% 
   group_by(EasementID, RestorationCategory, Year, Family) %>% 
   summarise(abundance= sum(Total)) %>% 
   select(EasementID, RestorationCategory, Family, Year, abundance) %>%
@@ -95,12 +174,34 @@ sitebyfam <- all_data %>%
 ##Shannon div per easement per year
 sitebyfam$Shannon <- diversity(sitebyfam[4:182], index = "shannon", MARGIN = 1, base = exp(1))
 insect_div <- sitebyfam%>%
-  select(EasementID, Year, Shannon)
+  select(EasementID, Year, Shannon) %>% 
+  left_join(rest_history) %>% 
+  filter(EasementID != "00VTR")
+
+insect_div %>% 
+  ggplot(aes(RestorationCategory, Shannon, fill=RestorationCategory)) +
+  geom_boxplot(outlier.alpha = 0) +
+  theme_classic()+
+  scale_fill_manual(values = palette3,
+                    name = "Site Categories")+
+  labs(title = "Insect Family Diversity \n per Site Category")+
+  xlab("\n Site Category") +
+  ylab("Average family diversity")+
+  theme(plot.title = element_text(family = "Palatino", size = 18, hjust = 0.5, vjust = 2),
+        axis.title.x = element_text(family = "Palatino", size = 15, vjust = 4),
+        axis.title.y = element_text(family = "Palatino", size = 15, hjust = 0.5, vjust =4),
+        axis.text.x =  element_text(family = "Palatino", size = 12),
+        axis.text.y = element_text(family = "Palatino", size = 12),
+        legend.title = element_blank(),
+        legend.position = "none",
+        plot.margin = unit(c(1,1,2,1), "lines")) +
+  geom_jitter(alpha=.2, width = .1, size = 3)
 
 mean3<-mean(insect_div$Shannon)
 insect_div$residual <- insect_div$Shannon-mean3
 shapiro.test(insect_div$residual)
 ggplot(data = insect_div) + geom_histogram(mapping = aes(x = residual), bins = 6)
+
 
 #diversity does not have normally distributed residuals
 
