@@ -1,7 +1,9 @@
-# Run this section every time! --------------------------------------------
-
+#Load packages####
+library(iNEXT)
 library(tidyverse)
 library(vegan)
+library(devtools)
+
 # NOTE: adding four # after a note makes it into a section heading!
 
 # Site History Data ####
@@ -80,7 +82,7 @@ palette3<-  c("#767171", "#A9D18E", "#548235", "#2A4117") #3B5422
 ###### LD,GB,GW checking for normality
 ######10/17/2021
 
-### ABUNDANCE
+# Abundance ####
 # get total abundance per site, per year
 abundance_by_year <- all_data %>%
   select(EasementID, RestorationCategory, Year, Sample, Total, Family) %>% 
@@ -95,7 +97,8 @@ ggplot(data = abundance_by_year) + geom_histogram(mapping = aes(x = residual), b
 
 #abundance has normally distributed residuals
 
-### RICHNESS
+#Diversity metrics ####
+### Species Richness ####
 # Calculate Family richness per easement, per year
 insects_rich_2019 <- all_data %>% 
   select(EasementID, RestorationCategory, Year, Sample, Family) %>% 
@@ -131,6 +134,7 @@ insect_rich<- all_data %>%
   group_by(EasementID) %>% 
   sum(ave_rich = mean(fam_rich))
 
+####Plotting richness ####
 insect_rich %>% 
   ggplot(aes(RestorationCategory, fam_rich, fill=RestorationCategory)) +
   geom_boxplot(outlier.alpha = 0) +
@@ -162,7 +166,7 @@ ggplot(data = insect_rich) + geom_histogram(mapping = aes(x = residual), bins = 
 
 #richness just barely has normally distributed residuals
 
-### DIVERSITY
+### Shannon's Diversity Index ####
 sitebyfam <- all_data %>% 
   select(EasementID, RestorationCategory, Year, Sample, Total, Family) %>% 
   group_by(EasementID, RestorationCategory, Year, Family) %>% 
@@ -178,6 +182,7 @@ insect_div <- sitebyfam%>%
   left_join(rest_history) %>% 
   filter(EasementID != "00VTR")
 
+#### Plotting Diversity ####
 insect_div %>% 
   ggplot(aes(RestorationCategory, Shannon, fill=RestorationCategory)) +
   geom_boxplot(outlier.alpha = 0) +
@@ -202,11 +207,48 @@ insect_div$residual <- insect_div$Shannon-mean3
 shapiro.test(insect_div$residual)
 ggplot(data = insect_div) + geom_histogram(mapping = aes(x = residual), bins = 6)
 
-
 #diversity does not have normally distributed residuals
 
+## iNEXT: Interpolation Exterpolation####
 
-# Rarefied richness ---------------------------------
+#### Formatting Data into a List of Lists ####
+plot_ids <- unique(all_data[c("EasementID", "Year")])  ##creates unique list of plot-year combo
+
+# output list of lists, start with blank list
+abundance_list <-  list()
+
+list_names <- mutate(plot_ids, paste0(EasementID, "_", Year)) %>%
+  select(names = 3) %>% ##naming 3rd column names
+  pull() ##changing to a vector of names which is needed to rename lists in abundance list
+
+## for loop -- converting species' abundances into a list for each site/date combo and adding to blank list, abundance_list
+for(i in 1:nrow(plot_ids)) 
+  {
+  df.out <- all_data %>% 
+    select(EasementID, RestorationCategory, Year, Sample, Total, Family) %>% 
+    group_by(EasementID, RestorationCategory, Year, Family) %>% 
+    summarise(abundance = sum(Total)) %>%
+    filter(EasementID==plot_ids[i,1]) %>% ##filtering easement by the site name (column 1)
+    filter(Year==plot_ids[i,2]) %>%  #& by year (column 2)
+    ungroup() %>%
+    select(abundance) %>%
+    as.list()
+  
+  abundance_list <- append(abundance_list, df.out)
+  }
+
+names(abundance_list) <- list_names ## assigning names to lists
+
+#### iNEXT calculations ####
+insect <- iNEXT(abundance_list, q=c(0, 1, 2), datatype = "abundance", endpoint = 500)
+view(insect$iNextEst)
+
+## output into separate data frames
+insect_datainfo <- as.data.frame(insect[["DataInfo"]])
+insect_div_est <- as.data.frame(insect[["iNextEst"]])
+insect_asy_est <- as.data.frame(insect[["AsyEst"]])
+
+## Rarefied richness ---------------------------------
 # rarefaction standardizes the sample sizes for the richness based on the smallest sample size
 
 #2020
