@@ -244,9 +244,9 @@ insect <- iNEXT(abundance_list, q=c(0, 1, 2), datatype = "abundance", endpoint =
 view(insect$iNextEst)
 
 ## output into separate data frames
-insect_datainfo <- as.data.frame(insect[["DataInfo"]])
-insect_div_est <- as.data.frame(insect[["iNextEst"]])
-insect_asy_est <- as.data.frame(insect[["AsyEst"]])
+insect_datainfo <- as.data.frame(insect[["DataInfo"]])  ##site name, sample size, Family richness, number of singletons, doubletons, etc.
+insect_div_est <- as.data.frame(insect[["iNextEst"]]) ## diversity estimates with rarefied and extrapolated samples for q = 0,1,2
+insect_asy_est <- as.data.frame(insect[["AsyEst"]]) ## asympototic diversity estimates with bootstrap s.e. and confidence intervals for q = 0,1,2
 
 ## Rarefied richness ---------------------------------
 # rarefaction standardizes the sample sizes for the richness based on the smallest sample size
