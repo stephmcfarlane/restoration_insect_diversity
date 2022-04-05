@@ -240,13 +240,99 @@ for(i in 1:nrow(plot_ids))
 names(abundance_list) <- list_names ## assigning names to lists
 
 #### iNEXT calculations ####
-insect <- iNEXT(abundance_list, q=c(0, 1, 2), datatype = "abundance", endpoint = 500)
-view(insect$iNextEst)
+##setting sample sizes for R/E estimations
+insect <- iNEXT(abundance_list, q=c(0, 1, 2), datatype = "abundance") ##can set endpoint too, referring to number of indivduals 
 
 ## output into separate data frames
 insect_datainfo <- as.data.frame(insect[["DataInfo"]])  ##site name, sample size, Family richness, number of singletons, doubletons, etc.
 insect_div_est <- as.data.frame(insect[["iNextEst"]]) ## diversity estimates with rarefied and extrapolated samples for q = 0,1,2
 insect_asy_est <- as.data.frame(insect[["AsyEst"]]) ## asympototic diversity estimates with bootstrap s.e. and confidence intervals for q = 0,1,2
+
+write_csv(insect$DataInfo, "clean/insect_data_info.csv")
+write_csv(insect$AsyEst, "clean/insect_AsyEst.csv")
+write_csv(insect_div_est, "clean/insect_div_est.csv")
+
+##determining estimated species richness at N=450
+insect_rich <- iNEXT(abundance_list, q=0, datatype = "abundance", endpoint = 450, knots= 100) 
+
+insect_rich_est <- as.data.frame(insect_rich[["iNextEst"]])
+insect_rich_est <- insect_rich_est %>% 
+  filter(Westport.Drumlin_2020.m == 450)
+
+##determining estimated species diversity 
+insect_shannon <- iNEXT(abundance_list, q=1, datatype = "abundance", endpoint = 2500, knots = 100) 
+insect_shannon_est <- as.data.frame(insect_shannon[["iNextEst"]]) %>% 
+  filter(Westport.Drumlin_2020.m == 2500)
+
+## Cleaning spp richness estimates ####
+rich_est <- insect_rich_est %>% 
+  select(ends_with(".qD")) %>% 
+  t() %>% 
+  as.data.frame() %>% 
+  rownames_to_column(var = "rowname") %>% 
+  separate(., rowname, c("EasementID", "Year"), sep = "_") %>% 
+  mutate_at("Year", str_replace, ".qD", "") %>% 
+  mutate_at("EasementID", str_replace_all, '\\.', " ") %>% 
+  mutate(EasementID = if_else(str_starts(EasementID, "X"), str_replace(EasementID,"X", ""), EasementID)) %>% 
+  rename(est_rich=V1)
+
+## Cleaning up diveristy estimates
+shannon_est <- insect_shannon_est %>% 
+  select(ends_with(".qD")) %>% 
+  t() %>% 
+  as.data.frame() %>% 
+  rownames_to_column(var = "rowname") %>% 
+  separate(., rowname, c("EasementID", "Year"), sep = "_") %>% 
+  mutate_at("Year", str_replace, ".qD", "") %>% 
+  mutate_at("EasementID", str_replace_all, '\\.', " ") %>% 
+  mutate(EasementID = if_else(str_starts(EasementID, "X"), str_replace(EasementID,"X", ""), EasementID)) %>% 
+  rename(est_shannon=V1)
+
+
+##Plotting iNEXT example with remanant sites...not really useful with 40 sites
+remnant <- all_data %>% 
+  filter(RestorationCategory == "Remnant")
+
+rem_plot_ids <- unique(remnant[c("EasementID", "Year")])
+
+rem_list_names <- mutate(rem_plot_ids, paste0(EasementID, "_", Year)) %>%
+  select(names = 3) %>%
+  pull()
+rem_abundance_list <-  list()
+
+for(i in 1:nrow(rem_plot_ids)) {
+  
+  df.out <- remnant %>% 
+    select(EasementID, RestorationCategory, Year, Sample, Total, Family) %>% 
+    group_by(EasementID, RestorationCategory, Year, Family) %>% 
+    summarise(abundance= sum(Total)) %>%
+    filter(EasementID==rem_plot_ids[i,1]) %>% 
+    filter(Year==rem_plot_ids[i,2]) %>%
+    ungroup() %>%
+    select(abundance) %>%
+    as.list()
+  #pivot_wider(names_from = Family, values_from = abundance) %>%
+  #split(1:nrow(.))  #split(df.out, 1:nrow(df.out))
+  
+  rem_abundance_list <- append(rem_abundance_list, df.out)
+}
+
+names(rem_abundance_list) <- rem_list_names
+
+rem_abundance_list <- rem_abundance_list[c(-3, -5)]  ##removing Faville and Oliver prairies, due to extremely low abundance
+
+remnant_insect <- iNEXT(rem_abundance_list, q=c(0, 1, 2), datatype = "abundance", endpoint = 1500) 
+
+write_csv(remnant_insect$DataInfo, "clean/remnant_insect_data_info.csv")
+write_csv(remnant_insect$AsyEst, "clean/remnant_insect_AsyEst.csv")
+
+ggiNEXT(remnant_insect, type=1, facet.var="site")  
+# Sample-size-based R/E curves, separating plots by "order" 
+ggiNEXT(remnant_insect, type=1, facet.var="order", color.var="site") +
+  theme_bw() +
+  scale_color_manual(values = c("#A9D18E", "#548235", "#767171", "#A9D18E", "#548235", "#2A4117", "#2A4117")) +
+  scale_fill_manual(values = c("#A9D18E", "#548235", "#767171", "#A9D18E", "#548235", "#2A4117", "#2A4117"))
+
 
 ## Rarefied richness ---------------------------------
 # rarefaction standardizes the sample sizes for the richness based on the smallest sample size
