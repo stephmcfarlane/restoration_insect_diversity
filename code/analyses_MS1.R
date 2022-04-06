@@ -4,7 +4,10 @@ library(tidyverse)
 library(vegan)
 library(devtools)
 
-# NOTE: adding four # after a note makes it into a section heading!
+# Color palettes ####
+palette1<-  c("#767171", "#A9D18E", "#548235", "#A49988")
+palette2 <-  c("tomato3", "#A49988","#5F9EA0", "#006887")
+palette3<-  c("#767171", "#A9D18E", "#548235", "#2A4117") #3B5422
 
 # Site History Data ####
 # Upload easement treatment (aka restoration category) data & clean ##
@@ -72,10 +75,7 @@ all_data <- read_csv("raw/All_Insect_Data.csv") %>%
 rest_year <- read_csv("clean/enroll_rest.csv")
 
 
-# Color Palettes #
-palette1<-  c("#767171", "#A9D18E", "#548235", "#A49988")
-palette2 <-  c("tomato3", "#A49988","#5F9EA0", "#006887")
-palette3<-  c("#767171", "#A9D18E", "#548235", "#2A4117") #3B5422
+
 
 
 # Normality ----
@@ -168,19 +168,29 @@ ggplot(data = insect_rich) + geom_histogram(mapping = aes(x = residual), bins = 
 
 ### Shannon's Diversity Index ####
 sitebyfam <- all_data %>% 
-  select(EasementID, RestorationCategory, Year, Sample, Total, Family) %>% 
-  group_by(EasementID, RestorationCategory, Year, Family) %>% 
+  select(EasementID, Year, Sample, Total, Family) %>% 
+  group_by(EasementID, Year, Family) %>% 
   summarise(abundance= sum(Total)) %>% 
-  select(EasementID, RestorationCategory, Family, Year, abundance) %>%
+  select(EasementID, Family, Year, abundance) %>%
   pivot_wider(names_from = Family, values_from = abundance) %>%
   replace(is.na(.), 0) %>%
   ungroup()
+
+ShannonDiv <- sitebyfam %>% 
+  unite(., "x", EasementID, Year, sep = "_") %>% 
+  column_to_rownames(var = "x") %>% 
+  diversity() %>% 
+  as.data.frame() %>% 
+  rownames_to_column(var = "rowname") %>% 
+  separate(., rowname, c("EasementID", "Year"), sep = "_") %>% 
+  rename(Shannon = ".")
+
 ##Shannon div per easement per year
-sitebyfam$Shannon <- diversity(sitebyfam[4:182], index = "shannon", MARGIN = 1, base = exp(1))
-insect_div <- sitebyfam%>%
-  select(EasementID, Year, Shannon) %>% 
-  left_join(rest_history) %>% 
-  filter(EasementID != "00VTR")
+#sitebyfam$Shannon <- diversity(sitebyfam[4:182], index = "shannon", MARGIN = 1, base = exp(1))
+#insect_div <- sitebyfam%>%
+ # select(EasementID, Year, Shannon) %>% 
+ # left_join(rest_history) %>% 
+ # filter(EasementID != "00VTR")
 
 #### Plotting Diversity ####
 insect_div %>% 
@@ -252,6 +262,10 @@ write_csv(insect$DataInfo, "clean/insect_data_info.csv")
 write_csv(insect$AsyEst, "clean/insect_AsyEst.csv")
 write_csv(insect_div_est, "clean/insect_div_est.csv")
 
+## abundanc2
+insect_abund <- insect_datainfo %>% 
+  separate(., site, c("EasementID", "Year"), sep = "_")
+  
 ##determining estimated species richness at N=450
 insect_rich <- iNEXT(abundance_list, q=0, datatype = "abundance", endpoint = 450, knots= 100) 
 
@@ -259,7 +273,7 @@ insect_rich_est <- as.data.frame(insect_rich[["iNextEst"]])
 insect_rich_est <- insect_rich_est %>% 
   filter(Westport.Drumlin_2020.m == 450)
 
-##determining estimated species diversity 
+##determining estimated species diversity with enpoint = 2500
 insect_shannon <- iNEXT(abundance_list, q=1, datatype = "abundance", endpoint = 2500, knots = 100) 
 insect_shannon_est <- as.data.frame(insect_shannon[["iNextEst"]]) %>% 
   filter(Westport.Drumlin_2020.m == 2500)
@@ -274,20 +288,36 @@ rich_est <- insect_rich_est %>%
   mutate_at("Year", str_replace, ".qD", "") %>% 
   mutate_at("EasementID", str_replace_all, '\\.', " ") %>% 
   mutate(EasementID = if_else(str_starts(EasementID, "X"), str_replace(EasementID,"X", ""), EasementID)) %>% 
-  rename(est_rich=V1)
+  rename(Rich_est=V1)
 
+shannon_est <- insect_asy_est %>% 
+  filter(Diversity == 'Shannon diversity') %>% 
+  select(Site, Shannon_iNext = Observed, Shannon_asy = Estimator) %>% 
+  separate(., Site, c("EasementID", "Year"), sep = "_")
 ## Cleaning up diveristy estimates
-shannon_est <- insect_shannon_est %>% 
-  select(ends_with(".qD")) %>% 
-  t() %>% 
-  as.data.frame() %>% 
-  rownames_to_column(var = "rowname") %>% 
-  separate(., rowname, c("EasementID", "Year"), sep = "_") %>% 
-  mutate_at("Year", str_replace, ".qD", "") %>% 
-  mutate_at("EasementID", str_replace_all, '\\.', " ") %>% 
-  mutate(EasementID = if_else(str_starts(EasementID, "X"), str_replace(EasementID,"X", ""), EasementID)) %>% 
-  rename(est_shannon=V1)
+#shannon_est <- insect_shannon_est %>% 
+#  select(ends_with(".qD")) %>% 
+#  t() %>% 
+#  as.data.frame() %>% 
+#  rownames_to_column(var = "rowname") %>% 
+#  separate(., rowname, c("EasementID", "Year"), sep = "_") %>% 
+#  mutate_at("Year", str_replace, ".qD", "") %>% 
+#  mutate_at("EasementID", str_replace_all, '\\.', " ") %>% 
+#  mutate(EasementID = if_else(str_starts(EasementID, "X"), str_replace(EasementID,"X", ""), EasementID)) %>% 
+#  rename(Shannon_est=V1)
 
+#All Response variables ####
+insect_response <- insect_abund %>% 
+  select(EasementID, Year, Abund = n, Rich_obs = S.obs) %>% 
+  left_join(rich_est) %>% 
+  left_join(shannon_est) %>% 
+  left_join(ShannonDiv) %>% 
+  left_join(rest_history) %>% 
+  filter(Abund > 200)# because it was too low to extrapolate
+  #left_join(fire_years %>% rename(EasementID=SiteID) %>% select(-sample_year))
+
+##time since fire code
+  
 
 ##Plotting iNEXT example with remanant sites...not really useful with 40 sites
 remnant <- all_data %>% 
@@ -512,11 +542,11 @@ abundance_total<- all_data %>%
    summarise(abundance= sum(Total))
  
 # plot abundance by year
-abundance_total %>% 
-   ggplot(aes(Year, abundance, fill = "EasementID")) +
+insect_response %>% 
+   ggplot(aes(Year, Abund, fill = "EasementID")) +
    geom_boxplot() +
    theme_classic()+
-   scale_fill_manual(values = c(palette2),
+   scale_fill_manual(values = c(palette3),
                      name = "EasementID")+
    labs(title = "Insect Abundance \n per Year")+
    xlab("\n Year") +
@@ -530,137 +560,6 @@ summary(fit1) # Year explains a significant amount of variation in the data
  
  
  
-# Calculate the family richness for each Order ####
-coleoptera_rel_rich <- all_data %>% 
-  select(EasementID, RestorationCategory, Date, Sample, Total, Order, Family) %>% 
-  filter(Order == "Coleoptera") %>% 
-  filter(!is.na(EasementID)) %>% 
-  group_by(EasementID, RestorationCategory, Date, Sample) %>% 
-  filter(!duplicated(Family))%>% 
-  summarise(fam_rich = n()) %>% 
-  group_by(EasementID, RestorationCategory) %>% 
-  summarise(ave_rich = mean(fam_rich)) 
-
-hymenoptera_rel_rich <- read_csv("raw/All_Insect_Data.csv") %>% 
-  select(EasementID, Date, Sample, Total, Order, Family) %>% 
-  filter(Order == "Hymenoptera") %>% 
-  filter(!is.na(EasementID)) %>% 
-  group_by(EasementID, Date, Sample) %>% 
-  filter(!duplicated(Family))%>% 
-  summarise(fam_rich = n()) %>% 
-  group_by(EasementID) %>% 
-  summarise(ave_rich = mean(fam_rich)) %>% 
-  left_join(treatment)
-
-hemiptera_rel_rich <- read_csv("raw/All_Insect_Data.csv") %>% 
-  select(EasementID, Date, Sample, Total, Order, Family) %>% 
-  filter(Order == "Hemiptera") %>% 
-  filter(!is.na(EasementID)) %>% 
-  group_by(EasementID, Date, Sample) %>% 
-  filter(!duplicated(Family))%>% 
-  summarise(fam_rich = n()) %>% 
-  group_by(EasementID) %>% 
-  summarise(ave_rich = mean(fam_rich)) %>% 
-  left_join(treatment)
-
-orthoptera_rel_rich <- read_csv("raw/All_Insect_Data.csv") %>% 
-  select(EasementID, Date, Sample, Total, Order, Family) %>% 
-  filter(Order == "Orthoptera") %>% 
-  filter(!is.na(EasementID)) %>% 
-  group_by(EasementID, Date, Sample) %>% 
-  filter(!duplicated(Family))%>% 
-  summarise(fam_rich = n()) %>% 
-  group_by(EasementID) %>% 
-  summarise(ave_rich = mean(fam_rich)) %>% 
-  left_join(treatment)
-
-diptera_rel_rich <- read_csv("raw/All_Insect_Data.csv") %>% 
-  select(EasementID, Date, Sample, Total, Order, Family) %>% 
-  filter(Order == "Diptera") %>% 
-  filter(!is.na(EasementID)) %>% 
-  group_by(EasementID, Date, Sample) %>% 
-  filter(!duplicated(Family))%>% 
-  summarise(fam_rich = n()) %>% 
-  group_by(EasementID) %>% 
-  summarise(ave_rich = mean(fam_rich)) %>% 
-  left_join(treatment)
-
-thysanoptera_ave_rich <- read_csv("raw/All_Insect_Data.csv") %>% 
-  select(EasementID, Date, Sample, Total, Order, Family) %>% 
-  filter(Order == "Thysanoptera") %>% 
-  filter(!is.na(EasementID)) %>% 
-  group_by(EasementID, Date, Sample) %>% 
-  filter(!duplicated(Family))%>% 
-  summarise(fam_rich = n()) %>% 
-  group_by(EasementID) %>% 
-  summarise(ave_rich = mean(fam_rich)) %>% 
-  left_join(treatment)
-
-odonata_ave_rich <- read_csv("raw/All_Insect_Data.csv") %>% 
-  select(EasementID, Date, Sample, Total, Order, Family) %>% 
-  filter(Order == "Odonata") %>% 
-  filter(!is.na(EasementID)) %>% 
-  group_by(EasementID, Date, Sample) %>% 
-  filter(!duplicated(Family))%>% 
-  summarise(fam_rich = n()) %>% 
-  group_by(EasementID) %>% 
-  summarise(ave_rich = mean(fam_rich)) %>% 
-  left_join(treatment)
-
-neuroptera_ave_rich <- read_csv("raw/All_Insect_Data.csv") %>% 
-  select(EasementID, Date, Sample, Total, Order, Family) %>% 
-  filter(Order == "Neuroptera") %>% 
-  filter(!is.na(EasementID)) %>% 
-  group_by(EasementID, Date, Sample) %>% 
-  filter(!duplicated(Family))%>% 
-  summarise(fam_rich = n()) %>% 
-  group_by(EasementID) %>% 
-  summarise(ave_rich = mean(fam_rich)) %>% 
-  left_join(treatment)
-
-ephemeroptera_ave_rich <- read_csv("raw/All_Insect_Data.csv") %>% 
-  select(EasementID, Date, Sample, Total, Order, Family) %>% 
-  filter(Order == "Ephemeroptera") %>% 
-  filter(!is.na(EasementID)) %>% 
-  group_by(EasementID, Date, Sample) %>% 
-  filter(!duplicated(Family))%>% 
-  summarise(fam_rich = n()) %>% 
-  group_by(EasementID) %>% 
-  summarise(ave_rich = mean(fam_rich)) %>% 
-  left_join(treatment)
-
-lepidoptera_ave_rich <- read_csv("raw/All_Insect_Data.csv") %>% 
-  select(EasementID, Date, Sample, Total, Order, Family) %>% 
-  filter(Order == "Lepidoptera") %>% 
-  filter(!is.na(EasementID)) %>% 
-  group_by(EasementID, Date, Sample) %>% 
-  filter(!duplicated(Family))%>% 
-  summarise(fam_rich = n()) %>% 
-  group_by(EasementID) %>% 
-  summarise(ave_rich = mean(fam_rich)) %>% 
-  left_join(treatment)
-
-strepsiptera_ave_rich <- read_csv("raw/All_Insect_Data.csv") %>% 
-  select(EasementID, Date, Sample, Total, Order, Family) %>% 
-  filter(Order == "Strepsiptera") %>% 
-  filter(!is.na(EasementID)) %>% 
-  group_by(EasementID, Date, Sample) %>% 
-  filter(!duplicated(Family))%>% 
-  summarise(fam_rich = n()) %>% 
-  group_by(EasementID) %>% 
-  summarise(ave_rich = mean(fam_rich)) %>% 
-  left_join(treatment)
-
-psocodea_ave_rich <- read_csv("raw/All_Insect_Data.csv") %>% 
-  select(EasementID, Date, Sample, Total, Order, Family) %>% 
-  filter(Order == "Psocodea") %>% 
-  filter(!is.na(EasementID)) %>% 
-  group_by(EasementID, Date, Sample) %>% 
-  filter(!duplicated(Family))%>% 
-  summarise(fam_rich = n()) %>% 
-  group_by(EasementID) %>% 
-  summarise(ave_rich = mean(fam_rich)) %>% 
-  left_join(treatment)
 
 # Total family richness per easement
 fam_rich <- read_csv("raw/All_Insect_Data.csv") %>% 
@@ -671,16 +570,16 @@ fam_rich <- read_csv("raw/All_Insect_Data.csv") %>%
   summarise(fam_rich = n()) %>% 
   left_join(treatment)
 
-## Boxplot of insect family richness by restoration category ####
-insects_ave_rich %>% 
-  ggplot(aes(RestorationCategory, ave_rich, fill=RestorationCategory)) +
+# Plotting diversity by restoration category ####
+insect_response %>% 
+  ggplot(aes(RestorationCategory, Shannon_asy, fill=RestorationCategory)) +
   geom_boxplot(outlier.alpha = 0) +
   theme_classic()+
-  scale_fill_manual(values = c(palette2),
+  scale_fill_manual(values = c(palette3),
                     name = "Site Categories")+
-  labs(title = "Insect Family Richness \n per Restoration Category")+
+  labs(title = "Extrapolated Insect Diversity\n per Restoration Category")+
   xlab("\n Restoration Category") +
-  ylab("Average Family Richness")+
+  ylab("Average Family Diversity")+
   theme(plot.title = element_text(family = "Palatino", size = 18, hjust = 0.5, vjust = 2),
         axis.title.x = element_text(family = "Palatino", size = 15, vjust = 4),
         axis.title.y = element_text(family = "Palatino", size = 15, hjust = 0.5, vjust =4),
@@ -743,10 +642,6 @@ div_permanova <- adonis(formula = sitebyfam2 ~ RestorationCategory, data = siteb
 div_permanova
   #permanova on the ordination: testing if there are differences in the dispersion/spread of groups
     #does not assume normality (non-parametric)
-
-
-
-
 
 
 # Community composition analyses ------------------------------------------
