@@ -1,0 +1,16 @@
+Site,Diversity,Observed,Estimator,s.e.,LCL,UCL
+Westport Drumlin_2020,Species richness,74,130.16,29.511,95.335,221.826
+Westport Drumlin_2020,Shannon diversity,27.318,30.377,1.835,27.318,33.972
+Westport Drumlin_2020,Simpson diversity,14.532,14.855,1.102,14.532,17.014
+Pleasant Valley Conservancy_2020,Species richness,56,59.564,3.09,56.821,71.464
+Pleasant Valley Conservancy_2020,Shannon diversity,21.288,22.833,1.58,21.288,25.931
+Pleasant Valley Conservancy_2020,Simpson diversity,10.207,10.417,0.866,10.207,12.114
+John Muir County Park_2020,Species richness,60,78.036,11.629,65.679,117.282
+John Muir County Park_2020,Shannon diversity,23.319,24.82,1.313,23.319,27.394
+John Muir County Park_2020,Simpson diversity,13.27,13.516,0.861,13.27,15.204
+Black Earth Rettenmund_2020,Species richness,68,101.01,18.94,79.603,161.914
+Black Earth Rettenmund_2020,Shannon diversity,28.6,31.126,1.63,28.6,34.322
+Black Earth Rettenmund_2020,Simpson diversity,16.948,17.388,1.235,16.948,19.808
+Arena Hill Prairie_2020,Species richness,61,70.36,6.327,63.813,92.147
+Arena Hill Prairie_2020,Shannon diversity,19.862,21.101,1.21,19.862,23.472
+Arena Hill Prairie_2020,Simpson diversity,10.529,10.689,0.648,10.529,11.959
