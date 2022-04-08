@@ -1,6 +1,7 @@
 #Load packages####
 library(iNEXT)
 library(tidyverse)
+library(hablar)
 library(vegan)
 library(devtools)
 
@@ -19,7 +20,8 @@ rest_history <- read_csv("raw/restoration_history.csv") %>%
   mutate(RestorationCategory = factor(RestorationCategory, levels = c("No Seed", "Seed", "Seed + Fire", "Remnant")))
 
 ## Restoration Age
-age <- read_csv("clean/rest_age.csv")
+age <- read_csv("clean/rest_age.csv") %>% 
+  select(EasementID = SiteID, rest_year)
 
 ##Fire History####
 fire_years  <- read_csv("raw/restoration_history.csv") %>% 
@@ -54,7 +56,7 @@ time_since_fire <- fire_years %>%
 
 # Upload raw insect sweep identification data
 # This csv was downloaded from the Google Doc data entry spreadsheet on 6 March 2021
-
+#Insect Data ####
 all_data <- read_csv("raw/All_Insect_Data.csv") %>% 
   left_join(rest_history) %>% 
   mutate(EasementID = replace(EasementID, EasementID == "792", "00792")) %>% 
@@ -72,8 +74,7 @@ all_data <- read_csv("raw/All_Insect_Data.csv") %>%
 
 #site 00VTR may be an outlier in the data...
 
-rest_year <- read_csv("clean/enroll_rest.csv")
-
+rest_year <- read_csv("clean/enroll_rest.csv") 
 
 
 
@@ -174,11 +175,13 @@ sitebyfam <- all_data %>%
   select(EasementID, Family, Year, abundance) %>%
   pivot_wider(names_from = Family, values_from = abundance) %>%
   replace(is.na(.), 0) %>%
-  ungroup()
+  ungroup() %>% 
+  unite(., "x", EasementID, Year, sep = "_") %>% ## joining columns and 
+  column_to_rownames(var = "x")
 
 ShannonDiv <- sitebyfam %>% 
-  unite(., "x", EasementID, Year, sep = "_") %>% 
-  column_to_rownames(var = "x") %>% 
+  unite(., "x", EasementID, Year, sep = "_") %>% ## joining columns and 
+  column_to_rownames(var = "x") %>% ##making column rownames so matrix is just numbers
   diversity() %>% 
   as.data.frame() %>% 
   rownames_to_column(var = "rowname") %>% 
@@ -306,15 +309,37 @@ shannon_est <- insect_asy_est %>%
 #  mutate(EasementID = if_else(str_starts(EasementID, "X"), str_replace(EasementID,"X", ""), EasementID)) %>% 
 #  rename(Shannon_est=V1)
 
-#All Response variables ####
+#All Variables ####
 insect_response <- insect_abund %>% 
-  select(EasementID, Year, Abund = n, Rich_obs = S.obs) %>% 
+  select(EasementID, Sample_year = Year, Abund = n, Rich_obs = S.obs) %>% 
   left_join(rich_est) %>% 
   left_join(shannon_est) %>% 
   left_join(ShannonDiv) %>% 
   left_join(rest_history) %>% 
-  filter(Abund > 200)# because it was too low to extrapolate
-  #left_join(fire_years %>% rename(EasementID=SiteID) %>% select(-sample_year))
+  left_join(age) %>% 
+  group_by(EasementID, Sample_year) %>% filter(!duplicated(Sample_year )) %>% ungroup() %>% ##for some reason some sited duplicated in joins...i don't know why.
+  convert(int(Sample_year, rest_year)) %>% 
+  mutate(rest_age =  (Sample_year - rest_year)) %>% 
+  select(-rest_year) %>% 
+  filter(Abund > 200) %>% # because it was too low to extrapolate
+  unite(., "x", EasementID, Sample_year, sep = "_") %>% 
+  #REMOVING RANDOM YEAR####
+  filter(x != "0078S_2020") %>% 
+  filter(x !="007C6_2020") %>% 
+  filter(x !="007XH_2019") %>% 
+  filter(x !="00MBG_2020") %>% 
+  filter(x !="00MJC_2020") %>% 
+  filter(x !="00NCQ_2019") %>% 
+  filter(x !="00WV0_2020") %>% 
+  separate(., x, c("EasementID", "Sample_year"), sep = "_")
+
+##Random number to remove year   
+year_ran_num <- insect_response %>% 
+  mutate(random_num = sample(c(1:37))) %>% 
+  relocate(., random_num, .before = "EasementID") %>% 
+  select(EasementID, Sample_year, random_num, Rich_est,Shannon_asy)
+write_csv(year_ran_num, "clean/year_random_number.csv")
+
 
 ##time since fire code
   
@@ -364,91 +389,6 @@ ggiNEXT(remnant_insect, type=1, facet.var="order", color.var="site") +
   scale_fill_manual(values = c("#A9D18E", "#548235", "#767171", "#A9D18E", "#548235", "#2A4117", "#2A4117"))
 
 
-## Rarefied richness ---------------------------------
-# rarefaction standardizes the sample sizes for the richness based on the smallest sample size
-
-#2020
-sitebyfam20 <- all_data %>% 
-  select(EasementID, RestorationCategory, Year, Sample, Total, Family) %>% 
-  filter(!is.na(EasementID)) %>% 
-  group_by(EasementID, RestorationCategory, Year, Family) %>% 
-  summarise(abundance= sum(Total)) %>% 
-  filter(Year == '2020') %>% 
-  select(EasementID, RestorationCategory, Family, Year, abundance) %>%
-  pivot_wider(names_from = Family, values_from = abundance) %>%
-  replace(is.na(.), 0) %>%
-  ungroup()
-sitebyfam20$Shannon <- diversity(sitebyfam20[4:182], index = "shannon", MARGIN = 1, base = exp(1))
-
-library(janitor)
-fambysite20 <- data.frame(t(sitebyfam20)) %>% 
-  row_to_names(row_number = 1)
-fambysite20 <-   fambysite20[-c(1,2),]
-rowremove <- c("Shannon")
-fambysite20 <- fambysite20[!(row.names(fambysite20)%in%rowremove),]
-fambysite20 <- mutate_all(fambysite20,function(x)as.numeric(as.character(x)))
-
-# the lowest abundance for 2020 was 60
-rare_richness20 <- rarefy(fambysite20, 60, MARGIN = 2)
-rare_richness20
-rarerich20 <- data.frame(rare_richness20)
-
-#2019
-sitebyfam19 <- all_data %>% 
-  select(EasementID, RestorationCategory, Year, Sample, Total, Family) %>% 
-  filter(!is.na(EasementID)) %>% 
-  group_by(EasementID, RestorationCategory, Year, Family) %>% 
-  summarise(abundance= sum(Total)) %>% 
-  filter(Year == '2019') %>% 
-  select(EasementID, RestorationCategory, Family, Year, abundance) %>%
-  pivot_wider(names_from = Family, values_from = abundance) %>%
-  replace(is.na(.), 0) %>%
-  ungroup()
-sitebyfam19$Shannon <- diversity(sitebyfam19[4:182], index = "shannon", MARGIN = 1, base = exp(1))
-
-
-fambysite19 <- data.frame(t(sitebyfam19)) %>% 
-  row_to_names(row_number = 1)
-fambysite19 <-   fambysite19[-c(1,2),]
-rowremove <- c("Shannon")
-fambysite19 <- fambysite19[!(row.names(fambysite19)%in%rowremove),]
-fambysite19 <- mutate_all(fambysite19,function(x)as.numeric(as.character(x)))
-
-# the lowest abundance in 2019 was 366
-rare_richness19 <- rarefy(fambysite19, 366, MARGIN = 2)
-rare_richness19
-rarerich19 <- data.frame(rare_richness19)
-
-library(dplyr)
-rarerich19 <- tibble::rownames_to_column(rarerich19, "VALUE")
-colnames(rarerich19)[colnames(rarerich19) == 'VALUE'] <- 'EasementID'
-rarerich19 <-  rarerich19%>% 
-  left_join(insects_rich_2019)
-attach(rarerich19)
-plot(rare_richness19, fam_rich, xlab = "fam_rich", ylab = "rare_richness19")
-abline(0, 1)
-detach(rarerich19)
-
-rarecurve(rarerich19, step = 20, sample = 366, col = "blue", cex = 0.6)
-
-#When comparing, must do within year, not across years, because they are standardized differently. 
-
-
-#checking the residuals for each year's rarefied richness
-
-#2019
-mean4<-mean(rarerich19$rare_richness19)
-rarerich19$residual <- rarerich19$rare_richness19-mean4
-shapiro.test(rarerich19$residual)
-ggplot(data = rarerich19) + geom_histogram(mapping = aes(x = residual))
-#not normally distributed p value 0.03392
-
-#2020
-mean5<-mean(rarerich20$rare_richness20)
-rarerich20$residual <- rarerich20$rare_richness20-mean5
-shapiro.test(rarerich20$residual)
-ggplot(data = rarerich20) + geom_histogram(mapping = aes(x = residual))
-#normally distributed p value 0.9187
 
 
 
@@ -572,7 +512,7 @@ fam_rich <- read_csv("raw/All_Insect_Data.csv") %>%
 
 # Plotting diversity by restoration category ####
 insect_response %>% 
-  ggplot(aes(RestorationCategory, Shannon_asy, fill=RestorationCategory)) +
+  ggplot(aes(RestorationCategory, Rich_est, fill=RestorationCategory)) +
   geom_boxplot(outlier.alpha = 0) +
   theme_classic()+
   scale_fill_manual(values = c(palette3),
@@ -592,9 +532,10 @@ insect_response %>%
 
 
 
-# Insect Diversity: ANOVA & Tukey----------------------------------------
-
-anova <- aov(Shannon ~ RestorationCategory + Year, data = sitebyfam)
+# Model  ANOVA & Tukey----------------------------------------
+insect_rest <-  insect_response %>% 
+  filter(RestorationCategory != "No Seed")
+anova <- aov(Rich_est ~ RestorationCategory, data=insect_rest)
 summary(anova)
 #there is no signifcant variation of insect diversity between restoration categories, nor collection year
 #Restoration category = 0.0572
@@ -612,7 +553,10 @@ sitebyfam %>% #visualizing restoration category and insect diversity
 
 
 # Ordination & PERMANOVA --------------------------------------------------
+## PCA ####
 
+
+insect_pca <-  princomp(sitebyfam[,-1], cor=TRUE)
 sitebyfam2 <- all_data %>% #matrix with only numeric values
   select(EasementID, RestorationCategory, Year, Sample, Total, Family) %>% #note that this is including year, so a site can have up to 2 entries
   filter(!is.na(EasementID)) %>% 
@@ -722,19 +666,20 @@ ShannonDiv <- sitebyfam %>%
 #shannon div per easement per year. ----
 
 sitebyfam <- all_data %>% 
-  select(EasementID, RestorationCategory, Date, Sample, Total, Family) %>% 
+  select(EasementID, Year, Sample, Total, Family) %>% 
   filter(!is.na(EasementID)) %>% 
-  separate(., Date, c('Month', 'Day', 'Year'), sep="/") %>% 
-  group_by(EasementID, RestorationCategory, Year, Family) %>% 
+  group_by(EasementID, Year, Family) %>% 
   summarise(abundance= sum(Total)) %>% 
-  select(EasementID, RestorationCategory, Family, Year, abundance) %>%
+  select(EasementID,Family, Year, abundance) %>%
   pivot_wider(names_from = Family, values_from = abundance) %>%
+  ungroup() %>% 
   replace(is.na(.), 0) %>%
-  ungroup()
+  unite(., "x", EasementID, Year, sep = "_") %>% 
+  column_to_rownames(var = "x")
 
 ##Shannon div per easement per year
 
-sitebyfam$Shannon <- diversity(sitebyfam[4:183], index = "shannon", MARGIN = 1, base = exp(1))
+sitebyfam$Shannon <- diversity(sitebyfam[3:181], index = "shannon", MARGIN = 1, base = exp(1))
 
 insect_div <- sitebyfam%>%
   select(EasementID, Year, Shannon)
@@ -976,3 +921,90 @@ p2 <- ggplot() +
 
 p2 #view the plot
 
+
+
+# Lydia's Rarefied richness  Code---------------------------------
+# rarefaction standardizes the sample sizes for the richness based on the smallest sample size
+
+#2020
+sitebyfam20 <- all_data %>% 
+  select(EasementID, RestorationCategory, Year, Sample, Total, Family) %>% 
+  filter(!is.na(EasementID)) %>% 
+  group_by(EasementID, RestorationCategory, Year, Family) %>% 
+  summarise(abundance= sum(Total)) %>% 
+  filter(Year == '2020') %>% 
+  select(EasementID, RestorationCategory, Family, Year, abundance) %>%
+  pivot_wider(names_from = Family, values_from = abundance) %>%
+  replace(is.na(.), 0) %>%
+  ungroup()
+sitebyfam20$Shannon <- diversity(sitebyfam20[4:182], index = "shannon", MARGIN = 1, base = exp(1))
+
+library(janitor)
+fambysite20 <- data.frame(t(sitebyfam20)) %>% 
+  row_to_names(row_number = 1)
+fambysite20 <-   fambysite20[-c(1,2),]
+rowremove <- c("Shannon")
+fambysite20 <- fambysite20[!(row.names(fambysite20)%in%rowremove),]
+fambysite20 <- mutate_all(fambysite20,function(x)as.numeric(as.character(x)))
+
+# the lowest abundance for 2020 was 60
+rare_richness20 <- rarefy(fambysite20, 60, MARGIN = 2)
+rare_richness20
+rarerich20 <- data.frame(rare_richness20)
+
+#2019
+sitebyfam19 <- all_data %>% 
+  select(EasementID, RestorationCategory, Year, Sample, Total, Family) %>% 
+  filter(!is.na(EasementID)) %>% 
+  group_by(EasementID, RestorationCategory, Year, Family) %>% 
+  summarise(abundance= sum(Total)) %>% 
+  filter(Year == '2019') %>% 
+  select(EasementID, RestorationCategory, Family, Year, abundance) %>%
+  pivot_wider(names_from = Family, values_from = abundance) %>%
+  replace(is.na(.), 0) %>%
+  ungroup()
+sitebyfam19$Shannon <- diversity(sitebyfam19[4:182], index = "shannon", MARGIN = 1, base = exp(1))
+
+
+fambysite19 <- data.frame(t(sitebyfam19)) %>% 
+  row_to_names(row_number = 1)
+fambysite19 <-   fambysite19[-c(1,2),]
+rowremove <- c("Shannon")
+fambysite19 <- fambysite19[!(row.names(fambysite19)%in%rowremove),]
+fambysite19 <- mutate_all(fambysite19,function(x)as.numeric(as.character(x)))
+
+# the lowest abundance in 2019 was 366
+rare_richness19 <- rarefy(fambysite19, 366, MARGIN = 2)
+rare_richness19
+rarerich19 <- data.frame(rare_richness19)
+
+library(dplyr)
+rarerich19 <- tibble::rownames_to_column(rarerich19, "VALUE")
+colnames(rarerich19)[colnames(rarerich19) == 'VALUE'] <- 'EasementID'
+rarerich19 <-  rarerich19%>% 
+  left_join(insects_rich_2019)
+attach(rarerich19)
+plot(rare_richness19, fam_rich, xlab = "fam_rich", ylab = "rare_richness19")
+abline(0, 1)
+detach(rarerich19)
+
+rarecurve(rarerich19, step = 20, sample = 366, col = "blue", cex = 0.6)
+
+#When comparing, must do within year, not across years, because they are standardized differently. 
+
+
+#checking the residuals for each year's rarefied richness
+
+#2019
+mean4<-mean(rarerich19$rare_richness19)
+rarerich19$residual <- rarerich19$rare_richness19-mean4
+shapiro.test(rarerich19$residual)
+ggplot(data = rarerich19) + geom_histogram(mapping = aes(x = residual))
+#not normally distributed p value 0.03392
+
+#2020
+mean5<-mean(rarerich20$rare_richness20)
+rarerich20$residual <- rarerich20$rare_richness20-mean5
+shapiro.test(rarerich20$residual)
+ggplot(data = rarerich20) + geom_histogram(mapping = aes(x = residual))
+#normally distributed p value 0.9187
