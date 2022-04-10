@@ -6,8 +6,6 @@ library(vegan)
 library(devtools)
 
 # Color palettes ####
-palette1<-  c("#767171", "#A9D18E", "#548235", "#A49988")
-palette2 <-  c("tomato3", "#A49988","#5F9EA0", "#006887")
 palette3<-  c("#767171", "#A9D18E", "#548235", "#2A4117") #3B5422
 
 # Site History Data ####
@@ -37,7 +35,7 @@ fire_years  <- read_csv("raw/restoration_history.csv") %>%
   mutate(Fire2 = ifelse(Fire2 > sample_year, NA, Fire2)) %>% 
   mutate(Fire1 = ifelse(Fire1 > sample_year, NA, Fire1))
 
-
+###REMOVE FIRE FREQ####
 fire_frequency <- fire_years %>% 
   pivot_longer(cols = c("Fire1", "Fire2", "Fire3"), values_to = "Fires") %>% 
   filter(!is.na(Fires)) %>% 
@@ -54,8 +52,6 @@ time_since_fire <- fire_years %>%
   convert(int(last_fire)) %>% 
   mutate(years_since_fire = (sample_year - last_fire))
 
-# Upload raw insect sweep identification data
-# This csv was downloaded from the Google Doc data entry spreadsheet on 6 March 2021
 #Insect Data ####
 all_data <- read_csv("raw/All_Insect_Data.csv") %>% 
   left_join(rest_history) %>% 
@@ -126,6 +122,7 @@ insect_rich<- all_data %>%
  summarise(fam_rich = n()) %>% 
   left_join(rest_history)
 
+## can't do this...need to remove on year randomly
 insect_rich<- all_data %>% 
   select(EasementID, RestorationCategory, Year, Sample, Family) %>% 
   group_by(EasementID, Year) %>% 
@@ -254,49 +251,47 @@ names(abundance_list) <- list_names ## assigning names to lists
 
 #### iNEXT calculations ####
 ##setting sample sizes for R/E estimations
-insect <- iNEXT(abundance_list, q=c(0, 1, 2), datatype = "abundance") ##can set endpoint too, referring to number of indivduals 
+insect <- iNEXT(abundance_list, q=c(0, 1), datatype = "abundance", nboot = 100) ##can set endpoint too, referring to number of indivduals 
 
 ## output into separate data frames
-insect_datainfo <- as.data.frame(insect[["DataInfo"]])  ##site name, sample size, Family richness, number of singletons, doubletons, etc.
-insect_div_est <- as.data.frame(insect[["iNextEst"]]) ## diversity estimates with rarefied and extrapolated samples for q = 0,1,2
-insect_asy_est <- as.data.frame(insect[["AsyEst"]]) ## asympototic diversity estimates with bootstrap s.e. and confidence intervals for q = 0,1,2
+insect_abundance <- as.data.frame(insect[["DataInfo"]])  ##site name, sample size, Family richness, number of singletons, doubletons, etc.
+#insect_div_est <- as.data.frame(insect[["iNextEst"]]) ## diversity estimates with rarefied and extrapolated samples for q = 0,1,2
+insect_div_asy <- as.data.frame(insect[["AsyEst"]]) ## asympototic diversity estimates with bootstrap s.e. and confidence intervals for q = 0,1,2
 
-write_csv(insect$DataInfo, "clean/insect_data_info.csv")
-write_csv(insect$AsyEst, "clean/insect_AsyEst.csv")
+write_csv(insect$DataInfo, "clean/insect_datainfo.csv")
+write_csv(insect$AsyEst, "clean/insect_div_asym.csv")
 write_csv(insect_div_est, "clean/insect_div_est.csv")
 
-## abundanc2
+## abundance
 insect_abund <- insect_datainfo %>% 
   separate(., site, c("EasementID", "Year"), sep = "_")
   
 ##determining estimated species richness at N=450
-insect_rich <- iNEXT(abundance_list, q=0, datatype = "abundance", endpoint = 450, knots= 100) 
+insect_rich <- iNEXT(abundance_list, q=0, datatype = "abundance", endpoint = 450, knots= 100, nboot = 100) 
 
 insect_rich_est <- as.data.frame(insect_rich[["iNextEst"]])
-insect_rich_est <- insect_rich_est %>% 
-  filter(Westport.Drumlin_2020.m == 450)
 
 ##determining estimated species diversity with enpoint = 2500
-insect_shannon <- iNEXT(abundance_list, q=1, datatype = "abundance", endpoint = 2500, knots = 100) 
-insect_shannon_est <- as.data.frame(insect_shannon[["iNextEst"]]) %>% 
-  filter(Westport.Drumlin_2020.m == 2500)
+insect_shannon <- iNEXT(abundance_list, q=1, datatype = "abundance", knots = 100) 
+insect_shannon_est <- as.data.frame(insect_shannon[["iNextEst"]]) 
 
 ## Cleaning spp richness estimates ####
 rich_est <- insect_rich_est %>% 
   select(ends_with(".qD")) %>% 
   t() %>% 
   as.data.frame() %>% 
-  rownames_to_column(var = "rowname") %>% 
-  separate(., rowname, c("EasementID", "Year"), sep = "_") %>% 
-  mutate_at("Year", str_replace, ".qD", "") %>% 
-  mutate_at("EasementID", str_replace_all, '\\.', " ") %>% 
-  mutate(EasementID = if_else(str_starts(EasementID, "X"), str_replace(EasementID,"X", ""), EasementID)) %>% 
-  rename(Rich_est=V1)
+  rownames_to_column(var = "ID") %>% 
+  #separate(., rowname, c("EasementID", "Year"), sep = "_") %>% 
+  mutate_at("ID", str_replace, ".qD", "") %>% 
+  mutate_at("ID", str_replace_all, '\\.', " ") %>% 
+  mutate(ID = if_else(str_starts(ID, "X"), str_replace(ID,"X", ""), ID)) %>% 
+  select(ID,Rich_est=V100)
 
-shannon_est <- insect_asy_est %>% 
+shannon_est <- insect_div_asy %>% 
   filter(Diversity == 'Shannon diversity') %>% 
-  select(Site, Shannon_iNext = Observed, Shannon_asy = Estimator) %>% 
-  separate(., Site, c("EasementID", "Year"), sep = "_")
+  select(Site, Shannon_iNext = Observed, Shannon_asy = Estimator)
+#%>% 
+#  separate(., Site, c("EasementID", "Year"), sep = "_")
 ## Cleaning up diveristy estimates
 #shannon_est <- insect_shannon_est %>% 
 #  select(ends_with(".qD")) %>% 
@@ -310,20 +305,23 @@ shannon_est <- insect_asy_est %>%
 #  rename(Shannon_est=V1)
 
 #All Variables ####
-insect_response <- insect_abund %>% 
-  select(EasementID, Sample_year = Year, Abund = n, Rich_obs = S.obs) %>% 
+## Must remove sites with abundance less than 225 when modeling estimated richness #filter(Abund > 200)
+insect_response <- insect_abundance %>% 
+  select(ID = site, Abund = n, Rich_obs = S.obs) %>% 
   left_join(rich_est) %>% 
-  left_join(shannon_est) %>% 
-  left_join(ShannonDiv) %>% 
+  left_join(shannon_est %>% rename(ID=Site)) %>% 
+  separate(., ID, c("EasementID", "Sample_year"), sep = "_") %>%  
   left_join(rest_history) %>% 
   left_join(age) %>% 
-  group_by(EasementID, Sample_year) %>% filter(!duplicated(Sample_year )) %>% ungroup() %>% ##for some reason some sited duplicated in joins...i don't know why.
   convert(int(Sample_year, rest_year)) %>% 
   mutate(rest_age =  (Sample_year - rest_year)) %>% 
-  select(-rest_year) %>% 
-  filter(Abund > 200) %>% # because it was too low to extrapolate
+  select(-rest_year)
+
+write_csv(insect_response, "clean/insect_response.csv")
+
+#Removing random year####  
+insect_response_YR <- insect_response %>% 
   unite(., "x", EasementID, Sample_year, sep = "_") %>% 
-  #REMOVING RANDOM YEAR####
   filter(x != "0078S_2020") %>% 
   filter(x !="007C6_2020") %>% 
   filter(x !="007XH_2019") %>% 
@@ -333,7 +331,7 @@ insect_response <- insect_abund %>%
   filter(x !="00WV0_2020") %>% 
   separate(., x, c("EasementID", "Sample_year"), sep = "_")
 
-##Random number to remove year   
+##Random number to remove year, duplicate site with largest random number kept, smaller number removed   
 year_ran_num <- insect_response %>% 
   mutate(random_num = sample(c(1:37))) %>% 
   relocate(., random_num, .before = "EasementID") %>% 
@@ -511,14 +509,37 @@ fam_rich <- read_csv("raw/All_Insect_Data.csv") %>%
   left_join(treatment)
 
 # Plotting diversity by restoration category ####
-insect_response %>% 
+## Estimated richness ####
+plot_rich <- insect_response_YR %>% filter(Abund > 200) 
+plot_rich %>% 
   ggplot(aes(RestorationCategory, Rich_est, fill=RestorationCategory)) +
   geom_boxplot(outlier.alpha = 0) +
   theme_classic()+
   scale_fill_manual(values = c(palette3),
                     name = "Site Categories")+
+  labs(title = "Interpolated and Extrapolated Insect\n Richness per Restoration Category")+
+  xlab("\n Site Category") +
+  ylab("Average Family Richness")+
+  theme(plot.title = element_text(family = "Palatino", size = 18, hjust = 0.5, vjust = 2),
+        axis.title.x = element_text(family = "Palatino", size = 15, vjust = 4),
+        axis.title.y = element_text(family = "Palatino", size = 15, hjust = 0.5, vjust =4),
+        axis.text.x =  element_text(family = "Palatino", size = 12),
+        axis.text.y = element_text(family = "Palatino", size = 12),
+        legend.title = element_blank(),
+        legend.position = "none",
+        plot.margin = unit(c(1,1,2,1), "lines")) +
+  geom_jitter(alpha=.2, width = .1, size = 3)
+
+## Estimated diversity ####
+plot_div <- insect_response_YR 
+plot_div %>% 
+  ggplot(aes(RestorationCategory, Shannon_asy, fill=RestorationCategory)) +
+  geom_boxplot(outlier.alpha = 0) +
+  theme_classic()+
+  scale_fill_manual(values = c(palette3),
+                    name = "Site Categories")+
   labs(title = "Extrapolated Insect Diversity\n per Restoration Category")+
-  xlab("\n Restoration Category") +
+  xlab("\n Site Category") +
   ylab("Average Family Diversity")+
   theme(plot.title = element_text(family = "Palatino", size = 18, hjust = 0.5, vjust = 2),
         axis.title.x = element_text(family = "Palatino", size = 15, vjust = 4),
@@ -535,8 +556,11 @@ insect_response %>%
 # Model  ANOVA & Tukey----------------------------------------
 insect_rest <-  insect_response %>% 
   filter(RestorationCategory != "No Seed")
-anova <- aov(Rich_est ~ RestorationCategory, data=insect_rest)
+
+anova <- aov(Rich_est ~ RestorationCategory, data=plot_div)
 summary(anova)
+
+anova <- aov(Shannon_asy ~ RestorationCategory + Size, data = plot_rich)
 #there is no signifcant variation of insect diversity between restoration categories, nor collection year
 #Restoration category = 0.0572
 #year = 0.2471
