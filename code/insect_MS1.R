@@ -76,12 +76,6 @@ shannon_div <- sitebyfam %>%
   separate(., rowname, c("EasementID", "Year"), sep = "_") %>% 
   rename(Shannon = ".") 
 
-matrix_env <- sitebyfam %>% 
-  rownames_to_column(var = "rowname") %>% 
-  separate(., rowname, c("EasementID", "Year"), sep = "_") %>% 
-  left_join(rest_history) %>% 
-  unite(., "id", EasementID, Year, sep = "_") %>% 
-  select(id, RestorationCategory) 
   
 #diversity does not have normally distributed residuals
 
@@ -561,23 +555,54 @@ sitebyfam %>% #visualizing restoration category and insect diversity
   ylab("Insect Diversity")
 
 
-# Ordination & PERMANOVA --------------------------------------------------
+# Ordination --------------------------------------------------
+##must use a site by family matrix
+presence_site_by_family <- sitebyfam %>% 
+  replace(.>1, 1)
+  
 ## NMDS ####
-#This next line runs the actual NMDS. There are more possible arguments, but the ones that are in it at the moment are the dataset, k, and the number of attempts R will do to try to reach a solution. k is the number of dimensions you wish to squish things into. In general, this number is two so that it can be plotted in a typical plot. I have also put the distance argument which selects the dissimilarity index to use. You can select a bunch of different indices if you wish. I have selected the Bray-Curtis index as that one is frequently used in community analysis and community data tends to meet the assumptions implicit in that index. For other index options, see the help for vegdist.
+#This next line runs the actual NMDS. There are more possible arguments, but the ones that are in it at the moment are the dataset, k, and the number of attempts R will do to try to reach a solution. 
 nmds.insect<-metaMDS(sitebyfam,k=3,trymax=250,distance="bray")
-
+nmds.insect <- metaMDS(presence_site_by_family, k=4, trymax = 250, distance = "jaccard")
 #Now we need to make some plots!
 #Set plot window dimensions
-par(mfcol=c(1,1))
+par(mfcol=c(0.7,1.5))
 
-#First is a stress plot to make sure that things look ok. If the points are widely scattered away from the generated line, the variation is not best squished into two dimensions and we will need to try something else.
-#Fortunately, this looks pretty good in our example here.
+#First is a stress plot to make sure that things look ok. If the points are widely scattered away from the generated line, the variation is not best squished into two dimensions.
 stressplot(nmds.insect)
 nmds.insect$stress
 
-#Just as an example, this is what the generic plot looks like. It is accurate, but pretty bland and I don't use this to plot my own NMDS stuff. In case you were wondering about the symbols that are displayed on this plot, the red crosses are the columns and the black, unfilled circles are the rows. Ordinarily, it is the rows that people are interested in, though this will obviously vary with whatever question you are asking.
+#JA generic plot:the red crosses are the columns (insect families) and the black, unfilled circles are the rows (sites). Ordinarily, it is the rows that people are interested in, though this will obviously vary with whatever question you are asking.
 plot(nmds.insect)
 
+#In order to color code by restoration category, we need to assign them into groups. To do this, you need to know the order of them as they reside in the matrix.
+matrix_env <- sitebyfam %>% 
+  rownames_to_column(var = "rowname") %>% 
+  separate(., rowname, c("EasementID", "Year"), sep = "_") %>% 
+  left_join(rest_history) %>% 
+  unite(., "id", EasementID, Year, sep = "_") %>% 
+  select(id, RestorationCategory) %>% 
+  column_to_rownames(var = "id")
+
+site_groups <- matrix_env$RestorationCategory
+
+#This next line generates the plotting space for the NMDS. The type argument specifies that it will be blank, which allows us to then come and plot things the way we want.
+ordiplot(nmds.insect,type="n",main="NMDS Comparing Restored Prairies\n to Remnant Prairie")
+points(nmds.insect,display="sites",pch=16,col=c("blue","darkgreen","purple","red")[site_groups])
+
+#This is the line for the complex hulls.
+ordihull(nmds.insect, site_groups)
+
+#This is simple legend.
+legend("bottomright",y=NULL,expression(italic("No Seed"),italic("Seed"),italic("Seed + Fire"), "Remnant"),pch=16,col=c("blue","darkgreen","purple", "red"),cex=0.8)
+
+
+
+# from Jade's code fit the site data (environmental info) onto the ordination
+community.envfit <- env_matrix[-c(1)]
+(fit <- envfit(nmds, matrix_env, perm = 999))
+head(fit)
+scores(fit, "vectors") 
 
 ### Vegan Code ####
 
@@ -588,7 +613,6 @@ plot(nmds.insect)
 # create a matrix with only the family and average abundance
 # these need to be whole numbers for PERMANOVA to work
 fam_matrix <- sitebyfam %>%
-  select(-EasementID, -RestorationCategory) %>%
   mutate_all(round, 0) #round up to nearest whole number
 
 # site (aka environmental-this is any independent variable) variables in separate df
