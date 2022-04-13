@@ -17,6 +17,8 @@ rest_history <- read_csv("raw/restoration_history.csv") %>%
   mutate(EasementID = recode(EasementID, '792' = "00792")) %>%
   mutate(RestorationCategory = factor(RestorationCategory, levels = c("No Seed", "Seed", "Seed + Fire", "Remnant")))
 
+write_csv(rest_history, "clean/restoration_history.csv")
+
 ## Restoration Age
 age <- read_csv("clean/rest_age.csv") %>% 
   select(EasementID = SiteID, rest_year)
@@ -72,8 +74,15 @@ shannon_div <- sitebyfam %>%
   as.data.frame() %>% 
   rownames_to_column(var = "rowname") %>% 
   separate(., rowname, c("EasementID", "Year"), sep = "_") %>% 
-  rename(Shannon = ".")
+  rename(Shannon = ".") 
 
+matrix_env <- sitebyfam %>% 
+  rownames_to_column(var = "rowname") %>% 
+  separate(., rowname, c("EasementID", "Year"), sep = "_") %>% 
+  left_join(rest_history) %>% 
+  unite(., "id", EasementID, Year, sep = "_") %>% 
+  select(id, RestorationCategory) 
+  
 #diversity does not have normally distributed residuals
 
 ## iNEXT: Interpolation Exterpolation####
@@ -553,39 +562,22 @@ sitebyfam %>% #visualizing restoration category and insect diversity
 
 
 # Ordination & PERMANOVA --------------------------------------------------
-## PCA ####
+## NMDS ####
+#This next line runs the actual NMDS. There are more possible arguments, but the ones that are in it at the moment are the dataset, k, and the number of attempts R will do to try to reach a solution. k is the number of dimensions you wish to squish things into. In general, this number is two so that it can be plotted in a typical plot. I have also put the distance argument which selects the dissimilarity index to use. You can select a bunch of different indices if you wish. I have selected the Bray-Curtis index as that one is frequently used in community analysis and community data tends to meet the assumptions implicit in that index. For other index options, see the help for vegdist.
+nmds.insect<-metaMDS(sitebyfam,k=3,trymax=250,distance="bray")
 
+#Now we need to make some plots!
+#Set plot window dimensions
+par(mfcol=c(1,1))
 
-insect_pca <-  princomp(sitebyfam[,-1], cor=TRUE)
-sitebyfam2 <- all_data %>% #matrix with only numeric values
-  select(EasementID, RestorationCategory, Year, Sample, Total, Family) %>% #note that this is including year, so a site can have up to 2 entries
-  filter(!is.na(EasementID)) %>% 
-  group_by(EasementID, RestorationCategory, Year, Family) %>% 
-  summarise(abundance= sum(Total)) %>% 
-  select(EasementID, RestorationCategory, Family, Year, abundance) %>%
-  pivot_wider(names_from = Family, values_from = abundance) %>%
-  replace(is.na(.), 0) %>%
-  ungroup()%>% 
-  select(-Year, -RestorationCategory, -EasementID)
+#First is a stress plot to make sure that things look ok. If the points are widely scattered away from the generated line, the variation is not best squished into two dimensions and we will need to try something else.
+#Fortunately, this looks pretty good in our example here.
+stressplot(nmds.insect)
+nmds.insect$stress
 
+#Just as an example, this is what the generic plot looks like. It is accurate, but pretty bland and I don't use this to plot my own NMDS stuff. In case you were wondering about the symbols that are displayed on this plot, the red crosses are the columns and the black, unfilled circles are the rows. Ordinarily, it is the rows that people are interested in, though this will obviously vary with whatever question you are asking.
+plot(nmds.insect)
 
-#the model statement for the capscale
-#model.cap <-capscale(dataonly ~ group, groupings, dist="bray")
-
-div_can <- capscale(sitebyfam2 ~ RestorationCategory, sitebyfam, dist="bray")
-div_can
-#creating the ordination
-
-#plotting the ordination
-ordiplot(div_can,type="n", main = "Insect Community")
-orditorp(div_can, display="sites", priority, labels= sitebyfam$RestorationCategory,)
-ordihull(div_can, groups= sitebyfam$RestorationCategory, label= TRUE, draw= "polygon")
-
-
-div_permanova <- adonis(formula = sitebyfam2 ~ RestorationCategory, data = sitebyfam, permutations = 999, method ="bray")
-div_permanova
-#permanova on the ordination: testing if there are differences in the dispersion/spread of groups
-#does not assume normality (non-parametric)
 
 ### Vegan Code ####
 
