@@ -4,6 +4,8 @@ library(tidyverse)
 library(hablar)
 library(vegan)
 library(devtools)
+library(BiodiversityR)
+
 
 # Color palettes ####
 palette3<-  c("#767171", "#A9D18E", "#548235") #3B5422
@@ -272,7 +274,6 @@ ggiNEXT(remnant_insect, type=1, facet.var="order", color.var="site") +
   scale_color_manual(values = c("#A9D18E", "#548235", "#767171", "#A9D18E", "#548235", "#2A4117", "#2A4117")) +
   scale_fill_manual(values = c("#A9D18E", "#548235", "#767171", "#A9D18E", "#548235", "#2A4117", "#2A4117"))
 
-
 # Raw data visualizations ####
 ## Abundance by age ####
 abund_by_age <- insect_response_YR %>% 
@@ -530,14 +531,27 @@ plot_div %>%
         plot.margin = unit(c(1,1,2,1), "lines")) +
   geom_jitter(alpha=.2, width = .1, size = 3)
 
+# Model Selection ####
+## Possible variables to include: Restoration Category, Sample Year, Size and Age.  Note that age can only be used for restored sites and not for any analysis that includes remnant
+
+#Checking to see if there is significant difference between the size of restoration categories. Anova shows a significant difference, so size can not be included in model.
+
+anova_size <- aov(Size ~ RestorationCategory, data=insect_response)
+summary(anova_size)
+
+anova_age <- aov(rest_age ~ RestorationCategory, data=insect_response)
+summary(anova_age)
+
+
 
 
 # Model  ANOVA & Tukey----------------------------------------
 insect_rest <-  insect_response %>% 
   filter(RestorationCategory != "No Seed")
 
-anova <- aov(Rich_est ~ RestorationCategory, data=plot_div)
+anova <- aov(Rich_est ~ RestorationCategory + Sample_year, data=insect_response_YR)
 summary(anova)
+TukeyHSD(anova)
 
 anova <- aov(Shannon_asy ~ RestorationCategory + Size, data = plot_rich)
 #there is no signifcant variation of insect diversity between restoration categories, nor collection year
@@ -564,6 +578,8 @@ presence_site_by_family <- sitebyfam %>%
 #This next line runs the actual NMDS. There are more possible arguments, but the ones that are in it at the moment are the dataset, k, and the number of attempts R will do to try to reach a solution. 
 nmds.insect<-metaMDS(sitebyfam,k=3,trymax=250,distance="bray")
 nmds.insect <- metaMDS(presence_site_by_family, k=4, trymax = 250, distance = "jaccard")
+
+nmds2.insect <- MDSrotate(nmds.insect)
 #Now we need to make some plots!
 #Set plot window dimensions
 par(mfcol=c(0.7,1.5))
@@ -581,28 +597,37 @@ matrix_env <- sitebyfam %>%
   separate(., rowname, c("EasementID", "Year"), sep = "_") %>% 
   left_join(rest_history) %>% 
   unite(., "id", EasementID, Year, sep = "_") %>% 
-  select(id, RestorationCategory) %>% 
   column_to_rownames(var = "id")
 
 site_groups <- matrix_env$RestorationCategory
 
 #This next line generates the plotting space for the NMDS. The type argument specifies that it will be blank, which allows us to then come and plot things the way we want.
 ordiplot(nmds.insect,type="n",main="NMDS Comparing Restored Prairies\n to Remnant Prairie")
-points(nmds.insect,display="sites",pch=16,col=c("blue","darkgreen","purple","red")[site_groups])
+      points(nmds.insect,display="sites",pch=16,col=c("blue","darkgreen","purple","red")[site_groups])
 
+      
+ordiplot3d(nmds.insect,type="n",main="NMDS Comparing Restored Prairies\n to Remnant Prairie")
 #This is the line for the complex hulls.
 ordihull(nmds.insect, site_groups)
 
 #This is simple legend.
 legend("bottomright",y=NULL,expression(italic("No Seed"),italic("Seed"),italic("Seed + Fire"), "Remnant"),pch=16,col=c("blue","darkgreen","purple", "red"),cex=0.8)
 
+## PERMANOVA ####
+adonis2(matrix_env[,c(1:179)]~ #Take only the numeric iris data
+         matrix_env[,180],    #Test by species
+       method="bray", #Method to convert numeric data into a distance matrix
+       permutations=10000) #Number of permutations to run.
 
 
-# from Jade's code fit the site data (environmental info) onto the ordination
-community.envfit <- env_matrix[-c(1)]
-(fit <- envfit(nmds, matrix_env, perm = 999))
-head(fit)
-scores(fit, "vectors") 
+#Testing for significance of homogeneity of multivariate dispersions. If the result of betadisper is significant, the results are potentially biased. 
+test.insect<-betadisper(vegdist(sitebyfam, method = "bray"),site_groups) 
+anova(test.insect)
+#the result is non-significant, so we assume not bias in our results
+## if this test was significant, we can look pairwise differences in our dispersion
+
+permutest(test.insect, pairwise = T, permutations = 999)
+
 
 ### Vegan Code ####
 
