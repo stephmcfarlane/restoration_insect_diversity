@@ -8,6 +8,7 @@ library(BiodiversityR)
 
 
 # Color palettes ####
+palette2 <- c("#548235", "#2A4117")
 palette3<-  c("#767171", "#A9D18E", "#548235") #3B5422
 palette4<-  c("#767171", "#A9D18E", "#548235", "#2A4117") #3B5422
 # Site History Data ####
@@ -27,17 +28,16 @@ age <- read_csv("clean/rest_age.csv") %>%
 
 ##Fire History####
 fire_years  <- read_csv("raw/restoration_history.csv") %>% 
-  select(SiteID = EasementID, RestorationCategory = RestorationCategory_NEW, Fire_Years) %>%
-  mutate(SiteID = recode(SiteID, '792' = "00792")) %>%
-  filter(RestorationCategory != "Seed") %>% 
-  filter(RestorationCategory != "No Seed") %>% 
-  separate(Fire_Years, c("Fire1", "Fire2", "Fire3")) %>%
-  left_join(age) %>% 
-  mutate(sample_year = '2020') %>% 
-  select(-rest_year, -rest_age)  %>% 
-  mutate(Fire3 = ifelse(Fire3 > sample_year, NA, Fire3)) %>% 
-  mutate(Fire2 = ifelse(Fire2 > sample_year, NA, Fire2)) %>% 
-  mutate(Fire1 = ifelse(Fire1 > sample_year, NA, Fire1))
+  select(EasementID, Fire_Years) %>%
+  mutate(EasementID = recode(EasementID, '792' = "00792")) %>% 
+  separate(Fire_Years, c("Fire1", "Fire2", "Fire3")) 
+
+  #left_join(age) %>% 
+  #mutate(sample_year = '2020') %>% 
+  #select(-rest_year, -rest_age)  %>% 
+  #mutate(Fire3 = ifelse(Fire3 > sample_year, NA, Fire3)) %>% 
+  #mutate(Fire2 = ifelse(Fire2 > sample_year, NA, Fire2)) %>% 
+  #mutate(Fire1 = ifelse(Fire1 > sample_year, NA, Fire1))
 
 #Insect Data ####
 all_data <- read_csv("raw/All_Insect_Data.csv") %>% 
@@ -53,7 +53,8 @@ all_data <- read_csv("raw/All_Insect_Data.csv") %>%
   filter(EasementID != "Hauser Road") %>% 
   filter(EasementID != "UW-Arboretum") %>% 
   filter(EasementID != "Snapper Prairie") %>% 
-  filter(EasementID !="00MDP"|Year!="2020") ##Need to filter out 00MDP 2020, but not 00MDP 2019
+  filter(EasementID !="00MDP"|Year!="2020")  ##Need to filter out 00MDP 2020, but not 00MDP 2019
+  #filter(EasementID != "00VTR"|Family != "Phalacridae")
 
 #site 00VTR may be an outlier in the data...
 
@@ -122,7 +123,7 @@ insect_div_asy <- as.data.frame(insect[["AsyEst"]]) ## asympototic diversity est
 
 write_csv(insect$DataInfo, "clean/insect_datainfo.csv")
 write_csv(insect$AsyEst, "clean/insect_div_asym.csv")
-write_csv(insect_div_est, "clean/insect_div_est.csv")
+
 
 ## abundance
 insect_abund <- insect_datainfo %>% 
@@ -133,9 +134,6 @@ insect_rich <- iNEXT(abundance_list, q=0, datatype = "abundance", endpoint = 450
 
 insect_rich_est <- as.data.frame(insect_rich[["iNextEst"]])
 
-##determining estimated species diversity with enpoint = 2500
-insect_shannon <- iNEXT(abundance_list, q=1, datatype = "abundance", knots = 100) 
-insect_shannon_est <- as.data.frame(insect_shannon[["iNextEst"]]) 
 
 ## Cleaning spp richness estimates ####
 rich_est <- insect_rich_est %>% 
@@ -531,6 +529,39 @@ plot_div %>%
         plot.margin = unit(c(1,1,2,1), "lines")) +
   geom_jitter(alpha=.2, width = .1, size = 3)
 
+## Estimated Richness ~ Time since Fire ####
+burn_insect <- insect_response_YR %>% 
+  filter(RestorationCategory %in% c("Seed + Fire", "Remnant")) %>% 
+  left_join(fire_years) %>% 
+  mutate(Fire3 = ifelse(Fire3 > Sample_year, NA, Fire3)) %>% 
+  mutate(Fire2 = ifelse(Fire2 > Sample_year, NA, Fire2)) %>% 
+  mutate(Fire1 = ifelse(Fire1 > Sample_year, NA, Fire1)) %>% 
+  mutate_at(vars(c(Fire1, Fire2, Fire3)), ~replace(., is.na(.), "")) %>% 
+  mutate(last_fire = ifelse(Fire3 > 0, Fire3, Fire2)) %>% 
+  mutate(last_fire = ifelse(last_fire > 0, last_fire, Fire1)) %>% 
+  convert(int(last_fire)) %>% 
+  convert(int(Sample_year)) %>% 
+  mutate(years_since_fire = (Sample_year - last_fire)) %>% 
+  select(-Fire3, -Fire2, -Fire1)
+
+burn_insect%>% 
+  ggplot(aes(years_since_fire, Shannon_asy, color = RestorationCategory)) +
+  geom_point(outlier.alpha = 0) +
+  geom_smooth(aes(color = RestorationCategory), method = "lm") +
+  theme_classic()+
+  scale_color_manual(values = palette2,
+                     name = "Site Categories")+
+  labs(title = "Fire Impacts on Insect Diversity\n Restored vs. Remnant Prairie")+
+  xlab("\n Years since last fire") +
+  ylab("Ave Insect Estimated Diversity")+
+  theme(plot.title = element_text(family = "Palatino", size = 18, hjust = 0.5, vjust = 2),
+        axis.title.x = element_text(family = "Palatino", size = 15, vjust = 4),
+        axis.title.y = element_text(family = "Palatino", size = 15, hjust = 0.5, vjust =4),
+        axis.text.x =  element_text(family = "Palatino", size = 12),
+        axis.text.y = element_text(family = "Palatino", size = 12),
+        legend.title = element_blank(),
+        legend.position = "bottom",
+        plot.margin = unit(c(1,1,2,1), "lines")) 
 # Model Selection ####
 ## Possible variables to include: Restoration Category, Sample Year, Size and Age.  Note that age can only be used for restored sites and not for any analysis that includes remnant
 
@@ -542,32 +573,45 @@ summary(anova_size)
 anova_age <- aov(rest_age ~ RestorationCategory, data=insect_response)
 summary(anova_age)
 
-
-
-
-# Model  ANOVA & Tukey----------------------------------------
+##Restored and Remnant Models ####
 insect_rest <-  insect_response %>% 
   filter(RestorationCategory != "No Seed")
 
+##Abundance
+anova <- aov(Abund ~ RestorationCategory + Sample_year, data=insect_response_YR)
+summary(anova)
+TukeyHSD(anova)
+
+##Estimated Richness
 anova <- aov(Rich_est ~ RestorationCategory + Sample_year, data=insect_response_YR)
 summary(anova)
 TukeyHSD(anova)
 
-anova <- aov(Shannon_asy ~ RestorationCategory + Size, data = plot_rich)
-#there is no signifcant variation of insect diversity between restoration categories, nor collection year
-#Restoration category = 0.0572
-#year = 0.2471
-
+##Estimated Diversity
+anova <- aov(Shannon_asy ~ RestorationCategory + Sample_year, data = insect_response_YR)
+summary(anova)
 TukeyHSD(anova)
-#this gives intersting results for the differences in the means
 
-sitebyfam %>% #visualizing restoration category and insect diversity
-  ggplot(aes(RestorationCategory, Shannon, fill = "EasementID")) +
-  geom_boxplot() +
-  theme_classic()+
-  xlab("Restoration Category") +
-  ylab("Insect Diversity")
+##Restored Only Model ####
+restored_insect <- insect_response_YR %>% 
+  filter(RestorationCategory != "Remnant")
 
+anova <- aov(Rich_est ~ RestorationCategory + Sample_year + rest_age, data=restored_insect)
+summary(anova)
+TukeyHSD(anova)
+
+#Estimated Diversity
+anova <- aov(Shannon_asy ~ RestorationCategory + Sample_year + rest_age, data = restored_insect)
+summary(anova)
+TukeyHSD(anova)
+
+##Burned Model####
+fit_burn <- lm(Rich_est ~ years_since_fire + RestorationCategory, data = burn_insect)
+summary(fit_burn) 
+
+anova <- aov(Rich_est ~ RestorationCategory + Sample_year + years_since_fire, data = burn_insect)
+summary(anova)
+TukeyHSD(anova)
 
 # Ordination --------------------------------------------------
 ##must use a site by family matrix
@@ -588,7 +632,7 @@ par(mfcol=c(0.7,1.5))
 stressplot(nmds.insect)
 nmds.insect$stress
 
-#JA generic plot:the red crosses are the columns (insect families) and the black, unfilled circles are the rows (sites). Ordinarily, it is the rows that people are interested in, though this will obviously vary with whatever question you are asking.
+#Generic plot:the red crosses are the columns (insect families) and the black, unfilled circles are the rows (sites). Ordinarily, it is the rows that people are interested in, though this will obviously vary with whatever question you are asking.
 plot(nmds.insect)
 
 #In order to color code by restoration category, we need to assign them into groups. To do this, you need to know the order of them as they reside in the matrix.
@@ -602,16 +646,14 @@ matrix_env <- sitebyfam %>%
 site_groups <- matrix_env$RestorationCategory
 
 #This next line generates the plotting space for the NMDS. The type argument specifies that it will be blank, which allows us to then come and plot things the way we want.
-ordiplot(nmds.insect,type="n",main="NMDS Comparing Restored Prairies\n to Remnant Prairie")
-      points(nmds.insect,display="sites",pch=16,col=c("blue","darkgreen","purple","red")[site_groups])
+ordiplot(nmds.insect,type="n",main="NMDS Comparing Restored Prairies\n and Remnant Prairies")
+      points(nmds.insect,display="sites",pch=16,col= palette4[site_groups])
 
-      
-ordiplot3d(nmds.insect,type="n",main="NMDS Comparing Restored Prairies\n to Remnant Prairie")
 #This is the line for the complex hulls.
 ordihull(nmds.insect, site_groups)
 
 #This is simple legend.
-legend("bottomright",y=NULL,expression(italic("No Seed"),italic("Seed"),italic("Seed + Fire"), "Remnant"),pch=16,col=c("blue","darkgreen","purple", "red"),cex=0.8)
+legend("bottomright",y=NULL,expression(italic("No Seed"),italic("Seed"),italic("Seed + Fire"), "Remnant"),pch=16,col=palette4 ,cex=0.8)
 
 ## PERMANOVA ####
 adonis2(matrix_env[,c(1:179)]~ #Take only the numeric iris data
@@ -626,9 +668,20 @@ anova(test.insect)
 #the result is non-significant, so we assume not bias in our results
 ## if this test was significant, we can look pairwise differences in our dispersion
 
-permutest(test.insect, pairwise = T, permutations = 999)
+##permutest(test.insect, pairwise = T, permutations = 999)  ## if it was significant, we would run this code
 
+## CCA - Constrained Correspondance Analysis ####
 
+cca_insect <-  cca(sitebyfam ~ RestorationCategory, data = matrix_env)
+
+ordiplot(cca_insect,type="n",main="CCA Comparing Restored\n and Remnant Prairies")
+points(cca_insect,display="sites",pch=16,col= palette4[site_groups])
+
+#This is the line for the complex hulls.
+ordihull(cca_insect, site_groups)
+
+#This is simple legend.
+legend("bottomright",y=NULL,expression(italic("No Seed"),italic("Seed"),italic("Seed + Fire"), "Remnant"),pch=16,col=palette4 ,cex=0.8)
 ### Vegan Code ####
 
 #take the square root to give less to abundant spp
@@ -948,3 +1001,9 @@ rarerich20$residual <- rarerich20$rare_richness20-mean5
 shapiro.test(rarerich20$residual)
 ggplot(data = rarerich20) + geom_histogram(mapping = aes(x = residual))
 #normally distributed p value 0.9187
+
+
+family_abundance <- all_data %>% 
+  group_by(EasementID, Year, Family) %>% 
+  summarise(fam_abund = sum(Total))
+  filter(!duplicated(Family))
