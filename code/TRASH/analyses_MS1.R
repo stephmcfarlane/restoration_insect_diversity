@@ -762,13 +762,13 @@ dispersion<-betadisper(bray2, group=env_matrix$RestorationCategory)
 dispersion
 permutest(dispersion, pairwise = T) #p=0.554 so groups do not have different variance (aka dispersions). this model assumption is met!
 
-## Ordination Figures: NMDS ####
+##NMDS: Ordination Figures ####
 ## create the basic nmds ordination
-nmds <- metaMDS(fam_matrix, distance = "bray")
+nmds <- metaMDS(sitebyfam, distance = "bray")
 plot(nmds) #basic plot
 
 # fit the site data (environmental info) onto the ordination
-community.envfit <- env_matrix[-c(1)]
+community.envfit <- insect_envir#[-c(1)]
 (fit <- envfit(nmds, community.envfit, perm = 999))
 head(fit)
 scores(fit, "vectors")  #extracting XYs
@@ -790,7 +790,7 @@ nmds.scores$EasementID <- env_matrix$EasementID
 nmds.scores <- inner_join(nmds.scores, env_matrix)
 
 #### Basic Plot
-# create hulls
+#### Create hulls####
 grp.control <- nmds.scores[nmds.scores$RestorationCategory == "Not Seeded", ][chull(nmds.scores[nmds.scores$RestorationCategory == 
                                                                                                "Not Seeded", c("NMDS1", "NMDS2")]), ]  # hull values for grp A
 
@@ -810,7 +810,7 @@ hull.data
 color.nmds <- factor(nmds.scores$RestorationCategory, levels = c("Not Seeded", "Seeded Only", "Seeded + Fire", "Remnant"))
 color.hull <- factor(hull.data$RestorationCategory, levels = c("Not Seeded", "Seeded Only", "Seeded + Fire", "Remnant"))
 
-# Make NMDS PLot in ggplot
+#### Make NMDS PLot in ggplot####
 p <- ggplot() + 
   geom_polygon(data=hull.data,aes(x=NMDS1,y=NMDS2, group=color.hull),alpha=0.2) + 
   geom_point(data = nmds.scores, aes(x=NMDS1,y=NMDS2, colour=color.nmds, shape = color.nmds), size = 2) + # add the point markers
