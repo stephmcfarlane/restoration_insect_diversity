@@ -1,0 +1,5018 @@
+EasementID,Month,Day,Sample,Year,Family,Total
+0077R,7,17,T1,2019,Aphrophoridae,1
+0077R,7,17,T1,2019,Braconidae,1
+0077R,7,17,T1,2019,Cecidomyiidae,3
+0077R,7,17,T1,2019,Chloropidae,35
+0077R,7,17,T1,2019,Cicadellidae,50
+0077R,7,17,T1,2019,COLUNK,1
+0077R,7,17,T1,2019,Eulophidae,7
+0077R,7,17,T1,2019,Eupelmidae,118
+0077R,7,17,T1,2019,Eurytomidae,13
+0077R,7,17,T1,2019,Formicidae,1
+0077R,7,17,T1,2019,Ichneumonidae,1
+0077R,7,17,T1,2019,LEPUNK,4
+0077R,7,17,T1,2019,Miridae,5
+0077R,7,17,T1,2019,Mymaridae,1
+0077R,7,17,T1,2019,Nabidae,2
+0077R,7,17,T1,2019,Noctuidae,1
+0077R,7,17,T1,2019,Phalacridae,5
+0077R,7,17,T1,2019,Staphylinidae,1
+0077R,7,17,T1,2019,Tettigoniidae,1
+0077R,7,17,T1,2019,Thripidae,21
+0077R,7,17,T2,2019,Anthocoridae,26
+0077R,7,17,T2,2019,Braconidae,1
+0077R,7,17,T2,2019,Chironomidae,1
+0077R,7,17,T2,2019,Chloropidae,31
+0077R,7,17,T2,2019,Cicadellidae,64
+0077R,7,17,T2,2019,COLUNK,1
+0077R,7,17,T2,2019,Dolichopodidae,1
+0077R,7,17,T2,2019,Eulophidae,15
+0077R,7,17,T2,2019,Eurytomidae,8
+0077R,7,17,T2,2019,Figitidae,3
+0077R,7,17,T2,2019,Formicidae,5
+0077R,7,17,T2,2019,Latridiidae,2
+0077R,7,17,T2,2019,LEPUNK,6
+0077R,7,17,T2,2019,Miridae,16
+0077R,7,17,T2,2019,Mordellidae,1
+0077R,7,17,T2,2019,Nabidae,3
+0077R,7,17,T2,2019,Nitidulidae,5
+0077R,7,17,T2,2019,Phalacridae,4
+0077R,7,17,T2,2019,Psyllidae,7
+0077R,7,17,T2,2019,Pteromalidae,5
+0077R,7,17,T2,2019,Thripidae,141
+0077R,7,17,T3,2019,Acrididae,1
+0077R,7,17,T3,2019,Anthocoridae,1
+0077R,7,17,T3,2019,Chloropidae,122
+0077R,7,17,T3,2019,Chrysomelidae,2
+0077R,7,17,T3,2019,Cicadellidae,3
+0077R,7,17,T3,2019,COLUNK,4
+0077R,7,17,T3,2019,Culicidae,8
+0077R,7,17,T3,2019,Curculionidae,1
+0077R,7,17,T3,2019,DIPUNK,1
+0077R,7,17,T3,2019,Eulophidae,43
+0077R,7,17,T3,2019,Eurytomidae,3
+0077R,7,17,T3,2019,Formicidae,1
+0077R,7,17,T3,2019,HEMUNK,2
+0077R,7,17,T3,2019,HYMUNK,2
+0077R,7,17,T3,2019,LEPUNK,1
+0077R,7,17,T3,2019,Miridae,4
+0077R,7,17,T3,2019,Muscidae,1
+0077R,7,17,T3,2019,Nitidulidae,1
+0077R,7,17,T3,2019,Phalacridae,24
+0077R,7,17,T3,2019,Pteromalidae,74
+0077R,7,17,T3,2019,Simuliidae,3
+0077R,7,17,T3,2019,Thripidae,55
+0077R,7,17,T3,2019,Ulidiidae,1
+0077R,8,13,T1,2019,Acrididae,1
+0077R,8,13,T1,2019,Cercopidae,2
+0077R,8,13,T1,2019,Chloropidae,4
+0077R,8,13,T1,2019,Cicadellidae,7
+0077R,8,13,T1,2019,Eulophidae,27
+0077R,8,13,T1,2019,Eurytomidae,2
+0077R,8,13,T1,2019,Formicidae,1
+0077R,8,13,T1,2019,HYMUNK,1
+0077R,8,13,T1,2019,LEPUNK,2
+0077R,8,13,T1,2019,Mymaridae,3
+0077R,8,13,T1,2019,Perilampidae,1
+0077R,8,13,T1,2019,Phalacridae,6
+0077R,8,13,T1,2019,Platygastridae,1
+0077R,8,13,T1,2019,Reduviidae,1
+0077R,8,13,T1,2019,Thripidae,6
+0077R,8,13,T2,2019,Anthocoridae,50
+0077R,8,13,T2,2019,Aphelinidae,1
+0077R,8,13,T2,2019,Aphididae,4
+0077R,8,13,T2,2019,Braconidae,1
+0077R,8,13,T2,2019,Chloropidae,3
+0077R,8,13,T2,2019,Chrysomelidae,5
+0077R,8,13,T2,2019,Cicadellidae,64
+0077R,8,13,T2,2019,COLUNK,1
+0077R,8,13,T2,2019,DIPUNK,3
+0077R,8,13,T2,2019,Dolichopodidae,1
+0077R,8,13,T2,2019,Encyrtidae,2
+0077R,8,13,T2,2019,Eucinetidae,1
+0077R,8,13,T2,2019,Eulophidae,1
+0077R,8,13,T2,2019,Formicidae,15
+0077R,8,13,T2,2019,Latridiidae,1
+0077R,8,13,T2,2019,LEPUNK,5
+0077R,8,13,T2,2019,Miridae,5
+0077R,8,13,T2,2019,Nitidulidae,5
+0077R,8,13,T2,2019,Noctuidae,1
+0077R,8,13,T2,2019,Phalacridae,5
+0077R,8,13,T2,2019,Phlaeothripidae,1
+0077R,8,13,T2,2019,Phoridae,3
+0077R,8,13,T2,2019,Platygastridae,4
+0077R,8,13,T2,2019,Psyllidae,4
+0077R,8,13,T2,2019,Pteromalidae,5
+0077R,8,13,T2,2019,Reduviidae,1
+0077R,8,13,T2,2019,Tettigoniidae,1
+0077R,8,13,T3,2019,Acrididae,3
+0077R,8,13,T3,2019,Aphididae,2
+0077R,8,13,T3,2019,Chloropidae,14
+0077R,8,13,T3,2019,Cicadellidae,9
+0077R,8,13,T3,2019,COLUNK,4
+0077R,8,13,T3,2019,Culicidae,1
+0077R,8,13,T3,2019,DIPUNK,1
+0077R,8,13,T3,2019,Eulophidae,16
+0077R,8,13,T3,2019,Eurytomidae,2
+0077R,8,13,T3,2019,Figitidae,2
+0077R,8,13,T3,2019,Halictidae,1
+0077R,8,13,T3,2019,HEMUNK,1
+0077R,8,13,T3,2019,Ichneumonidae,1
+0077R,8,13,T3,2019,Lampyridae,1
+0077R,8,13,T3,2019,Miridae,1
+0077R,8,13,T3,2019,Muscidae,1
+0077R,8,13,T3,2019,Nitidulidae,1
+0077R,8,13,T3,2019,Phalacridae,12
+0077R,8,13,T3,2019,Phlaeothripidae,1
+0077R,8,13,T3,2019,Phoridae,5
+0077R,8,13,T3,2019,Platygastridae,3
+0077R,8,13,T3,2019,Reduviidae,1
+0077R,8,13,T3,2019,Sepsidae,2
+0077R,8,13,T3,2019,Sphaeroceridae,1
+0077R,8,13,T3,2019,Thripidae,4
+0077R,8,13,T3,2019,Ulidiidae,1
+0078F,7,22,T1,2020,Acrididae,2
+0078F,7,22,T1,2020,Chironomidae,1
+0078F,7,22,T1,2020,Chloropidae,20
+0078F,7,22,T1,2020,Chrysomelidae,129
+0078F,7,22,T1,2020,Cicadellidae,4
+0078F,7,22,T1,2020,Cixiidae,1
+0078F,7,22,T1,2020,DIPUNK,2
+0078F,7,22,T1,2020,Dolichopodidae,2
+0078F,7,22,T1,2020,Eulophidae,3
+0078F,7,22,T1,2020,Eurytomidae,1
+0078F,7,22,T1,2020,Formicidae,6
+0078F,7,22,T1,2020,Halictidae,3
+0078F,7,22,T1,2020,Ichneumonidae,1
+0078F,7,22,T1,2020,LEPUNK,1
+0078F,7,22,T1,2020,Mantidae,1
+0078F,7,22,T1,2020,Membracidae,1
+0078F,7,22,T1,2020,Phalacridae,1
+0078F,7,22,T1,2020,Platygastridae,8
+0078F,7,22,T1,2020,Sarcophagidae,1
+0078F,7,22,T1,2020,Scatopsidae,1
+0078F,7,22,T1,2020,Sciomyzidae,1
+0078F,7,22,T1,2020,Thripidae,1
+0078F,7,22,T1,2020,Ulidiidae,1
+0078F,7,22,T2,2020,Acrididae,3
+0078F,7,22,T2,2020,Anthicidae,1
+0078F,7,22,T2,2020,Aphididae,1
+0078F,7,22,T2,2020,Aphrophoridae,1
+0078F,7,22,T2,2020,Baetidae,1
+0078F,7,22,T2,2020,Cercopidae,1
+0078F,7,22,T2,2020,Chironomidae,2
+0078F,7,22,T2,2020,Chloropidae,5
+0078F,7,22,T2,2020,Chrysomelidae,16
+0078F,7,22,T2,2020,Cicadellidae,1
+0078F,7,22,T2,2020,Eulophidae,4
+0078F,7,22,T2,2020,Formicidae,3
+0078F,7,22,T2,2020,Gryllidae,2
+0078F,7,22,T2,2020,Halictidae,1
+0078F,7,22,T2,2020,LEPUNK,3
+0078F,7,22,T2,2020,Membracidae,11
+0078F,7,22,T2,2020,Muscidae,1
+0078F,7,22,T2,2020,Pteromalidae,3
+0078F,7,22,T2,2020,Scatopsidae,3
+0078F,7,22,T2,2020,Sciomyzidae,1
+0078F,7,22,T2,2020,Tetrigidae,1
+0078F,7,22,T2,2020,Tettigoniidae,8
+0078F,7,22,T2,2020,Ulidiidae,1
+0078F,7,22,T3,2020,Acrididae,1
+0078F,7,22,T3,2020,Aeolothripidae,3
+0078F,7,22,T3,2020,Aphididae,2
+0078F,7,22,T3,2020,Baetidae,1
+0078F,7,22,T3,2020,Chironomidae,2
+0078F,7,22,T3,2020,Chloropidae,7
+0078F,7,22,T3,2020,Chrysomelidae,4
+0078F,7,22,T3,2020,Cicadellidae,5
+0078F,7,22,T3,2020,Cixiidae,3
+0078F,7,22,T3,2020,Dolichopodidae,4
+0078F,7,22,T3,2020,Eupelmidae,2
+0078F,7,22,T3,2020,Formicidae,6
+0078F,7,22,T3,2020,LEPUNK,1
+0078F,7,22,T3,2020,Membracidae,1
+0078F,7,22,T3,2020,Pteromalidae,5
+0078F,7,22,T3,2020,Rhyparochromidae,3
+0078F,7,22,T3,2020,Scatopsidae,3
+0078F,7,22,T3,2020,Sciomyzidae,2
+0078F,7,22,T3,2020,Sphaeroceridae,1
+0078F,7,22,T3,2020,Tephritidae,1
+0078F,7,22,T3,2020,Thripidae,1
+0078F,8,26,T1,2020,Acrididae,2
+0078F,8,26,T1,2020,Aphrophoridae,2
+0078F,8,26,T1,2020,Blissidae,1
+0078F,8,26,T1,2020,Cecidomyiidae,2
+0078F,8,26,T1,2020,Chironomidae,7
+0078F,8,26,T1,2020,Chloropidae,2
+0078F,8,26,T1,2020,Chrysomelidae,5
+0078F,8,26,T1,2020,Cicadellidae,6
+0078F,8,26,T1,2020,Culicidae,2
+0078F,8,26,T1,2020,Dolichopodidae,2
+0078F,8,26,T1,2020,Eulophidae,1
+0078F,8,26,T1,2020,Eurytomidae,4
+0078F,8,26,T1,2020,Formicidae,7
+0078F,8,26,T1,2020,Gryllidae,1
+0078F,8,26,T1,2020,Halictidae,1
+0078F,8,26,T1,2020,LEPUNK,1
+0078F,8,26,T1,2020,Membracidae,4
+0078F,8,26,T1,2020,Miridae,2
+0078F,8,26,T1,2020,Mymaridae,1
+0078F,8,26,T1,2020,Phalacridae,1
+0078F,8,26,T1,2020,Phoridae,2
+0078F,8,26,T1,2020,Pteromalidae,2
+0078F,8,26,T1,2020,Sciomyzidae,1
+0078F,8,26,T1,2020,Tettigoniidae,3
+0078F,8,26,T1,2020,Thripidae,1
+0078F,8,26,T2,2020,Acrididae,1
+0078F,8,26,T2,2020,Anthocoridae,2
+0078F,8,26,T2,2020,Aphididae,2
+0078F,8,26,T2,2020,Cecidomyiidae,3
+0078F,8,26,T2,2020,Chironomidae,3
+0078F,8,26,T2,2020,Chloropidae,2
+0078F,8,26,T2,2020,Chrysomelidae,44
+0078F,8,26,T2,2020,Cicadellidae,3
+0078F,8,26,T2,2020,Curculionidae,1
+0078F,8,26,T2,2020,DIPUNK,1
+0078F,8,26,T2,2020,Encyrtidae,1
+0078F,8,26,T2,2020,Eulophidae,97
+0078F,8,26,T2,2020,Formicidae,3
+0078F,8,26,T2,2020,Heleomyzidae,5
+0078F,8,26,T2,2020,HEMUNK,2
+0078F,8,26,T2,2020,HYMUNK,3
+0078F,8,26,T2,2020,LEPUNK,1
+0078F,8,26,T2,2020,Membracidae,1
+0078F,8,26,T2,2020,Miridae,2
+0078F,8,26,T2,2020,Phalacridae,2
+0078F,8,26,T2,2020,Phlaeothripidae,2
+0078F,8,26,T2,2020,Platygastridae,13
+0078F,8,26,T2,2020,Psyllidae,2
+0078F,8,26,T2,2020,Scatopsidae,4
+0078F,8,26,T2,2020,Sciomyzidae,1
+0078F,8,26,T2,2020,Tettigoniidae,2
+0078F,8,26,T2,2020,Thripidae,6
+0078F,8,26,T3,2020,Acrididae,1
+0078F,8,26,T3,2020,Aphididae,1
+0078F,8,26,T3,2020,Cecidomyiidae,2
+0078F,8,26,T3,2020,Chironomidae,6
+0078F,8,26,T3,2020,Chloropidae,20
+0078F,8,26,T3,2020,Chrysomelidae,7
+0078F,8,26,T3,2020,Cicadellidae,5
+0078F,8,26,T3,2020,Cixiidae,2
+0078F,8,26,T3,2020,Culicidae,6
+0078F,8,26,T3,2020,Dolichopodidae,2
+0078F,8,26,T3,2020,Encyrtidae,1
+0078F,8,26,T3,2020,Eulophidae,3
+0078F,8,26,T3,2020,Formicidae,2
+0078F,8,26,T3,2020,LEPUNK,2
+0078F,8,26,T3,2020,Membracidae,1
+0078F,8,26,T3,2020,Miridae,1
+0078F,8,26,T3,2020,Mymaridae,1
+0078F,8,26,T3,2020,Phalacridae,3
+0078F,8,26,T3,2020,Phoridae,1
+0078F,8,26,T3,2020,Psyllidae,1
+0078F,8,26,T3,2020,Pteromalidae,14
+0078F,8,26,T3,2020,Sciaridae,3
+0078F,8,26,T3,2020,Sciomyzidae,6
+0078F,8,26,T3,2020,Simuliidae,4
+0078F,8,26,T3,2020,Syrphidae,1
+0078F,8,26,T3,2020,Tettigoniidae,1
+0078F,8,26,T3,2020,Torymidae,2
+0078F,8,26,T3,2020,Ulidiidae,1
+0078S,7,23,T1,2020,Acrididae,4
+0078S,7,23,T1,2020,Agromyzidae,1
+0078S,7,23,T1,2020,Aphididae,6
+0078S,7,23,T1,2020,Asilidae,1
+0078S,7,23,T1,2020,Chloropidae,16
+0078S,7,23,T1,2020,Chrysomelidae,12
+0078S,7,23,T1,2020,Cicadellidae,41
+0078S,7,23,T1,2020,Culicidae,1
+0078S,7,23,T1,2020,Curculionidae,1
+0078S,7,23,T1,2020,Delphacidae,3
+0078S,7,23,T1,2020,Dolichopodidae,1
+0078S,7,23,T1,2020,Eulophidae,8
+0078S,7,23,T1,2020,Formicidae,2
+0078S,7,23,T1,2020,Halictidae,1
+0078S,7,23,T1,2020,Ichneumonidae,1
+0078S,7,23,T1,2020,Latridiidae,9
+0078S,7,23,T1,2020,LEPUNK,1
+0078S,7,23,T1,2020,Muscidae,11
+0078S,7,23,T1,2020,Nabidae,1
+0078S,7,23,T1,2020,Noctuidae,1
+0078S,7,23,T1,2020,Phalacridae,3
+0078S,7,23,T1,2020,Phoridae,1
+0078S,7,23,T1,2020,Platygastridae,1
+0078S,7,23,T1,2020,Psyllidae,1
+0078S,7,23,T1,2020,Reduviidae,1
+0078S,7,23,T1,2020,Scatopsidae,10
+0078S,7,23,T1,2020,Sciomyzidae,1
+0078S,7,23,T1,2020,Syrphidae,1
+0078S,7,23,T1,2020,Tettigoniidae,1
+0078S,7,23,T1,2020,Thripidae,1
+0078S,7,23,T1,2020,Tingidae,1
+0078S,7,23,T1,2020,Ulidiidae,1
+0078S,7,23,T2,2020,Acrididae,8
+0078S,7,23,T2,2020,Anthicidae,1
+0078S,7,23,T2,2020,Anthomyiidae,1
+0078S,7,23,T2,2020,Aphididae,20
+0078S,7,23,T2,2020,Asilidae,2
+0078S,7,23,T2,2020,Chloropidae,16
+0078S,7,23,T2,2020,Chrysomelidae,66
+0078S,7,23,T2,2020,Cicadellidae,20
+0078S,7,23,T2,2020,Culicidae,2
+0078S,7,23,T2,2020,Delphacidae,1
+0078S,7,23,T2,2020,Dolichopodidae,1
+0078S,7,23,T2,2020,Encyrtidae,1
+0078S,7,23,T2,2020,Eulophidae,8
+0078S,7,23,T2,2020,Formicidae,1
+0078S,7,23,T2,2020,Latridiidae,2
+0078S,7,23,T2,2020,LEPUNK,3
+0078S,7,23,T2,2020,Muscidae,1
+0078S,7,23,T2,2020,Nabidae,1
+0078S,7,23,T2,2020,Platygastridae,3
+0078S,7,23,T2,2020,Pteromalidae,9
+0078S,7,23,T2,2020,Scarabaeidae,8
+0078S,7,23,T2,2020,Scatopsidae,1
+0078S,7,23,T2,2020,Sciomyzidae,2
+0078S,7,23,T2,2020,Sepsidae,1
+0078S,7,23,T2,2020,Thripidae,1
+0078S,7,23,T2,2020,Thyreocoridae,1
+0078S,7,23,T2,2020,Ulidiidae,3
+0078S,7,23,T2,2020,UNKORD,2
+0078S,7,23,T3,2020,Acrididae,21
+0078S,7,23,T3,2020,Aphrophoridae,8
+0078S,7,23,T3,2020,Braconidae,2
+0078S,7,23,T3,2020,Chironomidae,6
+0078S,7,23,T3,2020,Chloropidae,32
+0078S,7,23,T3,2020,Chrysomelidae,8
+0078S,7,23,T3,2020,Cicadellidae,7
+0078S,7,23,T3,2020,Cixiidae,15
+0078S,7,23,T3,2020,COLUNK,1
+0078S,7,23,T3,2020,Curculionidae,1
+0078S,7,23,T3,2020,Delphacidae,2
+0078S,7,23,T3,2020,Dictyopharidae,2
+0078S,7,23,T3,2020,Dolichopodidae,1
+0078S,7,23,T3,2020,Empididae,1
+0078S,7,23,T3,2020,Eulophidae,3
+0078S,7,23,T3,2020,Eurytomidae,2
+0078S,7,23,T3,2020,Figitidae,2
+0078S,7,23,T3,2020,Formicidae,9
+0078S,7,23,T3,2020,Halictidae,1
+0078S,7,23,T3,2020,LEPUNK,8
+0078S,7,23,T3,2020,Miridae,16
+0078S,7,23,T3,2020,Mymaridae,1
+0078S,7,23,T3,2020,Noctuidae,3
+0078S,7,23,T3,2020,Pentatomidae,1
+0078S,7,23,T3,2020,Phalacridae,3
+0078S,7,23,T3,2020,Phlaeothripidae,4
+0078S,7,23,T3,2020,Platygastridae,9
+0078S,7,23,T3,2020,Psyllidae,3
+0078S,7,23,T3,2020,Pteromalidae,1
+0078S,7,23,T3,2020,Scarabaeidae,3
+0078S,7,23,T3,2020,Simuliidae,2
+0078S,7,23,T3,2020,Staphylinidae,2
+0078S,7,23,T3,2020,Tephritidae,1
+0078S,7,23,T3,2020,Tettigoniidae,2
+0078S,7,25,T1,2019,Aphididae,7
+0078S,7,25,T1,2019,Aphrophoridae,1
+0078S,7,25,T1,2019,Brentidae,21
+0078S,7,25,T1,2019,Ceratopogonidae,2
+0078S,7,25,T1,2019,Chironomidae,1
+0078S,7,25,T1,2019,Chloropidae,8
+0078S,7,25,T1,2019,Chrysomelidae,12
+0078S,7,25,T1,2019,Cicadellidae,8
+0078S,7,25,T1,2019,Eulophidae,10
+0078S,7,25,T1,2019,Eurytomidae,2
+0078S,7,25,T1,2019,Figitidae,1
+0078S,7,25,T1,2019,LEPUNK,4
+0078S,7,25,T1,2019,Miridae,1
+0078S,7,25,T1,2019,Muscidae,2
+0078S,7,25,T1,2019,Pentatomidae,1
+0078S,7,25,T1,2019,Scarabaeidae,5
+0078S,7,25,T1,2019,Sphaeroceridae,1
+0078S,7,25,T1,2019,Thripidae,16
+0078S,7,25,T1,2019,Torymidae,1
+0078S,7,25,T2,2019,Acrididae,1
+0078S,7,25,T2,2019,Aeolothripidae,1
+0078S,7,25,T2,2019,Aphididae,4
+0078S,7,25,T2,2019,Aphrophoridae,2
+0078S,7,25,T2,2019,Ceratopogonidae,1
+0078S,7,25,T2,2019,Chloropidae,1
+0078S,7,25,T2,2019,Chrysomelidae,11
+0078S,7,25,T2,2019,Cicadellidae,2
+0078S,7,25,T2,2019,Cixiidae,4
+0078S,7,25,T2,2019,Culicidae,1
+0078S,7,25,T2,2019,Eulophidae,1
+0078S,7,25,T2,2019,LEPUNK,1
+0078S,7,25,T2,2019,Miridae,2
+0078S,7,25,T2,2019,Scatopsidae,1
+0078S,7,25,T2,2019,Thripidae,2
+0078S,7,25,T2,2019,Ulidiidae,1
+0078S,7,25,T3,2019,Aphididae,4
+0078S,7,25,T3,2019,Brentidae,4
+0078S,7,25,T3,2019,Cecidomyiidae,1
+0078S,7,25,T3,2019,Ceratopogonidae,2
+0078S,7,25,T3,2019,Chironomidae,1
+0078S,7,25,T3,2019,Chloropidae,6
+0078S,7,25,T3,2019,Chrysopidae,1
+0078S,7,25,T3,2019,Cicadellidae,8
+0078S,7,25,T3,2019,Delphacidae,1
+0078S,7,25,T3,2019,Dolichopodidae,1
+0078S,7,25,T3,2019,Eulophidae,1
+0078S,7,25,T3,2019,Miridae,1
+0078S,7,25,T3,2019,Muscidae,2
+0078S,7,25,T3,2019,Nitidulidae,1
+0078S,7,25,T3,2019,Pteromalidae,1
+0078S,7,25,T3,2019,Sphaeroceridae,2
+0078S,7,25,T3,2019,Syrphidae,1
+0078S,7,25,T3,2019,Thripidae,2
+0078S,7,25,T3,2019,Ulidiidae,2
+0078S,8,14,T1,2020,Acrididae,8
+0078S,8,14,T1,2020,Anthicidae,1
+0078S,8,14,T1,2020,Aphididae,22
+0078S,8,14,T1,2020,Aphrophoridae,2
+0078S,8,14,T1,2020,Braconidae,1
+0078S,8,14,T1,2020,Chloropidae,5
+0078S,8,14,T1,2020,Chrysomelidae,15
+0078S,8,14,T1,2020,Cicadellidae,12
+0078S,8,14,T1,2020,COLUNK,4
+0078S,8,14,T1,2020,Curculionidae,1
+0078S,8,14,T1,2020,Cynipidae,1
+0078S,8,14,T1,2020,DIPUNK,1
+0078S,8,14,T1,2020,Dolichopodidae,2
+0078S,8,14,T1,2020,Eulophidae,9
+0078S,8,14,T1,2020,Formicidae,1
+0078S,8,14,T1,2020,Gryllidae,3
+0078S,8,14,T1,2020,HEMUNK,1
+0078S,8,14,T1,2020,HYMUNK,1
+0078S,8,14,T1,2020,Latridiidae,7
+0078S,8,14,T1,2020,LEPUNK,2
+0078S,8,14,T1,2020,Megaspilidae,1
+0078S,8,14,T1,2020,Miridae,2
+0078S,8,14,T1,2020,Mymaridae,2
+0078S,8,14,T1,2020,Nabidae,1
+0078S,8,14,T1,2020,Noctuidae,1
+0078S,8,14,T1,2020,Pentatomidae,4
+0078S,8,14,T1,2020,Phalacridae,4
+0078S,8,14,T1,2020,Platygastridae,6
+0078S,8,14,T1,2020,Pteromalidae,1
+0078S,8,14,T1,2020,Reduviidae,1
+0078S,8,14,T1,2020,Simuliidae,1
+0078S,8,14,T1,2020,Tingidae,12
+0078S,8,14,T1,2020,Torymidae,1
+0078S,8,14,T1,2020,Ulidiidae,1
+0078S,8,14,T2,2020,Aphididae,5
+0078S,8,14,T2,2020,Ceraphronidae,1
+0078S,8,14,T2,2020,Chloropidae,14
+0078S,8,14,T2,2020,Chrysomelidae,45
+0078S,8,14,T2,2020,Cicadellidae,3
+0078S,8,14,T2,2020,Eulophidae,5
+0078S,8,14,T2,2020,Figitidae,2
+0078S,8,14,T2,2020,Latridiidae,1
+0078S,8,14,T2,2020,LEPUNK,5
+0078S,8,14,T2,2020,Mymaridae,1
+0078S,8,14,T2,2020,Pentatomidae,1
+0078S,8,14,T2,2020,Phlaeothripidae,2
+0078S,8,14,T2,2020,Phoridae,1
+0078S,8,14,T2,2020,Platygastridae,6
+0078S,8,14,T2,2020,Pteromalidae,1
+0078S,8,14,T2,2020,Scatopsidae,1
+0078S,8,14,T2,2020,Simuliidae,4
+0078S,8,14,T2,2020,Sphaeroceridae,1
+0078S,8,14,T2,2020,Thripidae,3
+0078S,8,14,T2,2020,Ulidiidae,1
+0078S,8,14,T3,2020,Acrididae,6
+0078S,8,14,T3,2020,Aphididae,5
+0078S,8,14,T3,2020,Aphrophoridae,4
+0078S,8,14,T3,2020,Cantharidae,1
+0078S,8,14,T3,2020,Chironomidae,3
+0078S,8,14,T3,2020,Chloropidae,6
+0078S,8,14,T3,2020,Chrysomelidae,3
+0078S,8,14,T3,2020,Cicadellidae,17
+0078S,8,14,T3,2020,Culicidae,1
+0078S,8,14,T3,2020,Dolichopodidae,2
+0078S,8,14,T3,2020,Eulophidae,5
+0078S,8,14,T3,2020,Eupelmidae,1
+0078S,8,14,T3,2020,Eurytomidae,1
+0078S,8,14,T3,2020,Figitidae,1
+0078S,8,14,T3,2020,Formicidae,6
+0078S,8,14,T3,2020,Ichneumonidae,1
+0078S,8,14,T3,2020,Miridae,8
+0078S,8,14,T3,2020,Mymaridae,2
+0078S,8,14,T3,2020,Nabidae,1
+0078S,8,14,T3,2020,Noctuidae,1
+0078S,8,14,T3,2020,Phalacridae,8
+0078S,8,14,T3,2020,Phoridae,2
+0078S,8,14,T3,2020,Platygastridae,6
+0078S,8,14,T3,2020,Psyllidae,4
+0078S,8,14,T3,2020,Pteromalidae,1
+0078S,8,14,T3,2020,Reduviidae,1
+0078S,8,14,T3,2020,Sciomyzidae,1
+0078S,8,14,T3,2020,Simuliidae,1
+0078S,8,14,T3,2020,Syrphidae,1
+0078S,8,14,T3,2020,Tephritidae,1
+0078S,8,14,T3,2020,Tettigoniidae,1
+0078S,8,14,T3,2020,Tingidae,1
+0078S,8,14,T3,2020,Tipulidae,1
+0078S,8,27,T1,2019,Acrididae,1
+0078S,8,27,T1,2019,Alydidae,1
+0078S,8,27,T1,2019,Aphididae,16
+0078S,8,27,T1,2019,Brentidae,12
+0078S,8,27,T1,2019,Ceratopogonidae,2
+0078S,8,27,T1,2019,Chloropidae,3
+0078S,8,27,T1,2019,Chrysomelidae,42
+0078S,8,27,T1,2019,Cicadellidae,2
+0078S,8,27,T1,2019,Culicidae,1
+0078S,8,27,T1,2019,Encyrtidae,1
+0078S,8,27,T1,2019,Eulophidae,1
+0078S,8,27,T1,2019,LEPUNK,3
+0078S,8,27,T1,2019,Muscidae,2
+0078S,8,27,T1,2019,Noctuidae,1
+0078S,8,27,T1,2019,Pentatomidae,6
+0078S,8,27,T1,2019,Scarabaeidae,2
+0078S,8,27,T1,2019,Sciaridae,1
+0078S,8,27,T1,2019,Syrphidae,1
+0078S,8,27,T2,2019,Acanaloniidae,1
+0078S,8,27,T2,2019,Aphididae,9
+0078S,8,27,T2,2019,Braconidae,1
+0078S,8,27,T2,2019,Chrysomelidae,8
+0078S,8,27,T2,2019,Cicadellidae,8
+0078S,8,27,T2,2019,Depressariidae,5
+0078S,8,27,T2,2019,Eulophidae,1
+0078S,8,27,T2,2019,Geometridae,2
+0078S,8,27,T2,2019,LEPUNK,3
+0078S,8,27,T2,2019,Miridae,1
+0078S,8,27,T2,2019,Scarabaeidae,4
+0078S,8,27,T2,2019,Stratiomyidae,1
+0078S,8,27,T3,2019,Anthomyiidae,2
+0078S,8,27,T3,2019,Aphididae,4
+0078S,8,27,T3,2019,Ceratopogonidae,2
+0078S,8,27,T3,2019,Chalcididae,1
+0078S,8,27,T3,2019,Chironomidae,1
+0078S,8,27,T3,2019,Chloropidae,7
+0078S,8,27,T3,2019,Chrysomelidae,1
+0078S,8,27,T3,2019,Cicadellidae,3
+0078S,8,27,T3,2019,Eulophidae,5
+0078S,8,27,T3,2019,Eurytomidae,1
+0078S,8,27,T3,2019,Gryllidae,1
+0078S,8,27,T3,2019,LEPUNK,2
+0078S,8,27,T3,2019,Muscidae,2
+0078S,8,27,T3,2019,Phalacridae,1
+0078S,8,27,T3,2019,Pteromalidae,1
+0078S,8,27,T3,2019,Scarabaeidae,3
+0078S,8,27,T3,2019,Sphaeroceridae,3
+0078S,8,27,T3,2019,Tettigoniidae,2
+00792,7,24,T1,2019,Acrididae,2
+00792,7,24,T1,2019,Aeolothripidae,3
+00792,7,24,T1,2019,Agromyzidae,2
+00792,7,24,T1,2019,Anthocoridae,1
+00792,7,24,T1,2019,Aphididae,2
+00792,7,24,T1,2019,Carabidae,1
+00792,7,24,T1,2019,Cerambycidae,2
+00792,7,24,T1,2019,Chloropidae,60
+00792,7,24,T1,2019,Chrysomelidae,1
+00792,7,24,T1,2019,Cicadellidae,14
+00792,7,24,T1,2019,Culicidae,9
+00792,7,24,T1,2019,Dolichopodidae,2
+00792,7,24,T1,2019,Eurytomidae,9
+00792,7,24,T1,2019,Formicidae,3
+00792,7,24,T1,2019,Halictidae,1
+00792,7,24,T1,2019,HEMUNK,1
+00792,7,24,T1,2019,Lauxaniidae,3
+00792,7,24,T1,2019,LEPUNK,5
+00792,7,24,T1,2019,Miridae,4
+00792,7,24,T1,2019,Nymphalidae,1
+00792,7,24,T1,2019,Platygastridae,12
+00792,7,24,T1,2019,Pteromalidae,31
+00792,7,24,T1,2019,Sepsidae,4
+00792,7,24,T1,2019,Tabanidae,1
+00792,7,24,T1,2019,Thripidae,4
+00792,7,24,T1,2019,Thyreocoridae,3
+00792,7,24,T2,2019,Agromyzidae,1
+00792,7,24,T2,2019,Anthomyiidae,1
+00792,7,24,T2,2019,Aphididae,1
+00792,7,24,T2,2019,Chironomidae,13
+00792,7,24,T2,2019,Chloropidae,35
+00792,7,24,T2,2019,Cicadellidae,20
+00792,7,24,T2,2019,COLUNK,2
+00792,7,24,T2,2019,Corylophidae,1
+00792,7,24,T2,2019,Curtonotidae,3
+00792,7,24,T2,2019,Delphacidae,2
+00792,7,24,T2,2019,Eulophidae,27
+00792,7,24,T2,2019,Eurytomidae,6
+00792,7,24,T2,2019,Figitidae,1
+00792,7,24,T2,2019,Latridiidae,2
+00792,7,24,T2,2019,Lauxaniidae,1
+00792,7,24,T2,2019,Mymaridae,1
+00792,7,24,T2,2019,Nabidae,2
+00792,7,24,T2,2019,Phlaeothripidae,1
+00792,7,24,T2,2019,Phoridae,5
+00792,7,24,T2,2019,Platystomatidae,1
+00792,7,24,T2,2019,Pteromalidae,1
+00792,7,24,T2,2019,Simuliidae,1
+00792,7,24,T2,2019,Sphaeroceridae,1
+00792,7,24,T2,2019,Tephritidae,3
+00792,7,24,T2,2019,Thripidae,3
+00792,7,24,T3,2019,Acrididae,10
+00792,7,24,T3,2019,Braconidae,4
+00792,7,24,T3,2019,Chamaemyiidae,1
+00792,7,24,T3,2019,Chironomidae,2
+00792,7,24,T3,2019,Chloropidae,128
+00792,7,24,T3,2019,Chrysomelidae,1
+00792,7,24,T3,2019,Cicadellidae,10
+00792,7,24,T3,2019,Cixiidae,5
+00792,7,24,T3,2019,Curculionidae,1
+00792,7,24,T3,2019,Delphacidae,2
+00792,7,24,T3,2019,Dictyopharidae,1
+00792,7,24,T3,2019,Dolichopodidae,5
+00792,7,24,T3,2019,Encyrtidae,4
+00792,7,24,T3,2019,Fanniidae,28
+00792,7,24,T3,2019,Gryllidae,2
+00792,7,24,T3,2019,HYMUNK,1
+00792,7,24,T3,2019,Latridiidae,8
+00792,7,24,T3,2019,Lauxaniidae,5
+00792,7,24,T3,2019,Membracidae,1
+00792,7,24,T3,2019,Miridae,20
+00792,7,24,T3,2019,Nabidae,6
+00792,7,24,T3,2019,Phoridae,1
+00792,7,24,T3,2019,Platygastridae,5
+00792,7,24,T3,2019,Pteromalidae,15
+00792,7,24,T3,2019,Reduviidae,1
+00792,7,24,T3,2019,Scatopsidae,1
+00792,7,24,T3,2019,Sepsidae,1
+00792,7,24,T3,2019,Tephritidae,5
+00792,7,24,T3,2019,Tettigoniidae,2
+00792,7,24,T3,2019,Thripidae,5
+00792,7,24,T3,2019,Torymidae,1
+00792,7,24,T3,2019,Ulidiidae,1
+00792,7,24,T3,2019,UNKORD,1
+00792,8,20,T1,2019,Acanaloniidae,1
+00792,8,20,T1,2019,Agromyzidae,4
+00792,8,20,T1,2019,Anthocoridae,1
+00792,8,20,T1,2019,Braconidae,2
+00792,8,20,T1,2019,Chloropidae,12
+00792,8,20,T1,2019,Chrysomelidae,8
+00792,8,20,T1,2019,Cicadellidae,7
+00792,8,20,T1,2019,Coccinellidae,1
+00792,8,20,T1,2019,Coreidae,1
+00792,8,20,T1,2019,Culicidae,5
+00792,8,20,T1,2019,Diapriidae,1
+00792,8,20,T1,2019,DIPUNK,2
+00792,8,20,T1,2019,Dolichopodidae,2
+00792,8,20,T1,2019,Eucharitidae,1
+00792,8,20,T1,2019,Eulophidae,43
+00792,8,20,T1,2019,Figitidae,1
+00792,8,20,T1,2019,Formicidae,3
+00792,8,20,T1,2019,HEMUNK,3
+00792,8,20,T1,2019,HYMUNK,1
+00792,8,20,T1,2019,LEPUNK,3
+00792,8,20,T1,2019,Miridae,13
+00792,8,20,T1,2019,Nabidae,1
+00792,8,20,T1,2019,Phalacridae,2
+00792,8,20,T1,2019,Platygastridae,12
+00792,8,20,T1,2019,Pteromalidae,2
+00792,8,20,T1,2019,Scatopsidae,5
+00792,8,20,T1,2019,Sciaridae,1
+00792,8,20,T1,2019,Sepsidae,1
+00792,8,20,T1,2019,Tephritidae,4
+00792,8,20,T1,2019,Tettigoniidae,4
+00792,8,20,T1,2019,Tipulidae,2
+00792,8,20,T1,2019,UNKORD,2
+00792,8,20,T2,2019,Acrididae,2
+00792,8,20,T2,2019,Braconidae,1
+00792,8,20,T2,2019,Chloropidae,7
+00792,8,20,T2,2019,Chrysomelidae,1
+00792,8,20,T2,2019,Cicadellidae,7
+00792,8,20,T2,2019,Cleridae,1
+00792,8,20,T2,2019,Culicidae,2
+00792,8,20,T2,2019,DIPUNK,1
+00792,8,20,T2,2019,Eulophidae,20
+00792,8,20,T2,2019,Eurytomidae,3
+00792,8,20,T2,2019,HEMUNK,2
+00792,8,20,T2,2019,Lauxaniidae,1
+00792,8,20,T2,2019,Phlaeothripidae,1
+00792,8,20,T2,2019,Platygastridae,1
+00792,8,20,T2,2019,Pteromalidae,1
+00792,8,20,T2,2019,Scatopsidae,8
+00792,8,20,T2,2019,Sciaridae,1
+00792,8,20,T2,2019,Tettigoniidae,3
+00792,8,20,T3,2019,Aeolothripidae,2
+00792,8,20,T3,2019,Agromyzidae,1
+00792,8,20,T3,2019,Anthocoridae,6
+00792,8,20,T3,2019,Braconidae,2
+00792,8,20,T3,2019,Chloropidae,15
+00792,8,20,T3,2019,Chrysomelidae,3
+00792,8,20,T3,2019,Cicadellidae,7
+00792,8,20,T3,2019,Culicidae,1
+00792,8,20,T3,2019,Eulophidae,7
+00792,8,20,T3,2019,Eurytomidae,1
+00792,8,20,T3,2019,Lauxaniidae,1
+00792,8,20,T3,2019,LEPUNK,1
+00792,8,20,T3,2019,Miridae,2
+00792,8,20,T3,2019,Nabidae,1
+00792,8,20,T3,2019,ORTUNK,1
+00792,8,20,T3,2019,Psyllidae,7
+00792,8,20,T3,2019,Scarabaeidae,4
+00792,8,20,T3,2019,Sciaridae,3
+00792,8,20,T3,2019,Staphylinidae,1
+00792,8,20,T3,2019,Tachinidae,3
+007BY,7,16,T1,2019,Anthomyiidae,2
+007BY,7,16,T1,2019,Aphididae,7
+007BY,7,16,T1,2019,Aphrophoridae,10
+007BY,7,16,T1,2019,Braconidae,1
+007BY,7,16,T1,2019,Carabidae,3
+007BY,7,16,T1,2019,Chloropidae,44
+007BY,7,16,T1,2019,Chrysomelidae,5
+007BY,7,16,T1,2019,Cicadellidae,2
+007BY,7,16,T1,2019,Dictyopharidae,1
+007BY,7,16,T1,2019,Dolichopodidae,6
+007BY,7,16,T1,2019,Encyrtidae,1
+007BY,7,16,T1,2019,Eurytomidae,1
+007BY,7,16,T1,2019,Formicidae,11
+007BY,7,16,T1,2019,Heleomyzidae,1
+007BY,7,16,T1,2019,Issidae,1
+007BY,7,16,T1,2019,LEPUNK,1
+007BY,7,16,T1,2019,Mordellidae,1
+007BY,7,16,T1,2019,Noctuidae,1
+007BY,7,16,T1,2019,Phalacridae,1
+007BY,7,16,T1,2019,Phlaeothripidae,1
+007BY,7,16,T1,2019,Pteromalidae,5
+007BY,7,16,T1,2019,Reduviidae,1
+007BY,7,16,T1,2019,Sciomyzidae,2
+007BY,7,16,T1,2019,Tephritidae,1
+007BY,7,16,T1,2019,Tettigoniidae,1
+007BY,7,16,T1,2019,Thripidae,2
+007BY,7,16,T1,2019,Torymidae,1
+007BY,7,16,T1,2019,Ulidiidae,1
+007BY,7,16,T2,2019,Acrididae,1
+007BY,7,16,T2,2019,Aphididae,4
+007BY,7,16,T2,2019,Aphrophoridae,3
+007BY,7,16,T2,2019,Braconidae,1
+007BY,7,16,T2,2019,Cecidomyiidae,1
+007BY,7,16,T2,2019,Chironomidae,26
+007BY,7,16,T2,2019,Chloropidae,55
+007BY,7,16,T2,2019,Chrysomelidae,3
+007BY,7,16,T2,2019,Cicadellidae,7
+007BY,7,16,T2,2019,Cixiidae,10
+007BY,7,16,T2,2019,Delphacidae,1
+007BY,7,16,T2,2019,Dictyopharidae,2
+007BY,7,16,T2,2019,Formicidae,4
+007BY,7,16,T2,2019,Halictophagidae,1
+007BY,7,16,T2,2019,Issidae,1
+007BY,7,16,T2,2019,Lampyridae,1
+007BY,7,16,T2,2019,LEPUNK,5
+007BY,7,16,T2,2019,Miridae,1
+007BY,7,16,T2,2019,Muscidae,4
+007BY,7,16,T2,2019,Psyllidae,7
+007BY,7,16,T2,2019,Pteromalidae,7
+007BY,7,16,T2,2019,Scatopsidae,5
+007BY,7,16,T2,2019,Tettigoniidae,1
+007BY,7,16,T2,2019,Thripidae,3
+007BY,7,16,T2,2019,Tipulidae,1
+007BY,7,16,T2,2019,Torymidae,8
+007BY,7,16,T3,2019,Acrididae,1
+007BY,7,16,T3,2019,Aphididae,1
+007BY,7,16,T3,2019,Aphrophoridae,1
+007BY,7,16,T3,2019,Braconidae,2
+007BY,7,16,T3,2019,Cecidomyiidae,2
+007BY,7,16,T3,2019,Chironomidae,7
+007BY,7,16,T3,2019,Chloropidae,34
+007BY,7,16,T3,2019,Chrysomelidae,1
+007BY,7,16,T3,2019,Cicadellidae,3
+007BY,7,16,T3,2019,Cixiidae,6
+007BY,7,16,T3,2019,DIPUNK,1
+007BY,7,16,T3,2019,Dolichopodidae,8
+007BY,7,16,T3,2019,Eulophidae,2
+007BY,7,16,T3,2019,Formicidae,1
+007BY,7,16,T3,2019,LEPUNK,2
+007BY,7,16,T3,2019,Miridae,1
+007BY,7,16,T3,2019,Mordellidae,1
+007BY,7,16,T3,2019,Muscidae,7
+007BY,7,16,T3,2019,Phlaeothripidae,1
+007BY,7,16,T3,2019,Pteromalidae,4
+007BY,7,16,T3,2019,Scatopsidae,10
+007BY,7,16,T3,2019,Sciomyzidae,6
+007BY,7,16,T3,2019,Sepsidae,1
+007BY,7,16,T3,2019,Tettigoniidae,1
+007BY,7,16,T3,2019,Thripidae,5
+007BY,7,16,T3,2019,Ulidiidae,1
+007BY,8,9,T1,2019,Aphididae,1
+007BY,8,9,T1,2019,Aphrophoridae,1
+007BY,8,9,T1,2019,Chironomidae,1
+007BY,8,9,T1,2019,Chloropidae,5
+007BY,8,9,T1,2019,Chrysomelidae,57
+007BY,8,9,T1,2019,Cicadellidae,5
+007BY,8,9,T1,2019,Culicidae,1
+007BY,8,9,T1,2019,Miridae,4
+007BY,8,9,T1,2019,Pentatomidae,1
+007BY,8,9,T1,2019,Psyllidae,5
+007BY,8,9,T1,2019,Pteromalidae,5
+007BY,8,9,T1,2019,Sphaeroceridae,1
+007BY,8,9,T1,2019,Tettigoniidae,4
+007BY,8,9,T1,2019,Thripidae,4
+007BY,8,9,T2,2019,Aphrophoridae,2
+007BY,8,9,T2,2019,Chironomidae,7
+007BY,8,9,T2,2019,Chloropidae,5
+007BY,8,9,T2,2019,Chrysomelidae,14
+007BY,8,9,T2,2019,Cicadellidae,3
+007BY,8,9,T2,2019,Delphacidae,1
+007BY,8,9,T2,2019,DIPUNK,3
+007BY,8,9,T2,2019,Formicidae,1
+007BY,8,9,T2,2019,Phoridae,2
+007BY,8,9,T2,2019,Psyllidae,1
+007BY,8,9,T2,2019,Pteromalidae,9
+007BY,8,9,T2,2019,Sphaeroceridae,2
+007BY,8,9,T2,2019,Thripidae,4
+007BY,8,9,T3,2019,Aphrophoridae,1
+007BY,8,9,T3,2019,Chironomidae,1
+007BY,8,9,T3,2019,Chloropidae,3
+007BY,8,9,T3,2019,Chrysomelidae,24
+007BY,8,9,T3,2019,Coenagrionidae,1
+007BY,8,9,T3,2019,Dolichopodidae,1
+007BY,8,9,T3,2019,Eulophidae,1
+007BY,8,9,T3,2019,Miridae,2
+007BY,8,9,T3,2019,Muscidae,2
+007BY,8,9,T3,2019,Pentatomidae,1
+007BY,8,9,T3,2019,Phalacridae,1
+007BY,8,9,T3,2019,Sciomyzidae,1
+007BY,8,9,T3,2019,Tettigoniidae,1
+007BY,8,9,T3,2019,Thripidae,1
+007C6,7,17,T1,2019,Aphididae,1
+007C6,7,17,T1,2019,Chamaemyiidae,1
+007C6,7,17,T1,2019,Chloropidae,11
+007C6,7,17,T1,2019,Cicadellidae,7
+007C6,7,17,T1,2019,Curculionidae,1
+007C6,7,17,T1,2019,Delphacidae,8
+007C6,7,17,T1,2019,Eulophidae,3
+007C6,7,17,T1,2019,LEPUNK,2
+007C6,7,17,T1,2019,Pentatomidae,1
+007C6,7,17,T1,2019,Phalacridae,1
+007C6,7,17,T1,2019,Psyllidae,3
+007C6,7,17,T1,2019,Rhyparochromidae,1
+007C6,7,17,T1,2019,Sepsidae,1
+007C6,7,17,T1,2019,Sphaeroceridae,1
+007C6,7,17,T1,2019,Tettigoniidae,2
+007C6,7,17,T1,2019,Torymidae,1
+007C6,7,17,T1,2019,Ulidiidae,2
+007C6,7,17,T2,2019,Aeolothripidae,1
+007C6,7,17,T2,2019,Bethylidae,1
+007C6,7,17,T2,2019,Braconidae,5
+007C6,7,17,T2,2019,Brentidae,2
+007C6,7,17,T2,2019,Cecidomyiidae,2
+007C6,7,17,T2,2019,Cerambycidae,1
+007C6,7,17,T2,2019,Chalcididae,1
+007C6,7,17,T2,2019,Chironomidae,3
+007C6,7,17,T2,2019,Chloropidae,36
+007C6,7,17,T2,2019,Chrysomelidae,1
+007C6,7,17,T2,2019,Chrysopidae,2
+007C6,7,17,T2,2019,Cicadellidae,18
+007C6,7,17,T2,2019,Cixiidae,1
+007C6,7,17,T2,2019,Coreidae,1
+007C6,7,17,T2,2019,Culicidae,2
+007C6,7,17,T2,2019,Delphacidae,8
+007C6,7,17,T2,2019,Eulophidae,15
+007C6,7,17,T2,2019,Eurytomidae,3
+007C6,7,17,T2,2019,Formicidae,1
+007C6,7,17,T2,2019,Hybotidae,3
+007C6,7,17,T2,2019,LEPUNK,11
+007C6,7,17,T2,2019,Miridae,5
+007C6,7,17,T2,2019,Muscidae,1
+007C6,7,17,T2,2019,Phlaeothripidae,1
+007C6,7,17,T2,2019,Platygastridae,1
+007C6,7,17,T2,2019,Pteromalidae,9
+007C6,7,17,T2,2019,Rhagionidae,2
+007C6,7,17,T2,2019,Scarabaeidae,5
+007C6,7,17,T2,2019,Sepsidae,2
+007C6,7,17,T2,2019,Tettigoniidae,2
+007C6,7,17,T2,2019,Thripidae,1
+007C6,7,17,T2,2019,Ulidiidae,5
+007C6,7,17,T3,2019,Acanaloniidae,4
+007C6,7,17,T3,2019,Acrididae,4
+007C6,7,17,T3,2019,Anthocoridae,1
+007C6,7,17,T3,2019,Aphididae,1
+007C6,7,17,T3,2019,Asilidae,3
+007C6,7,17,T3,2019,Braconidae,2
+007C6,7,17,T3,2019,Cecidomyiidae,2
+007C6,7,17,T3,2019,Cerambycidae,1
+007C6,7,17,T3,2019,Chironomidae,1
+007C6,7,17,T3,2019,Chloropidae,9
+007C6,7,17,T3,2019,Chrysomelidae,1
+007C6,7,17,T3,2019,Cicadellidae,27
+007C6,7,17,T3,2019,Cixiidae,14
+007C6,7,17,T3,2019,COLUNK,1
+007C6,7,17,T3,2019,Curculionidae,1
+007C6,7,17,T3,2019,Delphacidae,6
+007C6,7,17,T3,2019,Dictyopharidae,2
+007C6,7,17,T3,2019,DIPUNK,3
+007C6,7,17,T3,2019,Dolichopodidae,3
+007C6,7,17,T3,2019,Ephydridae,1
+007C6,7,17,T3,2019,Eulophidae,8
+007C6,7,17,T3,2019,Formicidae,1
+007C6,7,17,T3,2019,HEMUNK,1
+007C6,7,17,T3,2019,Hybotidae,1
+007C6,7,17,T3,2019,LEPUNK,8
+007C6,7,17,T3,2019,Miridae,4
+007C6,7,17,T3,2019,Platygastridae,2
+007C6,7,17,T3,2019,Psyllidae,1
+007C6,7,17,T3,2019,Pteromalidae,1
+007C6,7,17,T3,2019,Tephritidae,1
+007C6,7,17,T3,2019,Tettigoniidae,7
+007C6,7,17,T3,2019,Thripidae,1
+007C6,7,17,T3,2019,Ulidiidae,8
+007C6,7,29,T1,2020,Acanaloniidae,1
+007C6,7,29,T1,2020,Asilidae,1
+007C6,7,29,T1,2020,Chloropidae,2
+007C6,7,29,T1,2020,Derbidae,1
+007C6,7,29,T1,2020,Geometridae,1
+007C6,7,29,T1,2020,LEPUNK,2
+007C6,7,29,T1,2020,Phalacridae,1
+007C6,7,29,T1,2020,Psyllidae,1
+007C6,7,29,T1,2020,Pteromalidae,1
+007C6,7,29,T2,2020,Acanaloniidae,1
+007C6,7,29,T2,2020,Acrididae,1
+007C6,7,29,T2,2020,Ceratopogonidae,2
+007C6,7,29,T2,2020,Chironomidae,1
+007C6,7,29,T2,2020,Chloropidae,6
+007C6,7,29,T2,2020,Cicadellidae,3
+007C6,7,29,T2,2020,Coenagrionidae,1
+007C6,7,29,T2,2020,Curculionidae,5
+007C6,7,29,T2,2020,DIPUNK,1
+007C6,7,29,T2,2020,Dolichopodidae,1
+007C6,7,29,T2,2020,Drosophilidae,1
+007C6,7,29,T2,2020,Eulophidae,2
+007C6,7,29,T2,2020,HYMUNK,1
+007C6,7,29,T2,2020,LEPUNK,2
+007C6,7,29,T2,2020,Miridae,1
+007C6,7,29,T2,2020,Phalacridae,17
+007C6,7,29,T2,2020,Phoridae,1
+007C6,7,29,T2,2020,Platygastridae,3
+007C6,7,29,T2,2020,Psyllidae,6
+007C6,7,29,T2,2020,Rhyparochromidae,1
+007C6,7,29,T2,2020,Scarabaeidae,2
+007C6,7,29,T2,2020,Scatopsidae,1
+007C6,7,29,T2,2020,Sepsidae,1
+007C6,7,29,T2,2020,Thripidae,10
+007C6,7,29,T3,2020,Acrididae,1
+007C6,7,29,T3,2020,Aleyrodidae,1
+007C6,7,29,T3,2020,Brentidae,1
+007C6,7,29,T3,2020,Cecidomyiidae,1
+007C6,7,29,T3,2020,Ceratopogonidae,1
+007C6,7,29,T3,2020,Chironomidae,1
+007C6,7,29,T3,2020,Chloropidae,12
+007C6,7,29,T3,2020,Culicidae,1
+007C6,7,29,T3,2020,Dolichopodidae,1
+007C6,7,29,T3,2020,Eulophidae,2
+007C6,7,29,T3,2020,LEPUNK,2
+007C6,7,29,T3,2020,Miridae,1
+007C6,7,29,T3,2020,Muscidae,1
+007C6,7,29,T3,2020,Phalacridae,4
+007C6,7,29,T3,2020,Phoridae,1
+007C6,7,29,T3,2020,Psyllidae,1
+007C6,7,29,T3,2020,Reduviidae,1
+007C6,7,29,T3,2020,Scatopsidae,1
+007C6,7,29,T3,2020,Tephritidae,1
+007C6,7,29,T3,2020,Thripidae,10
+007C6,7,29,T3,2020,Thyreocoridae,2
+007C6,8,13,T1,2019,Alydidae,11
+007C6,8,13,T1,2019,Aphididae,4
+007C6,8,13,T1,2019,Aphrophoridae,1
+007C6,8,13,T1,2019,Braconidae,1
+007C6,8,13,T1,2019,Carabidae,1
+007C6,8,13,T1,2019,Chironomidae,4
+007C6,8,13,T1,2019,Chloropidae,9
+007C6,8,13,T1,2019,Chrysomelidae,1
+007C6,8,13,T1,2019,Cicadellidae,14
+007C6,8,13,T1,2019,Culicidae,1
+007C6,8,13,T1,2019,Dolichopodidae,1
+007C6,8,13,T1,2019,Eulophidae,5
+007C6,8,13,T1,2019,Formicidae,1
+007C6,8,13,T1,2019,Miridae,4
+007C6,8,13,T1,2019,Muscidae,2
+007C6,8,13,T1,2019,Phalacridae,63
+007C6,8,13,T1,2019,Psyllidae,16
+007C6,8,13,T1,2019,Pteromalidae,7
+007C6,8,13,T1,2019,Sciomyzidae,1
+007C6,8,13,T1,2019,Tettigoniidae,3
+007C6,8,13,T1,2019,Thripidae,1
+007C6,8,13,T2,2019,Acanaloniidae,3
+007C6,8,13,T2,2019,Alydidae,1
+007C6,8,13,T2,2019,Aphididae,2
+007C6,8,13,T2,2019,Braconidae,2
+007C6,8,13,T2,2019,Buprestidae,2
+007C6,8,13,T2,2019,Caliscelidae,1
+007C6,8,13,T2,2019,Chironomidae,29
+007C6,8,13,T2,2019,Chloropidae,5
+007C6,8,13,T2,2019,Chrysomelidae,7
+007C6,8,13,T2,2019,Cicadellidae,26
+007C6,8,13,T2,2019,Coccinellidae,1
+007C6,8,13,T2,2019,Culicidae,1
+007C6,8,13,T2,2019,Dolichopodidae,2
+007C6,8,13,T2,2019,Formicidae,3
+007C6,8,13,T2,2019,Miridae,2
+007C6,8,13,T2,2019,Pentatomidae,1
+007C6,8,13,T2,2019,Phalacridae,57
+007C6,8,13,T2,2019,Phlaeothripidae,3
+007C6,8,13,T2,2019,Phoridae,1
+007C6,8,13,T2,2019,Psyllidae,4
+007C6,8,13,T2,2019,Pteromalidae,8
+007C6,8,13,T2,2019,Reduviidae,1
+007C6,8,13,T2,2019,Rhyparochromidae,1
+007C6,8,13,T2,2019,Sepsidae,1
+007C6,8,13,T2,2019,Tettigoniidae,4
+007C6,8,13,T2,2019,Ulidiidae,2
+007C6,8,13,T3,2019,Acanaloniidae,1
+007C6,8,13,T3,2019,Anthocoridae,3
+007C6,8,13,T3,2019,Aphididae,2
+007C6,8,13,T3,2019,Braconidae,1
+007C6,8,13,T3,2019,Cerambycidae,2
+007C6,8,13,T3,2019,Chamaemyiidae,1
+007C6,8,13,T3,2019,Chironomidae,3
+007C6,8,13,T3,2019,Chloropidae,9
+007C6,8,13,T3,2019,Chrysomelidae,2
+007C6,8,13,T3,2019,Cicadellidae,16
+007C6,8,13,T3,2019,COLUNK,1
+007C6,8,13,T3,2019,Curculionidae,1
+007C6,8,13,T3,2019,DIPUNK,2
+007C6,8,13,T3,2019,Dolichopodidae,3
+007C6,8,13,T3,2019,Encyrtidae,1
+007C6,8,13,T3,2019,Eulophidae,3
+007C6,8,13,T3,2019,Formicidae,1
+007C6,8,13,T3,2019,Gryllidae,2
+007C6,8,13,T3,2019,Miridae,1
+007C6,8,13,T3,2019,Pentatomidae,1
+007C6,8,13,T3,2019,Phalacridae,102
+007C6,8,13,T3,2019,Phlaeothripidae,7
+007C6,8,13,T3,2019,Platygastridae,6
+007C6,8,13,T3,2019,Psyllidae,12
+007C6,8,13,T3,2019,Reduviidae,1
+007C6,8,13,T3,2019,Rhyparochromidae,1
+007C6,8,13,T3,2019,Thripidae,2
+007C6,8,13,T3,2019,Tipulidae,1
+007C6,8,13,T3,2019,Ulidiidae,1
+007C6,8,20,T1,2020,Acrididae,1
+007C6,8,20,T1,2020,Anthocoridae,1
+007C6,8,20,T1,2020,Aphididae,1
+007C6,8,20,T1,2020,Cecidomyiidae,1
+007C6,8,20,T1,2020,Chironomidae,2
+007C6,8,20,T1,2020,Chloropidae,1
+007C6,8,20,T1,2020,Cicadellidae,2
+007C6,8,20,T1,2020,Dolichopodidae,1
+007C6,8,20,T1,2020,Eulophidae,2
+007C6,8,20,T1,2020,Eupelmidae,1
+007C6,8,20,T1,2020,Mymaridae,1
+007C6,8,20,T1,2020,Phalacridae,1
+007C6,8,20,T1,2020,Platygastridae,4
+007C6,8,20,T1,2020,Psyllidae,1
+007C6,8,20,T1,2020,Pteromalidae,1
+007C6,8,20,T1,2020,Reduviidae,1
+007C6,8,20,T1,2020,Scatopsidae,1
+007C6,8,20,T2,2020,Aphididae,1
+007C6,8,20,T2,2020,Braconidae,2
+007C6,8,20,T2,2020,Cantharidae,3
+007C6,8,20,T2,2020,Chironomidae,1
+007C6,8,20,T2,2020,Chloropidae,1
+007C6,8,20,T2,2020,Cicadellidae,2
+007C6,8,20,T2,2020,Curculionidae,1
+007C6,8,20,T2,2020,Eulophidae,2
+007C6,8,20,T2,2020,Geometridae,1
+007C6,8,20,T2,2020,Miridae,1
+007C6,8,20,T2,2020,Pentatomidae,1
+007C6,8,20,T2,2020,Phalacridae,12
+007C6,8,20,T2,2020,Phoridae,1
+007C6,8,20,T2,2020,Platygastridae,7
+007C6,8,20,T2,2020,Psyllidae,2
+007C6,8,20,T2,2020,Reduviidae,1
+007C6,8,20,T2,2020,Scatopsidae,9
+007C6,8,20,T2,2020,Thripidae,7
+007C6,8,20,T2,2020,Tipulidae,1
+007C6,8,20,T3,2020,Bethylidae,1
+007C6,8,20,T3,2020,Cecidomyiidae,1
+007C6,8,20,T3,2020,Cicadellidae,1
+007C6,8,20,T3,2020,Eulophidae,1
+007C6,8,20,T3,2020,Miridae,1
+007C6,8,20,T3,2020,Phalacridae,8
+007C6,8,20,T3,2020,Platygastridae,2
+007C6,8,20,T3,2020,Psyllidae,2
+007CQ,7,23,T1,2020,Acrididae,9
+007CQ,7,23,T1,2020,Aeolothripidae,5
+007CQ,7,23,T1,2020,Aphididae,1
+007CQ,7,23,T1,2020,Braconidae,1
+007CQ,7,23,T1,2020,Cecidomyiidae,2
+007CQ,7,23,T1,2020,Chloropidae,46
+007CQ,7,23,T1,2020,Chrysomelidae,1
+007CQ,7,23,T1,2020,Cicadellidae,14
+007CQ,7,23,T1,2020,Culicidae,5
+007CQ,7,23,T1,2020,Encyrtidae,2
+007CQ,7,23,T1,2020,Eulophidae,16
+007CQ,7,23,T1,2020,Eupelmidae,1
+007CQ,7,23,T1,2020,Eurytomidae,5
+007CQ,7,23,T1,2020,LEPUNK,1
+007CQ,7,23,T1,2020,Miridae,4
+007CQ,7,23,T1,2020,Mycetophilidae,3
+007CQ,7,23,T1,2020,Nitidulidae,1
+007CQ,7,23,T1,2020,Phalacridae,1
+007CQ,7,23,T1,2020,Reduviidae,1
+007CQ,7,23,T1,2020,Scelionidae,2
+007CQ,7,23,T1,2020,Simuliidae,1
+007CQ,7,23,T1,2020,Sphaeroceridae,4
+007CQ,7,23,T1,2020,Staphylinidae,1
+007CQ,7,23,T1,2020,Tephritidae,2
+007CQ,7,23,T1,2020,Tettigoniidae,5
+007CQ,7,23,T1,2020,Thripidae,3
+007CQ,7,23,T1,2020,Ulidiidae,3
+007CQ,7,23,T2,2020,Achilidae,1
+007CQ,7,23,T2,2020,Acrididae,19
+007CQ,7,23,T2,2020,Aphididae,13
+007CQ,7,23,T2,2020,Asilidae,1
+007CQ,7,23,T2,2020,Bethylidae,2
+007CQ,7,23,T2,2020,Braconidae,1
+007CQ,7,23,T2,2020,Chloropidae,29
+007CQ,7,23,T2,2020,Chrysomelidae,2
+007CQ,7,23,T2,2020,Chrysopidae,1
+007CQ,7,23,T2,2020,Cicadellidae,24
+007CQ,7,23,T2,2020,Cymidae,1
+007CQ,7,23,T2,2020,Delphacidae,4
+007CQ,7,23,T2,2020,Dolichopodidae,1
+007CQ,7,23,T2,2020,Eulophidae,12
+007CQ,7,23,T2,2020,Eurytomidae,4
+007CQ,7,23,T2,2020,Figitidae,1
+007CQ,7,23,T2,2020,Formicidae,2
+007CQ,7,23,T2,2020,Geometridae,3
+007CQ,7,23,T2,2020,HEMUNK,1
+007CQ,7,23,T2,2020,LEPUNK,1
+007CQ,7,23,T2,2020,Miridae,8
+007CQ,7,23,T2,2020,Phalacridae,4
+007CQ,7,23,T2,2020,Phoridae,1
+007CQ,7,23,T2,2020,Platygastridae,1
+007CQ,7,23,T2,2020,Psyllidae,1
+007CQ,7,23,T2,2020,Reduviidae,2
+007CQ,7,23,T2,2020,Scatopsidae,2
+007CQ,7,23,T2,2020,Sepsidae,1
+007CQ,7,23,T2,2020,Tephritidae,3
+007CQ,7,23,T2,2020,Tettigoniidae,3
+007CQ,7,23,T2,2020,Thyreocoridae,5
+007CQ,7,23,T2,2020,Tipulidae,1
+007CQ,7,23,T2,2020,Ulidiidae,1
+007CQ,7,23,T3,2020,Acrididae,14
+007CQ,7,23,T3,2020,Alydidae,9
+007CQ,7,23,T3,2020,Anthicidae,1
+007CQ,7,23,T3,2020,Aphididae,5
+007CQ,7,23,T3,2020,Brentidae,2
+007CQ,7,23,T3,2020,Chironomidae,3
+007CQ,7,23,T3,2020,Chloropidae,45
+007CQ,7,23,T3,2020,Chrysomelidae,1
+007CQ,7,23,T3,2020,Cicadellidae,33
+007CQ,7,23,T3,2020,Delphacidae,11
+007CQ,7,23,T3,2020,Eulophidae,4
+007CQ,7,23,T3,2020,Formicidae,30
+007CQ,7,23,T3,2020,Ichneumonidae,1
+007CQ,7,23,T3,2020,Latridiidae,1
+007CQ,7,23,T3,2020,LEPUNK,8
+007CQ,7,23,T3,2020,Membracidae,1
+007CQ,7,23,T3,2020,Nabidae,2
+007CQ,7,23,T3,2020,Pentatomidae,1
+007CQ,7,23,T3,2020,Phlaeothripidae,5
+007CQ,7,23,T3,2020,Platygastridae,2
+007CQ,7,23,T3,2020,Psyllidae,1
+007CQ,7,23,T3,2020,Scatopsidae,4
+007CQ,7,23,T3,2020,Tettigoniidae,9
+007CQ,7,23,T3,2020,Thripidae,3
+007CQ,7,23,T3,2020,Ulidiidae,3
+007CQ,8,26,T2,2020,Acanaloniidae,3
+007CQ,8,26,T2,2020,Aphididae,1
+007CQ,8,26,T2,2020,Cantharidae,1
+007CQ,8,26,T2,2020,Chloropidae,2
+007CQ,8,26,T2,2020,Cicadellidae,6
+007CQ,8,26,T2,2020,Coreidae,1
+007CQ,8,26,T2,2020,Curculionidae,1
+007CQ,8,26,T2,2020,Dolichopodidae,13
+007CQ,8,26,T2,2020,Eulophidae,10
+007CQ,8,26,T2,2020,Eupelmidae,2
+007CQ,8,26,T2,2020,Formicidae,83
+007CQ,8,26,T2,2020,Gryllidae,1
+007CQ,8,26,T2,2020,HEMUNK,1
+007CQ,8,26,T2,2020,LEPUNK,2
+007CQ,8,26,T2,2020,Membracidae,29
+007CQ,8,26,T2,2020,Miridae,15
+007CQ,8,26,T2,2020,Mordellidae,1
+007CQ,8,26,T2,2020,Phalacridae,9
+007CQ,8,26,T2,2020,Platygastridae,11
+007CQ,8,26,T2,2020,Pteromalidae,3
+007CQ,8,26,T2,2020,Reduviidae,1
+007CQ,8,26,T2,2020,Scatopsidae,8
+007CQ,8,26,T2,2020,Tettigoniidae,1
+007CQ,8,26,T2,2020,Thripidae,3
+007CQ,8,26,T2,2020,Zygaenidae,13
+007CQ,8,27,T1,2020,Acrididae,1
+007CQ,8,27,T1,2020,Baetidae,1
+007CQ,8,27,T1,2020,Braconidae,1
+007CQ,8,27,T1,2020,Cecidomyiidae,1
+007CQ,8,27,T1,2020,Ceratopogonidae,1
+007CQ,8,27,T1,2020,Chloropidae,10
+007CQ,8,27,T1,2020,Cicadellidae,30
+007CQ,8,27,T1,2020,Coccinellidae,1
+007CQ,8,27,T1,2020,Cynipidae,1
+007CQ,8,27,T1,2020,Eulophidae,1
+007CQ,8,27,T1,2020,Eupelmidae,1
+007CQ,8,27,T1,2020,Eurytomidae,1
+007CQ,8,27,T1,2020,Halictidae,1
+007CQ,8,27,T1,2020,Ichneumonidae,1
+007CQ,8,27,T1,2020,LEPUNK,3
+007CQ,8,27,T1,2020,Meloidae,1
+007CQ,8,27,T1,2020,Membracidae,1
+007CQ,8,27,T1,2020,Miridae,1
+007CQ,8,27,T1,2020,Phalacridae,1
+007CQ,8,27,T1,2020,Phlaeothripidae,2
+007CQ,8,27,T1,2020,Platygastridae,1
+007CQ,8,27,T1,2020,Platystomatidae,1
+007CQ,8,27,T1,2020,Scatopsidae,1
+007CQ,8,27,T1,2020,Scelionidae,1
+007CQ,8,27,T1,2020,Tephritidae,13
+007CQ,8,27,T3,2020,Acanaloniidae,1
+007CQ,8,27,T3,2020,Aphididae,2
+007CQ,8,27,T3,2020,Baetidae,1
+007CQ,8,27,T3,2020,Braconidae,1
+007CQ,8,27,T3,2020,Chironomidae,1
+007CQ,8,27,T3,2020,Chloropidae,8
+007CQ,8,27,T3,2020,Cicadellidae,18
+007CQ,8,27,T3,2020,Culicidae,10
+007CQ,8,27,T3,2020,Eulophidae,2
+007CQ,8,27,T3,2020,Formicidae,38
+007CQ,8,27,T3,2020,HYMUNK,3
+007CQ,8,27,T3,2020,LEPUNK,2
+007CQ,8,27,T3,2020,Megaspilidae,1
+007CQ,8,27,T3,2020,Membracidae,17
+007CQ,8,27,T3,2020,Miridae,3
+007CQ,8,27,T3,2020,Nabidae,1
+007CQ,8,27,T3,2020,Phlaeothripidae,1
+007CQ,8,27,T3,2020,Platygastridae,2
+007CQ,8,27,T3,2020,Psocidae,1
+007CQ,8,27,T3,2020,Psoquillidae,1
+007CQ,8,27,T3,2020,Pteromalidae,1
+007CQ,8,27,T3,2020,Reduviidae,1
+007CQ,8,27,T3,2020,Tephritidae,2
+007CQ,8,27,T3,2020,Tettigoniidae,3
+007CQ,8,27,T3,2020,Thripidae,1
+007CQ,8,27,T3,2020,Zygaenidae,1
+007F5,7,1,T1,2019,Cecidomyiidae,1
+007F5,7,1,T1,2019,Chloropidae,2
+007F5,7,1,T1,2019,Chrysomelidae,4
+007F5,7,1,T1,2019,Cicadellidae,5
+007F5,7,1,T1,2019,Coccinellidae,1
+007F5,7,1,T1,2019,COLUNK,6
+007F5,7,1,T1,2019,Curculionidae,2
+007F5,7,1,T1,2019,Delphacidae,1
+007F5,7,1,T1,2019,DIPUNK,1
+007F5,7,1,T1,2019,Formicidae,11
+007F5,7,1,T1,2019,HEMUNK,1
+007F5,7,1,T1,2019,Lauxaniidae,2
+007F5,7,1,T1,2019,LEPUNK,1
+007F5,7,1,T1,2019,Phlaeothripidae,1
+007F5,7,1,T1,2019,Platygastridae,3
+007F5,7,1,T1,2019,Platystomatidae,4
+007F5,7,1,T1,2019,Psyllidae,1
+007F5,7,1,T1,2019,Scelionidae,1
+007F5,7,1,T1,2019,Simuliidae,2
+007F5,7,1,T1,2019,Syrphidae,1
+007F5,7,1,T1,2019,Thripidae,2
+007F5,7,1,T2,2019,Aeolothripidae,2
+007F5,7,1,T2,2019,Cercopidae,6
+007F5,7,1,T2,2019,Chloropidae,9
+007F5,7,1,T2,2019,Chrysomelidae,13
+007F5,7,1,T2,2019,Cicadellidae,4
+007F5,7,1,T2,2019,Cleridae,1
+007F5,7,1,T2,2019,COLUNK,2
+007F5,7,1,T2,2019,Dolichopodidae,1
+007F5,7,1,T2,2019,Drosophilidae,1
+007F5,7,1,T2,2019,Eurytomidae,1
+007F5,7,1,T2,2019,Formicidae,8
+007F5,7,1,T2,2019,HYMUNK,1
+007F5,7,1,T2,2019,Issidae,1
+007F5,7,1,T2,2019,LEPUNK,6
+007F5,7,1,T2,2019,Mordellidae,5
+007F5,7,1,T2,2019,Phoridae,1
+007F5,7,1,T2,2019,Platygastridae,2
+007F5,7,1,T2,2019,Psyllidae,6
+007F5,7,1,T2,2019,Sciaridae,1
+007F5,7,1,T2,2019,Sciomyzidae,1
+007F5,7,1,T2,2019,Simuliidae,7
+007F5,7,1,T2,2019,Sphaeroceridae,7
+007F5,7,1,T3,2019,Braconidae,1
+007F5,7,1,T3,2019,Cercopidae,1
+007F5,7,1,T3,2019,Chamaemyiidae,4
+007F5,7,1,T3,2019,Chrysomelidae,1
+007F5,7,1,T3,2019,Curculionidae,1
+007F5,7,1,T3,2019,DIPUNK,1
+007F5,7,1,T3,2019,Formicidae,48
+007F5,7,1,T3,2019,Miridae,1
+007F5,7,1,T3,2019,Platystomatidae,2
+007F5,7,1,T3,2019,Psyllidae,2
+007F5,7,30,T1,2019,Acrididae,3
+007F5,7,30,T1,2019,Anthocoridae,2
+007F5,7,30,T1,2019,Cantharidae,1
+007F5,7,30,T1,2019,Cercopidae,1
+007F5,7,30,T1,2019,Chironomidae,4
+007F5,7,30,T1,2019,Chloropidae,2
+007F5,7,30,T1,2019,Chrysomelidae,13
+007F5,7,30,T1,2019,Cicadellidae,3
+007F5,7,30,T1,2019,Curculionidae,6
+007F5,7,30,T1,2019,DIPUNK,1
+007F5,7,30,T1,2019,HEMUNK,1
+007F5,7,30,T1,2019,Ichneumonidae,1
+007F5,7,30,T1,2019,LEPUNK,4
+007F5,7,30,T1,2019,Mordellidae,1
+007F5,7,30,T1,2019,Oecophoridae,2
+007F5,7,30,T1,2019,Phalacridae,10
+007F5,7,30,T1,2019,Psyllidae,1
+007F5,7,30,T1,2019,Pteromalidae,4
+007F5,7,30,T1,2019,Sciaridae,1
+007F5,7,30,T1,2019,Tettigoniidae,6
+007F5,7,30,T1,2019,Thripidae,8
+007F5,7,30,T2,2019,Acrididae,1
+007F5,7,30,T2,2019,Agromyzidae,3
+007F5,7,30,T2,2019,Aphididae,1
+007F5,7,30,T2,2019,Chironomidae,1
+007F5,7,30,T2,2019,Chrysomelidae,14
+007F5,7,30,T2,2019,Cicadellidae,3
+007F5,7,30,T2,2019,Curculionidae,6
+007F5,7,30,T2,2019,Formicidae,1
+007F5,7,30,T2,2019,HEMUNK,1
+007F5,7,30,T2,2019,Lauxaniidae,2
+007F5,7,30,T2,2019,Lygaeidae,1
+007F5,7,30,T2,2019,Oecophoridae,3
+007F5,7,30,T2,2019,Platygastridae,1
+007F5,7,30,T2,2019,Pteromalidae,2
+007F5,7,30,T2,2019,Scarabaeidae,2
+007F5,7,30,T2,2019,Tettigoniidae,4
+007F5,7,30,T3,2019,Acrididae,5
+007F5,7,30,T3,2019,Anthocoridae,3
+007F5,7,30,T3,2019,Aphididae,1
+007F5,7,30,T3,2019,Braconidae,1
+007F5,7,30,T3,2019,Chloropidae,2
+007F5,7,30,T3,2019,Chrysomelidae,6
+007F5,7,30,T3,2019,Cicadellidae,2
+007F5,7,30,T3,2019,Curculionidae,3
+007F5,7,30,T3,2019,DIPUNK,3
+007F5,7,30,T3,2019,Erotylidae,1
+007F5,7,30,T3,2019,Formicidae,1
+007F5,7,30,T3,2019,HEMUNK,1
+007F5,7,30,T3,2019,Issidae,1
+007F5,7,30,T3,2019,Lauxaniidae,1
+007F5,7,30,T3,2019,LEPUNK,3
+007F5,7,30,T3,2019,Meloidae,1
+007F5,7,30,T3,2019,Miridae,1
+007F5,7,30,T3,2019,Phalacridae,17
+007F5,7,30,T3,2019,Phlaeothripidae,1
+007F5,7,30,T3,2019,Pteromalidae,2
+007F5,7,30,T3,2019,Sciaridae,1
+007F5,7,30,T3,2019,Simuliidae,2
+007F5,7,30,T3,2019,Tettigoniidae,3
+007F5,7,30,T3,2019,Thripidae,1
+007R5,7,9,T1,2019,Acrididae,1
+007R5,7,9,T1,2019,Aeolothripidae,1
+007R5,7,9,T1,2019,Anthomyiidae,1
+007R5,7,9,T1,2019,Braconidae,1
+007R5,7,9,T1,2019,Chironomidae,1
+007R5,7,9,T1,2019,Chloropidae,15
+007R5,7,9,T1,2019,Cicadellidae,2
+007R5,7,9,T1,2019,DIPUNK,2
+007R5,7,9,T1,2019,Encyrtidae,1
+007R5,7,9,T1,2019,Eulophidae,2
+007R5,7,9,T1,2019,HEMUNK,1
+007R5,7,9,T1,2019,Ichneumonidae,1
+007R5,7,9,T1,2019,Lauxaniidae,4
+007R5,7,9,T1,2019,LEPUNK,2
+007R5,7,9,T1,2019,Miridae,25
+007R5,7,9,T1,2019,Phoridae,1
+007R5,7,9,T1,2019,Psyllidae,1
+007R5,7,9,T1,2019,Pteromalidae,12
+007R5,7,9,T1,2019,Staphylinidae,1
+007R5,7,9,T1,2019,Stratiomyidae,1
+007R5,7,9,T1,2019,Tabanidae,2
+007R5,7,9,T1,2019,Tettigoniidae,2
+007R5,7,9,T2,2019,Acrididae,2
+007R5,7,9,T2,2019,Aeolothripidae,2
+007R5,7,9,T2,2019,Aphididae,2
+007R5,7,9,T2,2019,Braconidae,1
+007R5,7,9,T2,2019,Cantharidae,2
+007R5,7,9,T2,2019,Carabidae,1
+007R5,7,9,T2,2019,Cercopidae,18
+007R5,7,9,T2,2019,Chironomidae,8
+007R5,7,9,T2,2019,Chloropidae,45
+007R5,7,9,T2,2019,Chrysomelidae,4
+007R5,7,9,T2,2019,Chrysopidae,1
+007R5,7,9,T2,2019,Cicadellidae,16
+007R5,7,9,T2,2019,Culicidae,17
+007R5,7,9,T2,2019,Curculionidae,2
+007R5,7,9,T2,2019,Diapriidae,1
+007R5,7,9,T2,2019,Dictyopharidae,3
+007R5,7,9,T2,2019,DIPUNK,7
+007R5,7,9,T2,2019,Dolichopodidae,3
+007R5,7,9,T2,2019,Dryinidae,1
+007R5,7,9,T2,2019,Eurytomidae,2
+007R5,7,9,T2,2019,Formicidae,24
+007R5,7,9,T2,2019,HEMUNK,3
+007R5,7,9,T2,2019,HYMUNK,3
+007R5,7,9,T2,2019,Lauxaniidae,18
+007R5,7,9,T2,2019,LEPUNK,7
+007R5,7,9,T2,2019,Miridae,20
+007R5,7,9,T2,2019,Muscidae,1
+007R5,7,9,T2,2019,ORTUNK,2
+007R5,7,9,T2,2019,Pentatomidae,1
+007R5,7,9,T2,2019,Perilampidae,1
+007R5,7,9,T2,2019,Phlaeothripidae,1
+007R5,7,9,T2,2019,Platystomatidae,1
+007R5,7,9,T2,2019,Psyllidae,17
+007R5,7,9,T2,2019,Pteromalidae,10
+007R5,7,9,T2,2019,Reduviidae,1
+007R5,7,9,T2,2019,Scelionidae,2
+007R5,7,9,T2,2019,Sepsidae,9
+007R5,7,9,T2,2019,Tephritidae,5
+007R5,7,9,T2,2019,Tettigoniidae,4
+007R5,7,9,T2,2019,Therevidae,2
+007R5,7,9,T2,2019,Tingidae,2
+007R5,7,9,T3,2019,Acrididae,1
+007R5,7,9,T3,2019,Aphididae,1
+007R5,7,9,T3,2019,Asteiidae,1
+007R5,7,9,T3,2019,Chloropidae,23
+007R5,7,9,T3,2019,Cicadellidae,5
+007R5,7,9,T3,2019,Cixiidae,3
+007R5,7,9,T3,2019,Coccinellidae,3
+007R5,7,9,T3,2019,COLUNK,1
+007R5,7,9,T3,2019,DIPUNK,1
+007R5,7,9,T3,2019,Drosophilidae,1
+007R5,7,9,T3,2019,Eulophidae,174
+007R5,7,9,T3,2019,Eurytomidae,1
+007R5,7,9,T3,2019,Formicidae,1
+007R5,7,9,T3,2019,Heleomyzidae,2
+007R5,7,9,T3,2019,HEMUNK,1
+007R5,7,9,T3,2019,Lauxaniidae,14
+007R5,7,9,T3,2019,Miridae,113
+007R5,7,9,T3,2019,Mordellidae,1
+007R5,7,9,T3,2019,Nabidae,4
+007R5,7,9,T3,2019,Platygastridae,2
+007R5,7,9,T3,2019,Pteromalidae,1
+007R5,7,9,T3,2019,Scatopsidae,1
+007R5,7,9,T3,2019,Sepsidae,1
+007R5,7,9,T3,2019,Thripidae,15
+007R5,8,1,T1,2019,Aeolothripidae,19
+007R5,8,1,T1,2019,Anthocoridae,1
+007R5,8,1,T1,2019,Aphididae,4
+007R5,8,1,T1,2019,Braconidae,2
+007R5,8,1,T1,2019,Brentidae,1
+007R5,8,1,T1,2019,Carabidae,1
+007R5,8,1,T1,2019,Chironomidae,2
+007R5,8,1,T1,2019,Chloropidae,10
+007R5,8,1,T1,2019,Cicadellidae,3
+007R5,8,1,T1,2019,COLUNK,2
+007R5,8,1,T1,2019,Cynipidae,1
+007R5,8,1,T1,2019,Dolichopodidae,1
+007R5,8,1,T1,2019,Eurytomidae,189
+007R5,8,1,T1,2019,Gryllidae,5
+007R5,8,1,T1,2019,Lauxaniidae,1
+007R5,8,1,T1,2019,Miridae,3
+007R5,8,1,T1,2019,Scatopsidae,2
+007R5,8,1,T1,2019,Sciaridae,1
+007R5,8,1,T1,2019,Tephritidae,10
+007R5,8,1,T1,2019,Thripidae,4
+007R5,8,1,T1,2019,Ulidiidae,1
+007R5,8,1,T2,2019,Acanaloniidae,1
+007R5,8,1,T2,2019,Acrididae,12
+007R5,8,1,T2,2019,Aphididae,2
+007R5,8,1,T2,2019,Berytidae,1
+007R5,8,1,T2,2019,Blissidae,2
+007R5,8,1,T2,2019,Braconidae,2
+007R5,8,1,T2,2019,Brentidae,6
+007R5,8,1,T2,2019,Chloropidae,10
+007R5,8,1,T2,2019,Chrysomelidae,1
+007R5,8,1,T2,2019,Cicadellidae,37
+007R5,8,1,T2,2019,Colletidae,1
+007R5,8,1,T2,2019,Culicidae,2
+007R5,8,1,T2,2019,Dictyopharidae,1
+007R5,8,1,T2,2019,Dolichopodidae,1
+007R5,8,1,T2,2019,Formicidae,15
+007R5,8,1,T2,2019,Gryllidae,1
+007R5,8,1,T2,2019,HYMUNK,1
+007R5,8,1,T2,2019,Lauxaniidae,6
+007R5,8,1,T2,2019,Miridae,7
+007R5,8,1,T2,2019,Muscidae,2
+007R5,8,1,T2,2019,Nabidae,3
+007R5,8,1,T2,2019,Phalacridae,34
+007R5,8,1,T2,2019,Phlaeothripidae,3
+007R5,8,1,T2,2019,Psyllidae,22
+007R5,8,1,T2,2019,Pteromalidae,6
+007R5,8,1,T2,2019,Reduviidae,1
+007R5,8,1,T2,2019,Sciaridae,2
+007R5,8,1,T2,2019,Tephritidae,21
+007R5,8,1,T2,2019,Tettigoniidae,2
+007R5,8,1,T2,2019,Thyreocoridae,1
+007R5,8,1,T3,2019,Acrididae,2
+007R5,8,1,T3,2019,Anthocoridae,4
+007R5,8,1,T3,2019,Aphididae,4
+007R5,8,1,T3,2019,Braconidae,1
+007R5,8,1,T3,2019,Chloropidae,2
+007R5,8,1,T3,2019,Chrysomelidae,1
+007R5,8,1,T3,2019,Cicadellidae,9
+007R5,8,1,T3,2019,Culicidae,4
+007R5,8,1,T3,2019,Dolichopodidae,1
+007R5,8,1,T3,2019,Eulophidae,1
+007R5,8,1,T3,2019,Formicidae,1
+007R5,8,1,T3,2019,Gryllidae,4
+007R5,8,1,T3,2019,LEPUNK,2
+007R5,8,1,T3,2019,Membracidae,1
+007R5,8,1,T3,2019,Miridae,3
+007R5,8,1,T3,2019,Phalacridae,40
+007R5,8,1,T3,2019,Psyllidae,10
+007R5,8,1,T3,2019,Pteromalidae,4
+007R5,8,1,T3,2019,Reduviidae,3
+007R5,8,1,T3,2019,Simuliidae,2
+007R5,8,1,T3,2019,Tephritidae,1
+007R5,8,1,T3,2019,Tettigoniidae,1
+007R5,8,1,T3,2019,Thripidae,1
+007V7,7,15,T1,2019,Braconidae,1
+007V7,7,15,T1,2019,Buprestidae,2
+007V7,7,15,T1,2019,Cicadellidae,8
+007V7,7,15,T1,2019,COLUNK,1
+007V7,7,15,T1,2019,DIPUNK,14
+007V7,7,15,T1,2019,EPHUNK,1
+007V7,7,15,T1,2019,Formicidae,4
+007V7,7,15,T1,2019,HEMUNK,2
+007V7,7,15,T1,2019,HYMUNK,3
+007V7,7,15,T1,2019,Lampyridae,3
+007V7,7,15,T1,2019,LEPUNK,2
+007V7,7,15,T1,2019,Miridae,3
+007V7,7,15,T1,2019,Muscidae,2
+007V7,7,15,T1,2019,Platystomatidae,3
+007V7,7,15,T1,2019,Psyllidae,5
+007V7,7,15,T1,2019,Reduviidae,1
+007V7,7,15,T1,2019,Scatopsidae,1
+007V7,7,15,T1,2019,Tingidae,32
+007V7,7,15,T2,2019,Acrididae,1
+007V7,7,15,T2,2019,Aphrophoridae,3
+007V7,7,15,T2,2019,Bethylidae,1
+007V7,7,15,T2,2019,Braconidae,1
+007V7,7,15,T2,2019,Cicadellidae,6
+007V7,7,15,T2,2019,DIPUNK,4
+007V7,7,15,T2,2019,Encyrtidae,1
+007V7,7,15,T2,2019,Formicidae,1
+007V7,7,15,T2,2019,Heleomyzidae,2
+007V7,7,15,T2,2019,HYMUNK,3
+007V7,7,15,T2,2019,Lampyridae,1
+007V7,7,15,T2,2019,Lauxaniidae,45
+007V7,7,15,T2,2019,LEPUNK,3
+007V7,7,15,T2,2019,Miridae,3
+007V7,7,15,T2,2019,ORTUNK,1
+007V7,7,15,T2,2019,Platystomatidae,4
+007V7,7,15,T2,2019,Psyllidae,1
+007V7,7,15,T2,2019,Sepsidae,1
+007V7,7,15,T2,2019,Tettigoniidae,4
+007V7,7,15,T2,2019,Tipulidae,2
+007V7,7,15,T3,2019,Acanaloniidae,3
+007V7,7,15,T3,2019,Acrididae,1
+007V7,7,15,T3,2019,Aphrophoridae,1
+007V7,7,15,T3,2019,Braconidae,1
+007V7,7,15,T3,2019,Buprestidae,1
+007V7,7,15,T3,2019,Chloropidae,79
+007V7,7,15,T3,2019,Cicadellidae,14
+007V7,7,15,T3,2019,Cixiidae,5
+007V7,7,15,T3,2019,Delphacidae,1
+007V7,7,15,T3,2019,Dictyopharidae,4
+007V7,7,15,T3,2019,Eurytomidae,2
+007V7,7,15,T3,2019,Formicidae,3
+007V7,7,15,T3,2019,Gryllidae,1
+007V7,7,15,T3,2019,Heptageniidae,3
+007V7,7,15,T3,2019,LEPUNK,2
+007V7,7,15,T3,2019,Lygaeidae,1
+007V7,7,15,T3,2019,Membracidae,1
+007V7,7,15,T3,2019,Miridae,2
+007V7,7,15,T3,2019,Muscidae,4
+007V7,7,15,T3,2019,Mymaridae,1
+007V7,7,15,T3,2019,Pteromalidae,1
+007V7,7,15,T3,2019,Reduviidae,1
+007V7,7,15,T3,2019,Scatopsidae,1
+007V7,7,15,T3,2019,Sciomyzidae,2
+007V7,7,15,T3,2019,Sepsidae,2
+007V7,7,15,T3,2019,Sphaeroceridae,1
+007V7,7,15,T3,2019,Tephritidae,1
+007V7,7,15,T3,2019,Tettigoniidae,7
+007V7,7,15,T3,2019,Tipulidae,2
+007V7,7,15,T3,2019,Torymidae,1
+007V7,7,15,T3,2019,Ulidiidae,1
+007V7,8,8,T1,2019,Acrididae,1
+007V7,8,8,T1,2019,Aphididae,2
+007V7,8,8,T1,2019,Cercopidae,1
+007V7,8,8,T1,2019,Chironomidae,1
+007V7,8,8,T1,2019,Chrysomelidae,12
+007V7,8,8,T1,2019,Cicadellidae,3
+007V7,8,8,T1,2019,Culicidae,1
+007V7,8,8,T1,2019,Curculionidae,1
+007V7,8,8,T1,2019,Dictyopharidae,1
+007V7,8,8,T1,2019,DIPUNK,12
+007V7,8,8,T1,2019,Eupelmidae,2
+007V7,8,8,T1,2019,Eurytomidae,1
+007V7,8,8,T1,2019,Formicidae,3
+007V7,8,8,T1,2019,Heleomyzidae,2
+007V7,8,8,T1,2019,HYMUNK,2
+007V7,8,8,T1,2019,Lauxaniidae,5
+007V7,8,8,T1,2019,Phalacridae,12
+007V7,8,8,T1,2019,Psyllidae,6
+007V7,8,8,T1,2019,Reduviidae,1
+007V7,8,8,T1,2019,Scarabaeidae,3
+007V7,8,8,T1,2019,Scatopsidae,6
+007V7,8,8,T1,2019,Sciomyzidae,2
+007V7,8,8,T1,2019,Tingidae,3
+007V7,8,8,T1,2019,Ulidiidae,3
+007V7,8,8,T2,2019,Acanaloniidae,2
+007V7,8,8,T2,2019,Acrididae,6
+007V7,8,8,T2,2019,Aeolothripidae,1
+007V7,8,8,T2,2019,Ceratopogonidae,1
+007V7,8,8,T2,2019,Chloropidae,8
+007V7,8,8,T2,2019,Chrysomelidae,7
+007V7,8,8,T2,2019,Cicadellidae,12
+007V7,8,8,T2,2019,Cixiidae,1
+007V7,8,8,T2,2019,Culicidae,3
+007V7,8,8,T2,2019,Encyrtidae,2
+007V7,8,8,T2,2019,Eurytomidae,2
+007V7,8,8,T2,2019,Gryllidae,1
+007V7,8,8,T2,2019,Muscidae,3
+007V7,8,8,T2,2019,Phalacridae,1
+007V7,8,8,T2,2019,Pteromalidae,5
+007V7,8,8,T2,2019,Sciomyzidae,5
+007V7,8,8,T2,2019,Sepsidae,1
+007V7,8,8,T2,2019,Tettigoniidae,5
+007V7,8,8,T2,2019,Thripidae,1
+007V7,8,8,T3,2019,Acanaloniidae,1
+007V7,8,8,T3,2019,Acrididae,1
+007V7,8,8,T3,2019,Aphelinidae,1
+007V7,8,8,T3,2019,Aphididae,2
+007V7,8,8,T3,2019,Aphrophoridae,1
+007V7,8,8,T3,2019,Chamaemyiidae,3
+007V7,8,8,T3,2019,Chrysomelidae,24
+007V7,8,8,T3,2019,Cicadellidae,4
+007V7,8,8,T3,2019,Coenagrionidae,1
+007V7,8,8,T3,2019,Curculionidae,1
+007V7,8,8,T3,2019,Dictyopharidae,1
+007V7,8,8,T3,2019,DIPUNK,4
+007V7,8,8,T3,2019,Encyrtidae,1
+007V7,8,8,T3,2019,Formicidae,2
+007V7,8,8,T3,2019,Gryllidae,2
+007V7,8,8,T3,2019,HEMUNK,6
+007V7,8,8,T3,2019,HYMUNK,4
+007V7,8,8,T3,2019,LEPUNK,2
+007V7,8,8,T3,2019,Mymaridae,1
+007V7,8,8,T3,2019,Phalacridae,20
+007V7,8,8,T3,2019,Psyllidae,4
+007V7,8,8,T3,2019,Reduviidae,1
+007V7,8,8,T3,2019,Sepsidae,1
+007V7,8,8,T3,2019,Tettigoniidae,2
+007V7,8,8,T3,2019,Thripidae,1
+007XH,7,10,T1,2019,Anthomyiidae,1
+007XH,7,10,T1,2019,Aphididae,3
+007XH,7,10,T1,2019,Cantharidae,1
+007XH,7,10,T1,2019,Chironomidae,4
+007XH,7,10,T1,2019,Chloropidae,12
+007XH,7,10,T1,2019,Chrysomelidae,2
+007XH,7,10,T1,2019,Cicadellidae,8
+007XH,7,10,T1,2019,Cixiidae,15
+007XH,7,10,T1,2019,COLUNK,6
+007XH,7,10,T1,2019,Formicidae,21
+007XH,7,10,T1,2019,Issidae,5
+007XH,7,10,T1,2019,LEPUNK,2
+007XH,7,10,T1,2019,Noctuidae,1
+007XH,7,10,T1,2019,ORTUNK,1
+007XH,7,10,T1,2019,Psyllidae,3
+007XH,7,10,T1,2019,Sphaeroceridae,1
+007XH,7,10,T1,2019,Stratiomyidae,1
+007XH,7,10,T1,2019,Thripidae,1
+007XH,7,10,T2,2019,Cantharidae,1
+007XH,7,10,T2,2019,Chloropidae,3
+007XH,7,10,T2,2019,Chrysomelidae,10
+007XH,7,10,T2,2019,Cicadellidae,3
+007XH,7,10,T2,2019,Cixiidae,12
+007XH,7,10,T2,2019,COLUNK,15
+007XH,7,10,T2,2019,DIPUNK,8
+007XH,7,10,T2,2019,Eulophidae,2
+007XH,7,10,T2,2019,Eurytomidae,1
+007XH,7,10,T2,2019,Formicidae,15
+007XH,7,10,T2,2019,HEMUNK,4
+007XH,7,10,T2,2019,HYMUNK,3
+007XH,7,10,T2,2019,Ichneumonidae,1
+007XH,7,10,T2,2019,LEPUNK,4
+007XH,7,10,T2,2019,Membracidae,3
+007XH,7,10,T2,2019,Mymaridae,1
+007XH,7,10,T2,2019,ODOUNK,1
+007XH,7,10,T2,2019,Platygastridae,1
+007XH,7,10,T2,2019,Psyllidae,16
+007XH,7,10,T2,2019,Saldidae,13
+007XH,7,10,T2,2019,Tettigoniidae,2
+007XH,7,10,T2,2019,Thripidae,16
+007XH,7,10,T2,2019,Tingidae,5
+007XH,7,10,T3,2019,Aphididae,3
+007XH,7,10,T3,2019,Baetidae,1
+007XH,7,10,T3,2019,Chloropidae,4
+007XH,7,10,T3,2019,Chrysomelidae,10
+007XH,7,10,T3,2019,Cicadellidae,7
+007XH,7,10,T3,2019,Cixiidae,34
+007XH,7,10,T3,2019,Coenagrionidae,2
+007XH,7,10,T3,2019,COLUNK,13
+007XH,7,10,T3,2019,Culicidae,1
+007XH,7,10,T3,2019,Curculionidae,1
+007XH,7,10,T3,2019,Eurytomidae,1
+007XH,7,10,T3,2019,Fanniidae,1
+007XH,7,10,T3,2019,Formicidae,3
+007XH,7,10,T3,2019,Lampyridae,2
+007XH,7,10,T3,2019,LEPUNK,5
+007XH,7,10,T3,2019,Nabidae,1
+007XH,7,10,T3,2019,Psyllidae,18
+007XH,7,10,T3,2019,Thripidae,5
+007XH,7,10,T3,2019,Tingidae,2
+007XH,7,16,T1,2020,Aeolothripidae,1
+007XH,7,16,T1,2020,Aphididae,1
+007XH,7,16,T1,2020,Chironomidae,3
+007XH,7,16,T1,2020,Chloropidae,8
+007XH,7,16,T1,2020,Chrysomelidae,24
+007XH,7,16,T1,2020,Cicadellidae,13
+007XH,7,16,T1,2020,Cixiidae,4
+007XH,7,16,T1,2020,Coenagrionidae,1
+007XH,7,16,T1,2020,Culicidae,1
+007XH,7,16,T1,2020,Dolichopodidae,1
+007XH,7,16,T1,2020,Formicidae,4
+007XH,7,16,T1,2020,LEPUNK,2
+007XH,7,16,T1,2020,Miridae,1
+007XH,7,16,T1,2020,Muscidae,1
+007XH,7,16,T1,2020,Nabidae,1
+007XH,7,16,T1,2020,Phalacridae,1
+007XH,7,16,T1,2020,Reduviidae,2
+007XH,7,16,T1,2020,Sepsidae,2
+007XH,7,16,T2,2020,Acanaloniidae,4
+007XH,7,16,T2,2020,Braconidae,1
+007XH,7,16,T2,2020,Caliscelidae,1
+007XH,7,16,T2,2020,Chloropidae,2
+007XH,7,16,T2,2020,Chrysomelidae,10
+007XH,7,16,T2,2020,Cicadellidae,11
+007XH,7,16,T2,2020,Cixiidae,4
+007XH,7,16,T2,2020,Coenagrionidae,1
+007XH,7,16,T2,2020,Dictyopharidae,1
+007XH,7,16,T2,2020,Eurytomidae,2
+007XH,7,16,T2,2020,Formicidae,18
+007XH,7,16,T2,2020,Gryllidae,9
+007XH,7,16,T2,2020,Halictophagidae,2
+007XH,7,16,T2,2020,LEPUNK,3
+007XH,7,16,T2,2020,Membracidae,1
+007XH,7,16,T2,2020,Muscidae,1
+007XH,7,16,T2,2020,Nabidae,1
+007XH,7,16,T2,2020,Noctuidae,1
+007XH,7,16,T2,2020,Phalacridae,1
+007XH,7,16,T2,2020,Phoridae,1
+007XH,7,16,T2,2020,Psyllidae,1
+007XH,7,16,T2,2020,Reduviidae,2
+007XH,7,16,T2,2020,Sciomyzidae,1
+007XH,7,16,T2,2020,Sepsidae,2
+007XH,7,16,T3,2020,Acanaloniidae,1
+007XH,7,16,T3,2020,Braconidae,1
+007XH,7,16,T3,2020,Ceratopogonidae,2
+007XH,7,16,T3,2020,Chloropidae,9
+007XH,7,16,T3,2020,Chrysomelidae,47
+007XH,7,16,T3,2020,Cicadellidae,15
+007XH,7,16,T3,2020,Coenagrionidae,4
+007XH,7,16,T3,2020,Culicidae,2
+007XH,7,16,T3,2020,Eurytomidae,1
+007XH,7,16,T3,2020,Formicidae,132
+007XH,7,16,T3,2020,Gryllidae,8
+007XH,7,16,T3,2020,LEPUNK,2
+007XH,7,16,T3,2020,Lygaeidae,1
+007XH,7,16,T3,2020,Membracidae,3
+007XH,7,16,T3,2020,Muscidae,2
+007XH,7,16,T3,2020,Noctuidae,2
+007XH,7,16,T3,2020,Phalacridae,1
+007XH,7,16,T3,2020,Phoridae,1
+007XH,7,16,T3,2020,Psyllidae,4
+007XH,7,16,T3,2020,Pteromalidae,3
+007XH,7,16,T3,2020,Stratiomyidae,1
+007XH,7,16,T3,2020,Tephritidae,1
+007XH,7,16,T3,2020,Tingidae,17
+007XH,7,31,T1,2019,Agromyzidae,1
+007XH,7,31,T1,2019,Anthocoridae,1
+007XH,7,31,T1,2019,Aphididae,1
+007XH,7,31,T1,2019,Braconidae,2
+007XH,7,31,T1,2019,Cercopidae,3
+007XH,7,31,T1,2019,Chloropidae,1
+007XH,7,31,T1,2019,Chrysomelidae,4
+007XH,7,31,T1,2019,Cicadellidae,8
+007XH,7,31,T1,2019,Culicidae,2
+007XH,7,31,T1,2019,Dictyopharidae,3
+007XH,7,31,T1,2019,DIPUNK,4
+007XH,7,31,T1,2019,Figitidae,2
+007XH,7,31,T1,2019,Formicidae,9
+007XH,7,31,T1,2019,HEMUNK,1
+007XH,7,31,T1,2019,HYMUNK,3
+007XH,7,31,T1,2019,LEPUNK,5
+007XH,7,31,T1,2019,Membracidae,1
+007XH,7,31,T1,2019,Phlaeothripidae,2
+007XH,7,31,T1,2019,Psyllidae,2
+007XH,7,31,T1,2019,Reduviidae,2
+007XH,7,31,T1,2019,Sciomyzidae,2
+007XH,7,31,T1,2019,Scolytidae,1
+007XH,7,31,T1,2019,Sepsidae,1
+007XH,7,31,T1,2019,Simuliidae,3
+007XH,7,31,T1,2019,Tachinidae,2
+007XH,7,31,T1,2019,Tettigoniidae,5
+007XH,7,31,T1,2019,Thripidae,2
+007XH,7,31,T1,2019,Tingidae,1
+007XH,7,31,T1,2019,Tipulidae,2
+007XH,7,31,T2,2019,Agromyzidae,3
+007XH,7,31,T2,2019,Braconidae,4
+007XH,7,31,T2,2019,Cercopidae,1
+007XH,7,31,T2,2019,Chironomidae,3
+007XH,7,31,T2,2019,Chrysomelidae,10
+007XH,7,31,T2,2019,Cicadellidae,2
+007XH,7,31,T2,2019,DIPUNK,1
+007XH,7,31,T2,2019,HYMUNK,3
+007XH,7,31,T2,2019,Issidae,1
+007XH,7,31,T2,2019,Lauxaniidae,1
+007XH,7,31,T2,2019,LEPUNK,4
+007XH,7,31,T2,2019,Membracidae,1
+007XH,7,31,T2,2019,ORTUNK,1
+007XH,7,31,T2,2019,Phalacridae,9
+007XH,7,31,T2,2019,Phlaeothripidae,4
+007XH,7,31,T2,2019,Platygastridae,2
+007XH,7,31,T2,2019,Psyllidae,5
+007XH,7,31,T2,2019,Reduviidae,6
+007XH,7,31,T2,2019,Sciomyzidae,4
+007XH,7,31,T2,2019,Thripidae,3
+007XH,7,31,T2,2019,Tingidae,2
+007XH,7,31,T3,2019,Acanaloniidae,2
+007XH,7,31,T3,2019,Acrididae,1
+007XH,7,31,T3,2019,Braconidae,1
+007XH,7,31,T3,2019,Cercopidae,1
+007XH,7,31,T3,2019,Chironomidae,3
+007XH,7,31,T3,2019,Chloropidae,3
+007XH,7,31,T3,2019,Chrysomelidae,5
+007XH,7,31,T3,2019,Cicadellidae,16
+007XH,7,31,T3,2019,Coccinellidae,1
+007XH,7,31,T3,2019,COLUNK,1
+007XH,7,31,T3,2019,Culicidae,1
+007XH,7,31,T3,2019,Formicidae,7
+007XH,7,31,T3,2019,Issidae,5
+007XH,7,31,T3,2019,LEPUNK,2
+007XH,7,31,T3,2019,Nabidae,5
+007XH,7,31,T3,2019,Phalacridae,21
+007XH,7,31,T3,2019,Phlaeothripidae,6
+007XH,7,31,T3,2019,Psyllidae,6
+007XH,7,31,T3,2019,Staphylinidae,1
+007XH,7,31,T3,2019,Tettigoniidae,5
+007XH,7,31,T3,2019,Tingidae,2
+007XH,7,31,T3,2019,Tipulidae,1
+007XH,7,31,T3,2019,UNKORD,1
+007XH,8,13,T1,2020,Anthocoridae,1
+007XH,8,13,T1,2020,Aphididae,4
+007XH,8,13,T1,2020,Braconidae,1
+007XH,8,13,T1,2020,Ceratopogonidae,1
+007XH,8,13,T1,2020,Chironomidae,19
+007XH,8,13,T1,2020,Chloropidae,1
+007XH,8,13,T1,2020,Chrysomelidae,11
+007XH,8,13,T1,2020,Chrysopidae,1
+007XH,8,13,T1,2020,Cicadellidae,4
+007XH,8,13,T1,2020,Drosophilidae,2
+007XH,8,13,T1,2020,Eulophidae,22
+007XH,8,13,T1,2020,Eurytomidae,3
+007XH,8,13,T1,2020,Fanniidae,1
+007XH,8,13,T1,2020,Formicidae,12
+007XH,8,13,T1,2020,Gryllidae,1
+007XH,8,13,T1,2020,LEPUNK,2
+007XH,8,13,T1,2020,Membracidae,3
+007XH,8,13,T1,2020,Miridae,7
+007XH,8,13,T1,2020,Nabidae,1
+007XH,8,13,T1,2020,Noctuidae,1
+007XH,8,13,T1,2020,Pentatomidae,1
+007XH,8,13,T1,2020,Phalacridae,24
+007XH,8,13,T1,2020,Phlaeothripidae,2
+007XH,8,13,T1,2020,Phoridae,1
+007XH,8,13,T1,2020,Platygastridae,7
+007XH,8,13,T1,2020,Psyllidae,8
+007XH,8,13,T1,2020,Pteromalidae,2
+007XH,8,13,T1,2020,Reduviidae,1
+007XH,8,13,T1,2020,Scatopsidae,2
+007XH,8,13,T1,2020,Sciomyzidae,1
+007XH,8,13,T1,2020,Tettigoniidae,2
+007XH,8,13,T1,2020,Thripidae,6
+007XH,8,13,T2,2020,Acanaloniidae,2
+007XH,8,13,T2,2020,Aeolothripidae,4
+007XH,8,13,T2,2020,Aphididae,6
+007XH,8,13,T2,2020,Braconidae,1
+007XH,8,13,T2,2020,Chironomidae,5
+007XH,8,13,T2,2020,Chloropidae,1
+007XH,8,13,T2,2020,Chrysomelidae,55
+007XH,8,13,T2,2020,Cicadellidae,2
+007XH,8,13,T2,2020,Dolichopodidae,3
+007XH,8,13,T2,2020,Eulophidae,7
+007XH,8,13,T2,2020,Formicidae,36
+007XH,8,13,T2,2020,Membracidae,4
+007XH,8,13,T2,2020,Miridae,5
+007XH,8,13,T2,2020,Muscidae,2
+007XH,8,13,T2,2020,Phalacridae,37
+007XH,8,13,T2,2020,Platygastridae,1
+007XH,8,13,T2,2020,Psyllidae,13
+007XH,8,13,T2,2020,Pteromalidae,6
+007XH,8,13,T2,2020,Sepsidae,1
+007XH,8,13,T2,2020,Thripidae,1
+007XH,8,13,T2,2020,Tingidae,9
+007XH,8,13,T2,2020,Torymidae,1
+007XH,8,13,T3,2020,Aphididae,1
+007XH,8,13,T3,2020,Braconidae,1
+007XH,8,13,T3,2020,Cecidomyiidae,3
+007XH,8,13,T3,2020,Ceratopogonidae,1
+007XH,8,13,T3,2020,Chironomidae,15
+007XH,8,13,T3,2020,Chloropidae,6
+007XH,8,13,T3,2020,Chrysomelidae,28
+007XH,8,13,T3,2020,Cynipidae,1
+007XH,8,13,T3,2020,DIPUNK,2
+007XH,8,13,T3,2020,Dolichopodidae,1
+007XH,8,13,T3,2020,Eulophidae,49
+007XH,8,13,T3,2020,Formicidae,1
+007XH,8,13,T3,2020,Phalacridae,14
+007XH,8,13,T3,2020,Platygastridae,14
+007XH,8,13,T3,2020,Psyllidae,1
+007XH,8,13,T3,2020,Reduviidae,3
+007XH,8,13,T3,2020,Sarcophagidae,1
+007XH,8,13,T3,2020,Scarabaeidae,1
+007XH,8,13,T3,2020,Sepsidae,2
+007XH,8,13,T3,2020,Tettigoniidae,3
+007XH,8,13,T3,2020,Thripidae,10
+007XH,8,13,T3,2020,Tingidae,1
+007XH,8,13,T3,2020,Tipulidae,1
+007XH,8,13,T3,2020,Ulidiidae,1
+00MBG,7,11,T1,2019,Braconidae,1
+00MBG,7,11,T1,2019,Ceratopogonidae,4
+00MBG,7,11,T1,2019,Chironomidae,3
+00MBG,7,11,T1,2019,Chloropidae,15
+00MBG,7,11,T1,2019,Cicadellidae,2
+00MBG,7,11,T1,2019,Dolichopodidae,2
+00MBG,7,11,T1,2019,Eulophidae,4
+00MBG,7,11,T1,2019,HEMUNK,2
+00MBG,7,11,T1,2019,Lauxaniidae,1
+00MBG,7,11,T1,2019,Membracidae,1
+00MBG,7,11,T1,2019,Phoridae,1
+00MBG,7,11,T1,2019,Platygastridae,2
+00MBG,7,11,T1,2019,Psyllidae,5
+00MBG,7,11,T1,2019,Reduviidae,1
+00MBG,7,11,T1,2019,Scatopsidae,5
+00MBG,7,11,T1,2019,Sphaeroceridae,1
+00MBG,7,11,T1,2019,Thripidae,6
+00MBG,7,11,T2,2019,Braconidae,1
+00MBG,7,11,T2,2019,Ceratopogonidae,7
+00MBG,7,11,T2,2019,Chironomidae,12
+00MBG,7,11,T2,2019,Chloropidae,18
+00MBG,7,11,T2,2019,Cicadellidae,3
+00MBG,7,11,T2,2019,Cixiidae,4
+00MBG,7,11,T2,2019,Drosophilidae,1
+00MBG,7,11,T2,2019,Eulophidae,2
+00MBG,7,11,T2,2019,Eurytomidae,3
+00MBG,7,11,T2,2019,HEMUNK,1
+00MBG,7,11,T2,2019,Membracidae,1
+00MBG,7,11,T2,2019,Phoridae,1
+00MBG,7,11,T2,2019,Platygastridae,4
+00MBG,7,11,T2,2019,Psyllidae,1
+00MBG,7,11,T2,2019,Reduviidae,1
+00MBG,7,11,T2,2019,Scatopsidae,4
+00MBG,7,11,T2,2019,Sepsidae,2
+00MBG,7,11,T2,2019,Sphaeroceridae,1
+00MBG,7,11,T2,2019,Thripidae,7
+00MBG,7,11,T2,2019,Tipulidae,1
+00MBG,7,11,T2,2019,Ulidiidae,2
+00MBG,7,11,T3,2019,Cecidomyiidae,1
+00MBG,7,11,T3,2019,Chironomidae,2
+00MBG,7,11,T3,2019,Chloropidae,24
+00MBG,7,11,T3,2019,Cicadellidae,3
+00MBG,7,11,T3,2019,Cixiidae,3
+00MBG,7,11,T3,2019,COLUNK,1
+00MBG,7,11,T3,2019,Delphacidae,3
+00MBG,7,11,T3,2019,Dolichopodidae,3
+00MBG,7,11,T3,2019,Eulophidae,2
+00MBG,7,11,T3,2019,Lauxaniidae,3
+00MBG,7,11,T3,2019,Miridae,1
+00MBG,7,11,T3,2019,Phoridae,1
+00MBG,7,11,T3,2019,Platygastridae,5
+00MBG,7,11,T3,2019,Scatopsidae,1
+00MBG,7,11,T3,2019,Simuliidae,3
+00MBG,7,11,T3,2019,Thripidae,4
+00MBG,7,20,T2,2020,Anthocoridae,1
+00MBG,7,20,T2,2020,Braconidae,1
+00MBG,7,20,T2,2020,Cecidomyiidae,7
+00MBG,7,20,T2,2020,Ceratopogonidae,1
+00MBG,7,20,T2,2020,Chironomidae,1
+00MBG,7,20,T2,2020,Chloropidae,7
+00MBG,7,20,T2,2020,Chrysomelidae,2
+00MBG,7,20,T2,2020,Cicadellidae,1
+00MBG,7,20,T2,2020,Cixiidae,3
+00MBG,7,20,T2,2020,COLUNK,1
+00MBG,7,20,T2,2020,DIPUNK,2
+00MBG,7,20,T2,2020,Dolichopodidae,1
+00MBG,7,20,T2,2020,Eulophidae,5
+00MBG,7,20,T2,2020,Fanniidae,1
+00MBG,7,20,T2,2020,Fulgoridae,3
+00MBG,7,20,T2,2020,HEMUNK,1
+00MBG,7,20,T2,2020,LEPUNK,1
+00MBG,7,20,T2,2020,Miridae,2
+00MBG,7,20,T2,2020,Platygastridae,14
+00MBG,7,20,T2,2020,Scarabaeidae,1
+00MBG,7,20,T2,2020,Simuliidae,3
+00MBG,7,20,T2,2020,Tettigoniidae,1
+00MBG,7,20,T2,2020,Thripidae,6
+00MBG,7,20,T3,2020,Aeolothripidae,1
+00MBG,7,20,T3,2020,Anthocoridae,1
+00MBG,7,20,T3,2020,Aphrophoridae,1
+00MBG,7,20,T3,2020,Braconidae,1
+00MBG,7,20,T3,2020,Cecidomyiidae,20
+00MBG,7,20,T3,2020,Ceratopogonidae,4
+00MBG,7,20,T3,2020,Chironomidae,2
+00MBG,7,20,T3,2020,Chloropidae,6
+00MBG,7,20,T3,2020,Cicadellidae,3
+00MBG,7,20,T3,2020,Cixiidae,2
+00MBG,7,20,T3,2020,Eulophidae,3
+00MBG,7,20,T3,2020,Eupelmidae,3
+00MBG,7,20,T3,2020,Geometridae,1
+00MBG,7,20,T3,2020,Miridae,5
+00MBG,7,20,T3,2020,Muscidae,1
+00MBG,7,20,T3,2020,Mymaridae,1
+00MBG,7,20,T3,2020,Phalacridae,2
+00MBG,7,20,T3,2020,Phoridae,1
+00MBG,7,20,T3,2020,Platygastridae,16
+00MBG,7,20,T3,2020,Pteromalidae,31
+00MBG,7,20,T3,2020,Reduviidae,1
+00MBG,7,20,T3,2020,Syrphidae,1
+00MBG,7,20,T3,2020,Thripidae,6
+00MBG,7,21,T1,2020,Aphididae,6
+00MBG,7,21,T1,2020,Braconidae,1
+00MBG,7,21,T1,2020,Cecidomyiidae,1
+00MBG,7,21,T1,2020,Ceratopogonidae,6
+00MBG,7,21,T1,2020,Chironomidae,2
+00MBG,7,21,T1,2020,Chloropidae,6
+00MBG,7,21,T1,2020,Cicadellidae,1
+00MBG,7,21,T1,2020,Cixiidae,1
+00MBG,7,21,T1,2020,COLUNK,1
+00MBG,7,21,T1,2020,Delphacidae,1
+00MBG,7,21,T1,2020,Dolichopodidae,2
+00MBG,7,21,T1,2020,Eulophidae,7
+00MBG,7,21,T1,2020,Membracidae,1
+00MBG,7,21,T1,2020,Miridae,5
+00MBG,7,21,T1,2020,Muscidae,1
+00MBG,7,21,T1,2020,Pentatomidae,1
+00MBG,7,21,T1,2020,Phlaeothripidae,1
+00MBG,7,21,T1,2020,Platygastridae,11
+00MBG,7,21,T1,2020,Psyllidae,6
+00MBG,7,21,T1,2020,Sciaridae,1
+00MBG,7,21,T1,2020,Sepsidae,1
+00MBG,7,21,T1,2020,Simuliidae,10
+00MBG,7,21,T1,2020,Tettigoniidae,1
+00MBG,7,21,T1,2020,Thripidae,2
+00MBG,7,21,T1,2020,Thyreocoridae,1
+00MBG,7,21,T1,2020,Ulidiidae,2
+00MBG,8,19,T1,2020,Chironomidae,1
+00MBG,8,19,T1,2020,Cixiidae,1
+00MBG,8,19,T1,2020,Drosophilidae,1
+00MBG,8,19,T1,2020,Eulophidae,23
+00MBG,8,19,T1,2020,HEMUNK,1
+00MBG,8,19,T1,2020,Platygastridae,2
+00MBG,8,19,T1,2020,Psyllidae,1
+00MBG,8,19,T1,2020,Pteromalidae,1
+00MBG,8,19,T2,2020,Alydidae,2
+00MBG,8,19,T2,2020,Aphididae,4
+00MBG,8,19,T2,2020,Braconidae,1
+00MBG,8,19,T2,2020,Chironomidae,1
+00MBG,8,19,T2,2020,Chrysomelidae,2
+00MBG,8,19,T2,2020,Cicadellidae,2
+00MBG,8,19,T2,2020,Drosophilidae,1
+00MBG,8,19,T2,2020,Eulophidae,31
+00MBG,8,19,T2,2020,LEPUNK,2
+00MBG,8,19,T2,2020,Membracidae,1
+00MBG,8,19,T2,2020,Phalacridae,4
+00MBG,8,19,T2,2020,Platygastridae,7
+00MBG,8,19,T2,2020,Scatopsidae,1
+00MBG,8,19,T2,2020,Tettigoniidae,1
+00MBG,8,19,T3,2020,Aphididae,1
+00MBG,8,19,T3,2020,Chrysomelidae,2
+00MBG,8,19,T3,2020,Cicadellidae,2
+00MBG,8,19,T3,2020,Diapriidae,1
+00MBG,8,19,T3,2020,Encyrtidae,1
+00MBG,8,19,T3,2020,Eulophidae,8
+00MBG,8,19,T3,2020,LEPUNK,1
+00MBG,8,19,T3,2020,Psyllidae,5
+00MBG,8,7,T1,2019,Aeolothripidae,1
+00MBG,8,7,T1,2019,Aphididae,11
+00MBG,8,7,T1,2019,Braconidae,4
+00MBG,8,7,T1,2019,Calliphoridae,1
+00MBG,8,7,T1,2019,Cantharidae,1
+00MBG,8,7,T1,2019,Cecidomyiidae,23
+00MBG,8,7,T1,2019,Ceratopogonidae,1
+00MBG,8,7,T1,2019,Chironomidae,1
+00MBG,8,7,T1,2019,Chloropidae,13
+00MBG,8,7,T1,2019,Chrysomelidae,4
+00MBG,8,7,T1,2019,Cicadellidae,40
+00MBG,8,7,T1,2019,Cixiidae,2
+00MBG,8,7,T1,2019,Dolichopodidae,1
+00MBG,8,7,T1,2019,Eulophidae,68
+00MBG,8,7,T1,2019,LEPUNK,1
+00MBG,8,7,T1,2019,Membracidae,1
+00MBG,8,7,T1,2019,Miridae,1
+00MBG,8,7,T1,2019,Mymaridae,1
+00MBG,8,7,T1,2019,Pentatomidae,2
+00MBG,8,7,T1,2019,Phalacridae,9
+00MBG,8,7,T1,2019,Phlaeothripidae,3
+00MBG,8,7,T1,2019,Phoridae,2
+00MBG,8,7,T1,2019,Platygastridae,21
+00MBG,8,7,T1,2019,Psyllidae,21
+00MBG,8,7,T1,2019,Pteromalidae,1
+00MBG,8,7,T1,2019,Scarabaeidae,2
+00MBG,8,7,T1,2019,Sciomyzidae,1
+00MBG,8,7,T1,2019,Thripidae,2
+00MBG,8,7,T2,2019,Alydidae,1
+00MBG,8,7,T2,2019,Aphididae,2
+00MBG,8,7,T2,2019,Braconidae,1
+00MBG,8,7,T2,2019,Cecidomyiidae,1
+00MBG,8,7,T2,2019,Chloropidae,1
+00MBG,8,7,T2,2019,Chrysomelidae,10
+00MBG,8,7,T2,2019,Cicadellidae,5
+00MBG,8,7,T2,2019,DIPUNK,1
+00MBG,8,7,T2,2019,Eulophidae,10
+00MBG,8,7,T2,2019,Issidae,1
+00MBG,8,7,T2,2019,Muscidae,1
+00MBG,8,7,T2,2019,Phalacridae,16
+00MBG,8,7,T2,2019,Platygastridae,4
+00MBG,8,7,T2,2019,Psyllidae,1
+00MBG,8,7,T2,2019,Staphylinidae,1
+00MBG,8,7,T2,2019,Thripidae,2
+00MBG,8,7,T3,2019,Anthocoridae,4
+00MBG,8,7,T3,2019,Apidae,1
+00MBG,8,7,T3,2019,Braconidae,1
+00MBG,8,7,T3,2019,Cecidomyiidae,8
+00MBG,8,7,T3,2019,Chironomidae,3
+00MBG,8,7,T3,2019,Chloropidae,5
+00MBG,8,7,T3,2019,Chrysomelidae,6
+00MBG,8,7,T3,2019,Cicadellidae,42
+00MBG,8,7,T3,2019,Cixiidae,1
+00MBG,8,7,T3,2019,Coenagrionidae,1
+00MBG,8,7,T3,2019,Delphacidae,2
+00MBG,8,7,T3,2019,Eulophidae,13
+00MBG,8,7,T3,2019,LEPUNK,1
+00MBG,8,7,T3,2019,Lygaeidae,2
+00MBG,8,7,T3,2019,Membracidae,1
+00MBG,8,7,T3,2019,Miridae,2
+00MBG,8,7,T3,2019,Mordellidae,1
+00MBG,8,7,T3,2019,Muscidae,2
+00MBG,8,7,T3,2019,Phalacridae,6
+00MBG,8,7,T3,2019,Phoridae,1
+00MBG,8,7,T3,2019,Psyllidae,1
+00MBG,8,7,T3,2019,Pteromalidae,10
+00MBG,8,7,T3,2019,Scarabaeidae,3
+00MBG,8,7,T3,2019,Sphaeroceridae,1
+00MBG,8,7,T3,2019,Tipulidae,1
+00MDP,7,11,T1,2019,Acrididae,3
+00MDP,7,11,T1,2019,Agromyzidae,14
+00MDP,7,11,T1,2019,Aphididae,2
+00MDP,7,11,T1,2019,Berytidae,1
+00MDP,7,11,T1,2019,Braconidae,1
+00MDP,7,11,T1,2019,Cercopidae,8
+00MDP,7,11,T1,2019,Chloropidae,1
+00MDP,7,11,T1,2019,Cicadellidae,1
+00MDP,7,11,T1,2019,DIPUNK,2
+00MDP,7,11,T1,2019,Heleomyzidae,1
+00MDP,7,11,T1,2019,HEMUNK,2
+00MDP,7,11,T1,2019,LEPUNK,3
+00MDP,7,11,T1,2019,Lygaeidae,1
+00MDP,7,11,T1,2019,Membracidae,1
+00MDP,7,11,T1,2019,Miridae,9
+00MDP,7,11,T1,2019,Pentatomidae,2
+00MDP,7,11,T1,2019,Scarabaeidae,1
+00MDP,7,11,T1,2019,Simuliidae,5
+00MDP,7,11,T1,2019,Tettigoniidae,1
+00MDP,7,11,T1,2019,Thripidae,18
+00MDP,7,11,T2,2019,Anthomyiidae,2
+00MDP,7,11,T2,2019,Aphididae,2
+00MDP,7,11,T2,2019,Berytidae,1
+00MDP,7,11,T2,2019,Cercopidae,3
+00MDP,7,11,T2,2019,Chironomidae,1
+00MDP,7,11,T2,2019,Chloropidae,1
+00MDP,7,11,T2,2019,Cicadellidae,10
+00MDP,7,11,T2,2019,Culicidae,1
+00MDP,7,11,T2,2019,Curculionidae,1
+00MDP,7,11,T2,2019,DIPUNK,2
+00MDP,7,11,T2,2019,Eulophidae,3
+00MDP,7,11,T2,2019,Formicidae,1
+00MDP,7,11,T2,2019,Heleomyzidae,3
+00MDP,7,11,T2,2019,Lampyridae,1
+00MDP,7,11,T2,2019,LEPUNK,1
+00MDP,7,11,T2,2019,ORTUNK,1
+00MDP,7,11,T2,2019,Pentatomidae,3
+00MDP,7,11,T2,2019,Platygastridae,1
+00MDP,7,11,T2,2019,Psyllidae,3
+00MDP,7,11,T2,2019,Scatopsidae,2
+00MDP,7,11,T2,2019,Sciaridae,3
+00MDP,7,11,T2,2019,Simuliidae,2
+00MDP,7,11,T2,2019,Thripidae,66
+00MDP,7,11,T3,2019,Acrididae,42
+00MDP,7,11,T3,2019,Berytidae,1
+00MDP,7,11,T3,2019,Bombyliidae,1
+00MDP,7,11,T3,2019,Braconidae,1
+00MDP,7,11,T3,2019,Chloropidae,15
+00MDP,7,11,T3,2019,Chrysomelidae,1
+00MDP,7,11,T3,2019,Cicadellidae,53
+00MDP,7,11,T3,2019,Curculionidae,3
+00MDP,7,11,T3,2019,Delphacidae,58
+00MDP,7,11,T3,2019,Dictyopharidae,7
+00MDP,7,11,T3,2019,Eulophidae,2
+00MDP,7,11,T3,2019,Eurytomidae,1
+00MDP,7,11,T3,2019,Figitidae,1
+00MDP,7,11,T3,2019,Formicidae,3
+00MDP,7,11,T3,2019,Halictidae,1
+00MDP,7,11,T3,2019,HEMUNK,2
+00MDP,7,11,T3,2019,Miridae,28
+00MDP,7,11,T3,2019,Mordellidae,2
+00MDP,7,11,T3,2019,Nabidae,1
+00MDP,7,11,T3,2019,Pentatomidae,3
+00MDP,7,11,T3,2019,Phlaeothripidae,2
+00MDP,7,11,T3,2019,Platygastridae,1
+00MDP,7,11,T3,2019,Pteromalidae,1
+00MDP,7,11,T3,2019,Reduviidae,1
+00MDP,7,11,T3,2019,Syrphidae,2
+00MDP,7,11,T3,2019,Tettigoniidae,19
+00MDP,8,7,T1,2019,Acrididae,5
+00MDP,8,7,T1,2019,Agromyzidae,10
+00MDP,8,7,T1,2019,Anthocoridae,1
+00MDP,8,7,T1,2019,Berytidae,3
+00MDP,8,7,T1,2019,Cantharidae,1
+00MDP,8,7,T1,2019,Cercopidae,2
+00MDP,8,7,T1,2019,Chloropidae,47
+00MDP,8,7,T1,2019,Cicadellidae,7
+00MDP,8,7,T1,2019,Curculionidae,1
+00MDP,8,7,T1,2019,Cydnidae,2
+00MDP,8,7,T1,2019,Dictyopharidae,3
+00MDP,8,7,T1,2019,DIPUNK,1
+00MDP,8,7,T1,2019,Formicidae,1
+00MDP,8,7,T1,2019,HYMUNK,5
+00MDP,8,7,T1,2019,LEPUNK,1
+00MDP,8,7,T1,2019,Miridae,158
+00MDP,8,7,T1,2019,Nabidae,6
+00MDP,8,7,T1,2019,Pentatomidae,2
+00MDP,8,7,T1,2019,Phoridae,1
+00MDP,8,7,T1,2019,Platygastridae,4
+00MDP,8,7,T1,2019,Scarabaeidae,1
+00MDP,8,7,T1,2019,Sciaridae,1
+00MDP,8,7,T1,2019,Tephritidae,4
+00MDP,8,7,T1,2019,Tettigoniidae,3
+00MDP,8,7,T1,2019,Thripidae,8
+00MDP,8,7,T1,2019,Thyreocoridae,2
+00MDP,8,7,T1,2019,Tipulidae,1
+00MDP,8,7,T2,2019,Acanaloniidae,1
+00MDP,8,7,T2,2019,Acrididae,9
+00MDP,8,7,T2,2019,Agromyzidae,3
+00MDP,8,7,T2,2019,Carabidae,1
+00MDP,8,7,T2,2019,Cercopidae,2
+00MDP,8,7,T2,2019,Chalcididae,1
+00MDP,8,7,T2,2019,Chloropidae,1
+00MDP,8,7,T2,2019,Chrysomelidae,3
+00MDP,8,7,T2,2019,Cicadellidae,7
+00MDP,8,7,T2,2019,Eulophidae,5
+00MDP,8,7,T2,2019,Formicidae,2
+00MDP,8,7,T2,2019,Lauxaniidae,2
+00MDP,8,7,T2,2019,LEPUNK,3
+00MDP,8,7,T2,2019,Lygaeidae,3
+00MDP,8,7,T2,2019,Pentatomidae,1
+00MDP,8,7,T2,2019,Phalacridae,1
+00MDP,8,7,T2,2019,Phlaeothripidae,1
+00MDP,8,7,T2,2019,Platygastridae,1
+00MDP,8,7,T2,2019,Psyllidae,5
+00MDP,8,7,T2,2019,Pteromalidae,1
+00MDP,8,7,T2,2019,Reduviidae,3
+00MDP,8,7,T2,2019,Sciaridae,1
+00MDP,8,7,T2,2019,Tephritidae,1
+00MDP,8,7,T2,2019,Tettigoniidae,3
+00MDP,8,7,T3,2019,Acrididae,9
+00MDP,8,7,T3,2019,Agromyzidae,5
+00MDP,8,7,T3,2019,Cicadellidae,19
+00MDP,8,7,T3,2019,Delphacidae,1
+00MDP,8,7,T3,2019,Dryinidae,6
+00MDP,8,7,T3,2019,HEMUNK,1
+00MDP,8,7,T3,2019,HYMUNK,1
+00MDP,8,7,T3,2019,Lygaeidae,5
+00MDP,8,7,T3,2019,Miridae,25
+00MDP,8,7,T3,2019,Pentatomidae,5
+00MDP,8,7,T3,2019,Pteromalidae,1
+00MDP,8,7,T3,2019,Reduviidae,1
+00MDP,8,7,T3,2019,Tettigoniidae,5
+00MDP,8,7,T3,2019,Thripidae,4
+00MJ8,7,23,T1,2019,Anthomyiidae,1
+00MJ8,7,23,T1,2019,Carabidae,1
+00MJ8,7,23,T1,2019,Chloropidae,5
+00MJ8,7,23,T1,2019,Chrysomelidae,9
+00MJ8,7,23,T1,2019,Cicadellidae,2
+00MJ8,7,23,T1,2019,Cixiidae,1
+00MJ8,7,23,T1,2019,Curculionidae,1
+00MJ8,7,23,T1,2019,Dolichopodidae,1
+00MJ8,7,23,T1,2019,Eulophidae,1
+00MJ8,7,23,T1,2019,Eurytomidae,1
+00MJ8,7,23,T1,2019,Formicidae,2
+00MJ8,7,23,T1,2019,HYMUNK,2
+00MJ8,7,23,T1,2019,Mymaridae,1
+00MJ8,7,23,T1,2019,Nabidae,10
+00MJ8,7,23,T1,2019,ORTUNK,6
+00MJ8,7,23,T1,2019,Phalacridae,117
+00MJ8,7,23,T1,2019,Platygastridae,1
+00MJ8,7,23,T1,2019,Psyllidae,24
+00MJ8,7,23,T1,2019,Pteromalidae,3
+00MJ8,7,23,T1,2019,Scarabaeidae,3
+00MJ8,7,23,T1,2019,Scelionidae,1
+00MJ8,7,23,T1,2019,Sciaridae,1
+00MJ8,7,23,T1,2019,Sciomyzidae,3
+00MJ8,7,23,T1,2019,Simuliidae,1
+00MJ8,7,23,T1,2019,Tephritidae,1
+00MJ8,7,23,T2,2019,Acanaloniidae,1
+00MJ8,7,23,T2,2019,Aphididae,1
+00MJ8,7,23,T2,2019,Aphrophoridae,6
+00MJ8,7,23,T2,2019,Chloropidae,1
+00MJ8,7,23,T2,2019,Chrysomelidae,11
+00MJ8,7,23,T2,2019,Cicadellidae,7
+00MJ8,7,23,T2,2019,Culicidae,1
+00MJ8,7,23,T2,2019,LEPUNK,1
+00MJ8,7,23,T2,2019,Miridae,9
+00MJ8,7,23,T2,2019,Muscidae,1
+00MJ8,7,23,T2,2019,Phalacridae,7
+00MJ8,7,23,T2,2019,Psyllidae,1
+00MJ8,7,23,T2,2019,Pteromalidae,9
+00MJ8,7,23,T2,2019,Sciomyzidae,7
+00MJ8,7,23,T2,2019,Syrphidae,1
+00MJ8,7,23,T2,2019,Tettigoniidae,2
+00MJ8,7,23,T2,2019,Torymidae,1
+00MJ8,7,23,T3,2019,Braconidae,1
+00MJ8,7,23,T3,2019,Chrysomelidae,3
+00MJ8,7,23,T3,2019,Cicadellidae,2
+00MJ8,7,23,T3,2019,Eulophidae,1
+00MJ8,7,23,T3,2019,LEPUNK,2
+00MJ8,7,23,T3,2019,ORTUNK,1
+00MJ8,7,23,T3,2019,Phalacridae,15
+00MJ8,7,23,T3,2019,Psyllidae,1
+00MJ8,7,23,T3,2019,Scarabaeidae,1
+00MJ8,7,23,T3,2019,Scelionidae,3
+00MJ8,8,22,T1,2019,Anthocoridae,3
+00MJ8,8,22,T1,2019,Aphididae,3
+00MJ8,8,22,T1,2019,Blissidae,6
+00MJ8,8,22,T1,2019,Chironomidae,1
+00MJ8,8,22,T1,2019,Chrysomelidae,3
+00MJ8,8,22,T1,2019,Cicadellidae,10
+00MJ8,8,22,T1,2019,Dolichopodidae,1
+00MJ8,8,22,T1,2019,Eulophidae,2
+00MJ8,8,22,T1,2019,Eurytomidae,2
+00MJ8,8,22,T1,2019,Figitidae,1
+00MJ8,8,22,T1,2019,Formicidae,2
+00MJ8,8,22,T1,2019,Geometridae,1
+00MJ8,8,22,T1,2019,Gryllidae,1
+00MJ8,8,22,T1,2019,Halictophagidae,1
+00MJ8,8,22,T1,2019,Ichneumonidae,2
+00MJ8,8,22,T1,2019,Miridae,5
+00MJ8,8,22,T1,2019,Pentatomidae,1
+00MJ8,8,22,T1,2019,Phalacridae,39
+00MJ8,8,22,T1,2019,Psyllidae,16
+00MJ8,8,22,T1,2019,Pteromalidae,42
+00MJ8,8,22,T1,2019,Scarabaeidae,2
+00MJ8,8,22,T1,2019,Sciomyzidae,2
+00MJ8,8,22,T1,2019,Thripidae,4
+00MJ8,8,22,T1,2019,Tipulidae,1
+00MJ8,8,22,T1,2019,Torymidae,2
+00MJ8,8,22,T2,2019,Acanaloniidae,1
+00MJ8,8,22,T2,2019,Anthocoridae,1
+00MJ8,8,22,T2,2019,Aphididae,1
+00MJ8,8,22,T2,2019,Aphrophoridae,1
+00MJ8,8,22,T2,2019,Braconidae,1
+00MJ8,8,22,T2,2019,Chrysomelidae,1
+00MJ8,8,22,T2,2019,Cicadellidae,7
+00MJ8,8,22,T2,2019,Culicidae,1
+00MJ8,8,22,T2,2019,Eulophidae,6
+00MJ8,8,22,T2,2019,Eurytomidae,1
+00MJ8,8,22,T2,2019,Formicidae,2
+00MJ8,8,22,T2,2019,Gryllidae,1
+00MJ8,8,22,T2,2019,LEPUNK,1
+00MJ8,8,22,T2,2019,Mymaridae,1
+00MJ8,8,22,T2,2019,Nitidulidae,1
+00MJ8,8,22,T2,2019,Pentatomidae,3
+00MJ8,8,22,T2,2019,Phalacridae,9
+00MJ8,8,22,T2,2019,Psyllidae,3
+00MJ8,8,22,T2,2019,Pteromalidae,15
+00MJ8,8,22,T2,2019,Simuliidae,1
+00MJ8,8,22,T2,2019,Thripidae,3
+00MJ8,8,22,T3,2019,Aeolothripidae,2
+00MJ8,8,22,T3,2019,Aphididae,4
+00MJ8,8,22,T3,2019,Braconidae,3
+00MJ8,8,22,T3,2019,Chrysomelidae,4
+00MJ8,8,22,T3,2019,Cicadellidae,10
+00MJ8,8,22,T3,2019,Culicidae,1
+00MJ8,8,22,T3,2019,Drosophilidae,1
+00MJ8,8,22,T3,2019,Gryllidae,1
+00MJ8,8,22,T3,2019,Ichneumonidae,1
+00MJ8,8,22,T3,2019,Miridae,1
+00MJ8,8,22,T3,2019,Pentatomidae,1
+00MJ8,8,22,T3,2019,Phalacridae,3
+00MJ8,8,22,T3,2019,Psyllidae,2
+00MJ8,8,22,T3,2019,Pteromalidae,9
+00MJ8,8,22,T3,2019,Rhyparochromidae,1
+00MJ8,8,22,T3,2019,Sphaeroceridae,1
+00MJ8,8,22,T3,2019,Thripidae,3
+00MJ9,7,22,T1,2019,Acanaloniidae,1
+00MJ9,7,22,T1,2019,Acrididae,1
+00MJ9,7,22,T1,2019,Anthocoridae,1
+00MJ9,7,22,T1,2019,Cercopidae,1
+00MJ9,7,22,T1,2019,Chloropidae,2
+00MJ9,7,22,T1,2019,Chrysomelidae,4
+00MJ9,7,22,T1,2019,Cicadellidae,6
+00MJ9,7,22,T1,2019,Cixiidae,1
+00MJ9,7,22,T1,2019,Colletidae,1
+00MJ9,7,22,T1,2019,Dictyopharidae,2
+00MJ9,7,22,T1,2019,DIPUNK,1
+00MJ9,7,22,T1,2019,Eulophidae,6
+00MJ9,7,22,T1,2019,HYMUNK,3
+00MJ9,7,22,T1,2019,LEPUNK,4
+00MJ9,7,22,T1,2019,Membracidae,3
+00MJ9,7,22,T1,2019,Nabidae,2
+00MJ9,7,22,T1,2019,ORTUNK,1
+00MJ9,7,22,T1,2019,Phalacridae,28
+00MJ9,7,22,T1,2019,Platygastridae,8
+00MJ9,7,22,T1,2019,Pteromalidae,2
+00MJ9,7,22,T1,2019,Reduviidae,2
+00MJ9,7,22,T1,2019,Scarabaeidae,1
+00MJ9,7,22,T2,2019,Acanaloniidae,1
+00MJ9,7,22,T2,2019,Acrididae,1
+00MJ9,7,22,T2,2019,Braconidae,2
+00MJ9,7,22,T2,2019,Cercopidae,4
+00MJ9,7,22,T2,2019,Chloropidae,3
+00MJ9,7,22,T2,2019,Chrysomelidae,1
+00MJ9,7,22,T2,2019,Cicadellidae,4
+00MJ9,7,22,T2,2019,Culicidae,1
+00MJ9,7,22,T2,2019,Eurytomidae,11
+00MJ9,7,22,T2,2019,Formicidae,8
+00MJ9,7,22,T2,2019,Miridae,3
+00MJ9,7,22,T2,2019,Phalacridae,11
+00MJ9,7,22,T2,2019,Pteromalidae,2
+00MJ9,7,22,T2,2019,Reduviidae,1
+00MJ9,7,22,T2,2019,Tettigoniidae,2
+00MJ9,7,22,T2,2019,Thripidae,1
+00MJ9,7,22,T3,2019,Acanaloniidae,1
+00MJ9,7,22,T3,2019,Acrididae,1
+00MJ9,7,22,T3,2019,Aeolothripidae,1
+00MJ9,7,22,T3,2019,Chloropidae,3
+00MJ9,7,22,T3,2019,Chrysomelidae,2
+00MJ9,7,22,T3,2019,Cicadellidae,12
+00MJ9,7,22,T3,2019,Dictyopharidae,2
+00MJ9,7,22,T3,2019,Dolichopodidae,3
+00MJ9,7,22,T3,2019,Dryinidae,1
+00MJ9,7,22,T3,2019,Eulophidae,1
+00MJ9,7,22,T3,2019,Ichneumonidae,1
+00MJ9,7,22,T3,2019,Issidae,4
+00MJ9,7,22,T3,2019,LEPUNK,1
+00MJ9,7,22,T3,2019,Miridae,1
+00MJ9,7,22,T3,2019,Phalacridae,11
+00MJ9,7,22,T3,2019,Platygastridae,3
+00MJ9,7,22,T3,2019,Psyllidae,1
+00MJ9,7,22,T3,2019,Sphaeroceridae,1
+00MJ9,7,22,T3,2019,Tephritidae,2
+00MJ9,7,22,T3,2019,Tettigoniidae,1
+00MJ9,8,20,T1,2019,Acrididae,3
+00MJ9,8,20,T1,2019,Anthocoridae,2
+00MJ9,8,20,T1,2019,Aphididae,53
+00MJ9,8,20,T1,2019,Braconidae,1
+00MJ9,8,20,T1,2019,Cecidomyiidae,2
+00MJ9,8,20,T1,2019,Cercopidae,1
+00MJ9,8,20,T1,2019,Chloropidae,1
+00MJ9,8,20,T1,2019,Cicadellidae,12
+00MJ9,8,20,T1,2019,Coccinellidae,2
+00MJ9,8,20,T1,2019,Eulophidae,11
+00MJ9,8,20,T1,2019,HEMUNK,1
+00MJ9,8,20,T1,2019,LEPUNK,2
+00MJ9,8,20,T1,2019,Miridae,11
+00MJ9,8,20,T1,2019,Mymaridae,1
+00MJ9,8,20,T1,2019,Pentatomidae,1
+00MJ9,8,20,T1,2019,Phalacridae,54
+00MJ9,8,20,T1,2019,Phlaeothripidae,1
+00MJ9,8,20,T1,2019,Platygastridae,7
+00MJ9,8,20,T1,2019,Psyllidae,17
+00MJ9,8,20,T1,2019,Reduviidae,2
+00MJ9,8,20,T1,2019,Roproniidae,1
+00MJ9,8,20,T1,2019,Scarabaeidae,1
+00MJ9,8,20,T1,2019,Tettigoniidae,1
+00MJ9,8,20,T1,2019,Thripidae,3
+00MJ9,8,20,T1,2019,UNKORD,3
+00MJ9,8,20,T2,2019,Acanaloniidae,3
+00MJ9,8,20,T2,2019,Acrididae,2
+00MJ9,8,20,T2,2019,Anthocoridae,7
+00MJ9,8,20,T2,2019,Aphididae,14
+00MJ9,8,20,T2,2019,Ceratopogonidae,1
+00MJ9,8,20,T2,2019,Chloropidae,3
+00MJ9,8,20,T2,2019,Cicadellidae,25
+00MJ9,8,20,T2,2019,Dictyopharidae,1
+00MJ9,8,20,T2,2019,Encyrtidae,1
+00MJ9,8,20,T2,2019,Eulophidae,3
+00MJ9,8,20,T2,2019,Formicidae,21
+00MJ9,8,20,T2,2019,Geometridae,1
+00MJ9,8,20,T2,2019,HEMUNK,2
+00MJ9,8,20,T2,2019,HYMUNK,2
+00MJ9,8,20,T2,2019,LEPUNK,3
+00MJ9,8,20,T2,2019,Lygaeidae,1
+00MJ9,8,20,T2,2019,Miridae,2
+00MJ9,8,20,T2,2019,Nitidulidae,2
+00MJ9,8,20,T2,2019,Noctuidae,1
+00MJ9,8,20,T2,2019,Pentatomidae,3
+00MJ9,8,20,T2,2019,Phalacridae,8
+00MJ9,8,20,T2,2019,Platygastridae,1
+00MJ9,8,20,T2,2019,Psyllidae,11
+00MJ9,8,20,T2,2019,Reduviidae,1
+00MJ9,8,20,T2,2019,Rhyparochromidae,1
+00MJ9,8,20,T2,2019,Sphaeroceridae,3
+00MJ9,8,20,T2,2019,Thripidae,1
+00MJ9,8,20,T3,2019,Acanaloniidae,2
+00MJ9,8,20,T3,2019,Acrididae,5
+00MJ9,8,20,T3,2019,Anthocoridae,5
+00MJ9,8,20,T3,2019,Anthomyiidae,2
+00MJ9,8,20,T3,2019,Aphididae,2
+00MJ9,8,20,T3,2019,Braconidae,3
+00MJ9,8,20,T3,2019,Cecidomyiidae,2
+00MJ9,8,20,T3,2019,Cercopidae,1
+00MJ9,8,20,T3,2019,Chloropidae,11
+00MJ9,8,20,T3,2019,Cicadellidae,24
+00MJ9,8,20,T3,2019,DIPUNK,1
+00MJ9,8,20,T3,2019,Eulophidae,2
+00MJ9,8,20,T3,2019,Formicidae,9
+00MJ9,8,20,T3,2019,LEPUNK,1
+00MJ9,8,20,T3,2019,Miridae,2
+00MJ9,8,20,T3,2019,Nitidulidae,3
+00MJ9,8,20,T3,2019,Pentatomidae,12
+00MJ9,8,20,T3,2019,Phalacridae,1
+00MJ9,8,20,T3,2019,Phlaeothripidae,1
+00MJ9,8,20,T3,2019,Platygastridae,3
+00MJ9,8,20,T3,2019,Psyllidae,8
+00MJ9,8,20,T3,2019,Sphaeroceridae,1
+00MJ9,8,20,T3,2019,Tettigoniidae,1
+00MJ9,8,20,T3,2019,Thripidae,1
+00MJC,7,22,T1,2020,Acrididae,2
+00MJC,7,22,T1,2020,Anthocoridae,1
+00MJC,7,22,T1,2020,Aphididae,4
+00MJC,7,22,T1,2020,Chloropidae,10
+00MJC,7,22,T1,2020,Chrysomelidae,29
+00MJC,7,22,T1,2020,Cicadellidae,3
+00MJC,7,22,T1,2020,Delphacidae,1
+00MJC,7,22,T1,2020,Diapriidae,1
+00MJC,7,22,T1,2020,DIPUNK,1
+00MJC,7,22,T1,2020,Encyrtidae,1
+00MJC,7,22,T1,2020,Eurytomidae,2
+00MJC,7,22,T1,2020,Formicidae,1
+00MJC,7,22,T1,2020,LEPUNK,2
+00MJC,7,22,T1,2020,Membracidae,1
+00MJC,7,22,T1,2020,Miridae,5
+00MJC,7,22,T1,2020,Nabidae,1
+00MJC,7,22,T1,2020,Phalacridae,1
+00MJC,7,22,T1,2020,Platygastridae,8
+00MJC,7,22,T1,2020,Pteromalidae,1
+00MJC,7,22,T1,2020,Scarabaeidae,1
+00MJC,7,22,T2,2020,Acrididae,4
+00MJC,7,22,T2,2020,Aphididae,14
+00MJC,7,22,T2,2020,Ceratopogonidae,5
+00MJC,7,22,T2,2020,Chloropidae,1
+00MJC,7,22,T2,2020,Chrysomelidae,1
+00MJC,7,22,T2,2020,Cicadellidae,13
+00MJC,7,22,T2,2020,Eulophidae,2
+00MJC,7,22,T2,2020,Formicidae,1
+00MJC,7,22,T2,2020,LEPUNK,2
+00MJC,7,22,T2,2020,Miridae,4
+00MJC,7,22,T2,2020,Noctuidae,1
+00MJC,7,22,T2,2020,Phalacridae,31
+00MJC,7,22,T2,2020,Platygastridae,6
+00MJC,7,22,T2,2020,Psyllidae,1
+00MJC,7,22,T2,2020,Rhopalidae,5
+00MJC,7,22,T2,2020,Simuliidae,1
+00MJC,7,22,T2,2020,Tettigoniidae,1
+00MJC,7,22,T3,2020,Acrididae,5
+00MJC,7,22,T3,2020,Aeolothripidae,1
+00MJC,7,22,T3,2020,Anthocoridae,5
+00MJC,7,22,T3,2020,Aphrophoridae,2
+00MJC,7,22,T3,2020,Cecidomyiidae,19
+00MJC,7,22,T3,2020,Chloropidae,2
+00MJC,7,22,T3,2020,Chrysomelidae,3
+00MJC,7,22,T3,2020,Cicadellidae,14
+00MJC,7,22,T3,2020,Eupelmidae,4
+00MJC,7,22,T3,2020,Eurytomidae,3
+00MJC,7,22,T3,2020,Formicidae,2
+00MJC,7,22,T3,2020,Geometridae,1
+00MJC,7,22,T3,2020,Lygaeidae,3
+00MJC,7,22,T3,2020,Membracidae,2
+00MJC,7,22,T3,2020,Miridae,19
+00MJC,7,22,T3,2020,Noctuidae,1
+00MJC,7,22,T3,2020,Pteromalidae,8
+00MJC,7,22,T3,2020,Scarabaeidae,1
+00MJC,7,22,T3,2020,Tephritidae,1
+00MJC,7,22,T3,2020,Tettigoniidae,1
+00MJC,7,29,T1,2019,Acrididae,1
+00MJC,7,29,T1,2019,Aphididae,1
+00MJC,7,29,T1,2019,Cercopidae,5
+00MJC,7,29,T1,2019,Chrysomelidae,27
+00MJC,7,29,T1,2019,Chrysopidae,1
+00MJC,7,29,T1,2019,Cicadellidae,13
+00MJC,7,29,T1,2019,Culicidae,5
+00MJC,7,29,T1,2019,Curtonotidae,1
+00MJC,7,29,T1,2019,DIPUNK,3
+00MJC,7,29,T1,2019,Dolichopodidae,3
+00MJC,7,29,T1,2019,Drosophilidae,9
+00MJC,7,29,T1,2019,Formicidae,3
+00MJC,7,29,T1,2019,Heleomyzidae,2
+00MJC,7,29,T1,2019,HEMUNK,3
+00MJC,7,29,T1,2019,HYMUNK,1
+00MJC,7,29,T1,2019,Ichneumonidae,2
+00MJC,7,29,T1,2019,LEPUNK,1
+00MJC,7,29,T1,2019,Membracidae,1
+00MJC,7,29,T1,2019,Miridae,11
+00MJC,7,29,T1,2019,Pentatomidae,1
+00MJC,7,29,T1,2019,Phalacridae,12
+00MJC,7,29,T1,2019,Phoridae,1
+00MJC,7,29,T1,2019,Pipunculidae,1
+00MJC,7,29,T1,2019,Platygastridae,12
+00MJC,7,29,T1,2019,Platystomatidae,1
+00MJC,7,29,T1,2019,Scarabaeidae,3
+00MJC,7,29,T1,2019,Scelionidae,8
+00MJC,7,29,T1,2019,Sciomyzidae,1
+00MJC,7,29,T1,2019,Sepsidae,2
+00MJC,7,29,T1,2019,Staphylinidae,1
+00MJC,7,29,T1,2019,Thripidae,3
+00MJC,7,29,T1,2019,THYUNK,3
+00MJC,7,29,T2,2019,Acrididae,1
+00MJC,7,29,T2,2019,Anthocoridae,8
+00MJC,7,29,T2,2019,Aphididae,3
+00MJC,7,29,T2,2019,Braconidae,1
+00MJC,7,29,T2,2019,Cecidomyiidae,5
+00MJC,7,29,T2,2019,Chloropidae,3
+00MJC,7,29,T2,2019,Eulophidae,4
+00MJC,7,29,T2,2019,Formicidae,1
+00MJC,7,29,T2,2019,Miridae,9
+00MJC,7,29,T2,2019,Phalacridae,138
+00MJC,7,29,T2,2019,Phlaeothripidae,2
+00MJC,7,29,T2,2019,Platygastridae,2
+00MJC,7,29,T2,2019,Tephritidae,1
+00MJC,7,29,T3,2019,Acrididae,3
+00MJC,7,29,T3,2019,Aeolothripidae,2
+00MJC,7,29,T3,2019,Anthocoridae,14
+00MJC,7,29,T3,2019,Braconidae,1
+00MJC,7,29,T3,2019,Chloropidae,5
+00MJC,7,29,T3,2019,Cicadellidae,5
+00MJC,7,29,T3,2019,Delphacidae,1
+00MJC,7,29,T3,2019,DIPUNK,5
+00MJC,7,29,T3,2019,Encyrtidae,1
+00MJC,7,29,T3,2019,Eulophidae,3
+00MJC,7,29,T3,2019,Formicidae,1
+00MJC,7,29,T3,2019,Geometridae,6
+00MJC,7,29,T3,2019,HYMUNK,4
+00MJC,7,29,T3,2019,Latridiidae,1
+00MJC,7,29,T3,2019,LEPUNK,2
+00MJC,7,29,T3,2019,Membracidae,1
+00MJC,7,29,T3,2019,Miridae,18
+00MJC,7,29,T3,2019,Pentatomidae,1
+00MJC,7,29,T3,2019,Phalacridae,13
+00MJC,7,29,T3,2019,Phoridae,3
+00MJC,7,29,T3,2019,Platygastridae,1
+00MJC,7,29,T3,2019,Psyllidae,1
+00MJC,7,29,T3,2019,Pteromalidae,3
+00MJC,7,29,T3,2019,Scarabaeidae,1
+00MJC,7,29,T3,2019,Sepsidae,3
+00MJC,7,29,T3,2019,Thripidae,22
+00MJC,8,21,T1,2019,Anthocoridae,4
+00MJC,8,21,T1,2019,Braconidae,1
+00MJC,8,21,T1,2019,Ceratopogonidae,2
+00MJC,8,21,T1,2019,Chloropidae,8
+00MJC,8,21,T1,2019,Chrysomelidae,8
+00MJC,8,21,T1,2019,Cixiidae,2
+00MJC,8,21,T1,2019,COLUNK,2
+00MJC,8,21,T1,2019,Eulophidae,20
+00MJC,8,21,T1,2019,Figitidae,1
+00MJC,8,21,T1,2019,Formicidae,1
+00MJC,8,21,T1,2019,Miridae,19
+00MJC,8,21,T1,2019,Muscidae,1
+00MJC,8,21,T1,2019,Phalacridae,19
+00MJC,8,21,T1,2019,Phoridae,1
+00MJC,8,21,T1,2019,Platygastridae,2
+00MJC,8,21,T1,2019,Sepsidae,1
+00MJC,8,21,T1,2019,Syrphidae,3
+00MJC,8,21,T1,2019,Thripidae,3
+00MJC,8,21,T1,2019,Tipulidae,1
+00MJC,8,21,T2,2019,Anthocoridae,13
+00MJC,8,21,T2,2019,Aphididae,3
+00MJC,8,21,T2,2019,Braconidae,2
+00MJC,8,21,T2,2019,Chamaemyiidae,1
+00MJC,8,21,T2,2019,Chloropidae,3
+00MJC,8,21,T2,2019,Cicadellidae,2
+00MJC,8,21,T2,2019,Curculionidae,1
+00MJC,8,21,T2,2019,Eulophidae,5
+00MJC,8,21,T2,2019,Formicidae,1
+00MJC,8,21,T2,2019,LEPUNK,1
+00MJC,8,21,T2,2019,Meloidae,1
+00MJC,8,21,T2,2019,Miridae,42
+00MJC,8,21,T2,2019,Pentatomidae,2
+00MJC,8,21,T2,2019,Phalacridae,128
+00MJC,8,21,T2,2019,Phlaeothripidae,3
+00MJC,8,21,T2,2019,Platygastridae,2
+00MJC,8,21,T2,2019,Tabanidae,1
+00MJC,8,21,T3,2019,Anthocoridae,14
+00MJC,8,21,T3,2019,Aphididae,2
+00MJC,8,21,T3,2019,Braconidae,1
+00MJC,8,21,T3,2019,Chloropidae,4
+00MJC,8,21,T3,2019,Cicadellidae,5
+00MJC,8,21,T3,2019,Eulophidae,3
+00MJC,8,21,T3,2019,LEPUNK,5
+00MJC,8,21,T3,2019,Miridae,48
+00MJC,8,21,T3,2019,Nitidulidae,1
+00MJC,8,21,T3,2019,Phlaeothripidae,1
+00MJC,8,21,T3,2019,Thripidae,2
+00MJC,8,26,T1,2020,Chloropidae,1
+00MJC,8,26,T1,2020,Cicadellidae,3
+00MJC,8,26,T1,2020,COLUNK,1
+00MJC,8,26,T1,2020,Encrytidae,1
+00MJC,8,26,T1,2020,Eulophidae,1
+00MJC,8,26,T1,2020,Formicidae,2
+00MJC,8,26,T1,2020,Halictidae,1
+00MJC,8,26,T1,2020,Pentatomidae,2
+00MJC,8,26,T1,2020,Phlaeothripidae,1
+00MJC,8,26,T2,2020,Braconidae,1
+00MJC,8,26,T2,2020,Cicadellidae,5
+00MJC,8,26,T2,2020,Miridae,2
+00MJC,8,26,T2,2020,Mymaridae,1
+00MJC,8,26,T2,2020,Phalacridae,1
+00MJC,8,26,T2,2020,Platygastridae,1
+00MJC,8,26,T2,2020,Pteromalidae,2
+00MJC,8,26,T3,2020,Adrenidae,3
+00MJC,8,26,T3,2020,Anthocoridae,1
+00MJC,8,26,T3,2020,Chloropidae,1
+00MJC,8,26,T3,2020,Chrysomelidae,2
+00MJC,8,26,T3,2020,Cicadellidae,3
+00MJC,8,26,T3,2020,Eulophidae,5
+00MJC,8,26,T3,2020,Formicidae,3
+00MJC,8,26,T3,2020,Lauxaniidae,1
+00MJC,8,26,T3,2020,Lygaeidae,28
+00MJC,8,26,T3,2020,Miridae,3
+00MJC,8,26,T3,2020,Nabidae,1
+00MJC,8,26,T3,2020,Phalacridae,27
+00MJC,8,26,T3,2020,Platygastridae,4
+00MJC,8,26,T3,2020,Reduviidae,1
+00MJC,8,26,T3,2020,Thripidae,5
+00MJC,8,26,T3,2020,Torymidae,1
+00NCQ,7,16,T1,2020,Aeolothripidae,1
+00NCQ,7,16,T1,2020,Aphididae,16
+00NCQ,7,16,T1,2020,Aphrophoridae,1
+00NCQ,7,16,T1,2020,Baetidae,1
+00NCQ,7,16,T1,2020,Ceratopogonidae,2
+00NCQ,7,16,T1,2020,Chironomidae,12
+00NCQ,7,16,T1,2020,Chloropidae,1
+00NCQ,7,16,T1,2020,Chrysomelidae,1
+00NCQ,7,16,T1,2020,Cicadellidae,7
+00NCQ,7,16,T1,2020,Cixiidae,4
+00NCQ,7,16,T1,2020,Encyrtidae,3
+00NCQ,7,16,T1,2020,Formicidae,11
+00NCQ,7,16,T1,2020,Gryllidae,2
+00NCQ,7,16,T1,2020,LEPUNK,2
+00NCQ,7,16,T1,2020,Membracidae,3
+00NCQ,7,16,T1,2020,Miridae,2
+00NCQ,7,16,T1,2020,Muscidae,1
+00NCQ,7,16,T1,2020,Mymaridae,1
+00NCQ,7,16,T1,2020,Nitidulidae,1
+00NCQ,7,16,T1,2020,Psyllidae,3
+00NCQ,7,16,T1,2020,Pteromalidae,4
+00NCQ,7,16,T1,2020,Reduviidae,1
+00NCQ,7,16,T1,2020,Tephritidae,2
+00NCQ,7,16,T1,2020,Tettigoniidae,9
+00NCQ,7,16,T1,2020,Tingidae,2
+00NCQ,7,16,T1,2020,Tipulidae,2
+00NCQ,7,16,T2,2020,Acrididae,25
+00NCQ,7,16,T2,2020,Aphididae,1
+00NCQ,7,16,T2,2020,Braconidae,2
+00NCQ,7,16,T2,2020,Caliscelidae,3
+00NCQ,7,16,T2,2020,Cecidomyiidae,3
+00NCQ,7,16,T2,2020,Cercopidae,5
+00NCQ,7,16,T2,2020,Chironomidae,4
+00NCQ,7,16,T2,2020,Chloropidae,66
+00NCQ,7,16,T2,2020,Cicadellidae,82
+00NCQ,7,16,T2,2020,Cixiidae,1
+00NCQ,7,16,T2,2020,COLUNK,1
+00NCQ,7,16,T2,2020,Culicidae,10
+00NCQ,7,16,T2,2020,Curculionidae,5
+00NCQ,7,16,T2,2020,Delphacidae,17
+00NCQ,7,16,T2,2020,Dictyopharidae,1
+00NCQ,7,16,T2,2020,DIPUNK,1
+00NCQ,7,16,T2,2020,Dolichopodidae,1
+00NCQ,7,16,T2,2020,Eulophidae,7
+00NCQ,7,16,T2,2020,Eurytomidae,1
+00NCQ,7,16,T2,2020,Fanniidae,3
+00NCQ,7,16,T2,2020,Formicidae,25
+00NCQ,7,16,T2,2020,Gryllidae,3
+00NCQ,7,16,T2,2020,Latridiidae,1
+00NCQ,7,16,T2,2020,LEPUNK,5
+00NCQ,7,16,T2,2020,Lygaeidae,4
+00NCQ,7,16,T2,2020,Megaspilidae,1
+00NCQ,7,16,T2,2020,Meloidae,1
+00NCQ,7,16,T2,2020,Membracidae,1
+00NCQ,7,16,T2,2020,Miridae,3
+00NCQ,7,16,T2,2020,Mordellidae,1
+00NCQ,7,16,T2,2020,Mymaridae,2
+00NCQ,7,16,T2,2020,Nitidulidae,2
+00NCQ,7,16,T2,2020,Pentatomidae,7
+00NCQ,7,16,T2,2020,Phlaeothripidae,6
+00NCQ,7,16,T2,2020,Platygastridae,3
+00NCQ,7,16,T2,2020,Psyllidae,1
+00NCQ,7,16,T2,2020,Pteromalidae,4
+00NCQ,7,16,T2,2020,Reduviidae,2
+00NCQ,7,16,T2,2020,Rhyparochromidae,1
+00NCQ,7,16,T2,2020,Scutelleridae,1
+00NCQ,7,16,T2,2020,Sepsidae,1
+00NCQ,7,16,T2,2020,Simuliidae,7
+00NCQ,7,16,T2,2020,Sphaeroceridae,4
+00NCQ,7,16,T2,2020,Syrphidae,1
+00NCQ,7,16,T2,2020,Tettigoniidae,3
+00NCQ,7,16,T2,2020,Thripidae,4
+00NCQ,7,16,T2,2020,Thyreocoridae,1
+00NCQ,7,16,T3,2020,Acrididae,1
+00NCQ,7,16,T3,2020,Braconidae,1
+00NCQ,7,16,T3,2020,Ceratopogonidae,1
+00NCQ,7,16,T3,2020,Chironomidae,3
+00NCQ,7,16,T3,2020,Chloropidae,4
+00NCQ,7,16,T3,2020,Cicadellidae,8
+00NCQ,7,16,T3,2020,Cixiidae,2
+00NCQ,7,16,T3,2020,Dolichopodidae,1
+00NCQ,7,16,T3,2020,Eupelmidae,1
+00NCQ,7,16,T3,2020,Formicidae,1
+00NCQ,7,16,T3,2020,LEPUNK,2
+00NCQ,7,16,T3,2020,Membracidae,3
+00NCQ,7,16,T3,2020,Miridae,5
+00NCQ,7,16,T3,2020,Muscidae,1
+00NCQ,7,16,T3,2020,Platygastridae,1
+00NCQ,7,16,T3,2020,Psyllidae,5
+00NCQ,7,16,T3,2020,Pteromalidae,3
+00NCQ,7,16,T3,2020,Scatopsidae,2
+00NCQ,7,16,T3,2020,Sciomyzidae,1
+00NCQ,7,16,T3,2020,Sepsidae,10
+00NCQ,7,16,T3,2020,Tettigoniidae,2
+00NCQ,7,16,T3,2020,Tingidae,1
+00NCQ,7,16,T3,2020,Ulidiidae,1
+00NCQ,7,9,T1,2019,Aeolothripidae,2
+00NCQ,7,9,T1,2019,Anthomyiidae,13
+00NCQ,7,9,T1,2019,Braconidae,1
+00NCQ,7,9,T1,2019,Ceratopogonidae,1
+00NCQ,7,9,T1,2019,Cercopidae,7
+00NCQ,7,9,T1,2019,Chironomidae,273
+00NCQ,7,9,T1,2019,Chloropidae,8
+00NCQ,7,9,T1,2019,Chrysomelidae,5
+00NCQ,7,9,T1,2019,Cicadellidae,5
+00NCQ,7,9,T1,2019,Culicidae,5
+00NCQ,7,9,T1,2019,Delphacidae,1
+00NCQ,7,9,T1,2019,Dolichopodidae,5
+00NCQ,7,9,T1,2019,Eulophidae,2
+00NCQ,7,9,T1,2019,Formicidae,3
+00NCQ,7,9,T1,2019,Geometridae,1
+00NCQ,7,9,T1,2019,Hybotidae,2
+00NCQ,7,9,T1,2019,Lauxaniidae,12
+00NCQ,7,9,T1,2019,Muscidae,7
+00NCQ,7,9,T1,2019,Platygastridae,1
+00NCQ,7,9,T1,2019,Pteromalidae,1
+00NCQ,7,9,T1,2019,Reduviidae,1
+00NCQ,7,9,T1,2019,Sciomyzidae,2
+00NCQ,7,9,T1,2019,Tipulidae,1
+00NCQ,7,9,T2,2019,Acrididae,41
+00NCQ,7,9,T2,2019,Aeolothripidae,4
+00NCQ,7,9,T2,2019,Aphididae,4
+00NCQ,7,9,T2,2019,Braconidae,1
+00NCQ,7,9,T2,2019,Cerambycidae,1
+00NCQ,7,9,T2,2019,Chloropidae,56
+00NCQ,7,9,T2,2019,Chrysomelidae,2
+00NCQ,7,9,T2,2019,Cicadellidae,75
+00NCQ,7,9,T2,2019,Culicidae,1
+00NCQ,7,9,T2,2019,Curculionidae,11
+00NCQ,7,9,T2,2019,Cynipidae,2
+00NCQ,7,9,T2,2019,Delphacidae,18
+00NCQ,7,9,T2,2019,Dictyopharidae,3
+00NCQ,7,9,T2,2019,DIPUNK,5
+00NCQ,7,9,T2,2019,Dolichopodidae,6
+00NCQ,7,9,T2,2019,Eurytomidae,2
+00NCQ,7,9,T2,2019,Formicidae,30
+00NCQ,7,9,T2,2019,Heleomyzidae,1
+00NCQ,7,9,T2,2019,Issidae,2
+00NCQ,7,9,T2,2019,Latridiidae,2
+00NCQ,7,9,T2,2019,Lygaeidae,1
+00NCQ,7,9,T2,2019,Milichiidae,1
+00NCQ,7,9,T2,2019,Miridae,13
+00NCQ,7,9,T2,2019,Mordellidae,3
+00NCQ,7,9,T2,2019,Mymaridae,3
+00NCQ,7,9,T2,2019,Pentatomidae,1
+00NCQ,7,9,T2,2019,Phalacridae,2
+00NCQ,7,9,T2,2019,Phlaeothripidae,2
+00NCQ,7,9,T2,2019,Pipunculidae,2
+00NCQ,7,9,T2,2019,Platygastridae,1
+00NCQ,7,9,T2,2019,Pteromalidae,1
+00NCQ,7,9,T2,2019,Scarabaeidae,4
+00NCQ,7,9,T2,2019,Sciaridae,7
+00NCQ,7,9,T2,2019,Tettigoniidae,9
+00NCQ,7,9,T2,2019,Tingidae,1
+00NCQ,7,9,T2,2019,Tipulidae,2
+00NCQ,7,9,T2,2019,Ulidiidae,3
+00NCQ,7,9,T2,2019,UNKORD,1
+00NCQ,7,9,T3,2019,Acrididae,24
+00NCQ,7,9,T3,2019,Anthomyiidae,2
+00NCQ,7,9,T3,2019,Asilidae,1
+00NCQ,7,9,T3,2019,Blissidae,2
+00NCQ,7,9,T3,2019,Braconidae,2
+00NCQ,7,9,T3,2019,Cercopidae,16
+00NCQ,7,9,T3,2019,Chloropidae,3
+00NCQ,7,9,T3,2019,Chrysomelidae,10
+00NCQ,7,9,T3,2019,Cicadellidae,40
+00NCQ,7,9,T3,2019,Culicidae,1
+00NCQ,7,9,T3,2019,Curculionidae,5
+00NCQ,7,9,T3,2019,Dictyopharidae,3
+00NCQ,7,9,T3,2019,DIPUNK,2
+00NCQ,7,9,T3,2019,Dolichopodidae,1
+00NCQ,7,9,T3,2019,Eulophidae,5
+00NCQ,7,9,T3,2019,Formicidae,8
+00NCQ,7,9,T3,2019,Heleomyzidae,1
+00NCQ,7,9,T3,2019,HYMUNK,1
+00NCQ,7,9,T3,2019,Issidae,1
+00NCQ,7,9,T3,2019,Lauxaniidae,3
+00NCQ,7,9,T3,2019,LEPUNK,2
+00NCQ,7,9,T3,2019,Milichiidae,1
+00NCQ,7,9,T3,2019,Mordellidae,2
+00NCQ,7,9,T3,2019,Nitidulidae,4
+00NCQ,7,9,T3,2019,Noctuidae,1
+00NCQ,7,9,T3,2019,Platygastridae,1
+00NCQ,7,9,T3,2019,Psyllidae,33
+00NCQ,7,9,T3,2019,Sciomyzidae,1
+00NCQ,7,9,T3,2019,Sepsidae,1
+00NCQ,7,9,T3,2019,Simuliidae,1
+00NCQ,7,9,T3,2019,Tettigoniidae,7
+00NCQ,7,9,T3,2019,Thripidae,8
+00NCQ,7,9,T3,2019,Tingidae,50
+00NCQ,7,9,T3,2019,Tipulidae,1
+00NCQ,8,1,T1,2019,Acrididae,3
+00NCQ,8,1,T1,2019,Aphrophoridae,1
+00NCQ,8,1,T1,2019,Chironomidae,5
+00NCQ,8,1,T1,2019,Chloropidae,3
+00NCQ,8,1,T1,2019,Cicadellidae,5
+00NCQ,8,1,T1,2019,Cixiidae,1
+00NCQ,8,1,T1,2019,Delphacidae,2
+00NCQ,8,1,T1,2019,Dolichopodidae,5
+00NCQ,8,1,T1,2019,Formicidae,2
+00NCQ,8,1,T1,2019,Heleomyzidae,3
+00NCQ,8,1,T1,2019,Lygaeidae,1
+00NCQ,8,1,T1,2019,Muscidae,9
+00NCQ,8,1,T1,2019,Phoridae,1
+00NCQ,8,1,T1,2019,Psocidae,1
+00NCQ,8,1,T1,2019,Pteromalidae,3
+00NCQ,8,1,T1,2019,Sciomyzidae,2
+00NCQ,8,1,T1,2019,Sphaeroceridae,2
+00NCQ,8,1,T1,2019,Tettigoniidae,2
+00NCQ,8,1,T1,2019,Thripidae,1
+00NCQ,8,1,T2,2019,Acrididae,3
+00NCQ,8,1,T2,2019,Aeolothripidae,2
+00NCQ,8,1,T2,2019,Brentidae,1
+00NCQ,8,1,T2,2019,Ceratopogonidae,10
+00NCQ,8,1,T2,2019,Chironomidae,5
+00NCQ,8,1,T2,2019,Chloropidae,4
+00NCQ,8,1,T2,2019,Chrysomelidae,1
+00NCQ,8,1,T2,2019,Cicadellidae,3
+00NCQ,8,1,T2,2019,Dictyopharidae,3
+00NCQ,8,1,T2,2019,Eulophidae,4
+00NCQ,8,1,T2,2019,Formicidae,2
+00NCQ,8,1,T2,2019,LEPUNK,3
+00NCQ,8,1,T2,2019,Melyridae,2
+00NCQ,8,1,T2,2019,Membracidae,1
+00NCQ,8,1,T2,2019,Muscidae,1
+00NCQ,8,1,T2,2019,Pentatomidae,2
+00NCQ,8,1,T2,2019,Phlaeothripidae,2
+00NCQ,8,1,T2,2019,Pteromalidae,5
+00NCQ,8,1,T2,2019,Rhopalidae,5
+00NCQ,8,1,T2,2019,Rhyparochromidae,1
+00NCQ,8,1,T2,2019,Sciaridae,1
+00NCQ,8,1,T2,2019,Tettigoniidae,1
+00NCQ,8,1,T3,2019,Chironomidae,2
+00NCQ,8,1,T3,2019,Chloropidae,2
+00NCQ,8,1,T3,2019,Cicadellidae,2
+00NCQ,8,1,T3,2019,Culicidae,4
+00NCQ,8,1,T3,2019,Curtonotidae,1
+00NCQ,8,1,T3,2019,DIPUNK,2
+00NCQ,8,1,T3,2019,Dolichopodidae,1
+00NCQ,8,1,T3,2019,HEMUNK,12
+00NCQ,8,1,T3,2019,Sphaeroceridae,1
+00NCQ,8,1,T3,2019,Tettigoniidae,2
+00NCQ,8,1,T3,2019,UNKORD,2
+00NCQ,8,13,T1,2020,Acrididae,5
+00NCQ,8,13,T1,2020,Aphididae,1
+00NCQ,8,13,T1,2020,Braconidae,1
+00NCQ,8,13,T1,2020,Ceratopogonidae,1
+00NCQ,8,13,T1,2020,Chironomidae,29
+00NCQ,8,13,T1,2020,Chloropidae,2
+00NCQ,8,13,T1,2020,Chrysomelidae,4
+00NCQ,8,13,T1,2020,Cicadellidae,12
+00NCQ,8,13,T1,2020,Dolichopodidae,1
+00NCQ,8,13,T1,2020,Eulophidae,7
+00NCQ,8,13,T1,2020,Gryllidae,5
+00NCQ,8,13,T1,2020,LEPUNK,3
+00NCQ,8,13,T1,2020,Membracidae,2
+00NCQ,8,13,T1,2020,Miridae,1
+00NCQ,8,13,T1,2020,Muscidae,3
+00NCQ,8,13,T1,2020,Psyllidae,7
+00NCQ,8,13,T1,2020,Pteromalidae,3
+00NCQ,8,13,T1,2020,Reduviidae,1
+00NCQ,8,13,T1,2020,Sepsidae,1
+00NCQ,8,13,T1,2020,Tettigoniidae,1
+00NCQ,8,13,T1,2020,Tingidae,2
+00NCQ,8,13,T2,2020,Acrididae,4
+00NCQ,8,13,T2,2020,Aphrophoridae,8
+00NCQ,8,13,T2,2020,Braconidae,1
+00NCQ,8,13,T2,2020,Cantharidae,1
+00NCQ,8,13,T2,2020,Ceratopogonidae,3
+00NCQ,8,13,T2,2020,Chironomidae,10
+00NCQ,8,13,T2,2020,Chloropidae,11
+00NCQ,8,13,T2,2020,Cicadellidae,5
+00NCQ,8,13,T2,2020,Coenagrionidae,2
+00NCQ,8,13,T2,2020,Conopidae,1
+00NCQ,8,13,T2,2020,Dictyopharidae,1
+00NCQ,8,13,T2,2020,Eurytomidae,7
+00NCQ,8,13,T2,2020,Formicidae,18
+00NCQ,8,13,T2,2020,Geocoridae,1
+00NCQ,8,13,T2,2020,LEPUNK,1
+00NCQ,8,13,T2,2020,Miridae,6
+00NCQ,8,13,T2,2020,Muscidae,1
+00NCQ,8,13,T2,2020,Mycetophilidae,2
+00NCQ,8,13,T2,2020,Pentatomidae,1
+00NCQ,8,13,T2,2020,Phalacridae,5
+00NCQ,8,13,T2,2020,Pteromalidae,5
+00NCQ,8,13,T2,2020,Reduviidae,1
+00NCQ,8,13,T2,2020,Scutelleridae,9
+00NCQ,8,13,T2,2020,Syrphidae,1
+00NCQ,8,13,T3,2020,Acanaloniidae,1
+00NCQ,8,13,T3,2020,Acrididae,17
+00NCQ,8,13,T3,2020,Aeolothripidae,5
+00NCQ,8,13,T3,2020,Aphididae,6
+00NCQ,8,13,T3,2020,Blissidae,13
+00NCQ,8,13,T3,2020,Chironomidae,32
+00NCQ,8,13,T3,2020,Chloropidae,22
+00NCQ,8,13,T3,2020,Chrysomelidae,2
+00NCQ,8,13,T3,2020,Cicadellidae,4
+00NCQ,8,13,T3,2020,Cymidae,2
+00NCQ,8,13,T3,2020,Delphacidae,2
+00NCQ,8,13,T3,2020,DIPUNK,1
+00NCQ,8,13,T3,2020,Drosophilidae,2
+00NCQ,8,13,T3,2020,Eulophidae,11
+00NCQ,8,13,T3,2020,Eurytomidae,2
+00NCQ,8,13,T3,2020,Formicidae,5
+00NCQ,8,13,T3,2020,Geometridae,1
+00NCQ,8,13,T3,2020,Lampyridae,1
+00NCQ,8,13,T3,2020,Lauxaniidae,1
+00NCQ,8,13,T3,2020,LEPUNK,5
+00NCQ,8,13,T3,2020,Membracidae,2
+00NCQ,8,13,T3,2020,Miridae,2
+00NCQ,8,13,T3,2020,Muscidae,3
+00NCQ,8,13,T3,2020,Pentatomidae,5
+00NCQ,8,13,T3,2020,Phoridae,1
+00NCQ,8,13,T3,2020,Psyllidae,7
+00NCQ,8,13,T3,2020,Reduviidae,1
+00NCQ,8,13,T3,2020,Scatopsidae,3
+00NCQ,8,13,T3,2020,Tettigoniidae,4
+00NCQ,8,13,T3,2020,Thripidae,1
+00NCQ,8,13,T3,2020,Tingidae,17
+00NCQ,8,13,T3,2020,Ulidiidae,1
+00VTR,7,2,T1,2019,Braconidae,1
+00VTR,7,2,T1,2019,Chironomidae,1
+00VTR,7,2,T1,2019,Cicadellidae,3
+00VTR,7,2,T1,2019,COLUNK,2
+00VTR,7,2,T1,2019,Delphacidae,3
+00VTR,7,2,T1,2019,Eulophidae,2
+00VTR,7,2,T1,2019,Eurytomidae,1
+00VTR,7,2,T1,2019,Formicidae,2
+00VTR,7,2,T1,2019,Lauxaniidae,8
+00VTR,7,2,T1,2019,LEPUNK,3
+00VTR,7,2,T1,2019,Membracidae,2
+00VTR,7,2,T1,2019,Miridae,1
+00VTR,7,2,T1,2019,ORTUNK,2
+00VTR,7,2,T1,2019,Phoridae,1
+00VTR,7,2,T1,2019,Platygastridae,3
+00VTR,7,2,T1,2019,Psyllidae,30
+00VTR,7,2,T1,2019,Scatopsidae,1
+00VTR,7,2,T1,2019,Tephritidae,1
+00VTR,7,2,T2,2019,Braconidae,1
+00VTR,7,2,T2,2019,Ceratopogonidae,1
+00VTR,7,2,T2,2019,Chloropidae,2
+00VTR,7,2,T2,2019,Cicadellidae,1
+00VTR,7,2,T2,2019,Delphacidae,9
+00VTR,7,2,T2,2019,DIPUNK,1
+00VTR,7,2,T2,2019,Dolichopodidae,1
+00VTR,7,2,T2,2019,Eulophidae,7
+00VTR,7,2,T2,2019,Formicidae,2
+00VTR,7,2,T2,2019,Lauxaniidae,2
+00VTR,7,2,T2,2019,LEPUNK,1
+00VTR,7,2,T2,2019,Miridae,2
+00VTR,7,2,T2,2019,Pachygronthidae,2
+00VTR,7,2,T2,2019,Phoridae,1
+00VTR,7,2,T2,2019,Platygastridae,1
+00VTR,7,2,T2,2019,Psyllidae,11
+00VTR,7,2,T2,2019,Pteromalidae,1
+00VTR,7,2,T2,2019,Scatopsidae,1
+00VTR,7,2,T2,2019,Sepsidae,1
+00VTR,7,2,T2,2019,Tephritidae,1
+00VTR,7,2,T2,2019,Ulidiidae,1
+00VTR,7,2,T3,2019,Chloropidae,4
+00VTR,7,2,T3,2019,Cicadellidae,2
+00VTR,7,2,T3,2019,Delphacidae,4
+00VTR,7,2,T3,2019,Eulophidae,1
+00VTR,7,2,T3,2019,LEPUNK,1
+00VTR,7,2,T3,2019,Miridae,1
+00VTR,7,2,T3,2019,Mordellidae,1
+00VTR,7,2,T3,2019,ORTUNK,1
+00VTR,7,2,T3,2019,Pentatomidae,2
+00VTR,7,2,T3,2019,Phoridae,1
+00VTR,7,2,T3,2019,Psyllidae,17
+00VTR,7,2,T3,2019,Sciomyzidae,1
+00VTR,7,2,T3,2019,Sphaeroceridae,1
+00VTR,7,2,T3,2019,Tephritidae,1
+00VTR,7,2,T3,2019,Tettigoniidae,1
+00VTR,7,2,T3,2019,Thripidae,1
+00VTR,7,2,T3,2019,Tipulidae,1
+00VTR,8,5,T1,2019,Acanaloniidae,1
+00VTR,8,5,T1,2019,Acrididae,1
+00VTR,8,5,T1,2019,Anthocoridae,1
+00VTR,8,5,T1,2019,Aphrophoridae,1
+00VTR,8,5,T1,2019,Braconidae,1
+00VTR,8,5,T1,2019,Chironomidae,1
+00VTR,8,5,T1,2019,Chloropidae,15
+00VTR,8,5,T1,2019,Chrysomelidae,5
+00VTR,8,5,T1,2019,Cicadellidae,18
+00VTR,8,5,T1,2019,Dolichopodidae,2
+00VTR,8,5,T1,2019,Encyrtidae,7
+00VTR,8,5,T1,2019,Eulophidae,2
+00VTR,8,5,T1,2019,LEPUNK,5
+00VTR,8,5,T1,2019,Membracidae,1
+00VTR,8,5,T1,2019,Miridae,4
+00VTR,8,5,T1,2019,Phalacridae,361
+00VTR,8,5,T1,2019,Phoridae,1
+00VTR,8,5,T1,2019,Platygastridae,1
+00VTR,8,5,T1,2019,Psyllidae,51
+00VTR,8,5,T1,2019,Pteromalidae,9
+00VTR,8,5,T1,2019,Reduviidae,1
+00VTR,8,5,T1,2019,Sciaridae,3
+00VTR,8,5,T1,2019,Tephritidae,1
+00VTR,8,5,T1,2019,Tettigoniidae,6
+00VTR,8,5,T1,2019,Thripidae,3
+00VTR,8,5,T1,2019,Thyreocoridae,2
+00VTR,8,5,T2,2019,Acanaloniidae,2
+00VTR,8,5,T2,2019,Acrididae,1
+00VTR,8,5,T2,2019,Anthocoridae,1
+00VTR,8,5,T2,2019,Braconidae,2
+00VTR,8,5,T2,2019,Chironomidae,1
+00VTR,8,5,T2,2019,Chloropidae,11
+00VTR,8,5,T2,2019,Chrysomelidae,3
+00VTR,8,5,T2,2019,Cicadellidae,10
+00VTR,8,5,T2,2019,Culicidae,1
+00VTR,8,5,T2,2019,Dolichopodidae,1
+00VTR,8,5,T2,2019,Eulophidae,6
+00VTR,8,5,T2,2019,Formicidae,1
+00VTR,8,5,T2,2019,Geometridae,2
+00VTR,8,5,T2,2019,Ichneumonidae,1
+00VTR,8,5,T2,2019,LEPUNK,1
+00VTR,8,5,T2,2019,Miridae,5
+00VTR,8,5,T2,2019,Nabidae,1
+00VTR,8,5,T2,2019,Nitidulidae,1
+00VTR,8,5,T2,2019,Phalacridae,216
+00VTR,8,5,T2,2019,Psyllidae,7
+00VTR,8,5,T2,2019,Pteromalidae,7
+00VTR,8,5,T2,2019,Rhyparochromidae,1
+00VTR,8,5,T2,2019,Sepsidae,1
+00VTR,8,5,T2,2019,Tettigoniidae,3
+00VTR,8,5,T2,2019,Thripidae,1
+00VTR,8,5,T2,2019,Thyreocoridae,3
+00VTR,8,5,T3,2019,Braconidae,2
+00VTR,8,5,T3,2019,Chloropidae,16
+00VTR,8,5,T3,2019,Chrysomelidae,1
+00VTR,8,5,T3,2019,Chrysopidae,1
+00VTR,8,5,T3,2019,Cicadellidae,10
+00VTR,8,5,T3,2019,Coccinellidae,1
+00VTR,8,5,T3,2019,Dolichopodidae,1
+00VTR,8,5,T3,2019,Eulophidae,2
+00VTR,8,5,T3,2019,Eurytomidae,1
+00VTR,8,5,T3,2019,Ichneumonidae,1
+00VTR,8,5,T3,2019,Miridae,2
+00VTR,8,5,T3,2019,Noctuidae,1
+00VTR,8,5,T3,2019,Pentatomidae,1
+00VTR,8,5,T3,2019,Phalacridae,47
+00VTR,8,5,T3,2019,Phoridae,3
+00VTR,8,5,T3,2019,Psyllidae,12
+00VTR,8,5,T3,2019,Pteromalidae,2
+00WV0,7,13,T1,2020,Acrididae,1
+00WV0,7,13,T1,2020,Aphrophoridae,8
+00WV0,7,13,T1,2020,Braconidae,1
+00WV0,7,13,T1,2020,Chloropidae,1
+00WV0,7,13,T1,2020,Cicadellidae,14
+00WV0,7,13,T1,2020,Eulophidae,3
+00WV0,7,13,T1,2020,Formicidae,1
+00WV0,7,13,T1,2020,Geometridae,1
+00WV0,7,13,T1,2020,Muscidae,1
+00WV0,7,13,T1,2020,Phalacridae,1
+00WV0,7,13,T1,2020,Psyllidae,7
+00WV0,7,13,T1,2020,Pteromalidae,1
+00WV0,7,13,T1,2020,Tephritidae,2
+00WV0,7,13,T1,2020,Thripidae,1
+00WV0,7,13,T1,2020,Torymidae,1
+00WV0,7,13,T2,2020,Aeolothripidae,1
+00WV0,7,13,T2,2020,Anthocoridae,2
+00WV0,7,13,T2,2020,Aphrophoridae,6
+00WV0,7,13,T2,2020,Braconidae,1
+00WV0,7,13,T2,2020,Brentidae,3
+00WV0,7,13,T2,2020,Chironomidae,2
+00WV0,7,13,T2,2020,Chloropidae,3
+00WV0,7,13,T2,2020,Cicadellidae,10
+00WV0,7,13,T2,2020,Coenagrionidae,1
+00WV0,7,13,T2,2020,Eurytomidae,3
+00WV0,7,13,T2,2020,Formicidae,1
+00WV0,7,13,T2,2020,LEPUNK,1
+00WV0,7,13,T2,2020,Lygaeidae,1
+00WV0,7,13,T2,2020,Miridae,5
+00WV0,7,13,T2,2020,Phalacridae,1
+00WV0,7,13,T2,2020,Psyllidae,1
+00WV0,7,13,T2,2020,Pteromalidae,6
+00WV0,7,13,T2,2020,Tephritidae,1
+00WV0,7,13,T2,2020,Thyreocoridae,2
+00WV0,7,13,T3,2020,Anthocoridae,4
+00WV0,7,13,T3,2020,Ceratopogonidae,1
+00WV0,7,13,T3,2020,Chloropidae,4
+00WV0,7,13,T3,2020,Chrysomelidae,8
+00WV0,7,13,T3,2020,Cicadellidae,16
+00WV0,7,13,T3,2020,Cixiidae,14
+00WV0,7,13,T3,2020,Delphacidae,3
+00WV0,7,13,T3,2020,Erebidae,1
+00WV0,7,13,T3,2020,Eulophidae,2
+00WV0,7,13,T3,2020,Eurytomidae,1
+00WV0,7,13,T3,2020,Heleomyzidae,1
+00WV0,7,13,T3,2020,Lauxaniidae,2
+00WV0,7,13,T3,2020,LEPUNK,3
+00WV0,7,13,T3,2020,Miridae,3
+00WV0,7,13,T3,2020,Nabidae,3
+00WV0,7,13,T3,2020,Platygastridae,4
+00WV0,7,13,T3,2020,Pteromalidae,2
+00WV0,7,13,T3,2020,Scatopsidae,2
+00WV0,7,13,T3,2020,Scutelleridae,2
+00WV0,7,13,T3,2020,Syrphidae,1
+00WV0,7,3,T1,2019,Achilidae,23
+00WV0,7,3,T1,2019,Agromyzidae,3
+00WV0,7,3,T1,2019,Berytidae,1
+00WV0,7,3,T1,2019,Chironomidae,5
+00WV0,7,3,T1,2019,Chloropidae,11
+00WV0,7,3,T1,2019,Cicadellidae,3
+00WV0,7,3,T1,2019,Cixiidae,2
+00WV0,7,3,T1,2019,Coenagrionidae,1
+00WV0,7,3,T1,2019,DIPUNK,1
+00WV0,7,3,T1,2019,Dolichopodidae,6
+00WV0,7,3,T1,2019,Drosophilidae,2
+00WV0,7,3,T1,2019,Ichneumonidae,1
+00WV0,7,3,T1,2019,LEPUNK,1
+00WV0,7,3,T1,2019,Mordellidae,1
+00WV0,7,3,T1,2019,Pentatomidae,1
+00WV0,7,3,T1,2019,Psyllidae,1
+00WV0,7,3,T1,2019,Sepsidae,1
+00WV0,7,3,T1,2019,Thripidae,2
+00WV0,7,3,T2,2019,Achilidae,22
+00WV0,7,3,T2,2019,Chloropidae,11
+00WV0,7,3,T2,2019,Cicadellidae,4
+00WV0,7,3,T2,2019,Curculionidae,4
+00WV0,7,3,T2,2019,DIPUNK,2
+00WV0,7,3,T2,2019,Dolichopodidae,2
+00WV0,7,3,T2,2019,Drosophilidae,2
+00WV0,7,3,T2,2019,Eulophidae,4
+00WV0,7,3,T2,2019,Formicidae,1
+00WV0,7,3,T2,2019,Pentatomidae,4
+00WV0,7,3,T2,2019,Phoridae,1
+00WV0,7,3,T2,2019,Platygastridae,2
+00WV0,7,3,T2,2019,Psyllidae,2
+00WV0,7,3,T2,2019,Sarcophagidae,1
+00WV0,7,3,T2,2019,Sphaeroceridae,3
+00WV0,7,3,T2,2019,Tettigoniidae,2
+00WV0,7,3,T2,2019,Thripidae,1
+00WV0,7,3,T2,2019,UNKORD,1
+00WV0,7,3,T3,2019,Cicadellidae,4
+00WV0,7,3,T3,2019,Cixiidae,4
+00WV0,7,3,T3,2019,DIPUNK,3
+00WV0,7,3,T3,2019,Dolichopodidae,1
+00WV0,7,3,T3,2019,Heleomyzidae,1
+00WV0,7,3,T3,2019,Membracidae,1
+00WV0,7,3,T3,2019,Muscidae,1
+00WV0,7,3,T3,2019,Sciomyzidae,1
+00WV0,7,3,T3,2019,Sepsidae,1
+00WV0,7,3,T3,2019,Simuliidae,1
+00WV0,8,12,T1,2020,Aphididae,1
+00WV0,8,12,T1,2020,Chironomidae,3
+00WV0,8,12,T1,2020,Chloropidae,5
+00WV0,8,12,T1,2020,Cicadellidae,2
+00WV0,8,12,T1,2020,Eulophidae,2
+00WV0,8,12,T1,2020,HYMUNK,4
+00WV0,8,12,T1,2020,Phalacridae,2
+00WV0,8,12,T1,2020,Platygastridae,2
+00WV0,8,12,T1,2020,Proctotrupidae,1
+00WV0,8,12,T1,2020,Psyllidae,3
+00WV0,8,12,T1,2020,Thripidae,10
+00WV0,8,12,T2,2020,Anthocoridae,1
+00WV0,8,12,T2,2020,Aphididae,1
+00WV0,8,12,T2,2020,Chironomidae,1
+00WV0,8,12,T2,2020,Chrysomelidae,3
+00WV0,8,12,T2,2020,Cicadellidae,1
+00WV0,8,12,T2,2020,COLUNK,1
+00WV0,8,12,T2,2020,Curculionidae,1
+00WV0,8,12,T2,2020,Dolichopodidae,1
+00WV0,8,12,T2,2020,Eulophidae,2
+00WV0,8,12,T2,2020,HEMUNK,1
+00WV0,8,12,T2,2020,LEPUNK,1
+00WV0,8,12,T2,2020,Miridae,1
+00WV0,8,12,T2,2020,Muscidae,1
+00WV0,8,12,T2,2020,Phalacridae,1
+00WV0,8,12,T2,2020,Phlaeothripidae,2
+00WV0,8,12,T2,2020,Platygastridae,1
+00WV0,8,12,T2,2020,Psyllidae,1
+00WV0,8,12,T2,2020,Reduviidae,1
+00WV0,8,12,T2,2020,Rhyparochromidae,2
+00WV0,8,12,T2,2020,Thripidae,8
+00WV0,8,12,T3,2020,Anthocoridae,5
+00WV0,8,12,T3,2020,Aphididae,2
+00WV0,8,12,T3,2020,Cantharidae,1
+00WV0,8,12,T3,2020,Chironomidae,1
+00WV0,8,12,T3,2020,Chloropidae,1
+00WV0,8,12,T3,2020,Chrysomelidae,1
+00WV0,8,12,T3,2020,Cicadellidae,2
+00WV0,8,12,T3,2020,Eulophidae,7
+00WV0,8,12,T3,2020,Eurytomidae,2
+00WV0,8,12,T3,2020,Miridae,5
+00WV0,8,12,T3,2020,Phalacridae,32
+00WV0,8,12,T3,2020,Platygastridae,3
+00WV0,8,12,T3,2020,Psyllidae,6
+00WV0,8,12,T3,2020,Scelionidae,1
+00WV0,8,12,T3,2020,Thripidae,12
+00WV0,8,6,T1,2019,Aeolothripidae,6
+00WV0,8,6,T1,2019,Aleyrodidae,2
+00WV0,8,6,T1,2019,Anthocoridae,2
+00WV0,8,6,T1,2019,Aphididae,6
+00WV0,8,6,T1,2019,Berytidae,1
+00WV0,8,6,T1,2019,Braconidae,1
+00WV0,8,6,T1,2019,Ceratopogonidae,5
+00WV0,8,6,T1,2019,Chironomidae,4
+00WV0,8,6,T1,2019,Chloropidae,8
+00WV0,8,6,T1,2019,Cicadellidae,6
+00WV0,8,6,T1,2019,Cixiidae,8
+00WV0,8,6,T1,2019,Dolichopodidae,1
+00WV0,8,6,T1,2019,Drosophilidae,2
+00WV0,8,6,T1,2019,Empididae,1
+00WV0,8,6,T1,2019,Encyrtidae,1
+00WV0,8,6,T1,2019,Eurytomidae,1
+00WV0,8,6,T1,2019,Miridae,12
+00WV0,8,6,T1,2019,Muscidae,1
+00WV0,8,6,T1,2019,Phalacridae,30
+00WV0,8,6,T1,2019,Psyllidae,1
+00WV0,8,6,T1,2019,Pteromalidae,6
+00WV0,8,6,T1,2019,Tephritidae,2
+00WV0,8,6,T1,2019,Tettigoniidae,1
+00WV0,8,6,T1,2019,Thripidae,51
+00WV0,8,6,T2,2019,Aeolothripidae,4
+00WV0,8,6,T2,2019,Aphididae,9
+00WV0,8,6,T2,2019,Braconidae,2
+00WV0,8,6,T2,2019,Brentidae,2
+00WV0,8,6,T2,2019,Cantharidae,1
+00WV0,8,6,T2,2019,Ceratopogonidae,1
+00WV0,8,6,T2,2019,Chloropidae,82
+00WV0,8,6,T2,2019,Chrysomelidae,7
+00WV0,8,6,T2,2019,Chrysopidae,1
+00WV0,8,6,T2,2019,Cicadellidae,6
+00WV0,8,6,T2,2019,Cixiidae,18
+00WV0,8,6,T2,2019,Coccinellidae,2
+00WV0,8,6,T2,2019,Culicidae,1
+00WV0,8,6,T2,2019,Delphacidae,3
+00WV0,8,6,T2,2019,Dolichopodidae,2
+00WV0,8,6,T2,2019,Eulophidae,8
+00WV0,8,6,T2,2019,Eurytomidae,1
+00WV0,8,6,T2,2019,Formicidae,4
+00WV0,8,6,T2,2019,Halictidae,1
+00WV0,8,6,T2,2019,Ichneumonidae,2
+00WV0,8,6,T2,2019,Lygaeidae,2
+00WV0,8,6,T2,2019,Miridae,10
+00WV0,8,6,T2,2019,Muscidae,2
+00WV0,8,6,T2,2019,Papilionidae,1
+00WV0,8,6,T2,2019,Pentatomidae,7
+00WV0,8,6,T2,2019,Phalacridae,13
+00WV0,8,6,T2,2019,Phoridae,1
+00WV0,8,6,T2,2019,Psyllidae,7
+00WV0,8,6,T2,2019,Pteromalidae,7
+00WV0,8,6,T2,2019,Sepsidae,1
+00WV0,8,6,T2,2019,Sphaeroceridae,1
+00WV0,8,6,T2,2019,Tettigoniidae,1
+00WV0,8,6,T2,2019,Thripidae,9
+00WV0,8,6,T3,2019,Acrididae,1
+00WV0,8,6,T3,2019,Aeolothripidae,1
+00WV0,8,6,T3,2019,Aleyrodidae,2
+00WV0,8,6,T3,2019,Anthocoridae,3
+00WV0,8,6,T3,2019,Aphididae,30
+00WV0,8,6,T3,2019,Baetidae,1
+00WV0,8,6,T3,2019,Braconidae,4
+00WV0,8,6,T3,2019,Ceratopogonidae,4
+00WV0,8,6,T3,2019,Chironomidae,2
+00WV0,8,6,T3,2019,Chloropidae,16
+00WV0,8,6,T3,2019,Cicadellidae,10
+00WV0,8,6,T3,2019,Cixiidae,8
+00WV0,8,6,T3,2019,Coccinellidae,1
+00WV0,8,6,T3,2019,Culicidae,1
+00WV0,8,6,T3,2019,Delphacidae,6
+00WV0,8,6,T3,2019,Dolichopodidae,3
+00WV0,8,6,T3,2019,Drosophilidae,1
+00WV0,8,6,T3,2019,Encyrtidae,1
+00WV0,8,6,T3,2019,Eulophidae,5
+00WV0,8,6,T3,2019,Eurytomidae,1
+00WV0,8,6,T3,2019,Formicidae,2
+00WV0,8,6,T3,2019,Geometridae,2
+00WV0,8,6,T3,2019,Ichneumonidae,1
+00WV0,8,6,T3,2019,Miridae,27
+00WV0,8,6,T3,2019,Nabidae,1
+00WV0,8,6,T3,2019,Pentatomidae,2
+00WV0,8,6,T3,2019,Phalacridae,44
+00WV0,8,6,T3,2019,Phoridae,2
+00WV0,8,6,T3,2019,Psyllidae,8
+00WV0,8,6,T3,2019,Pteromalidae,18
+00WV0,8,6,T3,2019,Thripidae,9
+00WY5,7,23,T1,2019,Aeolothripidae,1
+00WY5,7,23,T1,2019,Anthocoridae,2
+00WY5,7,23,T1,2019,Aphididae,1
+00WY5,7,23,T1,2019,Aphrophoridae,1
+00WY5,7,23,T1,2019,Braconidae,1
+00WY5,7,23,T1,2019,Chironomidae,1
+00WY5,7,23,T1,2019,Chloropidae,6
+00WY5,7,23,T1,2019,Chrysomelidae,9
+00WY5,7,23,T1,2019,Cicadellidae,9
+00WY5,7,23,T1,2019,Encyrtidae,4
+00WY5,7,23,T1,2019,Eurytomidae,6
+00WY5,7,23,T1,2019,Formicidae,1
+00WY5,7,23,T1,2019,Phalacridae,3
+00WY5,7,23,T1,2019,Platygastridae,2
+00WY5,7,23,T1,2019,Psyllidae,4
+00WY5,7,23,T1,2019,Pteromalidae,10
+00WY5,7,23,T1,2019,Tettigoniidae,1
+00WY5,7,23,T1,2019,Torymidae,1
+00WY5,7,23,T2,2019,Anthocoridae,2
+00WY5,7,23,T2,2019,Chloropidae,1
+00WY5,7,23,T2,2019,Chrysomelidae,10
+00WY5,7,23,T2,2019,Cicadellidae,2
+00WY5,7,23,T2,2019,Curculionidae,3
+00WY5,7,23,T2,2019,Dictyopharidae,1
+00WY5,7,23,T2,2019,Encyrtidae,1
+00WY5,7,23,T2,2019,Formicidae,1
+00WY5,7,23,T2,2019,HYMUNK,1
+00WY5,7,23,T2,2019,Miridae,2
+00WY5,7,23,T2,2019,Pentatomidae,1
+00WY5,7,23,T2,2019,Phoridae,1
+00WY5,7,23,T2,2019,Platygastridae,7
+00WY5,7,23,T3,2019,Aphididae,1
+00WY5,7,23,T3,2019,Chloropidae,1
+00WY5,7,23,T3,2019,Chrysomelidae,1
+00WY5,7,23,T3,2019,Cicadellidae,5
+00WY5,7,23,T3,2019,Culicidae,1
+00WY5,7,23,T3,2019,DIPUNK,1
+00WY5,7,23,T3,2019,Fanniidae,1
+00WY5,7,23,T3,2019,Membracidae,1
+00WY5,7,23,T3,2019,Miridae,2
+00WY5,7,23,T3,2019,Nitidulidae,5
+00WY5,7,23,T3,2019,ORTUNK,2
+00WY5,7,23,T3,2019,Perilampidae,1
+00WY5,7,23,T3,2019,Platygastridae,2
+00WY5,7,23,T3,2019,Platystomatidae,1
+00WY5,7,23,T3,2019,Sciomyzidae,1
+00WY5,7,23,T3,2019,Thripidae,1
+00WY5,8,22,T1,2019,Aeolothripidae,1
+00WY5,8,22,T1,2019,Anthocoridae,5
+00WY5,8,22,T1,2019,Aphididae,2
+00WY5,8,22,T1,2019,Aphrophoridae,2
+00WY5,8,22,T1,2019,Cantharidae,1
+00WY5,8,22,T1,2019,Cecidomyiidae,5
+00WY5,8,22,T1,2019,Chloropidae,1
+00WY5,8,22,T1,2019,Chrysomelidae,17
+00WY5,8,22,T1,2019,Cicadellidae,12
+00WY5,8,22,T1,2019,Eulophidae,11
+00WY5,8,22,T1,2019,Halictidae,1
+00WY5,8,22,T1,2019,Miridae,9
+00WY5,8,22,T1,2019,Muscidae,1
+00WY5,8,22,T1,2019,Phalacridae,22
+00WY5,8,22,T1,2019,Psyllidae,14
+00WY5,8,22,T1,2019,Pteromalidae,15
+00WY5,8,22,T1,2019,Thripidae,1
+00WY5,8,22,T1,2019,Torymidae,1
+00WY5,8,22,T2,2019,Anthocoridae,2
+00WY5,8,22,T2,2019,Braconidae,1
+00WY5,8,22,T2,2019,Cercopidae,1
+00WY5,8,22,T2,2019,Chironomidae,1
+00WY5,8,22,T2,2019,Chloropidae,4
+00WY5,8,22,T2,2019,Chrysomelidae,14
+00WY5,8,22,T2,2019,Cicadellidae,2
+00WY5,8,22,T2,2019,Dolichopodidae,1
+00WY5,8,22,T2,2019,Mordellidae,1
+00WY5,8,22,T2,2019,Muscidae,2
+00WY5,8,22,T2,2019,Pentatomidae,7
+00WY5,8,22,T2,2019,Phalacridae,3
+00WY5,8,22,T2,2019,Pteromalidae,4
+00WY5,8,22,T2,2019,Thyreocoridae,15
+00WY5,8,22,T2,2019,Tipulidae,1
+00WY5,8,22,T2,2019,Torymidae,1
+00WY5,8,22,T3,2019,Acanaloniidae,1
+00WY5,8,22,T3,2019,Anthocoridae,3
+00WY5,8,22,T3,2019,Aphrophoridae,1
+00WY5,8,22,T3,2019,Brentidae,1
+00WY5,8,22,T3,2019,Cantharidae,13
+00WY5,8,22,T3,2019,Chironomidae,1
+00WY5,8,22,T3,2019,Chloropidae,2
+00WY5,8,22,T3,2019,Chrysomelidae,19
+00WY5,8,22,T3,2019,Cicadellidae,2
+00WY5,8,22,T3,2019,Encyrtidae,1
+00WY5,8,22,T3,2019,LEPUNK,2
+00WY5,8,22,T3,2019,Miridae,2
+00WY5,8,22,T3,2019,Phalacridae,6
+00WY5,8,22,T3,2019,Psyllidae,9
+00WY5,8,22,T3,2019,Pteromalidae,4
+00WY5,8,22,T3,2019,Reduviidae,2
+00WY5,8,22,T3,2019,Tettigoniidae,1
+00WY5,8,22,T3,2019,Thripidae,3
+00XMV,7,22,T1,2019,Aphididae,2
+00XMV,7,22,T1,2019,Braconidae,1
+00XMV,7,22,T1,2019,Chloropidae,2
+00XMV,7,22,T1,2019,Chrysomelidae,1
+00XMV,7,22,T1,2019,Cicadellidae,4
+00XMV,7,22,T1,2019,Eulophidae,1
+00XMV,7,22,T1,2019,Eurytomidae,1
+00XMV,7,22,T1,2019,Membracidae,3
+00XMV,7,22,T1,2019,Miridae,3
+00XMV,7,22,T1,2019,Muscidae,1
+00XMV,7,22,T1,2019,Phalacridae,13
+00XMV,7,22,T1,2019,Phlaeothripidae,1
+00XMV,7,22,T1,2019,Psyllidae,9
+00XMV,7,22,T1,2019,Pteromalidae,2
+00XMV,7,22,T1,2019,Sphaeroceridae,2
+00XMV,7,22,T1,2019,Tephritidae,1
+00XMV,7,22,T1,2019,Tettigoniidae,2
+00XMV,7,22,T2,2019,Acrididae,1
+00XMV,7,22,T2,2019,Aphididae,2
+00XMV,7,22,T2,2019,Aphrophoridae,3
+00XMV,7,22,T2,2019,Cercopidae,3
+00XMV,7,22,T2,2019,Chironomidae,2
+00XMV,7,22,T2,2019,Chloropidae,2
+00XMV,7,22,T2,2019,Chrysomelidae,6
+00XMV,7,22,T2,2019,Cicadellidae,15
+00XMV,7,22,T2,2019,Dolichopodidae,2
+00XMV,7,22,T2,2019,Drosophilidae,1
+00XMV,7,22,T2,2019,Eulophidae,2
+00XMV,7,22,T2,2019,Eurytomidae,3
+00XMV,7,22,T2,2019,Geometridae,1
+00XMV,7,22,T2,2019,Issidae,1
+00XMV,7,22,T2,2019,LEPUNK,1
+00XMV,7,22,T2,2019,Membracidae,1
+00XMV,7,22,T2,2019,Muscidae,3
+00XMV,7,22,T2,2019,Phlaeothripidae,1
+00XMV,7,22,T2,2019,Psyllidae,3
+00XMV,7,22,T2,2019,Pteromalidae,3
+00XMV,7,22,T2,2019,Sciomyzidae,1
+00XMV,7,22,T2,2019,Tephritidae,2
+00XMV,7,22,T2,2019,Thripidae,5
+00XMV,7,22,T3,2019,Acrididae,1
+00XMV,7,22,T3,2019,Aphrophoridae,1
+00XMV,7,22,T3,2019,Asilidae,1
+00XMV,7,22,T3,2019,Berytidae,1
+00XMV,7,22,T3,2019,Chironomidae,1
+00XMV,7,22,T3,2019,Chloropidae,4
+00XMV,7,22,T3,2019,Chrysomelidae,7
+00XMV,7,22,T3,2019,Cicadellidae,12
+00XMV,7,22,T3,2019,Cixiidae,4
+00XMV,7,22,T3,2019,Dolichopodidae,1
+00XMV,7,22,T3,2019,Eulophidae,2
+00XMV,7,22,T3,2019,Formicidae,1
+00XMV,7,22,T3,2019,Issidae,4
+00XMV,7,22,T3,2019,LEPUNK,1
+00XMV,7,22,T3,2019,Lygaeidae,4
+00XMV,7,22,T3,2019,Membracidae,1
+00XMV,7,22,T3,2019,Miridae,4
+00XMV,7,22,T3,2019,Phalacridae,1
+00XMV,7,22,T3,2019,Psyllidae,4
+00XMV,7,22,T3,2019,Pteromalidae,6
+00XMV,7,22,T3,2019,Syrphidae,1
+00XMV,7,22,T3,2019,Tephritidae,2
+00XMV,8,23,T1,2019,Acanaloniidae,1
+00XMV,8,23,T1,2019,Anthocoridae,2
+00XMV,8,23,T1,2019,Aphididae,6
+00XMV,8,23,T1,2019,Aphrophoridae,2
+00XMV,8,23,T1,2019,Braconidae,4
+00XMV,8,23,T1,2019,Cantharidae,2
+00XMV,8,23,T1,2019,Chrysomelidae,8
+00XMV,8,23,T1,2019,Chrysopidae,1
+00XMV,8,23,T1,2019,Cicadellidae,9
+00XMV,8,23,T1,2019,Halictidae,1
+00XMV,8,23,T1,2019,Meloidae,1
+00XMV,8,23,T1,2019,Miridae,10
+00XMV,8,23,T1,2019,Phalacridae,160
+00XMV,8,23,T1,2019,Phlaeothripidae,1
+00XMV,8,23,T1,2019,Psyllidae,7
+00XMV,8,23,T1,2019,Pteromalidae,7
+00XMV,8,23,T1,2019,Scirtidae,1
+00XMV,8,23,T1,2019,Thripidae,1
+00XMV,8,23,T2,2019,Acanaloniidae,1
+00XMV,8,23,T2,2019,Brentidae,1
+00XMV,8,23,T2,2019,Cantharidae,1
+00XMV,8,23,T2,2019,Chloropidae,1
+00XMV,8,23,T2,2019,Chrysomelidae,4
+00XMV,8,23,T2,2019,Cicadellidae,1
+00XMV,8,23,T2,2019,Formicidae,1
+00XMV,8,23,T2,2019,LEPUNK,1
+00XMV,8,23,T2,2019,Miridae,1
+00XMV,8,23,T2,2019,Pentatomidae,1
+00XMV,8,23,T2,2019,Phalacridae,5
+00XMV,8,23,T2,2019,Psyllidae,6
+00XMV,8,23,T2,2019,Reduviidae,1
+00XMV,8,23,T2,2019,Thripidae,1
+00XMV,8,23,T3,2019,Acrididae,1
+00XMV,8,23,T3,2019,Aphididae,6
+00XMV,8,23,T3,2019,Cantharidae,1
+00XMV,8,23,T3,2019,Chironomidae,2
+00XMV,8,23,T3,2019,Chrysomelidae,20
+00XMV,8,23,T3,2019,Cicadellidae,3
+00XMV,8,23,T3,2019,Miridae,4
+00XMV,8,23,T3,2019,Psyllidae,7
+00XMV,8,23,T3,2019,Pteromalidae,5
+00XMV,8,23,T3,2019,Sphaeroceridae,3
+00XMV,8,23,T3,2019,Thripidae,2
+00XX7,7,25,T1,2019,Aphrophoridae,4
+00XX7,7,25,T1,2019,Chloropidae,5
+00XX7,7,25,T1,2019,Cicadellidae,3
+00XX7,7,25,T1,2019,Culicidae,1
+00XX7,7,25,T1,2019,Delphacidae,1
+00XX7,7,25,T1,2019,Dolichopodidae,4
+00XX7,7,25,T1,2019,Eulophidae,5
+00XX7,7,25,T1,2019,Eupelmidae,1
+00XX7,7,25,T1,2019,Eurytomidae,1
+00XX7,7,25,T1,2019,Figitidae,1
+00XX7,7,25,T1,2019,Gryllidae,2
+00XX7,7,25,T1,2019,Latridiidae,2
+00XX7,7,25,T1,2019,Miridae,2
+00XX7,7,25,T1,2019,Phalacridae,5
+00XX7,7,25,T1,2019,Phoridae,1
+00XX7,7,25,T1,2019,Platygastridae,2
+00XX7,7,25,T1,2019,Psyllidae,4
+00XX7,7,25,T1,2019,Pteromalidae,2
+00XX7,7,25,T1,2019,Rhyparochromidae,1
+00XX7,7,25,T1,2019,Scarabaeidae,1
+00XX7,7,25,T1,2019,Sepsidae,2
+00XX7,7,25,T1,2019,Tettigoniidae,3
+00XX7,7,25,T2,2019,Aphrophoridae,1
+00XX7,7,25,T2,2019,Chloropidae,13
+00XX7,7,25,T2,2019,Cicadellidae,2
+00XX7,7,25,T2,2019,Culicidae,1
+00XX7,7,25,T2,2019,Curculionidae,1
+00XX7,7,25,T2,2019,DIPUNK,1
+00XX7,7,25,T2,2019,Eulophidae,5
+00XX7,7,25,T2,2019,Eurytomidae,1
+00XX7,7,25,T2,2019,Fanniidae,1
+00XX7,7,25,T2,2019,Formicidae,1
+00XX7,7,25,T2,2019,Miridae,1
+00XX7,7,25,T2,2019,Platygastridae,1
+00XX7,7,25,T2,2019,Psyllidae,1
+00XX7,7,25,T2,2019,Scatopsidae,2
+00XX7,7,25,T2,2019,Sepsidae,1
+00XX7,7,25,T2,2019,Simuliidae,1
+00XX7,7,25,T2,2019,Thripidae,8
+00XX7,7,25,T2,2019,Ulidiidae,2
+00XX7,7,25,T3,2019,Acrididae,2
+00XX7,7,25,T3,2019,Anthocoridae,3
+00XX7,7,25,T3,2019,Aphrophoridae,2
+00XX7,7,25,T3,2019,Chloropidae,11
+00XX7,7,25,T3,2019,Chrysomelidae,2
+00XX7,7,25,T3,2019,Cicadellidae,1
+00XX7,7,25,T3,2019,Culicidae,2
+00XX7,7,25,T3,2019,Diapriidae,1
+00XX7,7,25,T3,2019,Eulophidae,8
+00XX7,7,25,T3,2019,Eupelmidae,1
+00XX7,7,25,T3,2019,Ichneumonidae,1
+00XX7,7,25,T3,2019,LEPUNK,1
+00XX7,7,25,T3,2019,Membracidae,1
+00XX7,7,25,T3,2019,Miridae,8
+00XX7,7,25,T3,2019,Nabidae,1
+00XX7,7,25,T3,2019,Phlaeothripidae,2
+00XX7,7,25,T3,2019,Platygastridae,3
+00XX7,7,25,T3,2019,Scatopsidae,1
+00XX7,7,25,T3,2019,Sciomyzidae,1
+00XX7,7,25,T3,2019,Sepsidae,1
+00XX7,7,25,T3,2019,Tephritidae,6
+00XX7,7,25,T3,2019,Thyreocoridae,1
+00XX7,8,27,T1,2019,Anthocoridae,1
+00XX7,8,27,T1,2019,Aphididae,12
+00XX7,8,27,T1,2019,Aphrophoridae,8
+00XX7,8,27,T1,2019,Braconidae,2
+00XX7,8,27,T1,2019,Ceratopogonidae,1
+00XX7,8,27,T1,2019,Chloropidae,3
+00XX7,8,27,T1,2019,Cicadellidae,11
+00XX7,8,27,T1,2019,Dolichopodidae,1
+00XX7,8,27,T1,2019,Eulophidae,3
+00XX7,8,27,T1,2019,Ichneumonidae,2
+00XX7,8,27,T1,2019,Miridae,5
+00XX7,8,27,T1,2019,Muscidae,1
+00XX7,8,27,T1,2019,Phalacridae,66
+00XX7,8,27,T1,2019,Psyllidae,6
+00XX7,8,27,T1,2019,Pteromalidae,1
+00XX7,8,27,T1,2019,Scatopsidae,1
+00XX7,8,27,T1,2019,Simuliidae,1
+00XX7,8,27,T1,2019,Tettigoniidae,1
+00XX7,8,27,T2,2019,Aphididae,8
+00XX7,8,27,T2,2019,Chironomidae,4
+00XX7,8,27,T2,2019,Chloropidae,3
+00XX7,8,27,T2,2019,Chrysomelidae,1
+00XX7,8,27,T2,2019,Cicadellidae,18
+00XX7,8,27,T2,2019,Culicidae,1
+00XX7,8,27,T2,2019,Empididae,2
+00XX7,8,27,T2,2019,Eulophidae,5
+00XX7,8,27,T2,2019,Eurytomidae,1
+00XX7,8,27,T2,2019,Miridae,1
+00XX7,8,27,T2,2019,Mymaridae,1
+00XX7,8,27,T2,2019,Phalacridae,1
+00XX7,8,27,T2,2019,Phlaeothripidae,1
+00XX7,8,27,T2,2019,Pteromalidae,1
+00XX7,8,27,T2,2019,Scatopsidae,4
+00XX7,8,27,T2,2019,Simuliidae,2
+00XX7,8,27,T2,2019,Tettigoniidae,2
+00XX7,8,27,T2,2019,Ulidiidae,1
+00XX7,8,27,T3,2019,Aeolothripidae,1
+00XX7,8,27,T3,2019,Anthocoridae,4
+00XX7,8,27,T3,2019,Aphididae,4
+00XX7,8,27,T3,2019,Apidae,3
+00XX7,8,27,T3,2019,Braconidae,3
+00XX7,8,27,T3,2019,Chloropidae,1
+00XX7,8,27,T3,2019,Chrysomelidae,14
+00XX7,8,27,T3,2019,Cicadellidae,9
+00XX7,8,27,T3,2019,Curculionidae,1
+00XX7,8,27,T3,2019,DIPUNK,1
+00XX7,8,27,T3,2019,Eurytomidae,1
+00XX7,8,27,T3,2019,Fanniidae,1
+00XX7,8,27,T3,2019,Heleomyzidae,1
+00XX7,8,27,T3,2019,HEMUNK,3
+00XX7,8,27,T3,2019,HYMUNK,3
+00XX7,8,27,T3,2019,Ichneumonidae,1
+00XX7,8,27,T3,2019,Miridae,83
+00XX7,8,27,T3,2019,ORTUNK,1
+00XX7,8,27,T3,2019,Pentatomidae,1
+00XX7,8,27,T3,2019,Phalacridae,25
+00XX7,8,27,T3,2019,Pteromalidae,1
+00XX7,8,27,T3,2019,Reduviidae,1
+00XX7,8,27,T3,2019,Sarcophagidae,1
+00XX7,8,27,T3,2019,Sphecidae,1
+00XX7,8,27,T3,2019,Tephritidae,5
+00XX7,8,27,T3,2019,Tettigoniidae,1
+00XX7,8,27,T3,2019,THYUNK,4
+00XXK,7,13,T1,2020,Aphididae,1
+00XXK,7,13,T1,2020,Braconidae,3
+00XXK,7,13,T1,2020,Cecidomyiidae,1
+00XXK,7,13,T1,2020,Ceratopogonidae,1
+00XXK,7,13,T1,2020,Chironomidae,1
+00XXK,7,13,T1,2020,Chloropidae,4
+00XXK,7,13,T1,2020,Cicadellidae,4
+00XXK,7,13,T1,2020,COLUNK,1
+00XXK,7,13,T1,2020,Eurytomidae,2
+00XXK,7,13,T1,2020,Heleomyzidae,2
+00XXK,7,13,T1,2020,LEPUNK,1
+00XXK,7,13,T1,2020,Miridae,2
+00XXK,7,13,T1,2020,Nabidae,1
+00XXK,7,13,T1,2020,Noctuidae,1
+00XXK,7,13,T1,2020,Psyllidae,14
+00XXK,7,13,T1,2020,Pteromalidae,6
+00XXK,7,13,T1,2020,Tettigoniidae,2
+00XXK,7,13,T1,2020,Torymidae,1
+00XXK,7,13,T1,2020,Ulidiidae,1
+00XXK,7,13,T2,2020,Braconidae,9
+00XXK,7,13,T2,2020,Chironomidae,1
+00XXK,7,13,T2,2020,Chloropidae,12
+00XXK,7,13,T2,2020,Cicadellidae,10
+00XXK,7,13,T2,2020,DIPUNK,1
+00XXK,7,13,T2,2020,Dolichopodidae,2
+00XXK,7,13,T2,2020,Eulophidae,6
+00XXK,7,13,T2,2020,Eupelmidae,1
+00XXK,7,13,T2,2020,HEMUNK,1
+00XXK,7,13,T2,2020,HYMUNK,2
+00XXK,7,13,T2,2020,LEPUNK,1
+00XXK,7,13,T2,2020,Miridae,1
+00XXK,7,13,T2,2020,Mymaridae,1
+00XXK,7,13,T2,2020,Pentatomidae,1
+00XXK,7,13,T2,2020,Phalacridae,1
+00XXK,7,13,T2,2020,Phoridae,1
+00XXK,7,13,T2,2020,Psyllidae,9
+00XXK,7,13,T2,2020,Scatopsidae,5
+00XXK,7,13,T2,2020,Sciomyzidae,1
+00XXK,7,13,T2,2020,Simuliidae,1
+00XXK,7,13,T2,2020,Sphaeroceridae,1
+00XXK,7,13,T2,2020,Tettigoniidae,3
+00XXK,7,13,T3,2020,Baetidae,1
+00XXK,7,13,T3,2020,Braconidae,8
+00XXK,7,13,T3,2020,Cecidomyiidae,1
+00XXK,7,13,T3,2020,Chloropidae,5
+00XXK,7,13,T3,2020,Cicadellidae,11
+00XXK,7,13,T3,2020,Culicidae,1
+00XXK,7,13,T3,2020,Curculionidae,1
+00XXK,7,13,T3,2020,Dolichopodidae,1
+00XXK,7,13,T3,2020,Encyrtidae,1
+00XXK,7,13,T3,2020,Eurytomidae,3
+00XXK,7,13,T3,2020,Geometridae,1
+00XXK,7,13,T3,2020,Heleomyzidae,3
+00XXK,7,13,T3,2020,LEPUNK,2
+00XXK,7,13,T3,2020,Lycidae,1
+00XXK,7,13,T3,2020,Lygaeidae,1
+00XXK,7,13,T3,2020,Miridae,2
+00XXK,7,13,T3,2020,Phoridae,2
+00XXK,7,13,T3,2020,Psyllidae,10
+00XXK,7,13,T3,2020,Pteromalidae,5
+00XXK,7,13,T3,2020,Scatopsidae,3
+00XXK,7,13,T3,2020,Tettigoniidae,7
+00XXK,7,13,T3,2020,Torymidae,1
+00XXK,8,12,T1,2020,Bibionidae,1
+00XXK,8,12,T1,2020,Ceratopogonidae,1
+00XXK,8,12,T1,2020,Chloropidae,3
+00XXK,8,12,T1,2020,Cicadellidae,1
+00XXK,8,12,T1,2020,Culicidae,1
+00XXK,8,12,T1,2020,DIPUNK,1
+00XXK,8,12,T1,2020,Eurytomidae,1
+00XXK,8,12,T1,2020,Phalacridae,1
+00XXK,8,12,T1,2020,Phoridae,1
+00XXK,8,12,T1,2020,Scatopsidae,1
+00XXK,8,12,T1,2020,Thripidae,2
+00XXK,8,12,T2,2020,Aleyrodidae,1
+00XXK,8,12,T2,2020,Bibionidae,1
+00XXK,8,12,T2,2020,Braconidae,1
+00XXK,8,12,T2,2020,Chloropidae,2
+00XXK,8,12,T2,2020,Eulophidae,1
+00XXK,8,12,T2,2020,Miridae,1
+00XXK,8,12,T2,2020,Platygastridae,2
+00XXK,8,12,T2,2020,Scelionidae,1
+00XXK,8,12,T2,2020,Thripidae,2
+00XXK,8,12,T3,2020,Chloropidae,4
+00XXK,8,12,T3,2020,Cicadellidae,2
+00XXK,8,12,T3,2020,Eulophidae,2
+00XXK,8,12,T3,2020,Eurytomidae,1
+00XXK,8,12,T3,2020,Psyllidae,1
+00XXK,8,12,T3,2020,Tettigoniidae,2
+00XYF,7,27,T1,2019,Acanaloniidae,1
+00XYF,7,27,T1,2019,Alydidae,1
+00XYF,7,27,T1,2019,Aphididae,1
+00XYF,7,27,T1,2019,Baetidae,1
+00XYF,7,27,T1,2019,Braconidae,1
+00XYF,7,27,T1,2019,Cantharidae,3
+00XYF,7,27,T1,2019,Ceratopogonidae,2
+00XYF,7,27,T1,2019,Chloropidae,73
+00XYF,7,27,T1,2019,Chrysomelidae,2
+00XYF,7,27,T1,2019,Cicadellidae,12
+00XYF,7,27,T1,2019,Coreidae,1
+00XYF,7,27,T1,2019,Curculionidae,5
+00XYF,7,27,T1,2019,Cynipidae,2
+00XYF,7,27,T1,2019,Dolichopodidae,2
+00XYF,7,27,T1,2019,Eulophidae,6
+00XYF,7,27,T1,2019,Eurytomidae,4
+00XYF,7,27,T1,2019,Ichneumonidae,1
+00XYF,7,27,T1,2019,LEPUNK,1
+00XYF,7,27,T1,2019,Miridae,28
+00XYF,7,27,T1,2019,Phlaeothripidae,1
+00XYF,7,27,T1,2019,Psyllidae,24
+00XYF,7,27,T1,2019,Pteromalidae,21
+00XYF,7,27,T1,2019,Sciomyzidae,1
+00XYF,7,27,T1,2019,Tettigoniidae,3
+00XYF,7,27,T2,2019,Acrididae,1
+00XYF,7,27,T2,2019,Anthocoridae,1
+00XYF,7,27,T2,2019,Aphididae,1
+00XYF,7,27,T2,2019,Ceratopogonidae,1
+00XYF,7,27,T2,2019,Chloropidae,11
+00XYF,7,27,T2,2019,Chrysomelidae,7
+00XYF,7,27,T2,2019,Cicadellidae,14
+00XYF,7,27,T2,2019,Cixiidae,1
+00XYF,7,27,T2,2019,Cynipidae,1
+00XYF,7,27,T2,2019,Eulophidae,3
+00XYF,7,27,T2,2019,Geometridae,1
+00XYF,7,27,T2,2019,Ichneumonidae,1
+00XYF,7,27,T2,2019,LEPUNK,3
+00XYF,7,27,T2,2019,Muscidae,2
+00XYF,7,27,T2,2019,Pentatomidae,1
+00XYF,7,27,T2,2019,Pteromalidae,5
+00XYF,7,27,T2,2019,Sciomyzidae,2
+00XYF,7,27,T2,2019,Thripidae,7
+00XYF,7,27,T3,2019,Acrididae,1
+00XYF,7,27,T3,2019,Anthocoridae,4
+00XYF,7,27,T3,2019,Aphididae,3
+00XYF,7,27,T3,2019,Chloropidae,14
+00XYF,7,27,T3,2019,Chrysomelidae,1
+00XYF,7,27,T3,2019,Cicadellidae,16
+00XYF,7,27,T3,2019,Cixiidae,1
+00XYF,7,27,T3,2019,DIPUNK,3
+00XYF,7,27,T3,2019,Encrytidae,2
+00XYF,7,27,T3,2019,Eulophidae,16
+00XYF,7,27,T3,2019,Eurytomidae,4
+00XYF,7,27,T3,2019,Formicidae,70
+00XYF,7,27,T3,2019,LEPUNK,1
+00XYF,7,27,T3,2019,Nitidulidae,2
+00XYF,7,27,T3,2019,Pentatomidae,3
+00XYF,7,27,T3,2019,Phlaeothripidae,3
+00XYF,7,27,T3,2019,Platygastridae,1
+00XYF,7,27,T3,2019,Pteromalidae,2
+00XYF,7,27,T3,2019,Scatopsidae,3
+00XYF,7,27,T3,2019,Scelionidae,1
+00XYF,7,27,T3,2019,Tephritidae,1
+00XYF,7,27,T3,2019,Thripidae,3
+00XYF,8,16,T1,2019,Aphididae,3
+00XYF,8,16,T1,2019,Braconidae,6
+00XYF,8,16,T1,2019,Chloropidae,17
+00XYF,8,16,T1,2019,Chrysomelidae,3
+00XYF,8,16,T1,2019,Cicadellidae,5
+00XYF,8,16,T1,2019,COLUNK,1
+00XYF,8,16,T1,2019,Cynipidae,1
+00XYF,8,16,T1,2019,Dolichopodidae,1
+00XYF,8,16,T1,2019,Eulophidae,10
+00XYF,8,16,T1,2019,Formicidae,1
+00XYF,8,16,T1,2019,LEPUNK,1
+00XYF,8,16,T1,2019,Miridae,3
+00XYF,8,16,T1,2019,Nabidae,1
+00XYF,8,16,T1,2019,Pentatomidae,7
+00XYF,8,16,T1,2019,Phalacridae,12
+00XYF,8,16,T1,2019,Platygastridae,1
+00XYF,8,16,T1,2019,Psyllidae,3
+00XYF,8,16,T1,2019,Pteromalidae,3
+00XYF,8,16,T1,2019,Reduviidae,1
+00XYF,8,16,T1,2019,Sciomyzidae,1
+00XYF,8,16,T1,2019,Sepsidae,3
+00XYF,8,16,T1,2019,Sphaeroceridae,1
+00XYF,8,16,T1,2019,Thripidae,2
+00XYF,8,16,T2,2019,Aphididae,1
+00XYF,8,16,T2,2019,Carabidae,1
+00XYF,8,16,T2,2019,Chironomidae,1
+00XYF,8,16,T2,2019,Chloropidae,1
+00XYF,8,16,T2,2019,Chrysomelidae,7
+00XYF,8,16,T2,2019,Cicadellidae,3
+00XYF,8,16,T2,2019,Culicidae,1
+00XYF,8,16,T2,2019,Delphacidae,1
+00XYF,8,16,T2,2019,Eulophidae,4
+00XYF,8,16,T2,2019,LEPUNK,1
+00XYF,8,16,T2,2019,Miridae,1
+00XYF,8,16,T2,2019,Muscidae,1
+00XYF,8,16,T2,2019,Pteromalidae,4
+00XYF,8,16,T2,2019,Scarabaeidae,1
+00XYF,8,16,T2,2019,Sciomyzidae,1
+00XYF,8,16,T2,2019,Sphaeroceridae,1
+00XYF,8,16,T2,2019,Thripidae,2
+00XYF,8,16,T3,2019,Acrididae,1
+00XYF,8,16,T3,2019,Aphididae,6
+00XYF,8,16,T3,2019,Berytidae,2
+00XYF,8,16,T3,2019,Cantharidae,1
+00XYF,8,16,T3,2019,Ceratopogonidae,1
+00XYF,8,16,T3,2019,Chloropidae,4
+00XYF,8,16,T3,2019,Chrysomelidae,5
+00XYF,8,16,T3,2019,Cicadellidae,4
+00XYF,8,16,T3,2019,Eulophidae,9
+00XYF,8,16,T3,2019,Eurytomidae,1
+00XYF,8,16,T3,2019,LEPUNK,1
+00XYF,8,16,T3,2019,Miridae,3
+00XYF,8,16,T3,2019,Muscidae,1
+00XYF,8,16,T3,2019,Pentatomidae,9
+00XYF,8,16,T3,2019,Phalacridae,3
+00XYF,8,16,T3,2019,Phoridae,1
+00XYF,8,16,T3,2019,Psyllidae,11
+00XYF,8,16,T3,2019,Pteromalidae,5
+00XYF,8,16,T3,2019,Scatopsidae,2
+00XYF,8,16,T3,2019,Sciomyzidae,1
+00XYF,8,16,T3,2019,Thripidae,7
+00XYF,8,16,T3,2019,Torymidae,1
+0129G,7,16,T1,2019,Acrididae,3
+0129G,7,16,T1,2019,Aeolothripidae,2
+0129G,7,16,T1,2019,Aphrophoridae,2
+0129G,7,16,T1,2019,Braconidae,1
+0129G,7,16,T1,2019,Chironomidae,47
+0129G,7,16,T1,2019,Chloropidae,10
+0129G,7,16,T1,2019,Cicadellidae,8
+0129G,7,16,T1,2019,Coccinellidae,2
+0129G,7,16,T1,2019,Encyrtidae,1
+0129G,7,16,T1,2019,Ichneumonidae,1
+0129G,7,16,T1,2019,LEPUNK,1
+0129G,7,16,T1,2019,Miridae,1
+0129G,7,16,T1,2019,Muscidae,2
+0129G,7,16,T1,2019,Sepsidae,3
+0129G,7,16,T1,2019,Tettigoniidae,5
+0129G,7,16,T1,2019,Thripidae,1
+0129G,7,16,T2,2019,Aeolothripidae,2
+0129G,7,16,T2,2019,Aphrophoridae,1
+0129G,7,16,T2,2019,Braconidae,1
+0129G,7,16,T2,2019,Chironomidae,20
+0129G,7,16,T2,2019,Chloropidae,6
+0129G,7,16,T2,2019,Cicadellidae,48
+0129G,7,16,T2,2019,Culicidae,1
+0129G,7,16,T2,2019,Delphacidae,1
+0129G,7,16,T2,2019,Dolichopodidae,1
+0129G,7,16,T2,2019,Empididae,3
+0129G,7,16,T2,2019,Eurytomidae,1
+0129G,7,16,T2,2019,Muscidae,9
+0129G,7,16,T2,2019,Pteromalidae,5
+0129G,7,16,T2,2019,Sciomyzidae,4
+0129G,7,16,T2,2019,Tettigoniidae,7
+0129G,7,16,T3,2019,Aphididae,1
+0129G,7,16,T3,2019,Cercopidae,4
+0129G,7,16,T3,2019,Chloropidae,7
+0129G,7,16,T3,2019,Chrysomelidae,1
+0129G,7,16,T3,2019,Cicadellidae,5
+0129G,7,16,T3,2019,Coenagrionidae,1
+0129G,7,16,T3,2019,Cymidae,2
+0129G,7,16,T3,2019,DIPUNK,9
+0129G,7,16,T3,2019,Dolichopodidae,1
+0129G,7,16,T3,2019,Fanniidae,3
+0129G,7,16,T3,2019,Lampyridae,1
+0129G,7,16,T3,2019,LEPUNK,2
+0129G,7,16,T3,2019,Membracidae,1
+0129G,7,16,T3,2019,Phoridae,1
+0129G,7,16,T3,2019,Pyralidae,1
+0129G,7,16,T3,2019,Scelionidae,8
+0129G,7,16,T3,2019,Sciaridae,1
+0129G,7,16,T3,2019,Sciomyzidae,1
+0129G,7,16,T3,2019,Sepsidae,2
+0129G,7,16,T3,2019,Simuliidae,1
+0129G,7,16,T3,2019,Tettigoniidae,2
+0129G,7,16,T3,2019,Thripidae,3
+0129G,7,29,T1,2020,Acrididae,1
+0129G,7,29,T1,2020,Anthomyiidae,2
+0129G,7,29,T1,2020,Braconidae,1
+0129G,7,29,T1,2020,Ceratopogonidae,1
+0129G,7,29,T1,2020,Chironomidae,5
+0129G,7,29,T1,2020,Chloropidae,3
+0129G,7,29,T1,2020,Cicadellidae,3
+0129G,7,29,T1,2020,Cymidae,3
+0129G,7,29,T1,2020,DIPUNK,2
+0129G,7,29,T1,2020,Dolichopodidae,4
+0129G,7,29,T1,2020,HEMUNK,6
+0129G,7,29,T1,2020,LEPUNK,1
+0129G,7,29,T1,2020,Tephritidae,8
+0129G,7,29,T1,2020,Tettigoniidae,2
+0129G,7,29,T1,2020,Thripidae,5
+0129G,7,29,T2,2020,Acrididae,2
+0129G,7,29,T2,2020,Cercopidae,1
+0129G,7,29,T2,2020,Chloropidae,4
+0129G,7,29,T2,2020,Cicadellidae,11
+0129G,7,29,T2,2020,Coenagrionidae,1
+0129G,7,29,T2,2020,DIPUNK,1
+0129G,7,29,T2,2020,Dolichopodidae,1
+0129G,7,29,T2,2020,Eulophidae,2
+0129G,7,29,T2,2020,Sciomyzidae,1
+0129G,7,29,T2,2020,Tettigoniidae,10
+0129G,7,29,T3,2020,Cymidae,1
+0129G,7,29,T3,2020,Eulophidae,2
+0129G,7,29,T3,2020,Tephritidae,1
+0129G,8,20,T1,2020,Acrididae,1
+0129G,8,20,T1,2020,Aphididae,5
+0129G,8,20,T1,2020,Ceratopogonidae,3
+0129G,8,20,T1,2020,Chironomidae,1
+0129G,8,20,T1,2020,Cicadellidae,3
+0129G,8,20,T1,2020,Cymidae,1
+0129G,8,20,T1,2020,Eurytomidae,1
+0129G,8,20,T1,2020,Miridae,6
+0129G,8,20,T1,2020,Rhyparochromidae,1
+0129G,8,20,T1,2020,Tephritidae,1
+0129G,8,20,T1,2020,Thripidae,4
+0129G,8,20,T2,2020,Chironomidae,1
+0129G,8,20,T2,2020,Cicadellidae,2
+0129G,8,20,T2,2020,Tettigoniidae,2
+0129G,8,20,T3,2020,Cercopidae,1
+0129G,8,20,T3,2020,Chironomidae,1
+0129G,8,20,T3,2020,Chloropidae,1
+0129G,8,20,T3,2020,Cicadellidae,1
+0129G,8,20,T3,2020,Dolichopodidae,2
+0129G,8,20,T3,2020,Eulophidae,2
+0129G,8,20,T3,2020,Tettigoniidae,1
+0129G,8,9,T1,2019,Acrididae,3
+0129G,8,9,T1,2019,Aeolothripidae,7
+0129G,8,9,T1,2019,Aphididae,1
+0129G,8,9,T1,2019,Aphrophoridae,5
+0129G,8,9,T1,2019,Chironomidae,1
+0129G,8,9,T1,2019,Chloropidae,5
+0129G,8,9,T1,2019,Chrysomelidae,1
+0129G,8,9,T1,2019,Cicadellidae,3
+0129G,8,9,T1,2019,Coenagrionidae,1
+0129G,8,9,T1,2019,Encyrtidae,2
+0129G,8,9,T1,2019,LEPUNK,5
+0129G,8,9,T1,2019,Lygaeidae,1
+0129G,8,9,T1,2019,Miridae,14
+0129G,8,9,T1,2019,Pteromalidae,2
+0129G,8,9,T1,2019,Tettigoniidae,3
+0129G,8,9,T1,2019,Thripidae,15
+0129G,8,9,T1,2019,Ulidiidae,2
+0129G,8,9,T2,2019,Aeolothripidae,3
+0129G,8,9,T2,2019,Braconidae,1
+0129G,8,9,T2,2019,Chloropidae,6
+0129G,8,9,T2,2019,Cicadellidae,8
+0129G,8,9,T2,2019,Culicidae,1
+0129G,8,9,T2,2019,Dolichopodidae,1
+0129G,8,9,T2,2019,Eulophidae,1
+0129G,8,9,T2,2019,Eurytomidae,1
+0129G,8,9,T2,2019,Muscidae,1
+0129G,8,9,T2,2019,Pteromalidae,2
+0129G,8,9,T2,2019,Simuliidae,1
+0129G,8,9,T2,2019,Tettigoniidae,7
+0129G,8,9,T2,2019,Thripidae,3
+0129G,8,9,T3,2019,Acrididae,1
+0129G,8,9,T3,2019,Aeolothripidae,6
+0129G,8,9,T3,2019,Aphrophoridae,8
+0129G,8,9,T3,2019,Braconidae,2
+0129G,8,9,T3,2019,Brentidae,1
+0129G,8,9,T3,2019,Chloropidae,13
+0129G,8,9,T3,2019,Chrysomelidae,2
+0129G,8,9,T3,2019,Cicadellidae,12
+0129G,8,9,T3,2019,Erebidae,1
+0129G,8,9,T3,2019,Eurytomidae,3
+0129G,8,9,T3,2019,Muscidae,1
+0129G,8,9,T3,2019,Psyllidae,1
+0129G,8,9,T3,2019,Pteromalidae,3
+0129G,8,9,T3,2019,Scarabaeidae,1
+0129G,8,9,T3,2019,Thripidae,2
+0129G,8,9,T3,2019,Torymidae,1
+01DBS,7,27,T1,2020,Acrididae,3
+01DBS,7,27,T1,2020,Aphrophoridae,1
+01DBS,7,27,T1,2020,Asilidae,1
+01DBS,7,27,T1,2020,Chloropidae,1
+01DBS,7,27,T1,2020,Cicadellidae,2
+01DBS,7,27,T1,2020,COLUNK,1
+01DBS,7,27,T1,2020,Eurytomidae,1
+01DBS,7,27,T1,2020,Geometridae,1
+01DBS,7,27,T1,2020,Miridae,2
+01DBS,7,27,T1,2020,ORTUNK,1
+01DBS,7,27,T1,2020,Scatopsidae,1
+01DBS,7,27,T1,2020,Tettigoniidae,3
+01DBS,7,27,T2,2020,Acrididae,7
+01DBS,7,27,T2,2020,Asilidae,1
+01DBS,7,27,T2,2020,Chloropidae,4
+01DBS,7,27,T2,2020,Cicadellidae,4
+01DBS,7,27,T2,2020,COLUNK,1
+01DBS,7,27,T2,2020,DIPUNK,1
+01DBS,7,27,T2,2020,Eulophidae,4
+01DBS,7,27,T2,2020,Eurytomidae,1
+01DBS,7,27,T2,2020,Miridae,12
+01DBS,7,27,T2,2020,Phoridae,1
+01DBS,7,27,T2,2020,Rhyparochromidae,4
+01DBS,7,27,T2,2020,Tettigoniidae,3
+01DBS,7,27,T3,2020,Acrididae,3
+01DBS,7,27,T3,2020,Aphrophoridae,1
+01DBS,7,27,T3,2020,Chloropidae,6
+01DBS,7,27,T3,2020,Cicadellidae,1
+01DBS,7,27,T3,2020,COLUNK,1
+01DBS,7,27,T3,2020,Eulophidae,1
+01DBS,7,27,T3,2020,Formicidae,2
+01DBS,7,27,T3,2020,Latridiidae,2
+01DBS,7,27,T3,2020,Lauxaniidae,1
+01DBS,7,27,T3,2020,Miridae,6
+01DBS,7,27,T3,2020,Pentatomidae,2
+01DBS,7,27,T3,2020,Phoridae,1
+01DBS,7,27,T3,2020,Rhyparochromidae,1
+01DBS,7,27,T3,2020,Scarabaeidae,1
+01DBS,7,27,T3,2020,Scatopsidae,1
+01DBS,7,27,T3,2020,Tettigoniidae,4
+01DBS,8,27,T1,2020,Aphididae,1
+01DBS,8,27,T1,2020,Cicadellidae,4
+01DBS,8,27,T1,2020,COLUNK,1
+01DBS,8,27,T1,2020,Formicidae,2
+01DBS,8,27,T1,2020,HEMUNK,6
+01DBS,8,27,T2,2020,Aphididae,9
+01DBS,8,27,T2,2020,COLUNK,1
+01DBS,8,27,T2,2020,Gryllidae,1
+01DBS,8,27,T2,2020,Scelionidae,1
+01DBS,8,27,T3,2020,Acrididae,1
+01DBS,8,27,T3,2020,Cecidomyiidae,1
+01DBS,8,27,T3,2020,COLUNK,1
+01DBS,8,27,T3,2020,Dolichopodidae,1
+01DBS,8,27,T3,2020,Eulophidae,1
+01DBS,8,27,T3,2020,Platygastridae,1
+Arena Hill Prairie,7,17,T1,2020,Acrididae,1
+Arena Hill Prairie,7,17,T1,2020,Anthribidae,1
+Arena Hill Prairie,7,17,T1,2020,Braconidae,2
+Arena Hill Prairie,7,17,T1,2020,Ceratopogonidae,5
+Arena Hill Prairie,7,17,T1,2020,Chloropidae,23
+Arena Hill Prairie,7,17,T1,2020,Chrysomelidae,33
+Arena Hill Prairie,7,17,T1,2020,Cicadellidae,14
+Arena Hill Prairie,7,17,T1,2020,COLUNK,1
+Arena Hill Prairie,7,17,T1,2020,Corylophidae,4
+Arena Hill Prairie,7,17,T1,2020,Curculionidae,5
+Arena Hill Prairie,7,17,T1,2020,Delphacidae,1
+Arena Hill Prairie,7,17,T1,2020,Dolichopodidae,1
+Arena Hill Prairie,7,17,T1,2020,Elateridae,1
+Arena Hill Prairie,7,17,T1,2020,Encyrtidae,2
+Arena Hill Prairie,7,17,T1,2020,Eulophidae,4
+Arena Hill Prairie,7,17,T1,2020,Formicidae,6
+Arena Hill Prairie,7,17,T1,2020,Latridiidae,1
+Arena Hill Prairie,7,17,T1,2020,LEPUNK,1
+Arena Hill Prairie,7,17,T1,2020,Membracidae,6
+Arena Hill Prairie,7,17,T1,2020,Miridae,1
+Arena Hill Prairie,7,17,T1,2020,Nabidae,1
+Arena Hill Prairie,7,17,T1,2020,Phlaeothripidae,1
+Arena Hill Prairie,7,17,T1,2020,Platygastridae,13
+Arena Hill Prairie,7,17,T1,2020,Psoquillidae,1
+Arena Hill Prairie,7,17,T1,2020,Simuliidae,1
+Arena Hill Prairie,7,17,T1,2020,Sphaeroceridae,1
+Arena Hill Prairie,7,17,T1,2020,Tettigoniidae,2
+Arena Hill Prairie,7,17,T1,2020,Ulidiidae,2
+Arena Hill Prairie,7,17,T2,2020,Aphrophoridae,1
+Arena Hill Prairie,7,17,T2,2020,Asilidae,1
+Arena Hill Prairie,7,17,T2,2020,Braconidae,1
+Arena Hill Prairie,7,17,T2,2020,Chloropidae,11
+Arena Hill Prairie,7,17,T2,2020,Chrysomelidae,5
+Arena Hill Prairie,7,17,T2,2020,Cicadellidae,11
+Arena Hill Prairie,7,17,T2,2020,Cixiidae,1
+Arena Hill Prairie,7,17,T2,2020,COLUNK,1
+Arena Hill Prairie,7,17,T2,2020,Corylophidae,3
+Arena Hill Prairie,7,17,T2,2020,Curculionidae,2
+Arena Hill Prairie,7,17,T2,2020,Derbidae,3
+Arena Hill Prairie,7,17,T2,2020,Eulophidae,1
+Arena Hill Prairie,7,17,T2,2020,HYMUNK,1
+Arena Hill Prairie,7,17,T2,2020,Ichneumonidae,2
+Arena Hill Prairie,7,17,T2,2020,Latridiidae,1
+Arena Hill Prairie,7,17,T2,2020,LEPUNK,1
+Arena Hill Prairie,7,17,T2,2020,Membracidae,2
+Arena Hill Prairie,7,17,T2,2020,Miridae,1
+Arena Hill Prairie,7,17,T2,2020,Pentatomidae,1
+Arena Hill Prairie,7,17,T2,2020,Platygastridae,3
+Arena Hill Prairie,7,17,T2,2020,Tettigoniidae,2
+Arena Hill Prairie,7,17,T2,2020,Thyreocoridae,1
+Arena Hill Prairie,7,17,T3,2020,Acanaloniidae,3
+Arena Hill Prairie,7,17,T3,2020,Acrididae,1
+Arena Hill Prairie,7,17,T3,2020,Anthicidae,2
+Arena Hill Prairie,7,17,T3,2020,Asilidae,2
+Arena Hill Prairie,7,17,T3,2020,Brentidae,5
+Arena Hill Prairie,7,17,T3,2020,Carabidae,1
+Arena Hill Prairie,7,17,T3,2020,Chloropidae,7
+Arena Hill Prairie,7,17,T3,2020,Chrysomelidae,34
+Arena Hill Prairie,7,17,T3,2020,Cicadellidae,24
+Arena Hill Prairie,7,17,T3,2020,Cixiidae,1
+Arena Hill Prairie,7,17,T3,2020,Cynipidae,1
+Arena Hill Prairie,7,17,T3,2020,Eulophidae,1
+Arena Hill Prairie,7,17,T3,2020,Formicidae,7
+Arena Hill Prairie,7,17,T3,2020,LEPUNK,3
+Arena Hill Prairie,7,17,T3,2020,Membracidae,20
+Arena Hill Prairie,7,17,T3,2020,Muscidae,3
+Arena Hill Prairie,7,17,T3,2020,Phalacridae,2
+Arena Hill Prairie,7,17,T3,2020,Platygastridae,1
+Arena Hill Prairie,7,17,T3,2020,Simuliidae,1
+Arena Hill Prairie,7,17,T3,2020,Tettigoniidae,4
+Arena Hill Prairie,8,12,T1,2020,Acrididae,2
+Arena Hill Prairie,8,12,T1,2020,Alydidae,2
+Arena Hill Prairie,8,12,T1,2020,Anthocoridae,1
+Arena Hill Prairie,8,12,T1,2020,Aphididae,5
+Arena Hill Prairie,8,12,T1,2020,Aphrophoridae,2
+Arena Hill Prairie,8,12,T1,2020,Asilidae,1
+Arena Hill Prairie,8,12,T1,2020,Brentidae,2
+Arena Hill Prairie,8,12,T1,2020,Cantharidae,4
+Arena Hill Prairie,8,12,T1,2020,Cecidomyiidae,1
+Arena Hill Prairie,8,12,T1,2020,Ceratopogonidae,1
+Arena Hill Prairie,8,12,T1,2020,Chloropidae,5
+Arena Hill Prairie,8,12,T1,2020,Chrysomelidae,26
+Arena Hill Prairie,8,12,T1,2020,Cicadellidae,17
+Arena Hill Prairie,8,12,T1,2020,Dolichopodidae,1
+Arena Hill Prairie,8,12,T1,2020,Eulophidae,1
+Arena Hill Prairie,8,12,T1,2020,Eurytomidae,1
+Arena Hill Prairie,8,12,T1,2020,Formicidae,2
+Arena Hill Prairie,8,12,T1,2020,LEPUNK,2
+Arena Hill Prairie,8,12,T1,2020,Membracidae,3
+Arena Hill Prairie,8,12,T1,2020,Pentatomidae,3
+Arena Hill Prairie,8,12,T1,2020,Phalacridae,1
+Arena Hill Prairie,8,12,T1,2020,Phlaeothripidae,2
+Arena Hill Prairie,8,12,T1,2020,Pteromalidae,2
+Arena Hill Prairie,8,12,T2,2020,Acanaloniidae,3
+Arena Hill Prairie,8,12,T2,2020,Acrididae,1
+Arena Hill Prairie,8,12,T2,2020,Aphididae,5
+Arena Hill Prairie,8,12,T2,2020,Braconidae,1
+Arena Hill Prairie,8,12,T2,2020,Carabidae,1
+Arena Hill Prairie,8,12,T2,2020,Chamaemyiidae,1
+Arena Hill Prairie,8,12,T2,2020,Chloropidae,2
+Arena Hill Prairie,8,12,T2,2020,Chrysomelidae,14
+Arena Hill Prairie,8,12,T2,2020,Cicadellidae,16
+Arena Hill Prairie,8,12,T2,2020,Cixiidae,1
+Arena Hill Prairie,8,12,T2,2020,Coreidae,1
+Arena Hill Prairie,8,12,T2,2020,Corylophidae,3
+Arena Hill Prairie,8,12,T2,2020,Curculionidae,1
+Arena Hill Prairie,8,12,T2,2020,Delphacidae,2
+Arena Hill Prairie,8,12,T2,2020,Empididae,1
+Arena Hill Prairie,8,12,T2,2020,Encyrtidae,1
+Arena Hill Prairie,8,12,T2,2020,Eulophidae,3
+Arena Hill Prairie,8,12,T2,2020,Eurytomidae,1
+Arena Hill Prairie,8,12,T2,2020,Formicidae,4
+Arena Hill Prairie,8,12,T2,2020,HEMUNK,15
+Arena Hill Prairie,8,12,T2,2020,Ichneumonidae,1
+Arena Hill Prairie,8,12,T2,2020,Latridiidae,9
+Arena Hill Prairie,8,12,T2,2020,LEPUNK,2
+Arena Hill Prairie,8,12,T2,2020,Meloidae,3
+Arena Hill Prairie,8,12,T2,2020,Membracidae,8
+Arena Hill Prairie,8,12,T2,2020,Mymaridae,1
+Arena Hill Prairie,8,12,T2,2020,Phlaeothripidae,1
+Arena Hill Prairie,8,12,T2,2020,Phoridae,4
+Arena Hill Prairie,8,12,T2,2020,Platygastridae,1
+Arena Hill Prairie,8,12,T2,2020,Psoquillidae,1
+Arena Hill Prairie,8,12,T2,2020,Psyllidae,1
+Arena Hill Prairie,8,12,T2,2020,Scelionidae,1
+Arena Hill Prairie,8,12,T2,2020,Sphaeroceridae,1
+Arena Hill Prairie,8,12,T2,2020,Tettigoniidae,1
+Arena Hill Prairie,8,12,T3,2020,Acanaloniidae,2
+Arena Hill Prairie,8,12,T3,2020,Alydidae,3
+Arena Hill Prairie,8,12,T3,2020,Aphididae,1
+Arena Hill Prairie,8,12,T3,2020,Braconidae,3
+Arena Hill Prairie,8,12,T3,2020,Brentidae,4
+Arena Hill Prairie,8,12,T3,2020,Chloropidae,2
+Arena Hill Prairie,8,12,T3,2020,Chrysomelidae,13
+Arena Hill Prairie,8,12,T3,2020,Cicadellidae,19
+Arena Hill Prairie,8,12,T3,2020,Conopidae,1
+Arena Hill Prairie,8,12,T3,2020,Curculionidae,1
+Arena Hill Prairie,8,12,T3,2020,Delphacidae,1
+Arena Hill Prairie,8,12,T3,2020,Eulophidae,1
+Arena Hill Prairie,8,12,T3,2020,Formicidae,23
+Arena Hill Prairie,8,12,T3,2020,Membracidae,42
+Arena Hill Prairie,8,12,T3,2020,Pentatomidae,2
+Arena Hill Prairie,8,12,T3,2020,Phoridae,2
+Arena Hill Prairie,8,12,T3,2020,Scelionidae,1
+Arena Hill Prairie,8,12,T3,2020,Tettigoniidae,2
+Arena Hill Prairie,8,12,T3,2020,Thripidae,1
+Black Earth Rettenmund,7,17,T1,2020,Acrididae,6
+Black Earth Rettenmund,7,17,T1,2020,Anthocoridae,3
+Black Earth Rettenmund,7,17,T1,2020,Braconidae,2
+Black Earth Rettenmund,7,17,T1,2020,Cecidomyiidae,1
+Black Earth Rettenmund,7,17,T1,2020,Ceratopogonidae,1
+Black Earth Rettenmund,7,17,T1,2020,Chloropidae,6
+Black Earth Rettenmund,7,17,T1,2020,Chrysomelidae,2
+Black Earth Rettenmund,7,17,T1,2020,Cicadellidae,16
+Black Earth Rettenmund,7,17,T1,2020,Delphacidae,5
+Black Earth Rettenmund,7,17,T1,2020,DIPUNK,1
+Black Earth Rettenmund,7,17,T1,2020,Dolichopodidae,2
+Black Earth Rettenmund,7,17,T1,2020,Eulophidae,1
+Black Earth Rettenmund,7,17,T1,2020,Fanniidae,1
+Black Earth Rettenmund,7,17,T1,2020,Formicidae,1
+Black Earth Rettenmund,7,17,T1,2020,Geometridae,3
+Black Earth Rettenmund,7,17,T1,2020,Latridiidae,14
+Black Earth Rettenmund,7,17,T1,2020,LEPUNK,3
+Black Earth Rettenmund,7,17,T1,2020,Miridae,17
+Black Earth Rettenmund,7,17,T1,2020,Nabidae,1
+Black Earth Rettenmund,7,17,T1,2020,Pentatomidae,1
+Black Earth Rettenmund,7,17,T1,2020,Phlaeothripidae,2
+Black Earth Rettenmund,7,17,T1,2020,Platygastridae,1
+Black Earth Rettenmund,7,17,T1,2020,Pteromalidae,2
+Black Earth Rettenmund,7,17,T1,2020,Reduviidae,1
+Black Earth Rettenmund,7,17,T1,2020,Scutelleridae,1
+Black Earth Rettenmund,7,17,T1,2020,Sepsidae,1
+Black Earth Rettenmund,7,17,T1,2020,Tettigoniidae,7
+Black Earth Rettenmund,7,17,T1,2020,Thripidae,1
+Black Earth Rettenmund,7,17,T1,2020,Ulidiidae,1
+Black Earth Rettenmund,7,17,T2,2020,Acrididae,1
+Black Earth Rettenmund,7,17,T2,2020,Agromyzidae,1
+Black Earth Rettenmund,7,17,T2,2020,Aphididae,4
+Black Earth Rettenmund,7,17,T2,2020,Cecidomyiidae,10
+Black Earth Rettenmund,7,17,T2,2020,Ceratopogonidae,4
+Black Earth Rettenmund,7,17,T2,2020,Cercopidae,1
+Black Earth Rettenmund,7,17,T2,2020,Chloropidae,23
+Black Earth Rettenmund,7,17,T2,2020,Chrysomelidae,1
+Black Earth Rettenmund,7,17,T2,2020,Cicadellidae,22
+Black Earth Rettenmund,7,17,T2,2020,Curculionidae,5
+Black Earth Rettenmund,7,17,T2,2020,Dictyopharidae,1
+Black Earth Rettenmund,7,17,T2,2020,Dolichopodidae,1
+Black Earth Rettenmund,7,17,T2,2020,Eulophidae,5
+Black Earth Rettenmund,7,17,T2,2020,Fanniidae,1
+Black Earth Rettenmund,7,17,T2,2020,Formicidae,11
+Black Earth Rettenmund,7,17,T2,2020,Geometridae,1
+Black Earth Rettenmund,7,17,T2,2020,LEPUNK,1
+Black Earth Rettenmund,7,17,T2,2020,Membracidae,1
+Black Earth Rettenmund,7,17,T2,2020,Miridae,8
+Black Earth Rettenmund,7,17,T2,2020,Mordellidae,1
+Black Earth Rettenmund,7,17,T2,2020,Nabidae,1
+Black Earth Rettenmund,7,17,T2,2020,Nitidulidae,3
+Black Earth Rettenmund,7,17,T2,2020,Pentatomidae,1
+Black Earth Rettenmund,7,17,T2,2020,Platygastridae,20
+Black Earth Rettenmund,7,17,T2,2020,Psyllidae,28
+Black Earth Rettenmund,7,17,T2,2020,Pteromalidae,2
+Black Earth Rettenmund,7,17,T2,2020,Scatopsidae,14
+Black Earth Rettenmund,7,17,T2,2020,Sciaridae,2
+Black Earth Rettenmund,7,17,T2,2020,Tettigoniidae,15
+Black Earth Rettenmund,7,17,T2,2020,Thripidae,1
+Black Earth Rettenmund,7,17,T2,2020,Ulidiidae,1
+Black Earth Rettenmund,7,17,T3,2020,Acrididae,1
+Black Earth Rettenmund,7,17,T3,2020,Aeolothripidae,1
+Black Earth Rettenmund,7,17,T3,2020,Alydidae,1
+Black Earth Rettenmund,7,17,T3,2020,Aphididae,1
+Black Earth Rettenmund,7,17,T3,2020,Aphrophoridae,1
+Black Earth Rettenmund,7,17,T3,2020,Braconidae,1
+Black Earth Rettenmund,7,17,T3,2020,Brentidae,1
+Black Earth Rettenmund,7,17,T3,2020,Cecidomyiidae,2
+Black Earth Rettenmund,7,17,T3,2020,Chloropidae,2
+Black Earth Rettenmund,7,17,T3,2020,Cicadellidae,6
+Black Earth Rettenmund,7,17,T3,2020,Eulophidae,1
+Black Earth Rettenmund,7,17,T3,2020,Formicidae,14
+Black Earth Rettenmund,7,17,T3,2020,Issidae,1
+Black Earth Rettenmund,7,17,T3,2020,LEPUNK,1
+Black Earth Rettenmund,7,17,T3,2020,Membracidae,3
+Black Earth Rettenmund,7,17,T3,2020,Miridae,2
+Black Earth Rettenmund,7,17,T3,2020,Psyllidae,1
+Black Earth Rettenmund,7,17,T3,2020,Pteromalidae,3
+Black Earth Rettenmund,7,17,T3,2020,Scatopsidae,2
+Black Earth Rettenmund,7,17,T3,2020,Tettigoniidae,11
+Black Earth Rettenmund,8,12,T1,2020,Acrididae,1
+Black Earth Rettenmund,8,12,T1,2020,Aphididae,4
+Black Earth Rettenmund,8,12,T1,2020,Aphrophoridae,2
+Black Earth Rettenmund,8,12,T1,2020,Asilidae,1
+Black Earth Rettenmund,8,12,T1,2020,Blissidae,1
+Black Earth Rettenmund,8,12,T1,2020,Brentidae,1
+Black Earth Rettenmund,8,12,T1,2020,Cecidomyiidae,1
+Black Earth Rettenmund,8,12,T1,2020,Chloropidae,16
+Black Earth Rettenmund,8,12,T1,2020,Chrysomelidae,6
+Black Earth Rettenmund,8,12,T1,2020,Cicadellidae,22
+Black Earth Rettenmund,8,12,T1,2020,COLUNK,1
+Black Earth Rettenmund,8,12,T1,2020,Delphacidae,2
+Black Earth Rettenmund,8,12,T1,2020,Eurytomidae,1
+Black Earth Rettenmund,8,12,T1,2020,Formicidae,4
+Black Earth Rettenmund,8,12,T1,2020,Geometridae,1
+Black Earth Rettenmund,8,12,T1,2020,Halictidae,1
+Black Earth Rettenmund,8,12,T1,2020,LEPUNK,2
+Black Earth Rettenmund,8,12,T1,2020,Membracidae,1
+Black Earth Rettenmund,8,12,T1,2020,Pentatomidae,1
+Black Earth Rettenmund,8,12,T1,2020,Phalacridae,5
+Black Earth Rettenmund,8,12,T1,2020,Phoridae,1
+Black Earth Rettenmund,8,12,T1,2020,Pteromalidae,1
+Black Earth Rettenmund,8,12,T1,2020,Simuliidae,1
+Black Earth Rettenmund,8,12,T1,2020,Tettigoniidae,5
+Black Earth Rettenmund,8,12,T2,2020,Acrididae,1
+Black Earth Rettenmund,8,12,T2,2020,Aeolothripidae,1
+Black Earth Rettenmund,8,12,T2,2020,Alydidae,2
+Black Earth Rettenmund,8,12,T2,2020,Aphididae,5
+Black Earth Rettenmund,8,12,T2,2020,Aphrophoridae,1
+Black Earth Rettenmund,8,12,T2,2020,Blissidae,2
+Black Earth Rettenmund,8,12,T2,2020,Brentidae,2
+Black Earth Rettenmund,8,12,T2,2020,Chloropidae,4
+Black Earth Rettenmund,8,12,T2,2020,Cicadellidae,17
+Black Earth Rettenmund,8,12,T2,2020,Coccinellidae,1
+Black Earth Rettenmund,8,12,T2,2020,Cryptophagidae,6
+Black Earth Rettenmund,8,12,T2,2020,Delphacidae,2
+Black Earth Rettenmund,8,12,T2,2020,Formicidae,5
+Black Earth Rettenmund,8,12,T2,2020,Geometridae,2
+Black Earth Rettenmund,8,12,T2,2020,LEPUNK,2
+Black Earth Rettenmund,8,12,T2,2020,Lygaeidae,1
+Black Earth Rettenmund,8,12,T2,2020,Miridae,13
+Black Earth Rettenmund,8,12,T2,2020,Muscidae,1
+Black Earth Rettenmund,8,12,T2,2020,Nabidae,3
+Black Earth Rettenmund,8,12,T2,2020,Nymphalidae,1
+Black Earth Rettenmund,8,12,T2,2020,Pentatomidae,10
+Black Earth Rettenmund,8,12,T2,2020,Phalacridae,9
+Black Earth Rettenmund,8,12,T2,2020,Pteromalidae,2
+Black Earth Rettenmund,8,12,T2,2020,Sphaeroceridae,1
+Black Earth Rettenmund,8,12,T2,2020,Tettigoniidae,3
+Black Earth Rettenmund,8,12,T2,2020,Therevidae,1
+Black Earth Rettenmund,8,12,T2,2020,Torymidae,3
+Black Earth Rettenmund,8,12,T3,2020,Acrididae,2
+Black Earth Rettenmund,8,12,T3,2020,Aeolothripidae,2
+Black Earth Rettenmund,8,12,T3,2020,Aphididae,2
+Black Earth Rettenmund,8,12,T3,2020,Braconidae,1
+Black Earth Rettenmund,8,12,T3,2020,Brentidae,2
+Black Earth Rettenmund,8,12,T3,2020,Carabidae,1
+Black Earth Rettenmund,8,12,T3,2020,Chloropidae,15
+Black Earth Rettenmund,8,12,T3,2020,Cicadellidae,12
+Black Earth Rettenmund,8,12,T3,2020,Dolichopodidae,6
+Black Earth Rettenmund,8,12,T3,2020,Encyrtidae,2
+Black Earth Rettenmund,8,12,T3,2020,Eulophidae,4
+Black Earth Rettenmund,8,12,T3,2020,Formicidae,5
+Black Earth Rettenmund,8,12,T3,2020,Geometridae,1
+Black Earth Rettenmund,8,12,T3,2020,Gryllidae,1
+Black Earth Rettenmund,8,12,T3,2020,LEPUNK,2
+Black Earth Rettenmund,8,12,T3,2020,Membracidae,1
+Black Earth Rettenmund,8,12,T3,2020,Miridae,2
+Black Earth Rettenmund,8,12,T3,2020,Muscidae,3
+Black Earth Rettenmund,8,12,T3,2020,Mymaridae,1
+Black Earth Rettenmund,8,12,T3,2020,Pentatomidae,2
+Black Earth Rettenmund,8,12,T3,2020,Phalacridae,1
+Black Earth Rettenmund,8,12,T3,2020,Phoridae,1
+Black Earth Rettenmund,8,12,T3,2020,Pipunculidae,2
+Black Earth Rettenmund,8,12,T3,2020,Platygastridae,1
+Black Earth Rettenmund,8,12,T3,2020,Pteromalidae,6
+Black Earth Rettenmund,8,12,T3,2020,Scatopsidae,1
+Black Earth Rettenmund,8,12,T3,2020,Simuliidae,1
+Black Earth Rettenmund,8,12,T3,2020,Syrphidae,1
+Black Earth Rettenmund,8,12,T3,2020,Tettigoniidae,11
+Black Earth Rettenmund,8,12,T3,2020,Thripidae,4
+Black Earth Rettenmund,8,12,T3,2020,Tipulidae,1
+Faville,7,27,T1,2020,Acrididae,1
+Faville,7,27,T1,2020,Chironomidae,1
+Faville,7,27,T1,2020,Chloropidae,2
+Faville,7,27,T1,2020,Chrysomelidae,6
+Faville,7,27,T1,2020,Formicidae,1
+Faville,7,27,T1,2020,LEPUNK,1
+Faville,7,27,T1,2020,Membracidae,4
+Faville,7,27,T1,2020,Miridae,1
+Faville,7,27,T1,2020,Nabidae,2
+Faville,7,27,T1,2020,Phalacridae,1
+Faville,7,27,T1,2020,Reduviidae,1
+Faville,7,27,T1,2020,Sciaridae,2
+Faville,7,27,T1,2020,Sciomyzidae,1
+Faville,7,27,T1,2020,Tettigoniidae,6
+Faville,7,27,T2,2020,Asilidae,1
+Faville,7,27,T2,2020,Cantharidae,1
+Faville,7,27,T2,2020,Cecidomyiidae,1
+Faville,7,27,T2,2020,Ceratopogonidae,1
+Faville,7,27,T2,2020,Chironomidae,1
+Faville,7,27,T2,2020,Chloropidae,3
+Faville,7,27,T2,2020,Cicadellidae,2
+Faville,7,27,T2,2020,COLUNK,1
+Faville,7,27,T2,2020,Culicidae,1
+Faville,7,27,T2,2020,Delphacidae,1
+Faville,7,27,T2,2020,Eulophidae,1
+Faville,7,27,T2,2020,Formicidae,5
+Faville,7,27,T2,2020,HEMUNK,5
+Faville,7,27,T2,2020,Pteromalidae,1
+Faville,7,27,T2,2020,Sepsidae,1
+Faville,7,27,T2,2020,Thripidae,4
+Faville,7,27,T3,2020,Chloropidae,3
+Faville,7,27,T3,2020,Eulophidae,2
+Faville,7,27,T3,2020,Formicidae,1
+Faville,7,27,T3,2020,Pteromalidae,1
+Faville,7,27,T3,2020,Tettigoniidae,1
+Faville,7,27,T3,2020,Thripidae,1
+Faville,8,27,T1,2020,Thripidae,1
+Faville,8,27,T2,2020,Depressariidae,7
+Faville,8,27,T2,2020,Encyrtidae,1
+Faville,8,27,T2,2020,Eulophidae,1
+Faville,8,27,T2,2020,Thripidae,2
+Faville,8,27,T3,2020,Chloropidae,1
+Faville,8,27,T3,2020,Muscidae,1
+Faville,8,27,T3,2020,Sphaeroceridae,1
+Faville,8,27,T3,2020,Thripidae,1
+John Muir County Park,7,16,T1,2020,Acanaloniidae,4
+John Muir County Park,7,16,T1,2020,Acrididae,4
+John Muir County Park,7,16,T1,2020,Aphrophoridae,5
+John Muir County Park,7,16,T1,2020,Baetidae,1
+John Muir County Park,7,16,T1,2020,Braconidae,3
+John Muir County Park,7,16,T1,2020,Cantharidae,1
+John Muir County Park,7,16,T1,2020,Chalcididae,1
+John Muir County Park,7,16,T1,2020,Chloropidae,8
+John Muir County Park,7,16,T1,2020,Chrysomelidae,2
+John Muir County Park,7,16,T1,2020,Cicadellidae,6
+John Muir County Park,7,16,T1,2020,Curculionidae,1
+John Muir County Park,7,16,T1,2020,Dolichopodidae,2
+John Muir County Park,7,16,T1,2020,Eulophidae,1
+John Muir County Park,7,16,T1,2020,Eurytomidae,2
+John Muir County Park,7,16,T1,2020,Formicidae,5
+John Muir County Park,7,16,T1,2020,LEPUNK,3
+John Muir County Park,7,16,T1,2020,Membracidae,1
+John Muir County Park,7,16,T1,2020,Micropezidae,1
+John Muir County Park,7,16,T1,2020,Muscidae,2
+John Muir County Park,7,16,T1,2020,Pentatomidae,1
+John Muir County Park,7,16,T1,2020,Phlaeothripidae,2
+John Muir County Park,7,16,T1,2020,Psyllidae,5
+John Muir County Park,7,16,T1,2020,Pteromalidae,5
+John Muir County Park,7,16,T1,2020,Sciomyzidae,1
+John Muir County Park,7,16,T1,2020,Tingidae,1
+John Muir County Park,7,16,T2,2020,Acanaloniidae,8
+John Muir County Park,7,16,T2,2020,Aphididae,1
+John Muir County Park,7,16,T2,2020,Apidae,1
+John Muir County Park,7,16,T2,2020,Braconidae,1
+John Muir County Park,7,16,T2,2020,Chironomidae,2
+John Muir County Park,7,16,T2,2020,Chloropidae,19
+John Muir County Park,7,16,T2,2020,Chrysomelidae,5
+John Muir County Park,7,16,T2,2020,Cicadellidae,27
+John Muir County Park,7,16,T2,2020,Cixiidae,6
+John Muir County Park,7,16,T2,2020,Coenagrionidae,1
+John Muir County Park,7,16,T2,2020,Delphacidae,5
+John Muir County Park,7,16,T2,2020,Dolichopodidae,3
+John Muir County Park,7,16,T2,2020,Eulophidae,2
+John Muir County Park,7,16,T2,2020,Eurytomidae,1
+John Muir County Park,7,16,T2,2020,Formicidae,106
+John Muir County Park,7,16,T2,2020,Halictidae,1
+John Muir County Park,7,16,T2,2020,LEPUNK,3
+John Muir County Park,7,16,T2,2020,Membracidae,10
+John Muir County Park,7,16,T2,2020,Miridae,5
+John Muir County Park,7,16,T2,2020,Noctuidae,1
+John Muir County Park,7,16,T2,2020,Phalacridae,9
+John Muir County Park,7,16,T2,2020,Phlaeothripidae,3
+John Muir County Park,7,16,T2,2020,Psyllidae,15
+John Muir County Park,7,16,T2,2020,Pteromalidae,2
+John Muir County Park,7,16,T2,2020,Reduviidae,3
+John Muir County Park,7,16,T2,2020,Sphaeroceridae,1
+John Muir County Park,7,16,T2,2020,Tettigoniidae,1
+John Muir County Park,7,16,T2,2020,Thyreocoridae,2
+John Muir County Park,7,16,T2,2020,Tingidae,3
+John Muir County Park,7,16,T2,2020,Torymidae,1
+John Muir County Park,7,16,T3,2020,Acanaloniidae,1
+John Muir County Park,7,16,T3,2020,Aphididae,9
+John Muir County Park,7,16,T3,2020,Blissidae,1
+John Muir County Park,7,16,T3,2020,Braconidae,1
+John Muir County Park,7,16,T3,2020,Chloropidae,9
+John Muir County Park,7,16,T3,2020,Chrysomelidae,1
+John Muir County Park,7,16,T3,2020,Chrysopidae,2
+John Muir County Park,7,16,T3,2020,Cicadellidae,11
+John Muir County Park,7,16,T3,2020,Cixiidae,4
+John Muir County Park,7,16,T3,2020,Culicidae,1
+John Muir County Park,7,16,T3,2020,Delphacidae,12
+John Muir County Park,7,16,T3,2020,Dolichopodidae,4
+John Muir County Park,7,16,T3,2020,Eulophidae,2
+John Muir County Park,7,16,T3,2020,Formicidae,6
+John Muir County Park,7,16,T3,2020,Halictidae,1
+John Muir County Park,7,16,T3,2020,LEPUNK,1
+John Muir County Park,7,16,T3,2020,Membracidae,1
+John Muir County Park,7,16,T3,2020,Phalacridae,1
+John Muir County Park,7,16,T3,2020,Phoridae,2
+John Muir County Park,7,16,T3,2020,Psyllidae,8
+John Muir County Park,7,16,T3,2020,Pteromalidae,4
+John Muir County Park,7,16,T3,2020,Scatopsidae,1
+John Muir County Park,7,16,T3,2020,Sciomyzidae,1
+John Muir County Park,7,16,T3,2020,Tephritidae,1
+John Muir County Park,7,16,T3,2020,Tetrigidae,1
+John Muir County Park,7,16,T3,2020,Tettigoniidae,1
+John Muir County Park,7,16,T3,2020,Thripidae,1
+John Muir County Park,7,16,T3,2020,Torymidae,1
+John Muir County Park,8,13,T1,2020,Aeolothripidae,2
+John Muir County Park,8,13,T1,2020,Aphrophoridae,1
+John Muir County Park,8,13,T1,2020,Braconidae,2
+John Muir County Park,8,13,T1,2020,Brentidae,1
+John Muir County Park,8,13,T1,2020,Cecidomyiidae,2
+John Muir County Park,8,13,T1,2020,Chironomidae,1
+John Muir County Park,8,13,T1,2020,Chloropidae,7
+John Muir County Park,8,13,T1,2020,Cicadellidae,10
+John Muir County Park,8,13,T1,2020,Culicidae,1
+John Muir County Park,8,13,T1,2020,Delphacidae,1
+John Muir County Park,8,13,T1,2020,Dolichopodidae,1
+John Muir County Park,8,13,T1,2020,Eulophidae,5
+John Muir County Park,8,13,T1,2020,Formicidae,3
+John Muir County Park,8,13,T1,2020,LEPUNK,7
+John Muir County Park,8,13,T1,2020,Miridae,3
+John Muir County Park,8,13,T1,2020,Pentatomidae,2
+John Muir County Park,8,13,T1,2020,Phalacridae,1
+John Muir County Park,8,13,T1,2020,Phlaeothripidae,4
+John Muir County Park,8,13,T1,2020,Phoridae,1
+John Muir County Park,8,13,T1,2020,Pteromalidae,11
+John Muir County Park,8,13,T1,2020,Scelionidae,1
+John Muir County Park,8,13,T1,2020,Sphaeroceridae,2
+John Muir County Park,8,13,T1,2020,Thripidae,2
+John Muir County Park,8,13,T1,2020,Tingidae,2
+John Muir County Park,8,13,T2,2020,Acanaloniidae,5
+John Muir County Park,8,13,T2,2020,Acrididae,1
+John Muir County Park,8,13,T2,2020,Aphididae,7
+John Muir County Park,8,13,T2,2020,Braconidae,2
+John Muir County Park,8,13,T2,2020,Cecidomyiidae,1
+John Muir County Park,8,13,T2,2020,Chironomidae,1
+John Muir County Park,8,13,T2,2020,Chloropidae,5
+John Muir County Park,8,13,T2,2020,Chrysomelidae,4
+John Muir County Park,8,13,T2,2020,Cicadellidae,9
+John Muir County Park,8,13,T2,2020,Coccinellidae,1
+John Muir County Park,8,13,T2,2020,Dictyopharidae,2
+John Muir County Park,8,13,T2,2020,Dolichopodidae,1
+John Muir County Park,8,13,T2,2020,Encyrtidae,1
+John Muir County Park,8,13,T2,2020,Eulophidae,6
+John Muir County Park,8,13,T2,2020,Eurytomidae,3
+John Muir County Park,8,13,T2,2020,Formicidae,11
+John Muir County Park,8,13,T2,2020,Halictidae,1
+John Muir County Park,8,13,T2,2020,LEPUNK,3
+John Muir County Park,8,13,T2,2020,Membracidae,4
+John Muir County Park,8,13,T2,2020,Miridae,10
+John Muir County Park,8,13,T2,2020,Nabidae,5
+John Muir County Park,8,13,T2,2020,Pentatomidae,1
+John Muir County Park,8,13,T2,2020,Phalacridae,45
+John Muir County Park,8,13,T2,2020,Psyllidae,4
+John Muir County Park,8,13,T2,2020,Pteromalidae,12
+John Muir County Park,8,13,T2,2020,Tettigoniidae,2
+John Muir County Park,8,13,T2,2020,Torymidae,1
+John Muir County Park,8,13,T3,2020,Aphididae,1
+John Muir County Park,8,13,T3,2020,Braconidae,2
+John Muir County Park,8,13,T3,2020,Ceratopogonidae,1
+John Muir County Park,8,13,T3,2020,Cercopidae,1
+John Muir County Park,8,13,T3,2020,Chironomidae,2
+John Muir County Park,8,13,T3,2020,Chloropidae,5
+John Muir County Park,8,13,T3,2020,Chrysomelidae,2
+John Muir County Park,8,13,T3,2020,Cicadellidae,3
+John Muir County Park,8,13,T3,2020,Coccinellidae,1
+John Muir County Park,8,13,T3,2020,Empididae,1
+John Muir County Park,8,13,T3,2020,Eulophidae,6
+John Muir County Park,8,13,T3,2020,Eupelmidae,1
+John Muir County Park,8,13,T3,2020,Formicidae,2
+John Muir County Park,8,13,T3,2020,Miridae,1
+John Muir County Park,8,13,T3,2020,Muscidae,3
+John Muir County Park,8,13,T3,2020,Noctuidae,1
+John Muir County Park,8,13,T3,2020,Psyllidae,5
+John Muir County Park,8,13,T3,2020,Pteromalidae,6
+John Muir County Park,8,13,T3,2020,Scatopsidae,3
+John Muir County Park,8,13,T3,2020,Tettigoniidae,1
+John Muir County Park,8,13,T3,2020,Thripidae,1
+Oliver Prairie,7,22,T1,2020,Acanaloniidae,1
+Oliver Prairie,7,22,T1,2020,Chloropidae,3
+Oliver Prairie,7,22,T1,2020,Chrysomelidae,2
+Oliver Prairie,7,22,T1,2020,Dolichopodidae,1
+Oliver Prairie,7,22,T1,2020,Formicidae,2
+Oliver Prairie,7,22,T1,2020,Ichneumonidae,1
+Oliver Prairie,7,22,T1,2020,LEPUNK,1
+Oliver Prairie,7,22,T1,2020,Mordellidae,1
+Oliver Prairie,7,22,T1,2020,Muscidae,1
+Oliver Prairie,7,22,T1,2020,Notodontidae,1
+Oliver Prairie,7,22,T1,2020,Phoridae,1
+Oliver Prairie,7,22,T1,2020,Pteromalidae,2
+Oliver Prairie,7,22,T2,2020,Aphididae,1
+Oliver Prairie,7,22,T2,2020,Cecidomyiidae,1
+Oliver Prairie,7,22,T2,2020,Chloropidae,2
+Oliver Prairie,7,22,T2,2020,Formicidae,1
+Oliver Prairie,7,22,T2,2020,LEPUNK,2
+Oliver Prairie,7,22,T2,2020,Scatopsidae,1
+Oliver Prairie,7,22,T2,2020,Tettigoniidae,1
+Oliver Prairie,7,22,T2,2020,Ulidiidae,2
+Oliver Prairie,7,22,T3,2020,Aphididae,1
+Oliver Prairie,7,22,T3,2020,Braconidae,1
+Oliver Prairie,7,22,T3,2020,Chironomidae,1
+Oliver Prairie,7,22,T3,2020,Chrysomelidae,2
+Oliver Prairie,7,22,T3,2020,Cicadellidae,2
+Oliver Prairie,7,22,T3,2020,Dolichopodidae,1
+Oliver Prairie,7,22,T3,2020,Fanniidae,1
+Oliver Prairie,7,22,T3,2020,Lygaeidae,1
+Oliver Prairie,7,22,T3,2020,Pteromalidae,1
+Oliver Prairie,7,22,T3,2020,Scatopsidae,1
+Oliver Prairie,7,22,T3,2020,Tettigoniidae,1
+Oliver Prairie,8,17,T1,2020,Psyllidae,1
+Oliver Prairie,8,17,T2,2020,Aphididae,1
+Oliver Prairie,8,17,T2,2020,Cantharidae,2
+Oliver Prairie,8,17,T2,2020,Chloropidae,1
+Oliver Prairie,8,17,T2,2020,Chrysomelidae,3
+Oliver Prairie,8,17,T2,2020,Cixiidae,1
+Oliver Prairie,8,17,T2,2020,LEPUNK,1
+Oliver Prairie,8,17,T3,2020,Braconidae,1
+Oliver Prairie,8,17,T3,2020,Cantharidae,1
+Oliver Prairie,8,17,T3,2020,Chrysomelidae,4
+Oliver Prairie,8,17,T3,2020,Dictyopharidae,1
+Oliver Prairie,8,17,T3,2020,Eulophidae,1
+Oliver Prairie,8,17,T3,2020,LEPUNK,1
+Pleasant Valley Conservancy,7,17,T1,2020,Acrididae,2
+Pleasant Valley Conservancy,7,17,T1,2020,Aphrophoridae,1
+Pleasant Valley Conservancy,7,17,T1,2020,Braconidae,3
+Pleasant Valley Conservancy,7,17,T1,2020,Chironomidae,1
+Pleasant Valley Conservancy,7,17,T1,2020,Chloropidae,21
+Pleasant Valley Conservancy,7,17,T1,2020,Cicadellidae,9
+Pleasant Valley Conservancy,7,17,T1,2020,Delphacidae,3
+Pleasant Valley Conservancy,7,17,T1,2020,Empididae,3
+Pleasant Valley Conservancy,7,17,T1,2020,Encyrtidae,1
+Pleasant Valley Conservancy,7,17,T1,2020,Eurytomidae,2
+Pleasant Valley Conservancy,7,17,T1,2020,Formicidae,4
+Pleasant Valley Conservancy,7,17,T1,2020,LEPUNK,1
+Pleasant Valley Conservancy,7,17,T1,2020,Mordellidae,1
+Pleasant Valley Conservancy,7,17,T1,2020,Muscidae,1
+Pleasant Valley Conservancy,7,17,T1,2020,Pentatomidae,1
+Pleasant Valley Conservancy,7,17,T1,2020,Phalacridae,2
+Pleasant Valley Conservancy,7,17,T1,2020,Pteromalidae,2
+Pleasant Valley Conservancy,7,17,T1,2020,Sepsidae,1
+Pleasant Valley Conservancy,7,17,T1,2020,Tipulidae,1
+Pleasant Valley Conservancy,7,17,T2,2020,Ceratopogonidae,1
+Pleasant Valley Conservancy,7,17,T2,2020,Chironomidae,1
+Pleasant Valley Conservancy,7,17,T2,2020,Chloropidae,10
+Pleasant Valley Conservancy,7,17,T2,2020,Chrysomelidae,2
+Pleasant Valley Conservancy,7,17,T2,2020,Cicadellidae,37
+Pleasant Valley Conservancy,7,17,T2,2020,Corylophidae,4
+Pleasant Valley Conservancy,7,17,T2,2020,Delphacidae,12
+Pleasant Valley Conservancy,7,17,T2,2020,Dolichopodidae,1
+Pleasant Valley Conservancy,7,17,T2,2020,Eulophidae,1
+Pleasant Valley Conservancy,7,17,T2,2020,Formicidae,5
+Pleasant Valley Conservancy,7,17,T2,2020,Gryllidae,1
+Pleasant Valley Conservancy,7,17,T2,2020,Mordellidae,1
+Pleasant Valley Conservancy,7,17,T2,2020,Mymaridae,1
+Pleasant Valley Conservancy,7,17,T2,2020,Scatopsidae,4
+Pleasant Valley Conservancy,7,17,T2,2020,Sciaridae,1
+Pleasant Valley Conservancy,7,17,T2,2020,Syrphidae,1
+Pleasant Valley Conservancy,7,17,T2,2020,Tettigoniidae,6
+Pleasant Valley Conservancy,7,17,T3,2020,Cecidomyiidae,1
+Pleasant Valley Conservancy,7,17,T3,2020,Chloropidae,10
+Pleasant Valley Conservancy,7,17,T3,2020,Cicadellidae,19
+Pleasant Valley Conservancy,7,17,T3,2020,Delphacidae,7
+Pleasant Valley Conservancy,7,17,T3,2020,Halictidae,1
+Pleasant Valley Conservancy,7,17,T3,2020,Miridae,1
+Pleasant Valley Conservancy,7,17,T3,2020,Nitidulidae,1
+Pleasant Valley Conservancy,7,17,T3,2020,Scelionidae,1
+Pleasant Valley Conservancy,7,17,T3,2020,Tettigoniidae,5
+Pleasant Valley Conservancy,7,17,T3,2020,Thripidae,1
+Pleasant Valley Conservancy,8,12,T1,2020,Acrididae,2
+Pleasant Valley Conservancy,8,12,T1,2020,Aphrophoridae,7
+Pleasant Valley Conservancy,8,12,T1,2020,Cecidomyiidae,2
+Pleasant Valley Conservancy,8,12,T1,2020,Chloropidae,3
+Pleasant Valley Conservancy,8,12,T1,2020,Chrysomelidae,1
+Pleasant Valley Conservancy,8,12,T1,2020,Cicadellidae,15
+Pleasant Valley Conservancy,8,12,T1,2020,COLUNK,3
+Pleasant Valley Conservancy,8,12,T1,2020,Encyrtidae,1
+Pleasant Valley Conservancy,8,12,T1,2020,Membracidae,2
+Pleasant Valley Conservancy,8,12,T1,2020,Mutillidae,1
+Pleasant Valley Conservancy,8,12,T1,2020,Nitidulidae,9
+Pleasant Valley Conservancy,8,12,T1,2020,Phoridae,1
+Pleasant Valley Conservancy,8,12,T1,2020,Pteromalidae,6
+Pleasant Valley Conservancy,8,12,T1,2020,Reduviidae,1
+Pleasant Valley Conservancy,8,12,T1,2020,Sciaridae,1
+Pleasant Valley Conservancy,8,12,T1,2020,Simuliidae,1
+Pleasant Valley Conservancy,8,12,T1,2020,Tettigoniidae,1
+Pleasant Valley Conservancy,8,12,T1,2020,Thripidae,3
+Pleasant Valley Conservancy,8,12,T1,2020,Tipulidae,1
+Pleasant Valley Conservancy,8,12,T1,2020,Zygaenidae,1
+Pleasant Valley Conservancy,8,12,T2,2020,Alydidae,3
+Pleasant Valley Conservancy,8,12,T2,2020,Cecidomyiidae,3
+Pleasant Valley Conservancy,8,12,T2,2020,Ceratopogonidae,4
+Pleasant Valley Conservancy,8,12,T2,2020,Chironomidae,2
+Pleasant Valley Conservancy,8,12,T2,2020,Chloropidae,6
+Pleasant Valley Conservancy,8,12,T2,2020,Cicadellidae,14
+Pleasant Valley Conservancy,8,12,T2,2020,COLUNK,1
+Pleasant Valley Conservancy,8,12,T2,2020,Delphacidae,22
+Pleasant Valley Conservancy,8,12,T2,2020,Eulophidae,3
+Pleasant Valley Conservancy,8,12,T2,2020,Figitidae,2
+Pleasant Valley Conservancy,8,12,T2,2020,Formicidae,2
+Pleasant Valley Conservancy,8,12,T2,2020,Gryllidae,1
+Pleasant Valley Conservancy,8,12,T2,2020,Halictidae,1
+Pleasant Valley Conservancy,8,12,T2,2020,LEPUNK,3
+Pleasant Valley Conservancy,8,12,T2,2020,Membracidae,1
+Pleasant Valley Conservancy,8,12,T2,2020,Nitidulidae,16
+Pleasant Valley Conservancy,8,12,T2,2020,Pentatomidae,1
+Pleasant Valley Conservancy,8,12,T2,2020,Pipunculidae,4
+Pleasant Valley Conservancy,8,12,T2,2020,Platygastridae,2
+Pleasant Valley Conservancy,8,12,T2,2020,Scelionidae,3
+Pleasant Valley Conservancy,8,12,T2,2020,Sciomyzidae,4
+Pleasant Valley Conservancy,8,12,T2,2020,Tephritidae,1
+Pleasant Valley Conservancy,8,12,T2,2020,Tettigoniidae,3
+Pleasant Valley Conservancy,8,12,T2,2020,Thripidae,2
+Pleasant Valley Conservancy,8,12,T2,2020,UNKORD,9
+Pleasant Valley Conservancy,8,12,T3,2020,Acrididae,1
+Pleasant Valley Conservancy,8,12,T3,2020,Aphididae,6
+Pleasant Valley Conservancy,8,12,T3,2020,Braconidae,1
+Pleasant Valley Conservancy,8,12,T3,2020,Cecidomyiidae,4
+Pleasant Valley Conservancy,8,12,T3,2020,Chloropidae,6
+Pleasant Valley Conservancy,8,12,T3,2020,Chrysomelidae,2
+Pleasant Valley Conservancy,8,12,T3,2020,Cicadellidae,18
+Pleasant Valley Conservancy,8,12,T3,2020,Coreidae,2
+Pleasant Valley Conservancy,8,12,T3,2020,Delphacidae,6
+Pleasant Valley Conservancy,8,12,T3,2020,DIPUNK,2
+Pleasant Valley Conservancy,8,12,T3,2020,Dolichopodidae,1
+Pleasant Valley Conservancy,8,12,T3,2020,Eulophidae,3
+Pleasant Valley Conservancy,8,12,T3,2020,Eupelmidae,1
+Pleasant Valley Conservancy,8,12,T3,2020,Eurytomidae,1
+Pleasant Valley Conservancy,8,12,T3,2020,Latridiidae,8
+Pleasant Valley Conservancy,8,12,T3,2020,Nabidae,2
+Pleasant Valley Conservancy,8,12,T3,2020,Nitidulidae,5
+Pleasant Valley Conservancy,8,12,T3,2020,Phoridae,1
+Pleasant Valley Conservancy,8,12,T3,2020,Pipunculidae,2
+Pleasant Valley Conservancy,8,12,T3,2020,Platygastridae,2
+Pleasant Valley Conservancy,8,12,T3,2020,Tettigoniidae,3
+Pleasant Valley Conservancy,8,12,T3,2020,Thripidae,1
+Pleasant Valley Conservancy,8,12,T3,2020,UNKORD,1
+Pleasant Valley Conservancy,8,12,T3,2020,Zygaenidae,8
+Westport Drumlin,7,25,T1,2020,Acanaloniidae,3
+Westport Drumlin,7,25,T1,2020,Acrididae,5
+Westport Drumlin,7,25,T1,2020,Baetidae,2
+Westport Drumlin,7,25,T1,2020,Braconidae,2
+Westport Drumlin,7,25,T1,2020,Cecidomyiidae,1
+Westport Drumlin,7,25,T1,2020,Ceratopogonidae,3
+Westport Drumlin,7,25,T1,2020,Chironomidae,1
+Westport Drumlin,7,25,T1,2020,Chloropidae,8
+Westport Drumlin,7,25,T1,2020,Chrysomelidae,34
+Westport Drumlin,7,25,T1,2020,Cicadellidae,18
+Westport Drumlin,7,25,T1,2020,Delphacidae,3
+Westport Drumlin,7,25,T1,2020,Dolichopodidae,2
+Westport Drumlin,7,25,T1,2020,Encyrtidae,1
+Westport Drumlin,7,25,T1,2020,Formicidae,19
+Westport Drumlin,7,25,T1,2020,Gryllidae,1
+Westport Drumlin,7,25,T1,2020,Halictidae,1
+Westport Drumlin,7,25,T1,2020,LEPUNK,5
+Westport Drumlin,7,25,T1,2020,Membracidae,2
+Westport Drumlin,7,25,T1,2020,Phalacridae,2
+Westport Drumlin,7,25,T1,2020,Pteromalidae,2
+Westport Drumlin,7,25,T1,2020,Richardiidae,1
+Westport Drumlin,7,25,T1,2020,Scutelleridae,1
+Westport Drumlin,7,25,T1,2020,Tettigoniidae,2
+Westport Drumlin,7,25,T2,2020,Acanaloniidae,1
+Westport Drumlin,7,25,T2,2020,Aphididae,5
+Westport Drumlin,7,25,T2,2020,Braconidae,2
+Westport Drumlin,7,25,T2,2020,Brentidae,13
+Westport Drumlin,7,25,T2,2020,Ceratopogonidae,3
+Westport Drumlin,7,25,T2,2020,Chironomidae,1
+Westport Drumlin,7,25,T2,2020,Chloropidae,5
+Westport Drumlin,7,25,T2,2020,Chrysomelidae,9
+Westport Drumlin,7,25,T2,2020,Cicadellidae,6
+Westport Drumlin,7,25,T2,2020,Dolichopodidae,1
+Westport Drumlin,7,25,T2,2020,Encyrtidae,2
+Westport Drumlin,7,25,T2,2020,Eulophidae,2
+Westport Drumlin,7,25,T2,2020,Eupelmidae,1
+Westport Drumlin,7,25,T2,2020,Formicidae,8
+Westport Drumlin,7,25,T2,2020,Halictidae,1
+Westport Drumlin,7,25,T2,2020,Pentatomidae,2
+Westport Drumlin,7,25,T2,2020,Phalacridae,1
+Westport Drumlin,7,25,T2,2020,Psyllidae,3
+Westport Drumlin,7,25,T2,2020,Pteromalidae,2
+Westport Drumlin,7,25,T2,2020,Reduviidae,1
+Westport Drumlin,7,25,T2,2020,Thripidae,1
+Westport Drumlin,7,25,T3,2020,Acrididae,3
+Westport Drumlin,7,25,T3,2020,Aphididae,3
+Westport Drumlin,7,25,T3,2020,Braconidae,1
+Westport Drumlin,7,25,T3,2020,Cercopidae,1
+Westport Drumlin,7,25,T3,2020,Chironomidae,3
+Westport Drumlin,7,25,T3,2020,Chloropidae,15
+Westport Drumlin,7,25,T3,2020,Chrysomelidae,1
+Westport Drumlin,7,25,T3,2020,Cicadellidae,15
+Westport Drumlin,7,25,T3,2020,Culicidae,3
+Westport Drumlin,7,25,T3,2020,Curculionidae,2
+Westport Drumlin,7,25,T3,2020,Cynipidae,2
+Westport Drumlin,7,25,T3,2020,Delphacidae,1
+Westport Drumlin,7,25,T3,2020,Dictyopharidae,1
+Westport Drumlin,7,25,T3,2020,Encyrtidae,5
+Westport Drumlin,7,25,T3,2020,Eulophidae,2
+Westport Drumlin,7,25,T3,2020,Formicidae,9
+Westport Drumlin,7,25,T3,2020,Geometridae,1
+Westport Drumlin,7,25,T3,2020,Issidae,1
+Westport Drumlin,7,25,T3,2020,Latridiidae,1
+Westport Drumlin,7,25,T3,2020,Membracidae,10
+Westport Drumlin,7,25,T3,2020,Phalacridae,2
+Westport Drumlin,7,25,T3,2020,Platygastridae,4
+Westport Drumlin,7,25,T3,2020,Psyllidae,5
+Westport Drumlin,7,25,T3,2020,Pteromalidae,1
+Westport Drumlin,7,25,T3,2020,Scutelleridae,8
+Westport Drumlin,7,25,T3,2020,Simuliidae,1
+Westport Drumlin,7,25,T3,2020,Tettigoniidae,2
+Westport Drumlin,7,25,T3,2020,Thripidae,3
+Westport Drumlin,8,17,T1,2020,Acanaloniidae,1
+Westport Drumlin,8,17,T1,2020,Acrididae,2
+Westport Drumlin,8,17,T1,2020,Aphelinidae,1
+Westport Drumlin,8,17,T1,2020,Baetidae,2
+Westport Drumlin,8,17,T1,2020,Ceratopogonidae,1
+Westport Drumlin,8,17,T1,2020,Cercopidae,2
+Westport Drumlin,8,17,T1,2020,Chloropidae,3
+Westport Drumlin,8,17,T1,2020,Chrysomelidae,10
+Westport Drumlin,8,17,T1,2020,Cicadellidae,20
+Westport Drumlin,8,17,T1,2020,Dolichopodidae,2
+Westport Drumlin,8,17,T1,2020,Dryinidae,1
+Westport Drumlin,8,17,T1,2020,Encyrtidae,1
+Westport Drumlin,8,17,T1,2020,Ephydridae,1
+Westport Drumlin,8,17,T1,2020,Eulophidae,4
+Westport Drumlin,8,17,T1,2020,Formicidae,5
+Westport Drumlin,8,17,T1,2020,Geometridae,1
+Westport Drumlin,8,17,T1,2020,Gryllidae,1
+Westport Drumlin,8,17,T1,2020,Halictidae,1
+Westport Drumlin,8,17,T1,2020,Ichneumonidae,1
+Westport Drumlin,8,17,T1,2020,LEPUNK,1
+Westport Drumlin,8,17,T1,2020,Pentatomidae,2
+Westport Drumlin,8,17,T1,2020,Phalacridae,1
+Westport Drumlin,8,17,T1,2020,Phoridae,2
+Westport Drumlin,8,17,T1,2020,Platygastridae,2
+Westport Drumlin,8,17,T1,2020,Pteromalidae,3
+Westport Drumlin,8,17,T1,2020,Scatopsidae,1
+Westport Drumlin,8,17,T1,2020,Sciaridae,1
+Westport Drumlin,8,17,T1,2020,Sciomyzidae,1
+Westport Drumlin,8,17,T1,2020,Tephritidae,1
+Westport Drumlin,8,17,T2,2020,Acanaloniidae,2
+Westport Drumlin,8,17,T2,2020,Anthocoridae,1
+Westport Drumlin,8,17,T2,2020,Aphididae,3
+Westport Drumlin,8,17,T2,2020,Bethylidae,1
+Westport Drumlin,8,17,T2,2020,Braconidae,2
+Westport Drumlin,8,17,T2,2020,Ceratopogonidae,1
+Westport Drumlin,8,17,T2,2020,Chloropidae,7
+Westport Drumlin,8,17,T2,2020,Chrysomelidae,27
+Westport Drumlin,8,17,T2,2020,Chrysopidae,1
+Westport Drumlin,8,17,T2,2020,Cicadellidae,5
+Westport Drumlin,8,17,T2,2020,Curculionidae,12
+Westport Drumlin,8,17,T2,2020,DIPUNK,2
+Westport Drumlin,8,17,T2,2020,Empididae,1
+Westport Drumlin,8,17,T2,2020,Eulophidae,3
+Westport Drumlin,8,17,T2,2020,Eupelmidae,1
+Westport Drumlin,8,17,T2,2020,Eurytomidae,1
+Westport Drumlin,8,17,T2,2020,Figitidae,1
+Westport Drumlin,8,17,T2,2020,Formicidae,14
+Westport Drumlin,8,17,T2,2020,Halictidae,1
+Westport Drumlin,8,17,T2,2020,LEPUNK,1
+Westport Drumlin,8,17,T2,2020,Miridae,3
+Westport Drumlin,8,17,T2,2020,Pentatomidae,6
+Westport Drumlin,8,17,T2,2020,Perilampidae,1
+Westport Drumlin,8,17,T2,2020,Phalacridae,5
+Westport Drumlin,8,17,T2,2020,Platygastridae,14
+Westport Drumlin,8,17,T2,2020,Psyllidae,1
+Westport Drumlin,8,17,T2,2020,Rhyparochromidae,1
+Westport Drumlin,8,17,T2,2020,Sarcophagidae,1
+Westport Drumlin,8,17,T2,2020,Scathophagidae,1
+Westport Drumlin,8,17,T2,2020,Sepsidae,1
+Westport Drumlin,8,17,T2,2020,Tephritidae,1
+Westport Drumlin,8,17,T2,2020,UNKORD,14
+Westport Drumlin,8,17,T3,2020,Acrididae,2
+Westport Drumlin,8,17,T3,2020,Aeolothripidae,1
+Westport Drumlin,8,17,T3,2020,Aphididae,2
+Westport Drumlin,8,17,T3,2020,Braconidae,4
+Westport Drumlin,8,17,T3,2020,Brentidae,6
+Westport Drumlin,8,17,T3,2020,Caliscelidae,1
+Westport Drumlin,8,17,T3,2020,Cantharidae,1
+Westport Drumlin,8,17,T3,2020,Chironomidae,1
+Westport Drumlin,8,17,T3,2020,Chloropidae,9
+Westport Drumlin,8,17,T3,2020,Chrysomelidae,29
+Westport Drumlin,8,17,T3,2020,Chrysopidae,1
+Westport Drumlin,8,17,T3,2020,Cicadellidae,8
+Westport Drumlin,8,17,T3,2020,Dictyopharidae,1
+Westport Drumlin,8,17,T3,2020,Encyrtidae,1
+Westport Drumlin,8,17,T3,2020,Eucharitidae,3
+Westport Drumlin,8,17,T3,2020,Eulophidae,1
+Westport Drumlin,8,17,T3,2020,Formicidae,6
+Westport Drumlin,8,17,T3,2020,Gryllidae,1
+Westport Drumlin,8,17,T3,2020,Halictidae,1
+Westport Drumlin,8,17,T3,2020,Lampyridae,1
+Westport Drumlin,8,17,T3,2020,LEPUNK,1
+Westport Drumlin,8,17,T3,2020,Lygaeidae,1
+Westport Drumlin,8,17,T3,2020,Membracidae,5
+Westport Drumlin,8,17,T3,2020,Muscidae,1
+Westport Drumlin,8,17,T3,2020,Mymaridae,1
+Westport Drumlin,8,17,T3,2020,Pentatomidae,2
+Westport Drumlin,8,17,T3,2020,Phalacridae,7
+Westport Drumlin,8,17,T3,2020,Psyllidae,7
+Westport Drumlin,8,17,T3,2020,Pteromalidae,6
+Westport Drumlin,8,17,T3,2020,Scatopsidae,3
+Westport Drumlin,8,17,T3,2020,Sciaridae,1
+Westport Drumlin,8,17,T3,2020,Syrphidae,1
+Westport Drumlin,8,17,T3,2020,Tephritidae,1
+Westport Drumlin,8,17,T3,2020,Torymidae,1
