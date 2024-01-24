@@ -1,3 +1,5 @@
+library(iNEXT)
+
 #Insect Data ####
 all_data <- read_csv("../restoration_insect_diversity/clean/all_data.csv")
 #Data with aggragate families removed#### 
@@ -51,7 +53,16 @@ write_csv(insect_rich_120$AsyEst, "clean/estimates_120.csv")
 insect_rich_est_120 <- as.data.frame(insect_rich[["iNextEst"]])
 # output into separate data frames
 # with rarefied and extrapolated samples for q = 0,1,2
-insect_abundance_120 <- as.data.frame(insect_rich[["DataInfo"]])  ##site name, sample size, Family richness, number of singletons, doubletons, etc.
+insect_abundance_120 <- as.data.frame(insect_rich[["DataInfo"]])  ##site name, sample size, Family richness, number of singletons, doubletons, etc
+
+# Specifying Simpson's only, q = 2 ####
+insect_simp <- iNEXT(abundance_list, q=2, datatype = "abundance", nboot = 100) ##can set endpoint too, referring to number of indivduals 
+insect_simpson <- as.data.frame(insect_simp[["DataInfo"]])
+insect_sim_asy <- as.data.frame(insect_simp[["AsyEst"]]) ## asympototic diversity estimates with bootstrap s.e. and confidence intervals for q = 0,1,2
+simpson_div <-  insect_sim_asy %>% 
+  filter(Diversity == "Simpson diversity")
+
+write_csv(simpson_div, "clean/simpson_div.csv")
 
 # Specifying Richness and Shannon's only, q = 0 & 1 ####
 insect <- iNEXT(abundance_list, q=c(0, 1), datatype = "abundance", nboot = 100) ##can set endpoint too, referring to number of indivduals 
