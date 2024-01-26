@@ -227,11 +227,12 @@ summary(div_rich)
 
 ggResidpanel::resid_panel(div_rich)
 
-#Diversity
-even_rich <- lm(Simpson_est ~ richness, data = NRCS_sites)
+#evenness
+even_rich <- lm(pielou_even ~ richness, data = NRCS_sites)
 car::Anova(even_rich,type="II")
 summary(even_rich)
 
+ggResidpanel::resid_panel(even_rich)
 #### Non-native plant richness ####
 #Abundance
 abund_rich <- lm(Abund ~ nonnativerich, data = NRCS_sites)
@@ -254,7 +255,7 @@ summary(div_rich)
 ggResidpanel::resid_panel(div_rich)
 
 #Evenness
-even_rich <- lm(Simpson_est ~ nonnativerich, data = NRCS_sites)
+even_rich <- lm(pielou_even ~ nonnativerich, data = NRCS_sites)
 car::Anova(even_rich,type="II")
 summary(even_rich)
 
@@ -295,7 +296,7 @@ summary(mod_since_fire)
 
 ggResidpanel::resid_panel(mod_since_fire)
 
-mod_since_fire <- lm(Simpson_est ~  years_since_fire, data = burn_insect)
+mod_since_fire <- lm(pielou_even ~  years_since_fire, data = burn_insect)
 car::Anova(mod_since_fire,type="II")
 summary(mod_since_fire)
 
@@ -366,7 +367,7 @@ insect_response_YR %>%
         legend.title = element_blank(),
         legend.position = "none",
         plot.margin = unit(c(1,1,2,1), "lines")) +
-  geom_jitter(alpha=0.5, width = .1, size = 2.5)
+  geom_jitter(width = .1, size = 2.5)
 
 ## Estimated richness ####
 plot_rich <- insect_response_YR #%>% filter(Abund > 200) 
@@ -387,7 +388,7 @@ plot_rich %>%
         legend.title = element_blank(),
         legend.position = "none",
         plot.margin = unit(c(1,1,2,1), "lines")) +
-  geom_jitter(alpha = 0.5, width = .1, size = 2.5)
+  geom_jitter(width = .1, size = 2.5)
 
 ## Estimated diversity ####
 plot_div <- insect_response_YR 
@@ -399,7 +400,7 @@ plot_div %>%
                     name = "Site Categories")+
   labs(title = "")+
   xlab("\n Site category") +
-  ylab("Insect family diversity \n (hill number, q = 1)")+
+  ylab("Insect family Shannon's diversity \n (hill number, q = 1)")+
   theme(plot.title = element_text( size = 18, hjust = 0.5, vjust = 2),
         axis.title.x = element_text( size = 15, vjust = 4),
         axis.title.y = element_text( size = 15, hjust = 0.5, vjust =2),
@@ -408,7 +409,7 @@ plot_div %>%
         legend.title = element_blank(),
         legend.position = "none",
         plot.margin = unit(c(1,1,2,1), "lines")) +
-  geom_jitter(alpha = 0.5, width = .1, size = 2.5)
+  geom_jitter(width = .1, size = 2.5)
 
 ## Estimated evenness ####
 plot_even <- insect_response_YR 
@@ -420,7 +421,7 @@ plot_even %>%
                     name = "Site Categories")+
   labs(title = "")+
   xlab("\n Site category") +
-  ylab("Insect family evenness \n (hill number, q = 2)")+
+  ylab("Insect family Pielou's evenness")+
   theme(plot.title = element_text( size = 18, hjust = 0.5, vjust = 2),
         axis.title.x = element_text( size = 15, vjust = 4),
         axis.title.y = element_text( size = 15, hjust = 0.5, vjust =2),
@@ -429,13 +430,13 @@ plot_even %>%
         legend.title = element_blank(),
         legend.position = "none",
         plot.margin = unit(c(1,1,2,1), "lines")) +
-  geom_jitter(alpha=0.5, width = .1, size = 2.5)
+  geom_jitter(width = .1, size = 2.5)
 
 ## Plant species richness####
 ## evenness
 NRCS_sites %>% 
-  ggplot(aes(richness, Simpson_est, color = RestorationCategory)) +
-  geom_point() +
+  ggplot(aes(richness, pielou_even, color = RestorationCategory)) +
+  geom_point(aes(),size=2.5) +
   #geom_smooth(aes(color = RestorationCategory), method = "lm") + 
   geom_smooth(aes(), color = "black", method = "lm", se=FALSE) +
   theme_classic()+
@@ -443,7 +444,7 @@ NRCS_sites %>%
                      name = "Site Categories")+
   labs(title = "")+
   xlab("Plant species richness") +
-  ylab("Insect family evenness \n (hill number, q = 2)")+
+  ylab("Insect family \n Pielou's evenness")+
   theme(plot.title = element_text( size = 18, hjust = 1, vjust = 1),
         axis.title.x = element_text( size = 15, vjust = 1),
         axis.title.y = element_text( size = 15, hjust = 0.5, vjust =2),
@@ -456,7 +457,7 @@ NRCS_sites %>%
 ## Diversity
 NRCS_sites %>% 
   ggplot(aes(richness, Shannon_est, color = RestorationCategory)) +
-  geom_point() +
+  geom_point(aes(),size=2.5) +
   #geom_smooth(aes(color = RestorationCategory), method = "lm") + 
   geom_smooth(aes(), color = "black", method = "lm", se=FALSE) +
   theme_classic()+
@@ -464,7 +465,7 @@ NRCS_sites %>%
                      name = "Site Categories")+
   labs(title = "")+
   xlab("Plant species richness") +
-  ylab("Insect family diversity \n (hill number, q = 1)")+
+  ylab("Insect family Shannon's \n diversity (q = 1)")+
   theme(plot.title = element_text( size = 18, hjust = 1, vjust = 1),
         axis.title.x = element_text( size = 15, vjust = 1),
         axis.title.y = element_text( size = 15, hjust = 0.5, vjust =2),
@@ -477,7 +478,7 @@ NRCS_sites %>%
 ## Richness
 NRCS_sites %>% 
   ggplot(aes(richness, Rich_est, color = RestorationCategory)) +
-  geom_point() +
+  geom_point(aes(), size = 2.5) +
   #geom_smooth(aes(color = RestorationCategory), method = "lm") + 
   geom_smooth(aes(), color = "black", method = "lm", se=FALSE) +
   theme_classic()+
@@ -485,7 +486,7 @@ NRCS_sites %>%
                      name = "Site Categories")+
   labs(title = "")+
   xlab("Plant species richness") +
-  ylab("Insect family richness \n (hill number, q = 0)")+
+  ylab("Insect family richness \n (q = 0)")+
   theme(plot.title = element_text( size = 18, hjust = 0.1, vjust = 1),
         axis.title.x = element_text( size = 15, vjust = 1),
         axis.title.y = element_text( size = 15, hjust = 0.5, vjust =2),
@@ -498,7 +499,7 @@ NRCS_sites %>%
 ## Abundance
 NRCS_sites %>% 
   ggplot(aes(richness, Abund, color = RestorationCategory)) +
-  geom_point() +
+  geom_point(aes(), size = 2.5) +
   #geom_smooth(aes(color = RestorationCategory), method = "lm") + 
   geom_smooth(aes(), color = "black", method = "lm", se=FALSE) +
   theme_classic()+
@@ -519,8 +520,8 @@ NRCS_sites %>%
 ## Non-native plant species richness####
 ## evenness
 NRCS_sites %>% 
-  ggplot(aes(nonnativerich, Simpson_est, color = RestorationCategory)) +
-  geom_point() +
+  ggplot(aes(nonnativerich, pielou_even, color = RestorationCategory)) +
+  geom_point(aes(), size = 2.5) +
   #geom_smooth(aes(color = RestorationCategory), method = "lm") + 
   geom_smooth(aes(), color = "black", method = "lm", se=FALSE) +
   theme_classic()+
@@ -528,7 +529,7 @@ NRCS_sites %>%
                      name = "Site Categories")+
   labs(title = "")+
   xlab("Non-native plant richness") +
-  ylab("Insect family evenness \n (hill number, q = 2)")+
+  ylab("Insect family \n Pielou's evenness")+
   theme(plot.title = element_text( size = 18, hjust = 1, vjust = 1),
         axis.title.x = element_text( size = 15, vjust = 1),
         axis.title.y = element_text( size = 15, hjust = 0.5, vjust =2),
@@ -541,7 +542,7 @@ NRCS_sites %>%
 ## Diversity
 NRCS_sites %>% 
   ggplot(aes(nonnativerich, Shannon_est, color = RestorationCategory)) +
-  geom_point() +
+  geom_point(aes(), size = 2.5) +
   #geom_smooth(aes(color = RestorationCategory), method = "lm") + 
   geom_smooth(aes(), color = "black", method = "lm", se=FALSE) +
   theme_classic()+
@@ -549,7 +550,7 @@ NRCS_sites %>%
                      name = "Site Categories")+
   labs(title = "")+
   xlab("Non-native plant richness") +
-  ylab("Insect family diversity \n (hill number, q = 1)")+
+  ylab("Insect family Shannon's \n diversity (q = 1)")+
   theme(plot.title = element_text( size = 18, hjust = 1, vjust = 1),
         axis.title.x = element_text( size = 15, vjust = 1),
         axis.title.y = element_text( size = 15, hjust = 0.5, vjust =2),
@@ -562,7 +563,7 @@ NRCS_sites %>%
 ## Richness
 NRCS_sites %>% 
   ggplot(aes(nonnativerich, Rich_est, color = RestorationCategory)) +
-  geom_point() +
+  geom_point(aes(), size = 2.5) +
   #geom_smooth(aes(color = RestorationCategory), method = "lm") + 
   geom_smooth(aes(), color = "black", method = "lm", se=FALSE) +
   theme_classic()+
@@ -570,7 +571,7 @@ NRCS_sites %>%
                      name = "Site Categories")+
   labs(title = "")+
   xlab("Non-native plant richness") +
-  ylab("Insect family richness \n (hill number, q = 0)")+
+  ylab("Insect family richness \n (q = 0)")+
   theme(plot.title = element_text( size = 18, hjust = 0.1, vjust = 1),
         axis.title.x = element_text( size = 15, vjust = 1),
         axis.title.y = element_text( size = 15, hjust = 0.5, vjust =2),
@@ -583,7 +584,7 @@ NRCS_sites %>%
 ## Abundance
 NRCS_sites %>% 
   ggplot(aes(nonnativerich, Abund, color = RestorationCategory)) +
-  geom_point() +
+  geom_point(aes(), size = 2.5) +
   #geom_smooth(aes(color = RestorationCategory), method = "lm") + 
   geom_smooth(aes(), color = "black", method = "lm", se=FALSE) +
   theme_classic()+
@@ -604,8 +605,8 @@ NRCS_sites %>%
 ## Time since fire ####
 ## Evenness
 burn_insect%>% 
-  ggplot(aes(years_since_fire, Simpson_est, color = RestorationCategory)) +
-  geom_point(outlier.alpha = 0) +
+  ggplot(aes(years_since_fire, pielou_even, color = RestorationCategory)) +
+  geom_point(aes(), size = 2.5, outlier.alpha = 0) +
   #geom_smooth(aes(color = RestorationCategory), method = "lm") + 
   geom_smooth(aes(), color = "black", method = "lm", se=FALSE) +
   theme_classic()+
@@ -614,7 +615,7 @@ burn_insect%>%
                      name = "Site Categories")+
   labs(title = "")+
   xlab("\n Years since last fire") +
-  ylab("Insect family evenness \n (hill number, q = 2)")+
+  ylab("Insect family \n Pielou's evenness")+
   theme(plot.title = element_text( size = 18, hjust = 0.1, vjust = 1),
         axis.title.x = element_text( size = 15, vjust = 4),
         axis.title.y = element_text( size = 15, hjust = 0.5, vjust =2),
@@ -627,7 +628,7 @@ burn_insect%>%
 ## Diversity
 burn_insect%>% 
   ggplot(aes(years_since_fire, Shannon_est, color = RestorationCategory)) +
-  geom_point(outlier.alpha = 0) +
+  geom_point(aes(), size = 2.5, outlier.alpha = 0) +
   #geom_smooth(aes(color = RestorationCategory), method = "lm") + 
   geom_smooth(aes(), color = "black", method = "lm", se=FALSE) +
   theme_classic()+
@@ -636,7 +637,7 @@ burn_insect%>%
                      name = "Site Categories")+
   labs(title = "")+
   xlab("\n Years since last fire") +
-  ylab("Insect family diversity \n (hill number, q = 1)")+
+  ylab("Insect family Shannon's \n diversity (q = 1)")+
   theme(plot.title = element_text( size = 18, hjust = 0.1, vjust = 1),
         axis.title.x = element_text( size = 15, vjust = 4),
         axis.title.y = element_text( size = 15, hjust = 0.5, vjust =2),
@@ -649,7 +650,7 @@ burn_insect%>%
 ## Richness
 burn_insect%>% 
   ggplot(aes(years_since_fire, Rich_est, color = RestorationCategory)) +
-  geom_point(outlier.alpha = 0) +
+  geom_point(aes(), size = 2.5, outlier.alpha = 0) +
   #geom_smooth(aes(color = RestorationCategory), method = "lm") + 
   geom_smooth(aes(), color = "black", method = "lm", se=FALSE) +
   theme_classic()+
@@ -657,7 +658,7 @@ burn_insect%>%
                      name = "Site Categories")+
   labs(title = "")+
   xlab("\n Years since last fire") +
-  ylab("Insect family richness \n (hill number, q = 0)")+
+  ylab("Insect family richness \n (q = 0)")+
   theme(plot.title = element_text( size = 18, hjust = 0.1, vjust = 1),
         axis.title.x = element_text( size = 15, vjust = 4),
         axis.title.y = element_text( size = 15, hjust = 0.5, vjust =2),
@@ -670,7 +671,7 @@ burn_insect%>%
 ## Abundance
 burn_insect%>% 
   ggplot(aes(years_since_fire, Abund, color = RestorationCategory)) +
-  geom_point(outlier.alpha = 0) +
+  geom_point(aes(), size = 2.5, outlier.alpha = 0) +
   #geom_smooth(aes(color = RestorationCategory), method = "lm") + 
   geom_smooth(aes(), color = "black", method = "lm", se=FALSE) +
   theme_classic()+
